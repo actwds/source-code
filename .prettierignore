@@ -1,0 +1,13 @@
+*.html
+*.js
+*.jsx
+*.json
+*.log
+.cache
+.env
+.nova
+.storybook/public/
+.vscode
+.DS_Store
+node_modules
+storybook-static

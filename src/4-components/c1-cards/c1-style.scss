@@ -1,0 +1,353 @@
+.act-card-grid {
+	display: grid;
+	column-gap: map-get($act-space, "desktop-3");
+	row-gap: map-get($act-space, "desktop-3");
+	margin: map-get($act-space, "desktop-5") 0px;
+	@include devices(mobile) {
+		grid-template-columns: repeat(1, minmax(0, 1fr));
+	}
+	@include devices(tablet) {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+	@include devices(desktop) {
+		grid-template-columns: repeat(4, minmax(0, 1fr));
+	}
+}
+.act-card {
+	align-items: stretch;
+	border: 0px solid transparent;
+	display: flex;
+	&__container {
+		align-items: flex-start;
+		border: 1px solid $act-colour__middle-grey;
+		cursor: pointer;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		width: 100%;
+	}
+	[class*="__image"] {
+		background-color: $act-colour__middle-grey;
+		display: none;
+		height: map-get($act-space, "desktop-9");
+		min-height: map-get($act-space, "desktop-9");
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		width: 100%;
+	}
+	&__content {
+		align-items: flex-start;
+		color: $act-colour__black;
+		display: flex;
+		height: 100%;
+		flex-direction: column;
+		justify-content: flex-start;
+		padding: map-get($act-space, "desktop-3");
+		word-wrap: anywhere;
+		[class*="__icon"] {
+			display: none;
+			margin-bottom: map-get($act-space, "desktop-1");
+			i {
+				align-items: center;
+				color: $act-colour__purple;
+				display: inline-flex;
+				font-size: 32px;
+				justify-content: center;
+				::before {
+					height: 32px;
+				}
+			}
+		}
+		[class*="__timestamp"] {
+			color: $act-colour__black;
+			font-size: $act-font-size__desktop-p-small;
+			font-weight: $act-font-weight__semibold;
+			margin-bottom: map-get($act-space, "desktop-1");
+		}
+		[class*="__title"] {
+			color: $act-colour__black;
+			font-size: $act-font-size__desktop-h5;
+			font-weight: $act-font-weight__semibold;
+			line-height: $act-line-height__130;
+			margin-bottom: map-get($act-space, "desktop-1");
+		}
+		[class*="__description"] {
+			color: $act-colour__black;
+			font-size: $act-font-size__desktop-p;
+			font-weight: $act-font-weight__regular;
+			line-height: $act-line-height__150;
+		}
+		[class*="__cta"] {
+			align-items: flex-end;
+			display: flex;
+			flex-direction: row;
+			flex-grow: 1;
+			font-size: 24px;
+			justify-content: flex-end;
+			margin-top: map-get($act-space, "desktop-3");
+			text-decoration: none;
+			i {
+				align-items: center;
+				color: $act-colour__purple;
+				display: inline-flex;
+				justify-content: center;
+				::before {
+					height: 24px;
+				}
+			}
+			span {
+				font-size: $act-font-size__desktop-p;
+				text-decoration: underline;
+			}
+		}
+	}
+
+	/* Feature Toggles */
+	&__feature--image {
+		[class*="__image"] {
+			display: flex;
+		}
+	}
+	&__feature--icon {
+		[class*="__icon"] {
+			display: flex;
+		}
+	}
+	&__feature--none {
+		[class*="__image"],
+		[class*="__icon"] {
+			display: none;
+		}
+	}
+
+	/* Show/Hide Elements by Card Type */
+	&__primary {
+		border: 0px solid transparent;
+		[class*="__cta"] {
+			span {
+				display: none;
+			}
+		}
+		&:focus {
+			[class*="__container"] {
+				border-color: $act-colour__purple;
+				border-width: 1px;
+			}
+		}
+		&:hover {
+			border: 0px solid transparent;
+			background-color: $act-colour__purple;
+			color: $act-colour__white;
+			[class*="__container"] {
+				border-color: $act-colour__purple;
+				border-width: 1px;
+				color: $act-colour__white;
+			}
+			[class*="__timestamp"],
+			[class*="__title"],
+			[class*="__description"],
+			[class*="__icon"],
+			[class*="__cta"] {
+				color: $act-colour__white;
+				i {
+					color: $act-colour__white;
+				}
+			}
+			.act-tag {
+				border: 1px solid $act-colour__white;
+				&__filled {
+					background-color: $act-colour__black;
+					color: $act-colour__white;
+				}
+			}
+		}
+	}
+	&__secondary {
+		border: 0px solid transparent;
+		color: $act-colour__black;
+		[class*="__container"] {
+			border-color: transparent;
+			border-width: 2px;
+		}
+		[class*="__image"],
+		[class*="__timestamp"] {
+			display: none;
+		}
+		[class*="__title"],
+		[class*="__description"] {
+			text-decoration: underline;
+			color: $act-colour__black;
+		}
+		[class*="__cta"] {
+			i {
+				display: none;
+			}
+			span {
+				display: inline;
+			}
+		}
+		&:focus {
+			[class*="__container"] {
+				border-color: $act-colour__purple;
+			}
+		}
+		&:hover {
+			border: 0px solid transparent;
+			color: $act-colour__purple;
+			[class*="__title"],
+			[class*="__description"] {
+				text-decoration: underline;
+				color: $act-colour__purple;
+			}
+			[class*="__icon"],
+			[class*="__cta"] {
+				i,
+				span {
+					color: $act-colour__purple;
+				}
+			}
+			.act-tag {
+				border: 1px solid $act-colour__purple;
+				color: $act-colour__purple;
+				&__filled {
+					background-color: $act-colour__purple;
+					color: $act-colour__purple;
+				}
+			}
+		}
+	}
+	&__tertiary {
+		border: 0px solid transparent;
+		color: $act-colour__black;
+		.act-tag__container,
+		[class*="__image"] {
+			display: none;
+		}
+		[class*="__content"] {
+			align-items: center;
+			color: $act-colour__black;
+			flex-direction: row;
+			[class*="__icon"] {
+				margin-bottom: 0px;
+				margin-right: map-get($act-space, "desktop-2");
+			}
+			[class*="__title"] {
+				margin-bottom: 0px;
+			}
+			[class*="__timestamp"],
+			[class*="__description"] {
+				display: none;
+			}
+			[class*="__cta"] {
+				margin-top: 0px;
+				margin-left: map-get($act-space, "desktop-2");
+				span {
+					display: none;
+				}
+			}
+		}
+		&:focus {
+			[class*="__container"] {
+				border-color: $act-colour__purple;
+			}
+		}
+		&:hover {
+			background-color: $act-colour__purple;
+			border: 0px solid transparent;
+			color: $act-colour__white;
+			[class*="__container"] {
+				border-color: $act-colour__purple;
+			}
+			[class*="__title"],
+			[class*="__icon"],
+			[class*="__cta"] {
+				color: $act-colour__white;
+				i {
+					color: $act-colour__white;
+				}
+			}
+		}
+	}
+	&__homepage {
+		/* Homepage Card Variant */
+		background-color: $act-colour__light-purple;
+		border: 0px solid transparent;
+		color: $act-colour__black;
+		[class*="__container"] {
+			border: none;
+			border-width: 0px;
+			box-shadow: inset 0 4px 0 0 $act-colour__light-purple, inset 4px 0 0 0 $act-colour__light-purple, inset -4px 0 0 0 $act-colour__light-purple, 0 4px 0 $act-colour__purple;
+		}
+		[class*="__icon"] {
+			display: flex;
+		}
+		.act-tag__container,
+		[class*="__image"],
+		[class*="__timestamp"],
+		[class*="__description"],
+		[class*="__cta"] span {
+			display: none;
+		}
+		&:focus {
+			/* Card in focus state */
+			[class*="__container"] {
+				border-color: $act-colour__purple;
+				border-width: 4px;
+			}
+		}
+		&:hover {
+			/* Card in hover state */
+			background-color: $act-colour__purple;
+			border: 0px solid transparent;
+			color: $act-colour__white;
+			[class*="__container"] {
+				box-shadow: inset 0 4px 0 0 $act-colour__purple, inset 4px 0 0 0 $act-colour__purple, inset -4px 0 0 0 $act-colour__purple, 0 4px 0 $act-colour__purple;
+			}
+			[class*="__title"],
+			[class*="__icon"],
+			[class*="__cta"] {
+				color: $act-colour__white;
+				i {
+					color: $act-colour__white;
+				}
+			}
+		}
+	}
+	&__featured {
+		border: 0px solid transparent;
+		background-image: url("/images/purple.jpg");
+		background-color: #cccccc;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		grid-column: span 2;
+		grid-row: span 2;
+		[class*="__container"] {
+			border: 0px solid transparent;
+			justify-content: flex-end;
+			padding: map-get($act-space, "desktop-3");
+			[class*="__content"] {
+				align-items: flex-start;
+				background-color: $act-colour__white;
+				display: flex;
+				flex-direction: column;
+				flex-grow: 0;
+				height: fit-content;
+				justify-content: flex-end;
+				[class*="__cta"] {
+					flex-grow: 0;
+					span {
+						display: none;
+					}
+				}
+			}
+			&:hover {
+				border: 0px solid transparent;
+			}
+		}
+		&:hover {
+			border: 0px solid transparent;
+		}
+	}
+}

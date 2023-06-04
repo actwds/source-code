@@ -1,0 +1,64 @@
+.act-multi-step {
+	@include devices(ultrawide) {
+		max-width: $act-page-max-width;
+	}
+	&__container {
+		display: flex;
+		flex-direction: column;
+		padding: map-get($act-space, "desktop-4");
+	}
+	&__header {
+		display: flex;
+		flex-direction: column;
+		gap: map-get($act-space, "desktop-1");
+	}
+	&__content {
+		display: flex;
+		flex-direction: column;
+		margin-top: map-get($act-space, "desktop-2");
+		margin-bottom: map-get($act-space, "desktop-2");
+		&__step {
+			display: none;
+			&.active {
+				display: flex;
+			}
+		}
+	}
+	&__navigation {
+		align-items: center;
+		display: flex;
+		flex-direction: row;
+		@include devices(mobile) {
+			flex-direction: column;
+			gap: map-get($act-space, "mobile-1");
+		}
+		justify-content: space-around;
+		&__buttons {
+			display: inline-flex;
+			flex-direction: row;
+			@include devices(mobile) {
+				justify-content: center;
+				margin-top: map-get($act-space, "desktop-2");
+				margin-bottom: map-get($act-space, "desktop-2");
+				width: 100%;
+				button {
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+
+div::-webkit-scrollbar {
+	display: none;
+}
+
+.hide-scroll,
+aside {
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+}
+
+.hide-scroll::-webkit-scrollbar {
+	display: none;
+}

@@ -1,0 +1,64 @@
+{
+	"author": {
+		"name": "Online Services",
+		"email": "onlineservices@act.gov.au",
+		"url": "https://actwds.github.io"
+	},
+	"name": "ACTWDS",
+	"version": "1.0.0",
+	"description": "ACT Website Design System",
+	"main": "index.js",
+	"scripts": {
+		"dev": "set NODE_OPTIONS=--openssl-legacy-provider && start-storybook -p 9001",
+		"test-eslint": "npx eslint .",
+		"test-prettier": "npx prettier --check .",
+		"test-all": "npm run test-eslint && npm run test-prettier",
+		"fix-eslint": "npx eslint . --fix",
+		"fix-prettier": "npx prettier --write .",
+		"fix-all": "npm run fix-eslint && npm run fix-prettier",
+		"build-storybook": "build-storybook",
+		"build": "set NODE_OPTIONS=--openssl-legacy-provider && npm run fix-eslint && npm run fix-prettier && npm run build-storybook",
+		"serve": "npx http-server ./storybook-static -p 9001"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/ACTWDS/source-code.git"
+	},
+	"keywords": [],
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/ACTWDS/source-code/issues"
+	},
+	"homepage": "https://github.com/ACTWDS/source-code#readme",
+	"devDependencies": {
+		"@babel/core": "^7.19.3",
+		"@storybook/addon-actions": "^6.5.12",
+		"@storybook/addon-essentials": "^6.5.12",
+		"@storybook/addon-interactions": "^6.5.12",
+		"@storybook/addon-links": "^6.5.13",
+		"@storybook/builder-webpack4": "^6.5.12",
+		"@storybook/channels": "^6.5.9",
+		"@storybook/html": "^6.5.12",
+		"@storybook/manager-webpack4": "^6.5.12",
+		"@storybook/testing-library": "^0.0.13",
+		"babel-loader": "^8.2.5",
+		"eslint": "^8.25.0",
+		"eslint-plugin-react": "^7.31.10",
+		"eslint-plugin-storybook": "^0.6.6",
+		"json-loader": "^0.5.7",
+		"prettier": "2.7.1",
+		"react": "17.0.2",
+    	"react-dom": "^17.0.2",
+		"react-syntax-highlighter": "^15.5.0",
+		"storybook-addon-run-script": "^0.1.4"
+	},
+	"dependencies": {
+		"@etchteam/storybook-addon-status": "^4.2.2",
+		"@storybook/addon-a11y": "^6.5.13",
+		"@storybook/theming": "^6.5.12",
+		"@whitespace/storybook-addon-html": "^5.0.0",
+		"storybook-addon-html-validator": "^0.0.12",
+		"storybook-addon-sass-postcss": "^0.1.3",
+		"storybook-mobile": "^1.0.0"
+	}
+}

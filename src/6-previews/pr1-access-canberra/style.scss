@@ -1,0 +1,27 @@
+.act-navbar {
+	background-color: $act-colour__white;
+	display: flex;
+	width: $act-page-full-width;
+	&__container {
+		align-items: center;
+		display: flex;
+		font-size: $act-font-size__desktop-p-xsmall;
+		font-weight: $act-font-weight__semibold;
+		justify-content: space-between;
+		line-height: $act-line-height__100;
+		padding: 0px map-get($act-space, "desktop-2");
+		width: 100%;
+	}
+	&__content {
+		align-items: center;
+		display: flex;
+		&:first-of-type {
+			justify-content: flex-start;
+			padding: map-get($act-space, "desktop-2") 0px;
+		}
+		&:last-of-type {
+			justify-content: flex-end;
+			padding: 0px;
+		}
+	}
+}

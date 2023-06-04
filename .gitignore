@@ -1,0 +1,49 @@
+# Pollen - Default Gitignore
+
+# Editors/OS
+.nova
+.vscode
+.DS_*
+Thumbs.db
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# Dependency directories
+node_modules/
+jspm_packages/
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Optional stylelint cache
+.stylelintcache
+
+# dotenv environment variable files
+.env
+.env.development.local
+.env.test.local
+.env.production.local
+.env.local
+
+# Next.js build output
+.next
+out
+
+# Gatsby files
+.cache
+
+# Serverless directories
+.serverless
+
+# Storybook files
+storybook-static

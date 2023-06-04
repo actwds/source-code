@@ -1,0 +1,569 @@
+import { Meta, ColorPalette, ColorItem } from "@storybook/addon-docs";
+import { themes, ThemeProvider, convert, ensure } from "@storybook/theming";
+import Masthead from "../../_docs/masthead";
+import AoC from "../../_docs/aoc";
+import Footer from "../../_docs/footer";
+import LinkTo from "@storybook/addon-links/react";
+
+<Meta
+	title="Design/Design Tokens/Colours"
+	parameters={{
+		previewTabs: {
+			canvas: { hidden: true },
+			"storybook/docs/panel": { hidden: true },
+		},
+	}}
+/>
+
+<div className="act-docs-container">
+	<Masthead />
+	<main className="act-body">
+		<div className="act-flex act-flex-light-purple">
+			<div className="act-flex__container act-flex__container-padding-trim">
+				<div className="act-flex__grid">
+					<div className="act-flex__row">
+						<div className="act-col__cw-12">
+							<div className="act-box">
+								<div className="act-breadcrumbs">
+									<ul className="act-breadcrumbs__container">
+										<li className="act-breadcrumbs__crumb act-h6">
+											<LinkTo className="act-breadcrumbs__crumb__link" kind="about-about--page">
+												Design System <i className="fa-solid fa-angle-right"></i>
+											</LinkTo>
+										</li>
+										<li className="act-breadcrumbs__crumb act-h6">
+											<LinkTo className="act-breadcrumbs__crumb__link" kind="design-overview--page">
+												Design Tokens <i className="fa-solid fa-angle-right"></i>
+											</LinkTo>
+										</li>
+										<li className="act-breadcrumbs__crumb act-h6">
+											<LinkTo className="act-breadcrumbs__crumb__link" kind="design-colours--page">
+												Colours <i className="fa-solid fa-angle-right"></i>
+											</LinkTo>
+										</li>
+									</ul>
+								</div>
+								<h1>Colours</h1>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div className="act-flex">
+			<div className="act-flex__container">
+				<div className="act-flex__grid">
+					<div className="act-flex__row">
+						<div className="act-col__cw-12">
+							<div className="act-box">
+								<h2>Primary Colours</h2>
+								<ColorPalette>
+									<ColorItem
+										title="Purple"
+										subtitle="Whole of Government Purple"
+										colors={{
+											Purple: "#472D8C",
+										}}
+									/>
+									<ColorItem
+										title="Purple Shades"
+										subtitle="Variations to accompany Whole of Government Purple"
+										colors={{
+											Violet: "#1E0F48",
+											Indigo: "#311C6A",
+											PlumPurple: "#6042AE",
+											MediumPurple: "#9A78F2",
+										}}
+									/>
+									<ColorItem
+										title="Greyscale"
+										subtitle="A range of grey shades from black to white"
+										colors={{
+											Black: "#111111",
+											Grey: "#777777",
+											MiddleGrey: "#ADADAD",
+											White: "#FFFFFF",
+										}}
+									/>
+								</ColorPalette>
+								<div className="act-table-container">
+									<table className="act-table">
+										<thead>
+											<tr>
+												<th>Colour</th>
+												<th>HEX</th>
+												<th>Sass Variable</th>
+												<th>Sass Map</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>
+													<span className="act-icon" style={{ backgroundColor: "#472D8C" }}></span>
+													<p className="act-p-small">Purple</p>
+												</td>
+												<td>
+													<code className="hex">#472D8C</code>
+												</td>
+												<td>
+													<code className="sass-var">$act-colour__purple</code>
+												</td>
+												<td>
+													<code>map-get($act-colour, "purple")</code>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<span className="act-icon" style={{ backgroundColor: "#1E0F48" }}></span>
+													<p className="act-p-small">Violet</p>
+												</td>
+												<td>
+													<code className="hex">#1E0F48</code>
+												</td>
+												<td>
+													<code className="sass-var">$act-colour__violet</code>
+												</td>
+												<td>
+													<code>map-get($act-colour, "violet")</code>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<span className="act-icon" style={{ backgroundColor: "#311C6A" }}></span>
+													<p className="act-p-small">Indigo</p>
+												</td>
+												<td>
+													<code className="hex">#311C6A</code>
+												</td>
+												<td>
+													<code className="sass-var">$act-colour__indigo</code>
+												</td>
+												<td>
+													<code>map-get($act-colour, "indigo")</code>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<span className="act-icon" style={{ backgroundColor: "#6042AE" }}></span>
+													<p className="act-p-small">Plum Purple</p>
+												</td>
+												<td>
+													<code className="hex">#6042AE</code>
+												</td>
+												<td>
+													<code className="sass-var">$act-colour__plum-purple</code>
+												</td>
+												<td>
+													<code>map-get($act-colour, "plum-purple")</code>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<span className="act-icon" style={{ backgroundColor: "#9A78F2" }}></span>
+													<p className="act-p-small">Medium Purple</p>
+												</td>
+												<td>
+													<code className="hex">#9A78F2</code>
+												</td>
+												<td>
+													<code className="sass-var">$act-colour__medium-purple</code>
+												</td>
+												<td>
+													<code>map-get($act-colour, "medium-purple")</code>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<span className="act-icon" style={{ backgroundColor: "#111111" }}></span>
+													<p className="act-p-small">Black</p>
+												</td>
+												<td>
+													<code className="hex">#111111</code>
+												</td>
+												<td>
+													<code className="sass-var">$act-colour__black</code>
+												</td>
+												<td>
+													<code>map-get($act-colour, "black")</code>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<span className="act-icon" style={{ backgroundColor: "#777777" }}></span>
+													<p className="act-p-small">Grey</p>
+												</td>
+												<td>
+													<code className="hex">#777777</code>
+												</td>
+												<td>
+													<code className="sass-var">$act-colour__grey</code>
+												</td>
+												<td>
+													<code>map-get($act-colour, "grey")</code>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<span className="act-icon" style={{ backgroundColor: "#ADADAD" }}></span>
+													<p className="act-p-small">Middle Grey</p>
+												</td>
+												<td>
+													<code className="hex">#ADADAD</code>
+												</td>
+												<td>
+													<code className="sass-var">$act-colour__middle-grey</code>
+												</td>
+												<td>
+													<code>map-get($act-colour, "middle-grey")</code>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<span className="act-icon" style={{ backgroundColor: "#FFFFFF" }}></span>
+													<p className="act-p-small">White</p>
+												</td>
+												<td>
+													<code className="hex">#FFFFFF</code>
+												</td>
+												<td>
+													<code className="sass-var">$act-colour__white</code>
+												</td>
+												<td>
+													<code>map-get($act-colour, "white")</code>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div className="act-flex">
+			<div className="act-flex__container">
+				<div className="act-flex__grid">
+					<div className="act-flex__row">
+						<div className="act-col__cw-12">
+							<div className="act-box">
+								<h2>Interface Colours</h2>
+								<ColorPalette>
+									<ColorItem
+										title="Green"
+										subtitle="Some of the greens"
+										colors={{
+											Green: "#098660",
+											LightGreen: "#E7FFF8",
+										}}
+									/>
+									<ColorItem
+										title="Red"
+										subtitle="Some of the reds"
+										colors={{
+											Red: "#BA2133",
+											MistyRose: "#FFE9EB",
+										}}
+									/>
+									<ColorItem
+										title="Yellow"
+										subtitle="Some of the yellow"
+										colors={{
+											Yellow: "#F2C94C",
+											OldLace: "#FFF6E9",
+										}}
+									/>
+									<ColorItem
+										title="Blues"
+										subtitle="Some of the blues"
+										colors={{
+											BlueCrayola: "#01CEE8",
+											Azure: "#ECFDFF",
+										}}
+									/>
+								</ColorPalette>
+								<div className="act-table-container">
+									<table className="act-table">
+										<thead>
+											<tr>
+												<th>Colour</th>
+												<th>HEX</th>
+												<th>Sass Variable</th>
+												<th>Sass Map</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>
+													<span className="act-icon" style={{ backgroundColor: "#098660" }}></span>
+													<p className="act-p-small">Green</p>
+												</td>
+												<td>
+													<code className="hex">#098660</code>
+												</td>
+												<td>
+													<code className="sass-var">$act-colour__green</code>
+												</td>
+												<td>
+													<code>map-get($act-colour, "green")</code>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<span className="act-icon" style={{ backgroundColor: "#E7FFF8" }}></span>
+													<p className="act-p-small">Light Green</p>
+												</td>
+												<td>
+													<code className="hex">#E7FFF8</code>
+												</td>
+												<td>
+													<code className="sass-var">$act-colour__light-green</code>
+												</td>
+												<td>
+													<code>map-get($act-colour, "light-green")</code>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<span className="act-icon" style={{ backgroundColor: "#BA2133" }}></span>
+													<p className="act-p-small">Red</p>
+												</td>
+												<td>
+													<code className="hex">#BA2133</code>
+												</td>
+												<td>
+													<code className="sass-var">$act-colour__red</code>
+												</td>
+												<td>
+													<code>map-get($act-colour, "red")</code>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<span className="act-icon" style={{ backgroundColor: "#FFE9EB" }}></span>
+													<p className="act-p-small">Misty Rose</p>
+												</td>
+												<td>
+													<code className="hex">#FFE9EB</code>
+												</td>
+												<td>
+													<code className="sass-var">$act-colour__misty-rose</code>
+												</td>
+												<td>
+													<code>map-get($act-colour, "misty-rose")</code>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<span className="act-icon" style={{ backgroundColor: "#F2C94C" }}></span>
+													<p className="act-p-small">Yellow</p>
+												</td>
+												<td>
+													<code className="hex">#F2C94C</code>
+												</td>
+												<td>
+													<code className="sass-var">$act-colour__yellow</code>
+												</td>
+												<td>
+													<code>map-get($act-colour, "yellow")</code>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<span className="act-icon" style={{ backgroundColor: "#FFF6E9" }}></span>
+													<p className="act-p-small">Old Lace</p>
+												</td>
+												<td>
+													<code className="hex">#FFF6E9</code>
+												</td>
+												<td>
+													<code className="sass-var">$act-colour__old-lace</code>
+												</td>
+												<td>
+													<code>map-get($act-colour, "old-lace")</code>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<span className="act-icon" style={{ backgroundColor: "#01CEE8" }}></span>
+													<p className="act-p-small">Blue Crayola</p>
+												</td>
+												<td>
+													<code className="hex">#01CEE8</code>
+												</td>
+												<td>
+													<code className="sass-var">$act-colour__blue-crayola</code>
+												</td>
+												<td>
+													<code>map-get($act-colour, "blue-crayola")</code>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<span className="act-icon" style={{ backgroundColor: "#ECFDFF" }}></span>
+													<p className="act-p-small">Azure</p>
+												</td>
+												<td>
+													<code className="hex">#ECFDFF</code>
+												</td>
+												<td>
+													<code className="sass-var">$act-colour__azure</code>
+												</td>
+												<td>
+													<code>map-get($act-colour, "azure")</code>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div className="act-flex">
+			<div className="act-flex__container">
+				<div className="act-flex__grid">
+					<div className="act-flex__row">
+						<div className="act-col__cw-12">
+							<div className="act-box">
+								<h3>Region Colours</h3>
+								<ColorPalette>
+									<ColorItem
+										title="Belconnen"
+										subtitle="Name long associated with the locality; originally the name of a pioneer's homestead and later of a rural district of the Australian Capital Territory."
+										colors={{
+											Belconnen: "#377E7A",
+										}}
+									/>
+									<ColorItem
+										title="Gungahlin"
+										subtitle="Named after the Aboriginal word 'goongarline', translating to 'little rocky hill' in the English language."
+										colors={{
+											Gungahlin: "#90A630",
+										}}
+									/>
+									<ColorItem
+										title="Inner City"
+										subtitle=""
+										colors={{
+											InnerCity: "#008FC5",
+										}}
+									/>
+									<ColorItem
+										title="Tuggeranong"
+										subtitle="An aboriginal word for 'cold plain'; the name was also given to a former parish in the area."
+										colors={{
+											Tuggeranong: "#C6B30B",
+										}}
+									/>
+									<ColorItem
+										title="Woden"
+										subtitle="Woden is a thriving business district and shopping precinct with the residential areas of Weston Creek and Molonglo Valley to it's west."
+										colors={{
+											Woden: "#F15F50",
+										}}
+									/>
+								</ColorPalette>
+								<div className="act-table-container">
+									<table className="act-table">
+										<thead>
+											<tr>
+												<th>Colour</th>
+												<th>HEX</th>
+												<th>Sass Variable</th>
+												<th>Sass Map</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>
+													<span className="act-icon" style={{ backgroundColor: "#377E7A" }}></span>
+													<p className="act-p-small">Belconnen</p>
+												</td>
+												<td>
+													<code className="hex">#377E7A</code>
+												</td>
+												<td>
+													<code className="sass-var">$act-colour__region-belconnen</code>
+												</td>
+												<td>
+													<code>map-get($act-colour, "region-belconnen")</code>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<span className="act-icon" style={{ backgroundColor: "#90A630" }}></span>
+													<p className="act-p-small">Gungahlin</p>
+												</td>
+												<td>
+													<code className="hex">#90A630</code>
+												</td>
+												<td>
+													<code className="sass-var">$act-colour__region-gungahlin</code>
+												</td>
+												<td>
+													<code>map-get($act-colour, "region-gungahlin")</code>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<span className="act-icon" style={{ backgroundColor: "#008FC5" }}></span>
+													<p className="act-p-small">Inner City</p>
+												</td>
+												<td>
+													<code className="hex">#008FC5</code>
+												</td>
+												<td>
+													<code className="sass-var">$act-colour__region-innercity</code>
+												</td>
+												<td>
+													<code>map-get($act-colour, "region-innercity")</code>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<span className="act-icon" style={{ backgroundColor: "#C6B30B" }}></span>
+													<p className="act-p-small">Tuggeranong</p>
+												</td>
+												<td>
+													<code className="hex">#C6B30B</code>
+												</td>
+												<td>
+													<code className="sass-var">$act-colour__region-tuggeranong</code>
+												</td>
+												<td>
+													<code>map-get($act-colour, "region-tuggeranong")</code>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<span className="act-icon" style={{ backgroundColor: "#F15F50" }}></span>
+													<p className="act-p-small">Woden</p>
+												</td>
+												<td>
+													<code className="hex">#F15F50</code>
+												</td>
+												<td>
+													<code className="sass-var">$act-colour__region-woden</code>
+												</td>
+												<td>
+													<code>map-get($act-colour, "region-woden")</code>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<footer className="act-footer">
+		<AoC />
+		<Footer />
+	</footer>
+</div>

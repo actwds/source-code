@@ -1,0 +1,742 @@
+{
+	"A11": {
+		"details": {
+			"id": "A11",
+			"category": "🪗 Accordion",
+			"name": "Accordion",
+			"type": "Component"
+		},
+		"description": "A stack of interactve headings, used to display further information when opened, each item has a closed and open state",
+		"element": "<code>&lt;div class=\"act-accordion\"&gt;</code>",
+		"usage": "<ul><li>Do not mix styles of accordions on a page e.g. use all variants with a background or all variants with an outline</li><li>Max width on desktop 934px</li><li>Link variants do not expand</li></ul>",
+		"status": [
+			"production",
+			"core"
+		]
+	},
+	"A21": {
+		"details": {
+			"id": "A21",
+			"category": "⚠️ Alerts",
+			"name": "Global Alert",
+			"type": "Component"
+		},
+		"description": "Used to draw attention to important information for the user globally",
+		"element": "<code>&lt;div class=\"act-alert-global\"&gt;</code>",
+		"usage": "<ul><li>Do not stack Global Alerts, limit of one per page</li><li>Additional Global Alerts can be stacked in an emergency situation only</li><li>Global Alert must be placed above the masthead</li><li>Use the relevant variant</li><li>Keep alert text short and succinct (should be no longer than one sentence)</li><li>Text should link to relevant content</li></ul>",
+		"status": [
+			"production",
+			"core"
+		]
+	},
+	"A22": {
+		"details": {
+			"id": "A22",
+			"category": "⚠️ Alerts",
+			"name": "In Page Alert",
+			"type": "Component"
+		},
+		"description": "Used to draw attention to important information for the user on the page",
+		"element": "<code>&lt;div class=\"act-alert-inpage\"&gt;</code>",
+		"usage": "<ul><li>Limit of two In Page Alerts per page</li><li>In Page Alerts must be placed at the top of page content, but below the page banner and screen reader</li><li>Use the relevant variant</li><li>Keep alert text short and succinct (should be no longer than one sentence)</li><li>Text should link to relevant content</li></ul>",
+		"status": [
+			"production",
+			"core"
+		]
+	},
+	"B11": {
+		"details": {
+			"id": "B11",
+			"category": "🟣 Buttons",
+			"name": "Standard",
+			"type": "Component"
+		},
+		"description": "Buttons are used to give the user the ability to interact with the website",
+		"element": "<code>&lt;button class=\"act-button\"&gt;</code>",
+		"usage": "<ul><li>Use the \"primary\" variant as the default option when creating pages</li><li>When buttons are grouped next to each other ensure there is a minimum 24px margin on desktop and 16px on tablet/mobile</li></ul>",
+		"status": [
+			"production",
+			"core"
+		]
+	},
+	"B12": {
+		"details": {
+			"id": "B12",
+			"category": "🟣 Buttons",
+			"name": "Inline Link",
+			"type": "Component"
+		},
+		"description": "A link is to be used to take the user to a specific location, it could be a page or resource",
+		"element": "<code>&lt;a&gt;</code>",
+		"usage": "<ul><li>White inline Links are to be used in footer content</li><li>Links to external websites must include the icon <code>&lt;class=\"fa-solid fa-up-right-from-square\"&gt;&lt;/i&gt;</code></li></ul>",
+		"status": [
+			"production",
+			"core"
+		]
+	},
+	"B13": {
+		"details": {
+			"id": "B13",
+			"category": "🟣 Buttons",
+			"name": "Back to top",
+			"type": "Component"
+		},
+		"description": "A button that takes the user to the top of the page",
+		"element": "<code>&lt;button&gt;</code>",
+		"usage": "<ul><li>The Back To Top button should always be fixed to the bottom right corner of the screen.</li></ul>",
+		"status": [
+			"production",
+			"core"
+		]
+	},
+	"PC1": {
+		"details": {
+			"id": "PC1",
+			"category": "🃏 Cards",
+			"name": "Card Grid",
+			"type": "Pattern"
+		},
+		"description": "Container element that holds rows of individual cards",
+		"element": "<code>&lt;div class=\"act-card-grid\"&gt;</code>",
+		"status": [
+			"production",
+			"core"
+		]
+	},
+	"C11": {
+		"details": {
+			"id": "C11",
+			"category": "🃏 Cards",
+			"name": "Standard",
+			"type": "Component"
+		},
+		"description": "Cards are a container filled with content about a single subject, used to help users scan and navigate through content quickly",
+		"element": "<code>&lt;a class=\"act-card\"&gt;</code>",
+		"hierarchy": "<ul><li>Cards must always be rendered within a <code>&lt;div class=\"act-card-grid\"&gt;</code></li></ul>",
+		"usage": "<ul><li>Do not mix card variants in a row e.g. use all primary cards or all icon cards</li><li>Homepage variant with image feature to be used on homepages only</li><li>Maximum 4 cards per row at the desktop breakpoint</li></ul>",
+		"status": [
+			"production",
+			"core"
+		]
+	},
+	"C12": {
+		"details": {
+			"id": "C12",
+			"category": "🃏 Cards",
+			"name": "Featured",
+			"type": "Component"
+		},
+		"description": "Cards are a container filled with content about a single subject, used to help users scan and navigate through content quickly",
+		"element": "<code>&lt;a class=\"act-card\"&gt;</code>",
+		"hierarchy": "<ul><li>Cards must always be rendered within a <code>&lt;div class=\"act-card-grid\"&gt;</code></li></ul>",
+		"usage": "<ul><li>Do not mix card variants in a row e.g. use all primary cards or all icon cards</li><li>Primary variant with image feature to be used on homepages only</li><li>Maximum 4 cards per row at the desktop breakpoint</li></ul>",
+		"status": [
+			"production",
+			"core"
+		]
+	},
+	"C21": {
+		"details": {
+			"id": "C21",
+			"category": "📘 Content",
+			"name": "Breaker",
+			"type": "Component"
+		},
+		"description": "Used on content pages to help visually break up the page as well as calling out important information",
+		"element": "<code>&lt;div class=\"act-breaker\"&gt;</code>",
+		"status": [
+			"production",
+			"core"
+		]
+	},
+	"C22": {
+		"details": {
+			"id": "C22",
+			"category": "📘 Content",
+			"name": "Key Message",
+			"type": "Component"
+		},
+		"description": "Used at the start of content pages to summarise the key points to help people find information quickly",
+		"element": "<code>&lt;div class=\"act-key-message\"&gt;</code>",
+		"status": [
+			"production",
+			"core"
+		]
+	},
+	"C23": {
+		"details": {
+			"id": "C23",
+			"category": "📘 Content",
+			"name": "Quote",
+			"type": "Component"
+		},
+		"description": "Used on content pages to help visually break up the page as well as calling out important information",
+		"element": "<code>&lt;div class=\"act-quote\"&gt;</code>",
+		"usage": "<ul><li>Do not stack quotes</li><li>Limit of one quote per paragraph</li></ul>",
+		"status": [
+			"production",
+			"core"
+		]
+	},
+	"C24": {
+		"details": {
+			"id": "C24",
+			"category": "📘 Content",
+			"name": "Service Card",
+			"type": "Component"
+		},
+		"description": "Are used to display up to date information for helpful services",
+		"element": "<code>&lt;div class=\"act-service-card\"&gt;</code>",
+		"usage": "<ul><li>Desktop and tablet to use ‘large’ variant and mobile to use ‘smal’ variant</li><li>Paragraph length should only be one sentence</li><li>Phone number is optional</li></ul>",
+		"status": [
+			"production",
+			"core"
+		]
+	},
+	"C25": {
+		"details": {
+			"id": "C25",
+			"category": "📘 Content",
+			"name": "Steps List",
+			"type": "Component"
+		},
+		"description": "Are used to display a numerical list",
+		"element": "<code>&lt;div class=\"act-service-card\"&gt;</code>",
+		"usage": "",
+		"status": [
+			"production",
+			"core"
+		]
+	},
+	"C26": {
+		"details": {
+			"id": "C26",
+			"category": "📘 Content",
+			"name": "Managed By",
+			"type": "Component"
+		},
+		"description": "To help give the user the context of who is managing pages",
+		"element": "<code>&lt;div class=\"act-managed-by\"&gt;</code>",
+		"usage": "",
+		"status": [
+			"production",
+			"core"
+		]
+	},
+	"C27": {
+		"details": {
+			"id": "C27",
+			"category": "📘 Content",
+			"name": "Download Links",
+			"type": "Component"
+		},
+		"description": "Allows users to know what kind of action they will be taking",
+		"element": "<code>&lt;div class=\"act-download-link\"&gt;</code>",
+		"usage": "Set the file name, file type, and file size dynamically",
+		"status": [
+			"production",
+			"core"
+		]
+	},
+	"C28": {
+		"details": {
+			"id": "C28",
+			"category": "📘 Content",
+			"name": "Table Of Contents",
+			"type": "Component"
+		},
+		"description": "Used at the top of content pages, used to jump to a certain place on a page, clicking the link would scroll you to that point of the page",
+		"element": "<code>&lt;div class=\"act-table-contents\"&gt;</code>",
+		"usage": "",
+		"status": [
+			"production",
+			"core"
+		]
+	},
+	"C29": {
+		"details": {
+			"id": "C28",
+			"category": "📘 Content",
+			"name": "Links List",
+			"type": "Component"
+		},
+		"description": "Link lists surface and group related content.",
+		"element": "<code>&lt;div class=\"act-links-list\"&gt;</code>",
+		"usage": "",
+		"status": [
+			"production",
+			"core"
+		]
+	},
+	"F11": {
+		"details": {
+			"id": "F11",
+			"category": "👟 Footers",
+			"name": "Main Footer",
+			"type": "Component"
+		},
+		"description": "Used at the bottom of all pages to display - related links and other relevant information",
+		"element": "<code>&lt;div class=\"act-flex\"&gt;</code>",
+		"hierarchy": "Footers must always be rendered inside a <code>&lt;footer class=\"act-footer\"&gt;</code>",
+		"usage": "<ul><li>Must be the final element on the page</li><li>Do not modify the colours</li></ul>",
+		"status": [
+			"production",
+			"core"
+		]
+	},
+	"F12": {
+		"details": {
+			"id": "F12",
+			"category": "👟 Footers",
+			"name": "Acknowledgement Footer",
+			"type": "Component"
+		},
+		"description": "Acknowledgment of Country footer to used at the bottom of all pages",
+		"element": "<code>&lt;div class=\"act-flex\"&gt;</code>",
+		"hierarchy": "Footers must always be rendered inside a <code>&lt;footer class=\"act-footer\"&gt;</code>",
+		"usage": "<ul><li>Always place above the Main Footer</li><li>Do not modify the colours</li></ul>",
+		"status": [
+			"production",
+			"core"
+		]
+	},
+	"F13": {
+		"details": {
+			"id": "F12",
+			"category": "👟 Footers",
+			"name": "Feedback Footer",
+			"type": "Component"
+		},
+		"description": "Used on content pages to receive feedback to help continually improve ACT pages and components",
+		"element": "<code>&lt;div class=\"act-flex\"&gt;</code>",
+		"hierarchy": "Footers must always be rendered inside a <code>&lt;footer class=\"act-footer\"&gt;</code>",
+		"usage": "<ul><li>Always place above the Acknowledgement Footer</li><li>Used on content pages</li><li>Do not modify the colours</li></ul>",
+		"status": [
+			"production",
+			"core"
+		]
+	},
+	"F20": {
+		"details": {
+			"id": "F20",
+			"category": "⌨️ Form Elements",
+			"name": "Form Structure",
+			"type": "Pattern"
+		},
+		"description": "Forms allow people to enter data for use by the application, or to configure options",
+		"element": "<code>&lt;form class=\"act-form\"&gt;</code>",
+		"status": [
+			"production",
+			"core"
+		]
+	},
+	"F21": {
+		"details": {
+			"id": "F21",
+			"category": "⌨️ Form Elements",
+			"name": "Input Fields",
+			"type": "Component"
+		},
+		"description": "Allow users to input text",
+		"element": "<code>&lt;div class=\"act-form__container\"&gt;</code>",
+		"hierarchy": "Input fields must always be rendered inside a <code>&lt;form class=\"act-form\"&gt;</code>",
+		"status": [
+			"production",
+			"core"
+		]
+	},
+	"F22": {
+		"details": {
+			"id": "F22",
+			"category": "⌨️ Form Elements",
+			"name": "Checkboxes",
+			"type": "Component"
+		},
+		"description": "To give users the ability to choose from predefined choices, or when used single to have user check/ uncheck an option",
+		"element": "<code>&lt;div class=\"act-form__container\"&gt;</code>",
+		"hierarchy": "Checkboxes must always be rendered inside a <code>&lt;form class=\"act-form\"&gt;</code>",
+		"status": [
+			"production",
+			"core"
+		]
+	},
+	"F23": {
+		"details": {
+			"id": "F23",
+			"category": "⌨️ Form Elements",
+			"name": "Dropdowns",
+			"type": "Component"
+		},
+		"description": "To give users the ability to choose from predefined choices, or when used single to have user check/ uncheck an option",
+		"element": "<code>&lt;div class=\"act-form__container\"&gt;</code>",
+		"hierarchy": "Checkboxes must always be rendered inside a <code>&lt;form class=\"act-form\"&gt;</code>",
+		"status": [
+			"production",
+			"core"
+		]
+	},
+	"F24": {
+		"details": {
+			"id": "F24",
+			"category": "⌨️ Form Elements",
+			"name": "Toggles",
+			"type": "Component"
+		},
+		"description": "To give users the ability to switch between on and off state",
+		"element": "<code>&lt;div class=\"act-form__container\"&gt;</code>",
+		"hierarchy": "Checkboxes must always be rendered inside a <code>&lt;form class=\"act-form\"&gt;</code>",
+		"status": [
+			"production",
+			"core"
+		]
+	},
+	"F25": {
+		"details": {
+			"id": "F25",
+			"category": "⌨️ Form Elements",
+			"name": "Radio Buttons",
+			"type": "Component"
+		},
+		"description": "Allow users to select a single option from a list of options",
+		"element": "<code>&lt;div class=\"act-form__container\"&gt;</code>",
+		"hierarchy": "Checkboxes must always be rendered inside a <code>&lt;form class=\"act-form\"&gt;</code>",
+		"status": [
+			"production",
+			"core"
+		]
+	},
+	"F26": {
+		"details": {
+			"id": "F26",
+			"category": "⌨️ Form Elements",
+			"name": "Progress",
+			"type": "Component"
+		},
+		"description": "To help users understand their progress of completion, normally when completing a long form. Each step must have a stage of <i>active</i>, <i>complete</i> or <i>incomplete</i>",
+		"element": "<code>&lt;div class=\"act-progress\"&gt;</code>",
+		"hierarchy": "Progress Components must always be rendered inside a Progress Group",
+		"status": [
+			"production",
+			"core"
+		]
+	},
+	"F27": {
+		"details": {
+			"id": "F27",
+			"category": "⌨️ Form Elements",
+			"name": "Checkboxes",
+			"type": "Component"
+		},
+		"description": "Allow users to input long form text, normally will spand over multiple lines",
+		"element": "<code>&lt;div class=\"act-form__container\"&gt;</code>",
+		"hierarchy": "Text areas must always be rendered inside a <code>&lt;form class=\"act-form\"&gt;</code>",
+		"status": [
+			"production",
+			"core"
+		]
+	},
+	"F28": {
+		"details": {
+			"id": "F28",
+			"category": "⌨️ Form Elements",
+			"name": "Textarea",
+			"type": "Component"
+		},
+		"description": "Allow users to input long form text, normally will expand over multiple lines",
+		"element": "<code>&lt;div class=\"act-form__container\"&gt;</code>",
+		"hierarchy": "Text areas must always be rendered inside a <code>&lt;form class=\"act-form\"&gt;</code>",
+		"status": [
+			"production",
+			"core"
+		]
+	},
+	"M11": {
+		"details": {
+			"id": "M11",
+			"category": "🃏 Multi Step",
+			"name": "Multi Step",
+			"type": "Component"
+		},
+		"description": "Used to break up a long form into multiple steps",
+		"element": "<code>&lt;div class=\"act-multi-step\"&gt;</code>",
+		"hierarchy": "",
+		"usage": "Add the <code>complete</code> class to a <code>act-multi-step__step</code> element to indicate that the step has been completed",
+		"status": [
+			"production",
+			"core"
+		]
+	},
+	"P11": {
+		"details": {
+			"id": "P11",
+			"category": "⌨️ Popups",
+			"name": "Popup",
+			"type": "Component"
+		},
+		"description": "Used to alert users by appearing over the top of other content.",
+		"status": [
+			"production",
+			"core"
+		]
+	},
+	"P12": {
+		"details": {
+			"id": "P12",
+			"category": "⌨️ Popups",
+			"name": "Cookie Consent Popup",
+			"type": "Component"
+		},
+		"description": "Used to alert users to cookie consent options over the top of other content. Rendered at bottom of viewport.",
+		"status": [
+			"production",
+			"core"
+		]
+	},
+	"P13": {
+		"details": {
+			"id": "P13",
+			"category": "⌨️ Popups",
+			"name": "Full Page Banner",
+			"type": "Component"
+		},
+		"description": "Full Page Banner used to showcase programs, promotions near the bottom of a page.",
+		"status": [
+			"production",
+			"core"
+		]
+	},
+	"PF2": {
+		"details": {
+			"id": "PF2",
+			"category": "👟 Footers",
+			"name": "All Footers",
+			"type": "Pattern"
+		},
+		"description": "Acknowledgment of Country footer to used at the bottom of all pages",
+		"element": "<code>&lt;footer class=\"act-footer\"&gt;</code>",
+		"usage": "<ul><li>Footers should always be the last elements on the page</li></ul>",
+		"status": [
+			"production",
+			"core"
+		]
+	},
+	"S11": {
+		"details": {
+			"id": "S11",
+			"category": "🔎 Search Elements",
+			"name": "Search Result",
+			"type": "Component"
+		},
+		"description": "Search results to be displayed on search results page",
+		"element": "<code>&lt;div class=\"act-search-result\"&gt;</code>",
+		"status": [
+			"production",
+			"core"
+		]
+	},
+	"S12": {
+		"details": {
+			"id": "S12",
+			"category": "🔎 Search Elements",
+			"name": "Search Bar",
+			"type": "Component"
+		},
+		"description": "Allows users to find content by inputting search terms",
+		"element": "<code>&lt;div class=\"act-search-bar\"&gt;</code>",
+		"status": [
+			"production",
+			"core"
+		]
+	},
+	"S13": {
+		"details": {
+			"id": "S13",
+			"category": "🔎 Search Elements",
+			"name": "Search Stats",
+			"type": "Component"
+		},
+		"description": "Search stats to be located underneath Search Bar on results page",
+		"element": "<code>&lt;div class=\"act-search-stats\"&gt;</code>",
+		"status": [
+			"production",
+			"core"
+		]
+	},
+	"S14": {
+		"details": {
+			"id": "S14",
+			"category": "🔎 Search Elements",
+			"name": "Search Filter",
+			"type": "Component"
+		},
+		"description": "-",
+		"element": "<code>&lt;div class=\"act-search-filter\"&gt;</code>",
+		"status": [
+			"production",
+			"core"
+		]
+	},
+	"T11": {
+		"details": {
+			"id": "T11",
+			"category": "🏓 Tables",
+			"name": "Table",
+			"type": "Component"
+		},
+		"description": "Used to structure data in columns and rows, helpful when a user needs to compare a large amount of content",
+		"element": "<code>&lt;table class=\"act-table\"&gt;</code>",
+		"hierarchy": "Tables must always be rendered inside a <code>&lt;div class=\"act-table-container\"&gt;</code>",
+		"usage": "<ul><li>Only use tables as neccesary</li><li>Tables to scroll horizontally on smaller screens</li><li>Column widths can be adjusted to best fit content</li><li>Avoid using tables where possible, only use when necessary to present data</li></ul>",
+		"status": [
+			"production",
+			"core"
+		]
+	},
+	"T21": {
+		"details": {
+			"id": "T21",
+			"category": "🔖 Tabs",
+			"name": "Tabs",
+			"type": "Component"
+		},
+		"description": "Tabs are used to help organise content, between panels to reduce page length",
+		"element": "<code>&lt;div class=\"act-tabs-container\"&gt;</code>",
+		"status": [
+			"production",
+			"core"
+		]
+	},
+	"T31": {
+		"details": {
+			"id": "T31",
+			"category": "🏷️ Tags",
+			"name": "Tags",
+			"type": "Component"
+		},
+		"description": "Used for tagging content to help categorise",
+		"element": "<code>&lt;div class=\"act-tags\"&gt;</code>",
+		"status": [
+			"production",
+			"core"
+		]
+	},
+	"T42": {
+		"details": {
+			"id": "T42",
+			"category": "Tooltips",
+			"name": "Utility Set",
+			"type": "Component"
+		},
+		"description": "Click over a component to display a utility tooltip - for example, click on a Share button and display a list of Share options such as Social Media and Email",
+		"element": "<code>&lt;table class=\"act-utility-set\"&gt;</code>",
+		"hierarchy": "",
+		"usage": "Apply the .active class to <code>&lt;table class=\"act-utility-set\"&gt;</code> to display the utility set",
+		"status": [
+			"production",
+			"core"
+		]
+	},
+	"W11": {
+		"details": {
+			"id": "W11",
+			"category": "🌎 Wayfinding",
+			"name": "Masthead",
+			"type": "Component"
+		},
+		"description": "Used as a place for secondary links and to show unity within ACT websites",
+		"element": "<code>&lt;div class=\"act-masthead\"&gt;</code>",
+		"usage": "<ul><li>Max limit of 1 button</li><li>Max limit of 3 links</li><li>Skip to content button to be hidden, only being shown here  as a visual example</li><li>Do not change the background colour</li><li>Can change the button colour based on it’s needs</li></ul>",
+		"status": [
+			"production",
+			"core"
+		]
+	},
+	"W12": {
+		"details": {
+			"id": "W12",
+			"category": "🌎 Wayfinding",
+			"name": "Nav Bar",
+			"type": "Component"
+		},
+		"description": "Used to help users navigate the website through the menu button",
+		"element": "<code>&lt;div class=\"act-navbar\"&gt;</code>",
+		"usage": "<ul><li>ACT Government logo to link to ‘https://www.act.gov.au/’</li><li>Secondary logo to link to current websites homepage e.g. Access Canberra logo in this example</li><li>Default Menu Button purple, can be changed with approval from design system team</li><li>Ideally, the main navigation of your website should only include links to pages within your site, while links to external websites should be placed within the content pages.</li></ul>",
+		"status": [
+			"production",
+			"core"
+		]
+	},
+	"W13": {
+		"details": {
+			"id": "W13",
+			"category": "🌎 Wayfinding",
+			"name": "Sidebar",
+			"type": "Component"
+		},
+		"description": "Used for linking between related content on the side of content pages",
+		"element": "<code>&lt;div class=\"act-sidebar\"&gt;</code>",
+		"status": [
+			"production",
+			"core"
+		]
+	},
+	"W14": {
+		"details": {
+			"id": "W14",
+			"category": "🌎 Wayfinding",
+			"name": "Pagination",
+			"type": "Component"
+		},
+		"description": "Used for splitting information across multiple pages, instead of showing all content on one very long page",
+		"element": "<code>&lt;div class=\"act-pagination\"&gt;</code>",
+		"status": [
+			"production",
+			"core"
+		]
+	},
+	"W15": {
+		"details": {
+			"id": "W15",
+			"category": "🌎 Wayfinding",
+			"name": "Mega Menu",
+			"type": "Component"
+		},
+		"description": "Used to help users navigate the website via a collection of links. You can preview an example of the mega menu in action in the Toolkit section of this page.",
+		"element": "<code>&lt;div class=\"act-megamenu\"&gt;</code>",
+		"usage": "<ul><li>Do not change the colour of this component</li></ul>",
+		"status": [
+			"production",
+			"core"
+		]
+	},
+	"W16": {
+		"details": {
+			"id": "W16",
+			"category": "🌎 Wayfinding",
+			"name": "Breadcrumbs",
+			"type": "Component"
+		},
+		"description": "A list of links, showing current page in the website hierarchy, used to help the user navigate a website",
+		"element": "<code>&lt;div class=\"act-breadcrumbs\"&gt;</code>",
+		"usage": "<ul><li>Split breadcrumbs over multiple rows when it becomes too long</li></ul>",
+		"status": [
+			"production",
+			"core"
+		]
+	},
+	"W17": {
+		"details": {
+			"id": "W17",
+			"category": "🌎 Wayfinding",
+			"name": "Index",
+			"type": "Component"
+		},
+		"description": "Used for showing alphabetical index links",
+		"element": "<code>&lt;div class=\"act-index\"&gt;</code>",
+		"restrictions": "This component can only be used by ACT Health",
+		"status": [
+			"production",
+			"core"
+		]
+	}
+}

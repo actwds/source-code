@@ -1,0 +1,264 @@
+.act-button-group {
+	display: grid;
+	gap: 1.25rem;
+	grid-auto-flow: column;
+	@include devices(mobile) {
+		grid-auto-flow: row;
+		width: 100%;
+		gap: 0.5rem;
+		.act-button {
+			width: 100%;
+		}
+	}
+}
+
+.act-button {
+	align-items: center;
+	border: 2px solid transparent;
+	border-radius: 0px;
+	box-shadow: none;
+	cursor: pointer;
+	display: inline-flex;
+	font-size: $act-font-size__desktop-h6;
+	font-weight: $act-font-weight__bold;
+	justify-content: center;
+	line-height: $act-line-height__110;
+	margin: map-get($act-space, "desktop-1");
+	text-decoration: none;
+	outline: none;
+	width: fit-content;
+	&:only-child {
+		margin: map-get($act-space, "desktop-1") 0px;
+	}
+	i {
+		display: none;
+		height: 20px;
+		max-height: 20px;
+		max-width: 20px;
+		min-height: 20px;
+		min-width: 20px;
+		width: 20px;
+	}
+	/* Button Sizes */
+	&__normal,
+	&__default {
+		height: 56px;
+		padding: map-get($act-space, "desktop-2") map-get($act-space, "desktop-3");
+	}
+	&__xsmall {
+		height: 24px;
+		font-size: calc($act-font-size__desktop-p-small - 1px);
+		padding: map-get($act-space, "desktop-0") map-get($act-space, "desktop-2");
+		i {
+			height: 12px;
+			max-height: 12px;
+			max-width: 12px;
+			min-height: 12px;
+			min-width: 12px;
+			width: 12px;
+		}
+	}
+	&__small {
+		height: 40px;
+		padding: map-get($act-space, "desktop-1");
+	}
+	&__large {
+		height: 72px;
+		padding: map-get($act-space, "desktop-3") map-get($act-space, "desktop-4");
+	}
+	/* Button Types */
+	&__primary {
+		background-color: $act-colour__purple;
+		color: $act-colour__white;
+		i {
+			color: $act-colour__white;
+		}
+		&:hover,
+		&-hover {
+			background-color: $act-colour__violet;
+			color: $act-colour__white;
+		}
+		&:active,
+		&-active {
+			background-color: $act-colour__violet;
+			color: $act-colour__white;
+		}
+		&:focus,
+		&-focus {
+			border-color: $act-colour__purple;
+			box-shadow: 0 0 0 2px $act-colour__white, 0 0 0 4px $act-colour__purple;
+			i {
+				color: $act-colour__white;
+			}
+		}
+		&:disabled,
+		&-disabled {
+			background-color: $act-colour__middle-grey;
+			pointer-events: none;
+		}
+	}
+	&__secondary {
+		background-color: $act-colour__white;
+		border: 2px solid $act-colour__purple;
+		color: $act-colour__purple;
+		&:hover,
+		&-hover {
+			background-color: $act-colour__light-purple;
+			border-color: $act-colour__violet;
+			color: $act-colour__violet;
+			i {
+				color: inherit;
+			}
+		}
+		&:active,
+		&-active {
+			background-color: $act-colour__light-purple;
+			border-color: $act-colour__violet;
+			color: $act-colour__violet;
+			i {
+				color: $act-colour__violet;
+			}
+		}
+		&:focus,
+		&-focus {
+			border-color: $act-colour__purple;
+			box-shadow: 0 0 0 2px $act-colour__white, 0 0 0 4px $act-colour__purple;
+			i {
+				color: $act-colour__purple;
+			}
+		}
+		&:disabled,
+		&-disabled {
+			border-color: $act-colour__middle-grey;
+			color: $act-colour__middle-grey;
+			pointer-events: none;
+			i {
+				color: $act-colour__middle-grey;
+			}
+		}
+	}
+	&__tertiary {
+		background-color: $act-colour__white;
+		border: 2px solid $act-colour__white;
+		color: $act-colour__purple;
+		i {
+			color: $act-colour__purple;
+		}
+		&:hover,
+		&-hover {
+			border-color: $act-colour__white;
+			color: $act-colour__violet;
+			i {
+				color: $act-colour__violet;
+			}
+		}
+		&:active,
+		&-active {
+			border-color: $act-colour__white;
+			color: $act-colour__violet;
+			i {
+				color: $act-colour__violet;
+			}
+		}
+		&:focus,
+		&-focus {
+			border-color: $act-colour__white;
+			box-shadow: 0 0 0 2px $act-colour__white, 0 0 0 4px $act-colour__purple;
+			i {
+				color: $act-colour__purple;
+			}
+		}
+		&:disabled,
+		&-disabled {
+			border-color: $act-colour__white;
+			color: $act-colour__middle-grey;
+			pointer-events: none;
+			i {
+				color: $act-colour__middle-grey;
+			}
+		}
+	}
+	/* Link Types */
+	&__inline {
+		background-color: transparent;
+		color: $act-colour__purple;
+		height: unset;
+		display: inline;
+		margin: 0px !important;
+		padding: 0px !important;
+		i {
+			display: none !important;
+		}
+		&:hover,
+		&-hover {
+			border-color: transparent;
+			color: $act-colour__plum-purple;
+		}
+		&:active,
+		&-active {
+			color: $act-colour__medium-purple;
+		}
+		&:focus,
+		&-focus {
+			border: 2px solid $act-colour__violet;
+			color: $act-colour__violet;
+		}
+		&:disabled,
+		&-disabled {
+			color: $act-colour__middle-grey;
+		}
+		/* White Link */
+		&-white {
+			color: $act-colour__white;
+		}
+		/* Small Link */
+		&-small {
+			font-size: 10px;
+			font-weight: $act-font-weight__semibold;
+			line-height: $act-line-height__100;
+			text-decoration: none;
+			padding: map-get($act-space, "desktop-1") !important;
+			&:hover,
+			&-hover {
+				color: $act-colour__middle-grey;
+			}
+			@include devices(mobile) {
+				padding: map-get($act-space, "desktop-0") !important;
+			}
+			@include devices(tablet) {
+				padding: map-get($act-space, "desktop-0") !important;
+			}
+			@include devices(desktop) {
+				padding: map-get($act-space, "desktop-1") !important;
+			}
+		}
+	}
+	/* Icon Types */
+	&__no-icon {
+		i {
+			display: none !important;
+		}
+	}
+	&__icon-left {
+		flex-direction: row-reverse;
+		i {
+			color: inherit;
+			display: flex;
+			margin-right: map-get($act-space, "desktop-1");
+		}
+	}
+	&__icon-right {
+		flex-direction: row;
+		i {
+			color: inherit;
+			display: flex;
+			margin-left: map-get($act-space, "desktop-1");
+		}
+	}
+	/* Back To Top */
+	&__back-to-top {
+		i {
+			margin-left: 0px;
+		}
+	}
+}

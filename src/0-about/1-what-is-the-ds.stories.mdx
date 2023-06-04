@@ -1,0 +1,113 @@
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { linkTo } from "@storybook/addon-links";
+import Masthead from "../_docs/masthead";
+import AoC from "../_docs/aoc";
+import Footer from "../_docs/footer";
+import LinkTo from "@storybook/addon-links/react";
+
+<Meta
+	title="About/What is the Design System"
+	parameters={{
+		previewTabs: {
+			canvas: { hidden: true },
+			"storybook/docs/panel": { hidden: true },
+		},
+	}}
+/>
+
+<div className="act-docs-container">
+	<Masthead />
+	<main className="act-body">
+		<div className="act-flex act-flex-light-purple">
+			<div className="act-flex__container act-flex__container-padding-trim">
+				<div className="act-flex__grid">
+					<div className="act-flex__row">
+						<div className="act-col__cw-12">
+							<div className="act-box">
+								<div className="act-breadcrumbs">
+									<ul className="act-breadcrumbs__container">
+										<li className="act-breadcrumbs__crumb act-h6">
+											<LinkTo className="act-breadcrumbs__crumb__link" kind="about-about--page">
+												Design System <i className="fa-solid fa-angle-right"></i>
+											</LinkTo>
+										</li>
+										<li className="act-breadcrumbs__crumb act-h6">
+											<LinkTo className="act-breadcrumbs__crumb__link" kind="about-what-is-the-design-system--page">
+												What is the Design System <i className="fa-solid fa-angle-right"></i>
+											</LinkTo>
+										</li>
+									</ul>
+								</div>
+								<h1>What is the Design System</h1>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div className="act-flex">
+			<div className="act-flex__container">
+				<div className="act-flex__grid">
+					<div className="act-flex__row">
+						<div className="act-col__cw-12">
+							<div className="act-box">
+								<p>
+									The Design System is a single source of truth for the design and development of ACT Government websites and digital products and services. It works alongside the
+									ACT Government{" "}
+									<a href="https://actgovernment.sharepoint.com/sites/extranet-DesignPractice" target="_blank" title="ACT Design Practice">
+										Design Practice
+									</a>{" "}
+									and{" "}
+									<a href="https://actgovernment.sharepoint.com/sites/intranet-Communications/SitePages/Content-Playbook.aspx" target="_blank" title="ACT Content Playbook">
+										Content Playbook
+									</a>{" "}
+									and helps teams build products and services that meet user needs and deliver great user experiences.
+								</p>
+								<p>
+									Our design guidelines and development documentation guide teams on how to use the Design System to deliver simple and consistent solutions. Building from a
+									single, best practice base ensures consistency with how our users engage and interact with ACT Government digitally. Resulting in easy-to-use products and
+									services.
+								</p>
+								<h2>Acknowledgement</h2>
+								<p>
+									We acknowledge the advice and guidance provided by the NSW Government Digital{" "}
+									<a href="https://www.digital.nsw.gov.au/delivery/digital-service-toolkit/design-system" target="_blank" title="NSW Design System">
+										Design System
+									</a>{" "}
+									and team which has informed the development of the ACT Government Web Design System.
+								</p>
+								<h2>Benefits</h2>
+								<h4>Build faster and at scale</h4>
+								<p>
+									The design system saves time and money with an ecosystem that is made to work together. It features a library of styles, components and templates, as well as
+									advice and guidance for how and when to use each one.
+								</p>
+								<h4>Out-of-the-box brand and accessibility compliance</h4>
+								<p>
+									Understand, apply and meet brand standards, with features required for brand compliance indicated with a CORE tag. Supporting the ACT Government brand guidelines,
+									the design system can be used by, and bring value to any brand classification. All components and styles are also built and tested to WCAG 2.1 AA standards.
+								</p>
+								<h4>Consistent code and design language</h4>
+								<p>
+									When using our foundations, components and themes, get access to fully synchronised UI and code kits for both designers and developers. This means everyone uses
+									the same atomic components, with extended guidance also bridging the gap to help avoid design drift.
+								</p>
+								<h4>Support</h4>
+								<p>
+									If you have any questions or would like to chat to us further about using the Design System, contact us at{" "}
+									<a href="mailto:CMTEDDWebmaster@act.gov.au" target="_blank" title="CMTEDDWebmaster@act.gov.au">
+										CMTEDDWebmaster@act.gov.au
+									</a>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<footer className="act-footer">
+		<AoC />
+		<Footer />
+	</footer>
+</div>

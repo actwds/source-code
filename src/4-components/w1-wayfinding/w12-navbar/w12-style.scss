@@ -1,0 +1,125 @@
+.act-navbar {
+	background-color: $act-colour__white;
+	display: flex;
+	width: $act-page-full-width;
+	&__container {
+		align-items: center;
+		display: flex;
+		font-size: $act-font-size__desktop-p-xsmall;
+		font-weight: $act-font-weight__semibold;
+		justify-content: space-between;
+		line-height: $act-line-height__100;
+		padding: 0px 0px 0px map-get($act-space, "desktop-2");
+		width: 100%;
+	}
+	&__content {
+		align-items: center;
+		display: flex;
+		height: 100%;
+		&:first-of-type {
+			justify-content: flex-start;
+			padding: map-get($act-space, "desktop-2") 0px;
+		}
+		@include devices(mobile) {
+			&:first-of-type {
+				padding: map-get($act-space, "desktop-1") 0px;
+			}
+		}
+		&:last-of-type {
+			justify-content: flex-end;
+			padding: 0px;
+		}
+	}
+	&__search {
+		height: 100%;
+
+		&__container {
+			align-items: center;
+			border: 2px solid $act-colour__white;
+			cursor: pointer;
+			display: flex;
+			justify-content: center;
+			// height: 100%;
+			margin: map-get($act-space, "desktop-2");
+			&.active,
+			&:active,
+			&:focus,
+			&:hover {
+				border: 2px solid $act-colour__middle-grey;
+			}
+			input {
+				border: none;
+				outline: none;
+				font-size: $act-font-size__desktop-p;
+				font-weight: $act-font-weight__semibold;
+				padding: map-get($act-space, "desktop-2");
+				width: 100px;
+				&.active,
+				&:active,
+				&:focus {
+					border: none;
+					outline: none;
+					width: 200px !important;
+				}
+			}
+			i {
+				align-items: center;
+				border-radius: 25%;
+				display: flex;
+				height: map-get($act-space, "desktop-3");
+				justify-content: center;
+				margin-left: map-get($act-space, "desktop-1");
+				padding: map-get($act-space, "desktop-2");
+				width: map-get($act-space, "desktop-3");
+			}
+		}
+		@include devices(mobile) {
+			padding: 0px;
+			&__container {
+				i {
+					margin-left: 0px;
+				}
+			}
+			&__text {
+				display: none;
+			}
+		}
+	}
+	&__menu {
+		height: 100%;
+		cursor: pointer;
+		&__container {
+			align-items: center;
+			background: $act-colour__purple;
+			color: $act-colour__white;
+			display: flex;
+			justify-content: center;
+			height: 100%;
+			padding: 0px map-get($act-space, "desktop-2");
+			i {
+				align-items: center;
+				border-radius: 25%;
+				display: flex;
+				height: map-get($act-space, "desktop-3");
+				justify-content: center;
+				margin-left: map-get($act-space, "desktop-1");
+				width: map-get($act-space, "desktop-3");
+			}
+			&:hover,
+			&-hover {
+				background-color: $act-colour__indigo;
+			}
+		}
+		@include devices(mobile) {
+			&__container {
+				background: $act-colour__purple;
+				i {
+					margin-left: 0px;
+				}
+			}
+			&__text {
+				display: none;
+			}
+		}
+	}
+}

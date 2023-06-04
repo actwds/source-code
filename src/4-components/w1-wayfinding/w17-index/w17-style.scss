@@ -1,0 +1,33 @@
+.act-index {
+	align-items: center;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: stretch;
+	.act-index-marker {
+		align-items: center;
+		background-color: $act-colour__light-grey;
+		cursor: pointer;
+		display: flex;
+		flex-grow: 1;
+		font-size: $act-font-size__desktop-p-small;
+		font-weight: $act-font-weight__semibold;
+		height: $act-space__desktop-5;
+		justify-content: center;
+		margin: 0px calc(map-get($act-space, "desktop-0") / 1);
+		min-width: $act-space__desktop-3;
+		width: fit-content;
+		&:hover {
+			background-color: $act-colour__middle-grey;
+			color: $act-colour__white;
+		}
+		&__current {
+			background-color: $act-colour__health-light-blue;
+			color: $act-colour__white;
+			&:hover {
+				background-color: $act-colour__health-light-blue;
+				color: $act-colour__white;
+			}
+		}
+	}
+}

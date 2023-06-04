@@ -1,0 +1,168 @@
+import { Meta, ColorPalette, ColorItem } from "@storybook/addon-docs";
+import { themes, ThemeProvider, convert, ensure } from "@storybook/theming";
+import Masthead from "../../_docs/masthead";
+import AoC from "../../_docs/aoc";
+import Footer from "../../_docs/footer";
+import LinkTo from "@storybook/addon-links/react";
+
+<Meta
+	title="Components/Content/Guidance"
+	parameters={{
+		previewTabs: {
+			canvas: { hidden: true },
+			"storybook/docs/panel": { hidden: true },
+		},
+	}}
+/>
+
+<div className="act-docs-container">
+	<Masthead />
+	<main className="act-body">
+		<div className="act-flex act-flex-light-purple">
+			<div className="act-flex__container act-flex__container-padding-trim">
+				<div className="act-flex__grid">
+					<div className="act-flex__row">
+						<div className="act-col__cw-12">
+							<div className="act-box">
+								<div className="act-breadcrumbs">
+									<ul className="act-breadcrumbs__container">
+										<li className="act-breadcrumbs__crumb act-h6">
+											<LinkTo className="act-breadcrumbs__crumb__link" kind="about-about--page">
+												Design System <i className="fa-solid fa-angle-right"></i>
+											</LinkTo>
+										</li>
+										<li className="act-breadcrumbs__crumb act-h6">
+											<LinkTo className="act-breadcrumbs__crumb__link" kind="components-overview--page">
+												Components <i className="fa-solid fa-angle-right"></i>
+											</LinkTo>
+										</li>
+										<li className="act-breadcrumbs__crumb act-h6">
+											<LinkTo className="act-breadcrumbs__crumb__link" kind="components-overview--pageoverview--page">
+												Content <i className="fa-solid fa-angle-right"></i>
+											</LinkTo>
+										</li>
+									</ul>
+								</div>
+								<h1>Content</h1>
+								<p>Additional visual components for use in blocks of content.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div className="act-flex">
+			<div className="act-flex__container">
+				<div className="act-flex__grid">
+					<div className="act-flex__row">
+						<div className="act-col__cw-12">
+							<div className="act-box">
+								<h3>Breaker</h3>
+								<p>The breaker component can be used on content pages to help visually break up the page as well as calling out important information.</p>
+								<div className="act-img">
+									<img src="/images/breaker_example.png" alt="Illustration of how a breaker renders within the design system" />
+									<div className="act-img__description act-p-small">
+										<i class="fa-solid fa-circle-info"></i> Illustration of how a breaker renders within the design system
+									</div>
+								</div>
+								<h4>Do</h4>
+								<ul>
+									<li>Keep breakers short and succinct, one sentence length</li>
+									<li>Use clear, concise and relevant language</li>
+									<li>use with consistent site theme colours </li>
+									<li>here</li>
+								</ul>
+								<h4>Do not</h4>
+								<ul>
+									<li>Avoid using too many on a single page</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div className="act-flex__row">
+						<div className="act-col__cw-12">
+							<div className="act-box">
+								<h3>Key message</h3>
+								<p>
+									The key message component can be used at the start of content pages to summarise the key points to help users find information quickly. They are designed to
+									capture the attention of the user in a deliberately way on a specific page.
+								</p>
+								<h4>Do</h4>
+								<ul>
+									<li>Keep key messages short and succinct (should be no longer than one sentence and a minimal number of dot points)</li>
+									<li>use clear, concise easy to understand language, to minimise cognitive load</li>
+									<li>use with consistent site theme colours </li>
+									<li>reserve the use of the critical alert for circumstances which warrant it</li>
+								</ul>
+								<h4>Do not</h4>
+								<ul>
+									<li>Do not stack multiple in key messages, limit of one per page.</li>
+									<li>Do not use for time sensitive alerts. In this instance use the In page alert.</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div className="act-flex__row">
+						<div className="act-col__cw-12">
+							<div className="act-box">
+								<h3>Links List</h3>
+								<p>Link lists surface and group related content.</p>
+								<h4>Do</h4>
+								<ul>
+									<li>keep links short and intuitive for users to scan</li>
+									<li>use the writing guide to ensure you keep the tone active.</li>
+								</ul>
+								<h4>Do not use:</h4>
+								<ul>
+									<li>for pages that aren't related as this is likely to confuse users.</li>
+									<li>in a transactional service or a form</li>
+									<li>to link to content on the same page, consider in-page navigation</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div className="act-flex__row">
+						<div className="act-col__cw-12">
+							<div className="act-box">
+								<h3>Quote</h3>
+								<p>Quotes are used on content pages to help visually break up the page as well as calling out important information.</p>
+								<h4>Do</h4>
+								<ul>
+									<li>Do not stack quotes</li>
+									<li>Limit of one quote per paragraph</li>
+								</ul>
+								<h4>Do not</h4>
+								<ul>
+									<li>Avoid using too many on the same content page</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div className="act-flex__row">
+						<div className="act-col__cw-12">
+							<div className="act-box">
+								<h3>Service Card</h3>
+								<p>Service cards are used to display up to date information for helpful services.</p>
+								<p>It is recommended to use only one primary link, with a secondary link available for phone numbers or other contact information if necessary.</p>
+								<h4>Do</h4>
+								<ul>
+									<li>Desktop and tablet to use ‘large’ variant and mobile to use ‘small’ variant</li>
+									<li>Paragraph length should only be one sentence</li>
+									<li>Phone number is optional</li>
+								</ul>
+								<h4>Do not</h4>
+								<ul>
+									<li>Use too much content such as multiple paragraphs of text.</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<footer className="act-footer">
+		<AoC />
+		<Footer />
+	</footer>
+</div>

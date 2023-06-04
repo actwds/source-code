@@ -1,0 +1,32 @@
+/* ACT Design System */
+/* Design Tokens */ /* Spacing */
+/* Reference: /?path=/docs/design-spacing--page */
+
+$act-page-full-width: 100%;
+$act-page-max-width: 1248px;
+
+$act-space__desktop-0: 4px;
+$act-space__desktop-1: 8px;
+$act-space__desktop-2: 16px;
+$act-space__desktop-3: 24px;
+$act-space__desktop-4: 32px;
+$act-space__desktop-5: 48px;
+$act-space__desktop-6: 64px;
+$act-space__desktop-7: 80px;
+$act-space__desktop-8: 124px;
+$act-space__desktop-9: 168px;
+$act-space__desktop-10: 210px;
+
+$act-space: (
+	"desktop-0": $act-space__desktop-0,
+	"desktop-1": $act-space__desktop-1,
+	"desktop-2": $act-space__desktop-2,
+	"desktop-3": $act-space__desktop-3,
+	"desktop-4": $act-space__desktop-4,
+	"desktop-5": $act-space__desktop-5,
+	"desktop-6": $act-space__desktop-6,
+	"desktop-7": $act-space__desktop-7,
+	"desktop-8": $act-space__desktop-8,
+	"desktop-9": $act-space__desktop-9,
+	"desktop-10": $act-space__desktop-10,
+);

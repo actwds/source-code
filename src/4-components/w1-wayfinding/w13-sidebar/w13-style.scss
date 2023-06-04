@@ -1,0 +1,107 @@
+.act-sidebar {
+	align-items: flex-start;
+	background-color: $act-colour__light-purple;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	&__title {
+		color: $act-colour__black;
+		font-size: $act-font-size__desktop-h5;
+		font-weight: $act-font-weight__semibold;
+		padding: map-get($act-space, "desktop-2");
+		width: 100%;
+	}
+	&__item {
+		color: $act-colour__black;
+		font-size: $act-font-size__desktop-h5;
+
+		width: 100%;
+		&:active {
+			background-color: $act-colour__purple;
+			color: $act-colour__white;
+		}
+		&__summary {
+			border-top: 1px solid $act-colour__white;
+			color: $act-colour__black;
+			cursor: pointer;
+			font-size: $act-font-size__desktop-h6;
+			font-weight: $act-font-weight__semibold;
+			padding: map-get($act-space, "desktop-2");
+			width: 100%;
+			list-style: none;
+			&:hover {
+				background-color: $act-colour__medium-purple;
+				color: $act-colour__white;
+			}
+			&__selected {
+				background-color: $act-colour__purple;
+				color: $act-colour__white;
+				&:hover {
+					background-color: $act-colour__purple;
+					color: $act-colour__white;
+				}
+			}
+		}
+		&__summary::after {
+			display: inline-block;
+			width: 0;
+			height: 0;
+			border-left: 5px solid transparent;
+			border-right: 5px solid transparent;
+			border-top: 5px solid $act-colour__black;
+			margin-left: 5px;
+		}
+		&__dropdown {
+			list-style: none;
+			border-top: 1px solid $act-colour__white;
+			color: $act-colour__black;
+			cursor: pointer;
+			font-size: $act-font-size__desktop-h6;
+			font-weight: $act-font-weight__regular;
+			width: 100%;
+			margin: 0;
+			&__item {
+				padding: map-get($act-space, "desktop-2");
+				border-bottom: 1px solid $act-colour__white;
+				&:hover {
+					background-color: $act-colour__medium-purple;
+					color: $act-colour__black;
+					a {
+						color: $act-colour__black;
+					}
+				}
+			}
+			&__item:last-of-type {
+				border: none;
+			}
+			&__closed {
+				display: none;
+			}
+			&__open {
+				display: block;
+			}
+		}
+	}
+
+	//handles the custom icon for the details element
+	details {
+		summary {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
+			list-style: none;
+			user-select: none;
+		}
+		summary::-webkit-details-marker {
+			display: none;
+		}
+	}
+	details[open] > summary {
+		background-color: $act-colour__purple;
+		color: $act-colour__white;
+	}
+	details[open] > summary > .summary-chevron > svg {
+		transform: rotate(180deg);
+	}
+}

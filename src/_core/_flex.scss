@@ -1,0 +1,212 @@
+/* ACT Design System */
+/* Layout */
+/* Reference: /?path=/docs/layout-overview--page */
+
+.act-flex {
+	background-color: $act-colour__white;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: $act-page-full-width;
+	&-light-grey {
+		background-color: $act-colour__light-grey;
+		&-gradient {
+			background: linear-gradient(180deg, #dfdfdf 0%, #e6e5e5 0.01%, #f0f0f0 100%);
+			background-color: linear-gradient(180deg, #dfdfdf 0%, #e6e5e5 0.01%, #f0f0f0 100%);
+		}
+	}
+	&-light-purple {
+		background-color: $act-colour__light-purple;
+	}
+	&-purple {
+		background-color: $act-colour__purple;
+		color: $act-colour__white;
+	}
+	&-middle-dark-grey {
+		background-color: $act-colour__middle-dark-grey;
+		color: $act-colour__white;
+		&:last-of-type {
+			border-top: 1px solid $act-colour__light-grey;
+		}
+	}
+	&-violet {
+		background-color: $act-colour__violet;
+		color: $act-colour__white;
+	}
+	&__container {
+		display: flex;
+		justify-content: center;
+		width: $act-page-full-width;
+		@include devices(mobile) {
+			padding: map-get($act-space, "desktop-3") map-get($act-space, "desktop-1");
+		}
+		@include devices(tablet) {
+			padding: map-get($act-space, "desktop-4") map-get($act-space, "desktop-2");
+		}
+		@include devices(desktop) {
+			padding: map-get($act-space, "desktop-5") map-get($act-space, "desktop-5");
+		}
+		&-padding-trim {
+			@include devices(mobile) {
+				padding: 0px map-get($act-space, "desktop-1");
+			}
+			@include devices(tablet) {
+				padding: 0px map-get($act-space, "desktop-2");
+			}
+			@include devices(desktop) {
+				padding: 0px map-get($act-space, "desktop-5");
+			}
+		}
+	}
+	&__grid {
+		align-items: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		max-width: $act-page-max-width;
+		width: $act-page-full-width;
+	}
+	&__row {
+		align-items: flex-start;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: flex-start;
+		width: 100%;
+	}
+	.act-col {
+		flex-grow: 1;
+		&__cw-2 {
+			/* 2 Column */ /* 16.666% */ /* 50/33/16 */
+			@include devices(mobile) {
+				max-width: 50%;
+				width: 50%;
+			}
+			@include devices(tablet) {
+				max-width: 33.333%;
+				width: 33.333%;
+			}
+			@include devices(desktop) {
+				max-width: 16.666%;
+				width: 16.666%;
+			}
+		}
+		&__cw-3 {
+			/* 3 Column */ /* 25% */ /* 100/50/25 */
+			@include devices(mobile) {
+				max-width: 100%;
+				width: 100%;
+			}
+			@include devices(tablet) {
+				max-width: 50%;
+				width: 50%;
+			}
+			@include devices(desktop) {
+				max-width: 25%;
+				width: 25%;
+			}
+		}
+		&__cw-4 {
+			/* 4 Column */ /* 33.333% */ /* 100/33/33 */
+			@include devices(mobile) {
+				max-width: 100%;
+				width: 100%;
+			}
+			@include devices(tablet) {
+				max-width: 33.333%;
+				width: 33.333%;
+			}
+			@include devices(desktop) {
+				max-width: 33.333%;
+				width: 33.333%;
+			}
+		}
+		&__cw-6 {
+			/* 6 Column */ /* 50% */ /* 100/50/50 */
+			@include devices(mobile) {
+				max-width: 100%;
+				width: 100%;
+			}
+			@include devices(tablet) {
+				max-width: 50%;
+				width: 50%;
+			}
+			@include devices(desktop) {
+				max-width: 50%;
+				width: 50%;
+			}
+		}
+		&__cw-8 {
+			/* 8 Column */ /* 66.666% */ /* 100/66/66 */
+			@include devices(mobile) {
+				max-width: 100%;
+				width: 100%;
+			}
+			@include devices(tablet) {
+				max-width: 66.666%;
+				width: 66.666%;
+			}
+			@include devices(desktop) {
+				max-width: 66.666%;
+				width: 66.666%;
+			}
+		}
+		&__cw-9 {
+			/* 9 Column */ /* 75% */ /* 100/100/75 */
+			@include devices(mobile) {
+				max-width: 100%;
+				width: 100%;
+			}
+			@include devices(tablet) {
+				max-width: 100%;
+				width: 100%;
+			}
+			@include devices(desktop) {
+				max-width: 75%;
+				width: 75%;
+			}
+		}
+		&__cw-12 {
+			/* 12 Column */ /* 100% */ /* 100/100/100 */
+			@include devices(mobile) {
+				max-width: 100%;
+				width: 100%;
+			}
+			@include devices(tablet) {
+				max-width: 100%;
+				width: 100%;
+			}
+			@include devices(desktop) {
+				max-width: 100%;
+				width: 100%;
+			}
+		}
+	}
+	.act-box {
+		@include devices(mobile) {
+			margin: map-get($act-space, "desktop-0");
+			padding: map-get($act-space, "desktop-0");
+		}
+		@include devices(tablet) {
+			margin: map-get($act-space, "desktop-1");
+			padding: map-get($act-space, "desktop-1");
+		}
+		@include devices(desktop) {
+			margin: map-get($act-space, "desktop-2");
+			padding: map-get($act-space, "desktop-2");
+		}
+	}
+	&__demo {
+		[class*="__row"] {
+			border: 1px solid black;
+		}
+		[class*="act-col"] {
+			background-color: $act-colour__light-grey;
+			border: 1px solid $act-colour__green;
+		}
+		[class*="act-box"] {
+			background-color: $act-colour__middle-grey;
+			border: 1px solid black;
+		}
+	}
+}

@@ -1,0 +1,67 @@
+/* ACT Design System */
+/* Design Tokens */ /* Colours */
+/* Reference: /?path=/docs/design-colours--page */
+
+/* Variables */
+$act-colour__azure: #ecfdff;
+$act-colour__black: #111111;
+$act-colour__blue-crayola: #01cee8;
+$act-colour__green: #098660;
+$act-colour__grey: #777777;
+$act-colour__indigo: #311c6a;
+$act-colour__light-green: #e7fff8;
+$act-colour__light-grey: #f6f6f6;
+$act-colour__light-purple: #f4f2fa;
+$act-colour__medium-purple: #9a78f2;
+$act-colour__middle-grey: #adadad;
+$act-colour__middle-dark-grey: #4b4b4b;
+$act-colour__misty-rose: #ffe9eb;
+$act-colour__old-lace: #fff6e9;
+$act-colour__purple: #472d8c;
+$act-colour__plum-purple: #6042ae;
+$act-colour__red: #ba2133;
+$act-colour__violet: #1e0f48;
+$act-colour__white: #ffffff;
+$act-colour__yellow: #f2c94c;
+$act-colour__yellow-orange: #ff9500;
+
+$act-colour__region-belconnen: #377e7a;
+$act-colour__region-gungahlin: #90a630;
+$act-colour__region-innercity: #008fc5;
+$act-colour__region-tuggeranong: #c6b30b;
+$act-colour__region-woden: #f15f50;
+
+$act-colour__district-inner-north: $act-colour__region-innercity;
+$act-colour__district-inner-south: #004868;
+$act-colour__district-molonglo-valley: #93171b;
+$act-colour__district-weston-creek: #f14c76;
+$act-colour__district-woden: $act-colour__region-woden;
+
+$act-colour__health-dark-blue: #2c4eab;
+$act-colour__health-light-blue: #0076c8;
+
+/* Map */
+$act-colour: (
+	"black": $act-colour__black,
+	"district-inner-north": $act-colour__district-inner-north,
+	"district-inner-south": $act-colour__district-inner-south,
+	"district-molonglo-valley": $act-colour__district-molonglo-valley,
+	"district-weston-creek": $act-colour__district-weston-creek,
+	"district-woden": $act-colour__district-woden,
+	"green": $act-colour__green,
+	"grey": $act-colour__grey,
+	"health-dark-blue": $act-colour__health-dark-blue,
+	"health-light-blue": $act-colour__health-light-blue,
+	"light-grey": $act-colour__light-grey,
+	"light-purple": $act-colour__light-purple,
+	"middle-grey": $act-colour__middle-grey,
+	"purple": $act-colour__purple,
+	"red": $act-colour__red,
+	"region-belconnen": $act-colour__region-belconnen,
+	"region-gungahlin": $act-colour__region-gungahlin,
+	"region-innercity": $act-colour__region-innercity,
+	"region-tuggeranong": $act-colour__region-tuggeranong,
+	"region-woden": $act-colour__region-woden,
+	"white": $act-colour__white,
+	"yellow": $act-colour__yellow,
+);

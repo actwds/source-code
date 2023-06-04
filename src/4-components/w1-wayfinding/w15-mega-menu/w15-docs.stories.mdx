@@ -1,0 +1,88 @@
+import { Meta, ColorPalette, ColorItem } from "@storybook/addon-docs";
+import { themes, ThemeProvider, convert, ensure } from "@storybook/theming";
+import Masthead from "../../../_docs/masthead";
+import AoC from "../../../_docs/aoc";
+import Footer from "../../../_docs/footer";
+import LinkTo from "@storybook/addon-links/react";
+
+<Meta
+	title="Components/Wayfinding/Mega Menu/Guidance"
+	parameters={{
+		previewTabs: {
+			canvas: { hidden: true },
+			"storybook/docs/panel": { hidden: true },
+		},
+	}}
+/>
+
+<div className="act-docs-container">
+	<Masthead />
+	<main className="act-body">
+		<div className="act-flex act-flex-light-purple">
+			<div className="act-flex__container act-flex__container-padding-trim">
+				<div className="act-flex__grid">
+					<div className="act-flex__row">
+						<div className="act-col__cw-12">
+							<div className="act-box">
+								<div className="act-breadcrumbs">
+									<ul className="act-breadcrumbs__container">
+										<li className="act-breadcrumbs__crumb act-h6">
+											<LinkTo className="act-breadcrumbs__crumb__link" kind="about-about--page">
+												Design System <i className="fa-solid fa-angle-right"></i>
+											</LinkTo>
+										</li>
+										<li className="act-breadcrumbs__crumb act-h6">
+											<LinkTo className="act-breadcrumbs__crumb__link" kind="components-overview--page">
+												Components <i className="fa-solid fa-angle-right"></i>
+											</LinkTo>
+										</li>
+										<li className="act-breadcrumbs__crumb act-h6">
+											<LinkTo className="act-breadcrumbs__crumb__link" kind="components-overview--pageoverview--page">
+												Mega Menu <i className="fa-solid fa-angle-right"></i>
+											</LinkTo>
+										</li>
+									</ul>
+								</div>
+								<h1>Mega Menu</h1>
+								<p></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div className="act-flex">
+			<div className="act-flex__container">
+				<div className="act-flex__grid">
+					<div className="act-flex__row">
+						<div className="act-col__cw-12">
+							<div className="act-box">
+								<h3>Usage</h3>
+								<ul>
+									<li>
+										Must use an icon to indicate what happens when the user clicks on a link. For example, a chevron icon can be used to signify that clicking the link will open
+										another layer of the menu, an arrow icon can indicate that the link takes the user to an internal page on the website, and an upward pointing arrow can signal
+										that clicking the link will take the user to another website.{" "}
+									</li>
+									<li>Try to avoid including links that take the user to another website. The men’s main purpose should be used for browsing within the website. </li>
+									<li>Note that the menu currently supports a maximum of two levels of links. After that, users should use in-page browsing to navigate further.</li>
+									<li>Advised to try to keep the amount of level 1 links to 4-6 </li>
+									<li>Advised to try to keep the amount of levels 2 links to a max of 10 for each section</li>
+									<li>
+										Regarding colour, the menu should use dark purple and grey as the primary colours. However, if a case can be made for using a consistent, accessible shade of
+										blue to replace the purple, it may be considered.
+									</li>
+									<li>No other colour options have been explored at this stage</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<footer className="act-footer">
+		<AoC />
+		<Footer />
+	</footer>
+</div>

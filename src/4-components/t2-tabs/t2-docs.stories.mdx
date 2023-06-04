@@ -1,0 +1,95 @@
+import { Meta, ColorPalette, ColorItem } from "@storybook/addon-docs";
+import { themes, ThemeProvider, convert, ensure } from "@storybook/theming";
+import Masthead from "../../_docs/masthead";
+import AoC from "../../_docs/aoc";
+import Footer from "../../_docs/footer";
+import LinkTo from "@storybook/addon-links/react";
+
+<Meta
+	title="Components/Tabs/Guidance"
+	parameters={{
+		previewTabs: {
+			canvas: { hidden: true },
+			"storybook/docs/panel": { hidden: true },
+		},
+	}}
+/>
+
+<div className="act-docs-container">
+	<Masthead />
+	<main className="act-body">
+		<div className="act-flex act-flex-light-purple">
+			<div className="act-flex__container act-flex__container-padding-trim">
+				<div className="act-flex__grid">
+					<div className="act-flex__row">
+						<div className="act-col__cw-12">
+							<div className="act-box">
+								<div className="act-breadcrumbs">
+									<ul className="act-breadcrumbs__container">
+										<li className="act-breadcrumbs__crumb act-h6">
+											<LinkTo className="act-breadcrumbs__crumb__link" kind="about-about--page">
+												Design System <i className="fa-solid fa-angle-right"></i>
+											</LinkTo>
+										</li>
+										<li className="act-breadcrumbs__crumb act-h6">
+											<LinkTo className="act-breadcrumbs__crumb__link" kind="components-overview--page">
+												Components <i className="fa-solid fa-angle-right"></i>
+											</LinkTo>
+										</li>
+										<li className="act-breadcrumbs__crumb act-h6">
+											<LinkTo className="act-breadcrumbs__crumb__link" kind="components-overview--pageoverview--page">
+												Tabs <i className="fa-solid fa-angle-right"></i>
+											</LinkTo>
+										</li>
+									</ul>
+								</div>
+								<h1>Tabs</h1>
+								<p>Tabs allow users to switch between multiple sections or views.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div className="act-flex">
+			<div className="act-flex__container">
+				<div className="act-flex__grid">
+					<div className="act-flex__row">
+						<div className="act-col__cw-12">
+							<div className="act-box">
+								<h3>Usage</h3>
+								<p>
+									Use tabs to organise content and allow users to move between related content sections or views at the same level of hierarchy. They allow users to focus on
+									specific content whilst remaining clear on the overall context of the screen.
+								</p>
+								<h4>Do:</h4>
+								<ul>
+									<li>ensure each tab contains content that is distinct from the others</li>
+									<li>use short (preferably single word), easily scannable, unique titles</li>
+									<li>order the tabs by importance/relevance to the user, from left to right</li>
+								</ul>
+								<h4>Don't:</h4>
+								<ul>
+									<li>use tabs within tabs</li>
+									<li>display disabled tabs.</li>
+								</ul>
+								<h4>When to avoid</h4>
+								<p>Do not:</p>
+								<ul>
+									<li>use where important information can be hidden and missed</li>
+									<li>use with very short content, consider using lists or paragraphs</li>
+									<li>use for very long content where the physical tabs become lost, consider breaking content into separate pages</li>
+									<li>use for content where users are likely to want to compare information across multiple tabs</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<footer className="act-footer">
+		<AoC />
+		<Footer />
+	</footer>
+</div>

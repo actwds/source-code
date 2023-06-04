@@ -1,0 +1,86 @@
+$act-local-logo-border: 1px solid $act-colour__grey;
+$act-local-logo-space: map-get($act-space, "desktop-2");
+$act-local-logo-height-mobile: 36px;
+$act-local-logo-height-tablet: map-get($act-space, "desktop-5");
+$act-local-logo-height-desktop: map-get($act-space, "desktop-6");
+$act-local-cobrand-logo-height-mobile: calc(($act-local-logo-height-mobile/100) * 90);
+$act-local-cobrand-logo-height-tablet: calc(($act-local-logo-height-tablet/100) * 90);
+$act-local-cobrand-logo-height-desktop: calc(($act-local-logo-height-desktop/100) * 90);
+$act-local-cobrand-text-height-desktop: calc(($act-local-logo-height-desktop/100) * 68);
+
+.act-logos {
+	&__container {
+		align-items: center;
+		display: flex;
+		flex-direction: row;
+		font-size: $act-font-size__alt-tags;
+		justify-content: flex-start;
+		.act-logo {
+			border: none !important;
+			display: flex;
+			&-horizontal {
+				border: inherit;
+				img {
+					display: block;
+					@include devices(mobile) {
+						height: $act-local-logo-height-mobile;
+						max-height: $act-local-logo-height-mobile;
+					}
+					@include devices(tablet) {
+						height: $act-local-logo-height-tablet;
+						max-height: $act-local-logo-height-tablet;
+					}
+					@include devices(desktop) {
+						height: $act-local-logo-height-desktop;
+						max-height: $act-local-logo-height-desktop;
+					}
+				}
+			}
+			&-cobrand {
+				border: inherit;
+				&-logo {
+					border: inherit;
+					border-left: $act-local-logo-border;
+					margin-left: $act-local-logo-space;
+					padding-left: $act-local-logo-space;
+					img {
+						display: block;
+						@include devices(mobile) {
+							height: $act-local-cobrand-logo-height-mobile;
+							max-height: $act-local-cobrand-logo-height-mobile;
+						}
+						@include devices(tablet) {
+							height: $act-local-cobrand-logo-height-tablet;
+							max-height: $act-local-cobrand-logo-height-tablet;
+						}
+						@include devices(desktop) {
+							height: $act-local-cobrand-logo-height-desktop;
+							max-height: $act-local-cobrand-logo-height-desktop;
+						}
+					}
+				}
+				&-text {
+					align-items: center;
+					border: inherit;
+					border-left: $act-local-logo-border;
+					color: $act-colour__black;
+					display: flex;
+					font-size: $act-font-size__desktop-p-large;
+					margin-left: $act-local-logo-space;
+					min-height: $act-local-cobrand-text-height-desktop;
+					padding-left: $act-local-logo-space;
+					text-decoration: none;
+					@include devices(mobile) {
+						font-size: $act-font-size__desktop-p;
+					}
+					@include devices(tablet) {
+						font-size: $act-font-size__tablet-p;
+					}
+					img {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+}

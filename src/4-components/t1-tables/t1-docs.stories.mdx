@@ -1,0 +1,123 @@
+import { Meta, ColorPalette, ColorItem } from "@storybook/addon-docs";
+import { themes, ThemeProvider, convert, ensure } from "@storybook/theming";
+import Masthead from "../../_docs/masthead";
+import AoC from "../../_docs/aoc";
+import Footer from "../../_docs/footer";
+import LinkTo from "@storybook/addon-links/react";
+
+<Meta
+	title="Components/Tables/Guidance"
+	parameters={{
+		previewTabs: {
+			canvas: { hidden: true },
+			"storybook/docs/panel": { hidden: true },
+		},
+	}}
+/>
+
+<div className="act-docs-container">
+	<Masthead />
+	<main className="act-body">
+		<div className="act-flex act-flex-light-purple">
+			<div className="act-flex__container act-flex__container-padding-trim">
+				<div className="act-flex__grid">
+					<div className="act-flex__row">
+						<div className="act-col__cw-12">
+							<div className="act-box">
+								<div className="act-breadcrumbs">
+									<ul className="act-breadcrumbs__container">
+										<li className="act-breadcrumbs__crumb act-h6">
+											<LinkTo className="act-breadcrumbs__crumb__link" kind="about-about--page">
+												Design System <i className="fa-solid fa-angle-right"></i>
+											</LinkTo>
+										</li>
+										<li className="act-breadcrumbs__crumb act-h6">
+											<LinkTo className="act-breadcrumbs__crumb__link" kind="components-overview--page">
+												Components <i className="fa-solid fa-angle-right"></i>
+											</LinkTo>
+										</li>
+										<li className="act-breadcrumbs__crumb act-h6">
+											<LinkTo className="act-breadcrumbs__crumb__link" kind="components-overview--pageoverview--page">
+												Popups <i className="fa-solid fa-angle-right"></i>
+											</LinkTo>
+										</li>
+									</ul>
+								</div>
+								<h1>Popups</h1>
+								<p>Dialogs make a user stop and think by presenting them with a critical action or piece of information required to continue.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div className="act-flex">
+			<div className="act-flex__container">
+				<div className="act-flex__grid">
+					<div className="act-flex__row">
+						<div className="act-col__cw-12">
+							<div className="act-box">
+								<h3>Usage</h3>
+								<p>Dialogs make a user stop and think by presenting them with a critical action or piece of information required to continue.</p>
+								<p>Use dialogs to:</p>
+								<ul>
+									<li>notify a user of an immediate response required to continue</li>
+									<li>confirm a user's action when it cannot be undone</li>
+									<li>notify a user of urgent information that affects their current process</li>
+								</ul>
+								<h4>Do:</h4>
+								<ul>
+									<li>ensure the headline and call to actions are clear and reflect the action or task</li>
+									<li>clearly explain the potential consequences of the action</li>
+									<li>use danger dialogs for destructive or irreversible actions</li>
+									<li>when required, give the user an option to close the dialog with no change</li>
+									<li>use sparingly and only when necessary. Overuse can cause disruption to the user</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div className="act-flex__row">
+						<div className="act-col__cw-12">
+							<div className="act-box">
+								<h3>Types of dialogs</h3>
+								<ul>
+									<li>Transactional - alert a user to urgent information they must acknowledge before continuing</li>
+									<li>Single call to action - when a single acknowledgement is required from the user</li>
+									<li>Danger - alert a user to a destructive or irreversible action they must confirm before continuing</li>
+									<li>Dismissible - when an action does not need to be selected and the user can return to the previous state with no change</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div className="act-flex__row">
+						<div className="act-col__cw-12">
+							<div className="act-box">
+								<h3>Dismissible vs non-dismissible</h3>
+								<p>
+									Dismissible dialogs allow a user to close the dialog with no action taken via a close button in the top right corner or clicking outside the dialog container.
+									Non-dismissible dialogs do not have a close button and a user must select a call to action button in order to proceed.
+								</p>
+							</div>
+						</div>
+					</div>
+					<div className="act-flex__row">
+						<div className="act-col__cw-12">
+							<div className="act-box">
+								<h3>When to avoid</h3>
+								<ul>
+									<li>to display simple alerts, consider in-page alerts</li>
+									<li>to capture user details, consider simple forms</li>
+									<li>to display large amounts of information</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<footer className="act-footer">
+		<AoC />
+		<Footer />
+	</footer>
+</div>

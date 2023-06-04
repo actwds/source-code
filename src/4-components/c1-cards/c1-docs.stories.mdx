@@ -1,0 +1,171 @@
+import { Meta, ColorPalette, ColorItem } from "@storybook/addon-docs";
+import { themes, ThemeProvider, convert, ensure } from "@storybook/theming";
+import Masthead from "../../_docs/masthead";
+import AoC from "../../_docs/aoc";
+import Footer from "../../_docs/footer";
+import LinkTo from "@storybook/addon-links/react";
+
+<Meta
+	title="Components/Cards/Guidance"
+	parameters={{
+		previewTabs: {
+			canvas: { hidden: true },
+			"storybook/docs/panel": { hidden: true },
+		},
+	}}
+/>
+
+<div className="act-docs-container">
+	<Masthead />
+	<main className="act-body">
+		<div className="act-flex act-flex-light-purple">
+			<div className="act-flex__container act-flex__container-padding-trim">
+				<div className="act-flex__grid">
+					<div className="act-flex__row">
+						<div className="act-col__cw-12">
+							<div className="act-box">
+								<div className="act-breadcrumbs">
+									<ul className="act-breadcrumbs__container">
+										<li className="act-breadcrumbs__crumb act-h6">
+											<LinkTo className="act-breadcrumbs__crumb__link" kind="about-about--page">
+												Design System <i className="fa-solid fa-angle-right"></i>
+											</LinkTo>
+										</li>
+										<li className="act-breadcrumbs__crumb act-h6">
+											<LinkTo className="act-breadcrumbs__crumb__link" kind="components-overview--page">
+												Components <i className="fa-solid fa-angle-right"></i>
+											</LinkTo>
+										</li>
+										<li className="act-breadcrumbs__crumb act-h6">
+											<LinkTo className="act-breadcrumbs__crumb__link" kind="components-overview--pageoverview--page">
+												Cards <i className="fa-solid fa-angle-right"></i>
+											</LinkTo>
+										</li>
+									</ul>
+								</div>
+								<h1>Cards</h1>
+								<p>Cards group related content or tasks to make it easier for users to scan, read, and find information.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div className="act-flex">
+			<div className="act-flex__container">
+				<div className="act-flex__grid">
+					<div className="act-flex__row">
+						<div className="act-col__cw-12">
+							<div className="act-box">
+								<h3>Usage</h3>
+								<p>Use card layouts to present a high-level summary of content related to a single topic for users to navigate to.</p>
+								<p>Cards group information into meaningful sections, providing concise information in a condensed space to allow users to distinguish between content and find information easily. The information in a card outlines the main idea of a product, service, or piece of information, allowing a user to click through for further information.</p>
+								<p>Cards are a flexible component that can be expanded to include:</p>
+								<ul>
+									<li>Headline only</li>
+									<li>Headline and copy</li>
+									<li>Label, dates and tags</li>
+									<li>Images</li>
+									<li>Iconography</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div className="act-flex__row">
+						<div className="act-col__cw-12">
+							<div className="act-box">
+								<h3>How to use</h3>
+								<h4>Do</h4>
+								<ul>
+									<li>consider and choose text and visual elements carefully. Test your cards with minimal content and only add additional content or graphics where they give needed context to the user</li>
+									<li>use headlines that set clear expectations about the content being linked to</li>
+									<li>use one style of card per module, don't mix and match</li>
+									<li>feature one piece of information per card</li>
+									<li>outline the main idea with the minimal possible information, don't overload with information as the card links to more detail.</li>
+								</ul>
+								<h4>Don't</h4>
+								<ul>
+									<li>mix card styles within the same module</li>
+									<li>overload with information as the card links to more detail</li>
+									<li>add inline text links, the card itself is clickable and should link to a single piece of information, consider using content blocks in this instance</li>
+									<li>use a single card component on its own.</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div className="act-flex__row">
+						<div className="act-col__cw-12">
+							<div className="act-box">
+								<h3>When to avoid</h3>
+								<p>Cards should only display enough information to give a user context. Do not use a card layout:</p>
+								<ul>
+									<li>to highlight a solo piece of information, consider callout</li>
+									<li>when the content requires in-line or multiple links, consider content blocks</li>
+									<li>when a large amount of text is needed to give users context</li>
+									<li>to anchor link to content lower down on the page, consider in-page navigation.</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div className="act-flex__row">
+						<div className="act-col__cw-12">
+							<div className="act-box">
+								<h3>Building cards</h3>
+								<p>Cards are made up of foundation and content elements to show information to users. Some examples of these elements are included in our base card component.</p>
+								<p>The only mandatary foundations of a card are the container, headline and icon. All others shown are optional and can be adapted to meet user needs.</p>
+								<p><b>NOTE:</b> Do not place single clickable elements (ie. buttons) inside a card, as whole component is clickable.</p>
+								<h4>Card elements</h4>
+								<ul>
+									<li>Container: Contains the content and identifies clickable area.</li>
+									<li>Label: Indicates the category of a topic or theme when a user needs to further group content. For example, departments, agencies, or services.</li>
+									<li>Date: Indicates how old the content is when this information is important to the user.</li>
+									<li>Headline: Provides a snapshot of the content.</li>
+									<li>Description: Provides further details where the headline alone may not be sufficient.</li>
+									<li>Icon: Arrow used to indicate a clickable component.</li>
+								</ul>
+								<h4>Visual elements</h4>
+								<p>Using visual elements (such as images or icons) in cards allows for different content to stand out and provide additional context. It helps users visualise different pieces of information and quickly distinguish between content to find information easily.</p>
+								<p>Test your visual elements carefully:</p>
+								<ul>
+									<li>only use where it supports and re-enforces the content to the user</li>
+									<li>only use when they can clearly show the difference between content and can be easily identified</li>
+									<li>do not use for decorative purposes only.</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div className="act-flex__row">
+						<div className="act-col__cw-12">
+							<div className="act-box">
+								<h3>Principles</h3>
+								<h4>Keep content concise</h4>
+								<p>Cards allow users to scan content in order to find their required information quickly, therefore it is important to make the content concise. Ensure the headlines are brief and explicit about the content the cards link to. Intuitive headlines and copy help the user build a clear mental model of the content.</p>
+								<h4>Behaviour</h4>
+								<p>When a user interacts with a card it inverts colour to indicate to the user which card they are currently focused on and reinforces the clickable area.</p>
+							</div>
+						</div>
+					</div>
+					<div className="act-flex__row">
+    					<div className="act-col__cw-12">
+    						<div className="act-box">
+									<p>To view all the different variations of cards, please use the controls on the component page.</p>
+    							<LinkTo
+    								className="act-button act-button__primary act-button__default act-button__icon-left act-button__primary-undefined"
+    								kind="components-cards-docs"
+    							>
+    								View Component
+    								<i class="fa-solid fa-eye"></i>
+    							</LinkTo>
+    						</div>
+    					</div>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    </main>
+    <footer className="act-footer">
+    	<AoC />
+    	<Footer />
+    </footer>
+
+</div>

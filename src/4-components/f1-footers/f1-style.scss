@@ -1,0 +1,205 @@
+[class*="act-footer"] {
+	p {
+		a {
+			border-bottom: 1px solid $act-colour__white;
+			color: $act-colour__white;
+			cursor: pointer;
+			font-size: $act-font-size__desktop-p-small;
+			font-weight: $act-font-weight__regular;
+			line-height: $act-line-height__100;
+			text-decoration: none;
+			margin-right: map-get($act-space, "desktop-1");
+			&:hover {
+				border-bottom: 1px dashed $act-colour__middle-grey;
+			}
+		}
+	}
+	ol,
+	ul {
+		list-style-type: none;
+		list-style-position: inside;
+		margin: map-get($act-space, "desktop-3") 0px;
+		li {
+			font-size: $act-font-size__desktop-p;
+			font-weight: $act-font-weight__regular;
+			line-height: $act-line-height__100;
+			margin: map-get($act-space, "desktop-2") 0px;
+			a {
+				border-bottom: 1px solid $act-colour__white;
+				color: inherit;
+				cursor: pointer;
+				font-size: inherit;
+				font-weight: inherit;
+				line-height: inherit;
+				text-decoration: none;
+				width: fit-content;
+				i {
+					margin-left: map-get($act-space, "desktop-0");
+				}
+				&:hover {
+					border-bottom: 1px dashed $act-colour__middle-grey;
+					color: $act-colour__middle-grey;
+				}
+			}
+		}
+	}
+	h4 {
+		a {
+			color: $act-colour__white;
+			border-bottom: 1px solid transparent;
+			&:hover {
+				border-bottom: 1px dashed $act-colour__middle-grey;
+				color: $act-colour__middle-grey;
+			}
+		}
+	}
+}
+
+.act-footer-feedback {
+	align-items: flex-start;
+	justify-content: flex-start;
+	&__title {
+		align-items: center;
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		margin-bottom: map-get($act-space, "desktop-2");
+		padding: map-get($act-space, "desktop-1");
+	}
+	&__text {
+		align-items: center;
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		padding: map-get($act-space, "desktop-1");
+	}
+	&__block {
+		align-items: center;
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		.act-h4 {
+			margin-bottom: 0px;
+			margin-right: map-get($act-space, "desktop-1");
+		}
+		&__button {
+			align-items: center;
+			background-color: $act-colour__purple;
+			border-radius: 50%;
+			color: $act-colour__white;
+			cursor: pointer;
+			display: flex;
+			justify-content: center;
+			height: map-get($act-space, "desktop-4");
+			margin: 0px map-get($act-space, "desktop-1");
+			width: map-get($act-space, "desktop-4");
+			i {
+				font-size: map-get($act-space, "desktop-2");
+			}
+			&:last-child {
+				background-color: $act-colour__middle-grey;
+			}
+		}
+	}
+}
+
+.act-footer-aoc {
+	&__title {
+		display: flex;
+		flex-direction: row;
+		i {
+			background-color: $act-colour__white;
+			display: block;
+			height: map-get($act-space, "desktop-4");
+			max-height: map-get($act-space, "desktop-4");
+			max-width: map-get($act-space, "desktop-4");
+			min-height: map-get($act-space, "desktop-4");
+			min-width: map-get($act-space, "desktop-4");
+			margin-right: map-get($act-space, "desktop-2");
+			width: map-get($act-space, "desktop-4");
+		}
+	}
+	&__icon {
+		margin-right: map-get($act-space, "desktop-2");
+		height: map-get($act-space, "desktop-4");
+		width: map-get($act-space, "desktop-4");
+		i,
+		img {
+			height: 100%;
+			width: auto;
+		}
+	}
+	&__body {
+		margin-top: map-get($act-space, "desktop-2");
+	}
+}
+
+.act-footer-nav {
+}
+
+.act-footer-main {
+	border-top: 1px solid $act-colour__white;
+	color: $act-colour__white;
+	padding-top: map-get($act-space, "desktop-1");
+	&__container {
+		align-items: center;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+	&__content {
+		padding: map-get($act-space, "desktop-1") 0px;
+	}
+	&__logos {
+		align-items: center;
+		color: $act-colour__white;
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		a,
+		a img,
+		.act-logos img {
+			max-height: map-get($act-space, "desktop-5") !important;
+		}
+	}
+	&__socials {
+		align-items: center;
+		color: $act-colour__white;
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-end;
+		&__icon {
+			align-items: center;
+			background-color: $act-colour__white;
+			border: none;
+			color: $act-colour__violet;
+			display: inline-flex;
+			height: map-get($act-space, "desktop-4");
+			justify-content: center;
+			margin: 0px map-get($act-space, "desktop-0");
+			max-height: map-get($act-space, "desktop-4");
+			min-height: map-get($act-space, "desktop-4");
+			max-width: map-get($act-space, "desktop-4");
+			min-width: map-get($act-space, "desktop-4");
+			text-decoration: none;
+			width: map-get($act-space, "desktop-4");
+			&:first-of-type {
+				margin-left: map-get($act-space, "desktop-2");
+			}
+			&:last-of-type {
+				margin-right: 0px;
+			}
+			i {
+				display: flex;
+				font-size: map-get($act-space, "desktop-2");
+				height: map-get($act-space, "desktop-2");
+				width: map-get($act-space, "desktop-2");
+			}
+			&:hover {
+				background-color: $act-colour__medium-purple;
+				border: none;
+				color: $act-colour__white;
+			}
+		}
+	}
+}

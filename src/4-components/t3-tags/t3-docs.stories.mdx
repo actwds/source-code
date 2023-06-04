@@ -1,0 +1,99 @@
+import { Meta, ColorPalette, ColorItem } from "@storybook/addon-docs";
+import { themes, ThemeProvider, convert, ensure } from "@storybook/theming";
+import Masthead from "../../_docs/masthead";
+import AoC from "../../_docs/aoc";
+import Footer from "../../_docs/footer";
+import LinkTo from "@storybook/addon-links/react";
+
+<Meta
+	title="Components/Tags/Guidance"
+	parameters={{
+		previewTabs: {
+			canvas: { hidden: true },
+			"storybook/docs/panel": { hidden: true },
+		},
+	}}
+/>
+
+<div className="act-docs-container">
+	<Masthead />
+	<main className="act-body">
+		<div className="act-flex act-flex-light-purple">
+			<div className="act-flex__container act-flex__container-padding-trim">
+				<div className="act-flex__grid">
+					<div className="act-flex__row">
+						<div className="act-col__cw-12">
+							<div className="act-box">
+								<div className="act-breadcrumbs">
+									<ul className="act-breadcrumbs__container">
+										<li className="act-breadcrumbs__crumb act-h6">
+											<LinkTo className="act-breadcrumbs__crumb__link" kind="about-about--page">
+												Design System <i className="fa-solid fa-angle-right"></i>
+											</LinkTo>
+										</li>
+										<li className="act-breadcrumbs__crumb act-h6">
+											<LinkTo className="act-breadcrumbs__crumb__link" kind="components-overview--page">
+												Components <i className="fa-solid fa-angle-right"></i>
+											</LinkTo>
+										</li>
+										<li className="act-breadcrumbs__crumb act-h6">
+											<LinkTo className="act-breadcrumbs__crumb__link" kind="components-tags-overview--page">
+												Tags <i className="fa-solid fa-angle-right"></i>
+											</LinkTo>
+										</li>
+									</ul>
+								</div>
+								<h1>Tags</h1>
+								<p>Tags visually label or categorise content.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div className="act-flex">
+			<div className="act-flex__container">
+				<div className="act-flex__grid">
+					<div className="act-flex__row">
+						<div className="act-col__cw-12">
+							<div className="act-box">
+								<h3>Usage</h3>
+								<p>Use tags to help label or categorise content for users using keywords or phrases. They can also be interactive and help users search for and navigate to content quickly and easily.</p>
+							</div>
+						</div>
+					</div>
+					<div className="act-flex__row">
+						<div className="act-col__cw-12">
+							<div className="act-box">
+								<h3>Tag types</h3>
+								<ul>
+									<li>Links - Link to category content</li>
+									<li>Text - Non interactive content category</li>
+									<li>Checkboxes - Make selections or filter results</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div className="act-flex__row">
+						<div className="act-col__cw-12">
+							<div className="act-box">
+								<h3>When to avoid</h3>
+								<h4>Don't</h4>
+								<ul>
+									<li>use to initiate an action, consider buttons</li>
+									<li>use to link to page content, consider text links</li>
+									<li>over use as this can cause confuse or create visual noise</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+    		</div>
+    	</div>
+    </main>
+    <footer className="act-footer">
+    	<AoC />
+    	<Footer />
+    </footer>
+
+</div>

@@ -1,0 +1,201 @@
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { linkTo } from "@storybook/addon-links";
+import Masthead from "../../_docs/masthead";
+import AoC from "../../_docs/aoc";
+import Footer from "../../_docs/footer";
+import LinkTo from "@storybook/addon-links/react";
+
+<Meta
+	title="Design/Design Tokens/Spacing"
+	parameters={{
+		previewTabs: {
+			canvas: { hidden: true },
+			"storybook/docs/panel": { hidden: true },
+		},
+	}}
+/>
+
+<div className="act-docs-container">
+	<Masthead />
+	<main className="act-body">
+		<div className="act-flex act-flex-light-purple">
+			<div className="act-flex__container act-flex__container-padding-trim">
+				<div className="act-flex__grid">
+					<div className="act-flex__row">
+						<div className="act-col__cw-12">
+							<div className="act-box">
+								<div className="act-breadcrumbs">
+									<ul className="act-breadcrumbs__container">
+										<li className="act-breadcrumbs__crumb act-h6">
+											<LinkTo className="act-breadcrumbs__crumb__link" kind="about-about--page">
+												Design System <i className="fa-solid fa-angle-right"></i>
+											</LinkTo>
+										</li>
+										<li className="act-breadcrumbs__crumb act-h6">
+											<LinkTo className="act-breadcrumbs__crumb__link" kind="design-overview--page">
+												Design Tokens <i className="fa-solid fa-angle-right"></i>
+											</LinkTo>
+										</li>
+										<li className="act-breadcrumbs__crumb act-h6">
+											<LinkTo className="act-breadcrumbs__crumb__link" kind="design-spacing--page">
+												Spacing <i className="fa-solid fa-angle-right"></i>
+											</LinkTo>
+										</li>
+									</ul>
+								</div>
+								<h1>Spacing</h1>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div className="act-flex">
+			<div className="act-flex__container">
+				<div className="act-flex__grid">
+					<div className="act-flex__row">
+						<div className="act-col__cw-12">
+							<div className="act-box">
+								<p>Consistent use of spacing provides the foundation for harmonious and accurately positioned elements onscreen.</p>
+								<p>Spacing follows a 4-pixel unit in this system, with each spacing variable evenly divisible by 4.</p>
+								<p>Spacing in this system is available as both Sass Variables and Maps.</p>
+								<div className="act-img">
+									<img src="/images/2-design-spacing-1.png" alt="Illustration of the available spacing variables" />
+									<div className="act-img__description act-p-small">
+										<i class="fa-solid fa-circle-info"></i> Illustration of the available spacing variables
+									</div>
+								</div>
+								<div className="act-table-container">
+									<table className="act-table">
+										<thead>
+											<tr>
+												<th>Token Name</th>
+												<th>Value</th>
+												<th>Sass Variable</th>
+												<th>Sass Map</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Space 0</td>
+												<td>
+													<code>4px</code>
+												</td>
+												<td>
+													<code className="sass-var">$act-space__desktop-0</code>
+												</td>
+												<td>
+													<code className="sass-var">map-get($act-space, "desktop-0")</code>
+												</td>
+											</tr>
+											<tr>
+												<td>Space 1</td>
+												<td>
+													<code>8px</code>
+												</td>
+												<td>
+													<code className="sass-var">$act-space__desktop-1</code>
+												</td>
+												<td>
+													<code className="sass-var">map-get($act-space, "desktop-1")</code>
+												</td>
+											</tr>
+											<tr>
+												<td>Space 2</td>
+												<td>
+													<code>16px</code>
+												</td>
+												<td>
+													<code className="sass-var">$act-space__desktop-2</code>
+												</td>
+												<td>
+													<code className="sass-var">map-get($act-space, "desktop-2")</code>
+												</td>
+											</tr>
+											<tr>
+												<td>Space 3</td>
+												<td>
+													<code>24px</code>
+												</td>
+												<td>
+													<code className="sass-var">$act-space__desktop-3</code>
+												</td>
+												<td>
+													<code className="sass-var">map-get($act-space, "desktop-3")</code>
+												</td>
+											</tr>
+											<tr>
+												<td>Space 4</td>
+												<td>
+													<code>32px</code>
+												</td>
+												<td>
+													<code className="sass-var">$act-space__desktop-4</code>
+												</td>
+												<td>
+													<code className="sass-var">map-get($act-space, "desktop-4")</code>
+												</td>
+											</tr>
+											<tr>
+												<td>Space 5</td>
+												<td>
+													<code>48px</code>
+												</td>
+												<td>
+													<code className="sass-var">$act-space__desktop-5</code>
+												</td>
+												<td>
+													<code className="sass-var">map-get($act-space, "desktop-5")</code>
+												</td>
+											</tr>
+											<tr>
+												<td>Space 6</td>
+												<td>
+													<code>64px</code>
+												</td>
+												<td>
+													<code className="sass-var">$act-space__desktop-6</code>
+												</td>
+												<td>
+													<code className="sass-var">map-get($act-space, "desktop-6")</code>
+												</td>
+											</tr>
+											<tr>
+												<td>Space 7</td>
+												<td>
+													<code>80px</code>
+												</td>
+												<td>
+													<code className="sass-var">$act-space__desktop-7</code>
+												</td>
+												<td>
+													<code className="sass-var">map-get($act-space, "desktop-7")</code>
+												</td>
+											</tr>
+											<tr>
+												<td>Space 8</td>
+												<td>
+													<code>124px</code>
+												</td>
+												<td>
+													<code className="sass-var">$act-space__desktop-8</code>
+												</td>
+												<td>
+													<code className="sass-var">map-get($act-space, "desktop-8")</code>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<footer className="act-footer">
+		<AoC />
+		<Footer />
+	</footer>
+</div>

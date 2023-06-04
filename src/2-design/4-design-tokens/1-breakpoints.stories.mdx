@@ -1,0 +1,148 @@
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { linkTo } from "@storybook/addon-links";
+import Masthead from "../../_docs/masthead";
+import AoC from "../../_docs/aoc";
+import Footer from "../../_docs/footer";
+import LinkTo from "@storybook/addon-links/react";
+
+<Meta
+	title="Design/Design Tokens/Breakpoints"
+	parameters={{
+		previewTabs: {
+			canvas: { hidden: true },
+			"storybook/docs/panel": { hidden: true },
+		},
+	}}
+/>
+
+<div className="act-docs-container">
+	<Masthead />
+	<main className="act-body">
+		<div className="act-flex act-flex-light-purple">
+			<div className="act-flex__container act-flex__container-padding-trim">
+				<div className="act-flex__grid">
+					<div className="act-flex__row">
+						<div className="act-col__cw-12">
+							<div className="act-box">
+								<div className="act-breadcrumbs">
+									<ul className="act-breadcrumbs__container">
+										<li className="act-breadcrumbs__crumb act-h6">
+											<LinkTo className="act-breadcrumbs__crumb__link" kind="about-about--page">
+												Design System <i className="fa-solid fa-angle-right"></i>
+											</LinkTo>
+										</li>
+										<li className="act-breadcrumbs__crumb act-h6">
+											<LinkTo className="act-breadcrumbs__crumb__link" kind="design-overview--page">
+												Design Tokens <i className="fa-solid fa-angle-right"></i>
+											</LinkTo>
+										</li>
+										<li className="act-breadcrumbs__crumb act-h6">
+											<LinkTo className="act-breadcrumbs__crumb__link" kind="design-breakpoints--page">
+												Breakpoints <i className="fa-solid fa-angle-right"></i>
+											</LinkTo>
+										</li>
+									</ul>
+								</div>
+								<h1>Breakpoints</h1>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div className="act-flex">
+			<div className="act-flex__container">
+				<div className="act-flex__grid">
+					<div className="act-flex__row">
+						<div className="act-col__cw-12">
+							<div className="act-box">
+								<p>A 'breakpoint' is a predefined viewport width. This Design System utilises four breakpoints.</p>
+								<p>At each breakpoint we make adjustments to the interface create a better user experience on devices within those widths.</p>
+								<div className="act-img">
+									<img src="/images/2-design-breakpoints-1.png" alt="Illustration of the available breakpoints" />
+									<div className="act-img__description act-p-small">
+										<i class="fa-solid fa-circle-info"></i> Illustration of the available breakpoints
+									</div>
+								</div>
+								<div className="act-table-container">
+									<table className="act-table">
+										<thead>
+											<tr>
+												<th>Breakpoint</th>
+												<th>Start Width</th>
+												<th>End Width</th>
+												<th>Sass Mixin</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Mobile</td>
+												<td>
+													<code>0px</code>
+													<code className="sass-var">$act-break__mobile-start</code>
+												</td>
+												<td>
+													<code>478px</code>
+													<code className="sass-var">$act-break__mobile-end</code>
+												</td>
+												<td>
+													<code className="sass-var">devices(mobile)</code>
+												</td>
+											</tr>
+											<tr>
+												<td>Tablet</td>
+												<td>
+													<code>479px</code>
+													<code className="sass-var">$act-break__tablet-start</code>
+												</td>
+												<td>
+													<code>991px</code>
+													<code className="sass-var">$act-break__tablet-end</code>
+												</td>
+												<td>
+													<code className="sass-var">devices(tablet)</code>
+												</td>
+											</tr>
+											<tr>
+												<td>Desktop</td>
+												<td>
+													<code>992px</code>
+													<code className="sass-var">$act-break__desktop-start</code>
+												</td>
+												<td>
+													<code>1440px</code>
+													<code className="sass-var">$act-break__desktop-end</code>
+												</td>
+												<td>
+													<code className="sass-var">devices(desktop)</code>
+												</td>
+											</tr>
+											<tr>
+												<td>Ultrawide</td>
+												<td>
+													<code>1441px</code>
+													<code className="sass-var">$act-break__ultrawide-start</code>
+												</td>
+												<td>
+													<code>9999px</code>
+													<code className="sass-var">$act-break__ultrawide-end</code>
+												</td>
+												<td>
+													<code className="sass-var">devices(ultrawide)</code>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<footer className="act-footer">
+		<AoC />
+		<Footer />
+	</footer>
+</div>

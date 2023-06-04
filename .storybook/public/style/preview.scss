@@ -1,0 +1,234 @@
+/* ACT Design System */
+
+/* Run Core SASS File */
+@import "../../../src/_core/_core.scss";
+
+/* Documentation Styling */
+/* Modifies and improves Storybook.js UI/UX */
+#docs-root {
+	.sbdocs {
+		&-content {
+			max-width: $act-page-max-width;
+			code {
+				background-color: #ADADAD10;
+				border: 1px solid #ADADAD50;
+				border-radius: 2px;
+				color: $act-colour__black;
+				display: inline-flex;
+				font-family: monospace !important;
+				font-size: 12px;
+				line-height: 1em;
+				margin: 2px 2px;
+				padding: 4px 8px;
+				white-space: nowrap;
+				vertical-align: baseline;
+				&.class {
+					color: $act-colour__green;
+				}
+				&.sass-var {
+					color: $act-colour__plum-purple;
+				}
+			}
+		}
+		.css-1vg6q84 {
+			display: none;
+		}
+		.css-cflg6q {
+			border-bottom: 0px transparent;
+			text-decoration: none !important;
+		}
+		&-preview {
+			border: 1px solid $act-colour__middle-grey;
+			border-radius: 0px;
+			overflow: hidden;
+			&:first-child {
+				padding-top: 31px;
+				> div:first-child {
+					border-bottom: 1px solid $act-colour__middle-grey;
+					box-shadow: none;
+					height: 31px;
+					max-height: 31px;
+					min-height: 31px;
+					> div {
+						border: none;
+						margin: 0px;
+						padding: 0px;
+						.css-p1dfi6 {
+							/* Toolbar */
+							height: 30px;
+							overflow: hidden;
+							.css-1amsdi0,
+							.css-102is01 {
+								margin: 0px;
+								padding: 0px;
+								a,
+								button {
+									align-items: center;
+									border-radius: 0px;
+									display: inline-flex;
+									height: 30px;
+									justify-content: center;
+									margin: 0px;
+									padding: 0px;
+									width: 30px;
+									svg {
+										height: 14px;
+										width: 14px;
+									}
+									&:hover {
+										background-color: $act-colour__purple;
+										color: $act-colour__white;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			.css-1dt41f3 {
+				border-radius: 0px !important;
+			}
+			.css-17vdvg6,
+			.docblock-code-toggle {
+				border-radius: 0px;
+				box-shadow: none;
+				font-family: monospace;
+				font-size: 11px;
+				font-weight: normal;
+				letter-spacing: 0px;
+				line-height: 1em;
+				outline: none;
+				&:hover {
+					background-color: $act-colour__purple;
+					color: $act-colour__white;
+				}
+			}
+		}
+		.docblock-colorpalette {
+			font-family: $sourcesanspro;
+			margin-top: map-get($act-space, "desktop-5");
+			* {
+				/* Remove border radius from colour swatches */
+				border-radius: 0px;
+				box-shadow: none;
+			}
+			.css-syxe49 {
+				/* Hide Title Row */
+				display: none;
+			}
+			.css-1cic1f4 {
+				/* Colour Name */
+				color: $act-colour__black;
+				font-size: $act-font-size__desktop-p;
+				font-weight: $act-font-weight__bold;
+				margin-bottom: map-get($act-space, "desktop-0");
+			}
+			.css-1nkxwxu {
+				/* Colour Description */
+				color: $act-colour__black;
+				font-size: $act-font-size__desktop-p-small;
+				font-weight: $act-font-weight__regular;
+			}
+			.css-2qy8by {
+				/* Create some whitespace for colour descriptions */
+				padding-right: map-get($act-space, "desktop-2");
+				margin-top: 0px;
+			}
+		}
+	}
+}
+
+.act-docs-container {
+	/* Allows the ACT Design System to run within the MDX docs pages */
+	background-color: $act-colour__violet;
+	font-family: $sourcesanspro;
+	left: 0px;
+	position: absolute;
+	min-height: 100%;
+	top: 0px;
+	width: 100%;
+	z-index: 888;
+}
+
+.act-img {
+	display: flex;
+	flex-direction: column;
+	margin: map-get($act-space, "desktop-2") 0px;
+	img,
+	&__image {
+		border: 1px solid $act-colour__middle-grey;
+	}
+	&__description {
+		margin-top: map-get($act-space, "desktop-1");
+		i {
+			color: $act-colour__plum-purple;
+			margin-right: map-get($act-space, "desktop-0");
+		}
+	}
+}
+
+
+
+.docblock-argstable,
+.sbdocs-table.act-table-docs {
+	border: 1px solid $act-colour__middle-grey !important;
+	font-size: $act-font-size__desktop-p-small;
+	thead,
+	tfoot {
+		tr {
+			td,
+			th {
+				font-size: $act-font-size__desktop-p-small;
+			}
+		}
+	}
+	tbody {
+		tr {
+			border-top: none !important;
+			td {
+				background-color: transparent !important;
+				border: none !important;
+				border-bottom: 1px solid $act-colour__middle-grey !important;
+				border-left: 1px solid transparent;
+				border-radius: 0px !important;
+				border-right: 1px solid transparent;
+				font-size: $act-font-size__desktop-p-small !important;
+				font-weight: $act-font-weight__regular;
+				line-height: $act-line-height__150;
+				padding: map-get($act-space, "desktop-1") map-get($act-space, "desktop-1") !important;
+				vertical-align: middle;
+				a {
+					color: $act-colour__purple;
+				}
+				ul,
+				ol {
+					padding-left: 0px;
+					li {
+						line-height: $act-line-height__130;
+					}
+				}
+				&:first-child {
+					font-weight: $act-font-weight__semibold;
+				}
+			}
+		}
+	}
+}
+
+
+.sbdocs-title,
+.sbdocs-title *,
+.sbdocs-h2 {
+		color: $act-colour__black !important;
+		font-family: $montserrat !important;
+		border-bottom: none !important;
+}
+.sbdocs-h2 {
+	margin-bottom: 0px !important;
+	margin-top: map-get($act-space, "desktop-5") !important;
+	padding-bottom: 0px !important;
+}
+.css-14m39zm * {
+		font-family: $sourcesanspro !important;
+}
+

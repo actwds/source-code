@@ -1,0 +1,117 @@
+import { Meta, ColorPalette, ColorItem } from "@storybook/addon-docs";
+import { themes, ThemeProvider, convert, ensure } from "@storybook/theming";
+import Masthead from "../../_docs/masthead";
+import AoC from "../../_docs/aoc";
+import Footer from "../../_docs/footer";
+import LinkTo from "@storybook/addon-links/react";
+
+<Meta
+	title="Components/Footers/Guidance"
+	parameters={{
+		previewTabs: {
+			canvas: { hidden: true },
+			"storybook/docs/panel": { hidden: true },
+		},
+	}}
+/>
+
+<div className="act-docs-container">
+	<Masthead />
+	<main className="act-body">
+		<div className="act-flex act-flex-light-purple">
+			<div className="act-flex__container act-flex__container-padding-trim">
+				<div className="act-flex__grid">
+					<div className="act-flex__row">
+						<div className="act-col__cw-12">
+							<div className="act-box">
+								<div className="act-breadcrumbs">
+									<ul className="act-breadcrumbs__container">
+										<li className="act-breadcrumbs__crumb act-h6">
+											<LinkTo className="act-breadcrumbs__crumb__link" kind="about-about--page">
+												Design System <i className="fa-solid fa-angle-right"></i>
+											</LinkTo>
+										</li>
+										<li className="act-breadcrumbs__crumb act-h6">
+											<LinkTo className="act-breadcrumbs__crumb__link" kind="components-overview--page">
+												Components <i className="fa-solid fa-angle-right"></i>
+											</LinkTo>
+										</li>
+										<li className="act-breadcrumbs__crumb act-h6">
+											<LinkTo className="act-breadcrumbs__crumb__link" kind="components-overview--pageoverview--page">
+												Footers <i className="fa-solid fa-angle-right"></i>
+											</LinkTo>
+										</li>
+									</ul>
+								</div>
+								<h1>Footers</h1>
+								<p>The footer displays across the bottom of all ACT Government websites.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div className="act-flex">
+			<div className="act-flex__container">
+				<div className="act-flex__grid">
+					<div className="act-flex__row">
+						<div className="act-col__cw-12">
+							<div className="act-box">
+								<h3>Main Footer</h3>
+								<p>To be used across the bottom of all ACT Government websites.</p>
+								<p>Use the footer to provide links to content that are separate from the main navigation but that are relevant to the entire site and platform. For example: Accessibility, Privacy statement, Terms of use, Legal content and contact information and links to social media.</p>
+								<h4>Do</h4>
+								<ul>
+									<li>only use option section links where they assist the user, otherwise they can be hidden</li>
+									<li>use a copyright statement that is specific to your agency.</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div className="act-flex__row">
+						<div className="act-col__cw-12">
+							<div className="act-box">
+								<h3>Primary Colour</h3>
+								<p>Masterbrand corporate use the Default Footer (Grey 01) to maintain a consistent ACT Government brand, however approved co-brands can also use the Brand palette variant to utilise a different brand colour.</p>
+								<h4>Approved co-brands and program subsites</h4>
+								<p>Approved co-brands can utilise their Brand palette variant to apply a custom colour as desired.</p>
+								<h4>Page feedback</h4>
+								<p>The page feedback component can be used on content pages to receive feedback to help continually improve pages and components. This is anonymous feedback, and no personal info should be requested.</p>
+								<p>A link to your main contact options can be added for if a user expects a response.</p>
+								<h4>Acknowledgement of Country</h4>
+								<p>The Acknowledgement of Country pays respect to the Traditional Custodians of the ACT. This component including the colour should not be changed and remain consistent on the site.</p>
+							</div>
+						</div>
+					</div>
+					<div className="act-flex__row">
+						<div className="act-col__cw-12">
+							<div className="act-box">
+								<h3>How this component works</h3>
+								<h4>Optional Section Links</h4>
+								<p>The optional section links allow users to bypass the main navigation, or access external links. This section provides users with easy access to additional links both internal and external, allowing them to continue their journey.</p>
+								<h4>Lower fixed links</h4>
+								<p>The links at the bottom of the footer should not be changed and must include:</p>
+								<ul>
+									<li>Accessibility</li>
+									<li>Privacy</li>
+									<li>Disclaimer</li>
+									<li>Copyright</li>
+									<li>Sitemap</li>
+								</ul>
+								<h4>Social icons</h4>
+								<p>Social icons can be used to link to relevant social media accounts. Icons used in the out-of-the-box components have been designed to meet the branding requirements of the associated social media channel at time of build. If you wish to use social media icons, you take on the responsibility for ensuring your individual application meets the company’s usage and branding requirements.</p>
+								<h4>Copyright</h4>
+								<p>The copyright statement is required as it is applies to all pages of the site.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+    		</div>
+    	</div>
+    </main>
+    <footer className="act-footer">
+    	<AoC />
+    	<Footer />
+    </footer>
+
+</div>

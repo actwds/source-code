@@ -1,0 +1,185 @@
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { linkTo } from "@storybook/addon-links";
+import Masthead from "../_docs/masthead";
+import AoC from "../_docs/aoc";
+import Footer from "../_docs/footer";
+import LinkTo from "@storybook/addon-links/react";
+
+<Meta
+	title="About/Technical Info"
+	parameters={{
+		previewTabs: {
+			canvas: { hidden: true },
+			"storybook/docs/panel": { hidden: true },
+		},
+	}}
+/>
+
+<div className="act-docs-container">
+	<Masthead />
+	<main className="act-body">
+		<div className="act-flex act-flex-light-purple">
+			<div className="act-flex__container act-flex__container-padding-trim">
+				<div className="act-flex__grid">
+					<div className="act-flex__row">
+						<div className="act-col__cw-12">
+							<div className="act-box">
+								<div className="act-breadcrumbs">
+									<ul className="act-breadcrumbs__container">
+										<li className="act-breadcrumbs__crumb act-h6">
+											<LinkTo className="act-breadcrumbs__crumb__link" kind="about-about--page">
+												Design System <i className="fa-solid fa-angle-right"></i>
+											</LinkTo>
+										</li>
+										<li className="act-breadcrumbs__crumb act-h6">
+											<LinkTo className="act-breadcrumbs__crumb__link" kind="about-technical-info--page">
+												Technical Info <i className="fa-solid fa-angle-right"></i>
+											</LinkTo>
+										</li>
+									</ul>
+								</div>
+								<h1>Technical Info</h1>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div className="act-flex">
+			<div className="act-flex__container">
+				<div className="act-flex__grid">
+					<div className="act-flex__row">
+						<div className="act-col__cw-12">
+							<div className="act-box">
+								<p>
+									Below is a summary of the latest version, commits and sizing. If you require a new component or are having troubles finding a component, please contact{" "}
+									<a href="mailto:CMTEDDWebmaster@act.gov.au" target="_blank" title="CMTEDDWebmaster@act.gov.au">
+										CMTEDDWebmaster@act.gov.au
+									</a>
+									.
+								</p>
+								<div className="act-table-container">
+									<table className="act-table">
+										<thead>
+											<tr>
+												<th>Item</th>
+												<th>Value</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Version</td>
+												<td>
+													<img src="https://img.shields.io/github/package-json/v/ACTWDS/source-code?style=flat-square" />
+												</td>
+											</tr>
+											<tr>
+												<td>Repo size</td>
+												<td>
+													<img src="https://img.shields.io/github/repo-size/ACTWDS/source-code?style=flat-square" />
+												</td>
+											</tr>
+											<tr>
+												<td>Code size</td>
+												<td>
+													<img src="https://img.shields.io/github/languages/code-size/ACTWDS/source-code?style=flat-square" />
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div className="act-flex__row">
+						<div className="act-col__cw-12">
+							<div className="act-box">
+								<h2>Repo</h2>
+								<img src="https://img.shields.io/github/package-json/v/ACTWDS/source-code?style=flat-square" />
+								<p>
+									The repo and README for this project is hosted on GitHub and can be found{" "}
+									<a href="https://github.com/ACTWDS/source-code" target="_blank" title="ACT Government GitHub">
+										here
+									</a>
+								</p>
+							</div>
+						</div>
+					</div>
+					<div className="act-flex__row">
+						<div className="act-col__cw-12">
+							<div className="act-box">
+								<h2>Source Code</h2>
+								<p>The source code for this project is stored in three main directories:</p>
+								<ul>
+									<li>.storybook</li>
+									<li>src</li>
+									<li>storybook-static</li>
+								</ul>
+								<p>At the root of the repo there are also several configuration files for ESLint and Prettier.</p>
+							</div>
+						</div>
+					</div>
+					<div className="act-flex__row">
+						<div className="act-col__cw-12">
+							<div className="act-box">
+								<h3>.storybook</h3>
+								<p>This directory contains the configuration and settings for the Storybook.js installation.</p>
+								<h4>main.js</h4>
+								<p>
+									The main.js file contains the primary settings for Storybook.js, it configures which file extensions to use for component pages, which Storybook.js integrations
+									(addons) to run and which directory to serve public resources from.
+								</p>
+								<h4>manager.js</h4>
+								<p>The manager.js file controls the display and configuration of elements within the Storybook.js sidebar</p>
+								<h4>preview.js</h4>
+								<p>The preview.js file is responsible for the display and configuration of the Storybook.js preview window.</p>
+							</div>
+						</div>
+					</div>
+					<div className="act-flex__row">
+						<div className="act-col__cw-12">
+							<div className="act-box">
+								<h3>src</h3>
+								<p>
+									This directory contains the bulk of the design system - it contains everything from documentation and design tokens, through to components, patterns and complete
+									page previews.
+								</p>
+								<h4>_core</h4>
+								<p>The _core folder contains the global SCSS of the design system.</p>
+								<h4>_docs</h4>
+								<p>The _docs folder contains reusable components suitable for use in documentation pages.</p>
+								<h4>0-about</h4>
+								<p>The 0-about folder contains documentation pertaining to the overall design system.</p>
+								<h4>1-guidelines</h4>
+								<p>The 1-guidelines folder contains guidance and templates for creating and maintaining content and designs with the ACT WDS.</p>
+								<h4>2-design</h4>
+								<p>The 2-design folder contains all of the design tokens the following folders consume to generate components and patterns.</p>
+								<h4>3-layout</h4>
+								<p>The 3-layout folder contains documentation and examples of how pages are structures and displayed within the ACT WDS.</p>
+								<h4>4-components</h4>
+								<p>The 4-components folder stores all of the components maintained within the ACT WDS.</p>
+								<h4>5-patterns</h4>
+								<p>The 5-patterns folder contains combinations of components that create reusable patterns.</p>
+								<h4>6-previews</h4>
+								<p>The 6-previews folder contains pre-assembled versions of ACT Government web pages to demonstrate how the ACT WDS works.</p>
+							</div>
+						</div>
+					</div>
+					<div className="act-flex__row">
+						<div className="act-col__cw-12">
+							<div className="act-box">
+								<h3>storybook-static</h3>
+								<p>This directory is the build destination for Storybook.js. It's contents are served via GitHub Pages as the complete design system.</p>
+								<p>This directory is not version controlled - and ignored by git.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<footer className="act-footer">
+		<AoC />
+		<Footer />
+	</footer>
+</div>

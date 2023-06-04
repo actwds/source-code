@@ -1,0 +1,192 @@
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { linkTo } from "@storybook/addon-links";
+import Masthead from "../_docs/masthead";
+import AoC from "../_docs/aoc";
+import Footer from "../_docs/footer";
+import LinkTo from "@storybook/addon-links/react";
+
+<Meta
+	title="Design/Getting started"
+	parameters={{
+		previewTabs: {
+			canvas: { hidden: true },
+			"storybook/docs/panel": { hidden: true },
+		},
+	}}
+/>
+
+<div className="act-docs-container">
+	<Masthead />
+	<main className="act-body">
+		<div className="act-flex act-flex-light-purple">
+			<div className="act-flex__container act-flex__container-padding-trim">
+				<div className="act-flex__grid">
+					<div className="act-flex__row">
+						<div className="act-col__cw-12">
+							<div className="act-box">
+								<div className="act-breadcrumbs">
+									<ul className="act-breadcrumbs__container">
+										<li className="act-breadcrumbs__crumb act-h6">
+											<LinkTo className="act-breadcrumbs__crumb__link" kind="about-about--page">
+												Design System <i className="fa-solid fa-angle-right"></i>
+											</LinkTo>
+										</li>
+										<li className="act-breadcrumbs__crumb act-h6">
+											<LinkTo className="act-breadcrumbs__crumb__link" kind="design-overview--page">
+												Design <i className="fa-solid fa-angle-right"></i>
+											</LinkTo>
+										</li>
+									</ul>
+								</div>
+								<h1>Design</h1>
+								<p>
+									<i className="fa-solid fa-atom"></i> <em>Subatomic Particles</em>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div className="act-flex">
+			<div className="act-flex__container">
+				<div className="act-flex__grid">
+					<div className="act-flex__row">
+						<div className="act-col__cw-12">
+							<div className="act-box">
+								<h2>Getting started</h2>
+								<p>
+									The ACT Government{" "}
+									<a href="https://actgovernment.sharepoint.com/sites/extranet-DesignPractice" target="_blank">
+										Design Practice
+									</a>{" "}
+									should be used to guide best practice design and delivery. It is a toolkit to assist staff across ACT Government build human centred products and services.
+								</p>
+								<p>
+									Use the ACT Government Design System to create customer-centred websites and other digital products and services that meet branding and WCAG 2.1 AA accessibility
+									guidelines. It also helps you meet the Design Standards to design for user needs.
+								</p>
+								<p>The design system includes:</p>
+								<ul>
+									<li>Core styles - foundations that communicate the ACT Government visual identity</li>
+									<li>Base components - examples of assembled core styles to support the build of user interfaces</li>
+									<li>UX Guidance - detailed usage and interaction guidance for creating consistent user experiences</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div className="act-flex__row">
+						<div className="act-col__cw-12">
+							<div className="act-box">
+								<div className="act-card-grid">
+									<LinkTo className="act-card act-card__primary act-card__feature--icon" kind="design-breakpoints--page">
+										<div class="act-card__container">
+											<div class="act-card__content">
+												<div class="act-card__icon">
+													<i class="fa-solid fa-left-right"></i>
+												</div>
+												<div class="act-card__title">Breakpoints</div>
+												<div class="act-card__description">Defined points where the design system responds according to the device width</div>
+												<div class="act-card__cta">
+													<i class="fa-solid fa-arrow-right"></i>
+												</div>
+											</div>
+										</div>
+									</LinkTo>
+									<LinkTo className="act-card act-card__primary act-card__feature--icon" kind="design-colours--page">
+										<div class="act-card__container">
+											<div class="act-card__content">
+												<div class="act-card__icon">
+													<i class="fa-solid fa-palette"></i>
+												</div>
+												<div class="act-card__title">Colours</div>
+												<div class="act-card__description">Colour plays an important role in creating a consistent and strong visual identify</div>
+												<div class="act-card__cta">
+													<i class="fa-solid fa-arrow-right"></i>
+												</div>
+											</div>
+										</div>
+									</LinkTo>
+									<LinkTo className="act-card act-card__primary act-card__feature--icon" kind="design-interactions--page">
+										<div class="act-card__container">
+											<div class="act-card__content">
+												<div class="act-card__icon">
+													<i class="fa-solid fa-person-walking"></i>
+												</div>
+												<div class="act-card__title">Interactions</div>
+												<div class="act-card__description">Bring the screen to life, guide users through experiences, and help move them forward</div>
+												<div class="act-card__cta">
+													<i class="fa-solid fa-arrow-right"></i>
+												</div>
+											</div>
+										</div>
+									</LinkTo>
+									<LinkTo className="act-card act-card__primary act-card__feature--icon" kind="design-radius--page">
+										<div class="act-card__container">
+											<div class="act-card__content">
+												<div class="act-card__icon">
+													<i class="fa-solid fa-circle"></i>
+												</div>
+												<div class="act-card__title">Radius</div>
+												<div class="act-card__description">Border-radius values to ensure a consistent shape of elements</div>
+												<div class="act-card__cta">
+													<i class="fa-solid fa-arrow-right"></i>
+												</div>
+											</div>
+										</div>
+									</LinkTo>
+									<LinkTo className="act-card act-card__primary act-card__feature--icon" kind="design-shadows--page">
+										<div class="act-card__container">
+											<div class="act-card__content">
+												<div class="act-card__icon">
+													<i class="fa-solid fa-sun"></i>
+												</div>
+												<div class="act-card__title">Shadows</div>
+												<div class="act-card__description">Box-shadow values to create depth within the interface</div>
+												<div class="act-card__cta">
+													<i class="fa-solid fa-arrow-right"></i>
+												</div>
+											</div>
+										</div>
+									</LinkTo>
+									<LinkTo className="act-card act-card__primary act-card__feature--icon" kind="design-spacing--page">
+										<div class="act-card__container">
+											<div class="act-card__content">
+												<div class="act-card__icon">
+													<i class="fa-solid fa-border-none"></i>
+												</div>
+												<div class="act-card__title">Spacing</div>
+												<div class="act-card__description">The consistent area between elements and components</div>
+												<div class="act-card__cta">
+													<i class="fa-solid fa-arrow-right"></i>
+												</div>
+											</div>
+										</div>
+									</LinkTo>
+									<LinkTo className="act-card act-card__primary act-card__feature--icon" kind="design-typography--page">
+										<div class="act-card__container">
+											<div class="act-card__content">
+												<div class="act-card__icon">
+													<i class="fa-solid fa-font"></i>
+												</div>
+												<div class="act-card__title">Typography</div>
+												<div class="act-card__description">Documentation and examples for typography within the design system</div>
+												<div class="act-card__cta">
+													<i class="fa-solid fa-arrow-right"></i>
+												</div>
+											</div>
+										</div>
+									</LinkTo>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<footer className="act-footer">
+		<AoC />
+		<Footer />
+	</footer>
+</div>

@@ -1,0 +1,521 @@
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { linkTo } from "@storybook/addon-links";
+import Masthead from "../../_docs/masthead";
+import AoC from "../../_docs/aoc";
+import Footer from "../../_docs/footer";
+import LinkTo from "@storybook/addon-links/react";
+
+<Meta
+	title="Design/Design Tokens/Typography"
+	parameters={{
+		previewTabs: {
+			canvas: { hidden: true },
+			"storybook/docs/panel": { hidden: true },
+		},
+	}}
+/>
+
+<div className="act-docs-container">
+	<Masthead />
+	<main className="act-body">
+		<div className="act-flex act-flex-light-purple">
+			<div className="act-flex__container act-flex__container-padding-trim">
+				<div className="act-flex__grid">
+					<div className="act-flex__row">
+						<div className="act-col__cw-12">
+							<div className="act-box">
+								<div className="act-breadcrumbs">
+									<ul className="act-breadcrumbs__container">
+										<li className="act-breadcrumbs__crumb act-h6">
+											<LinkTo className="act-breadcrumbs__crumb__link" kind="about-about--page">
+												Design System <i className="fa-solid fa-angle-right"></i>
+											</LinkTo>
+										</li>
+										<li className="act-breadcrumbs__crumb act-h6">
+											<LinkTo className="act-breadcrumbs__crumb__link" kind="design-overview--page">
+												Design Tokens <i className="fa-solid fa-angle-right"></i>
+											</LinkTo>
+										</li>
+										<li className="act-breadcrumbs__crumb act-h6">
+											<LinkTo className="act-breadcrumbs__crumb__link" kind="design-typography--page">
+												Typography <i className="fa-solid fa-angle-right"></i>
+											</LinkTo>
+										</li>
+									</ul>
+								</div>
+								<h1>Typography</h1>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div className="act-flex">
+			<div className="act-flex__container">
+				<div className="act-flex__grid">
+					<div className="act-flex__row">
+						<div className="act-col__cw-12">
+							<div className="act-box">
+								<h2>Fonts</h2>
+								<p>The ACT Government Design System utilises two font families, Montserrat and Source Sans Pro, throughout the system.</p>
+							</div>
+						</div>
+						<div className="act-col__cw-6">
+							<div className="act-box">
+								<h3>Montserrat</h3>
+								<p style={{ fontFamily: "Montserrat" }}>
+									The old posters and signs in the Montserrat neighbourhood of Buenos Aires inspired Julieta Ulanovsky to design this typeface and capture the beauty of urban
+									typography.
+								</p>
+								<p>
+									<a href="https://fonts.google.com/specimen/Montserrat/" target="_blank" title="Google Fonts">
+										Montserrat on Google Fonts <i className="fa-solid fa-arrow-up-right-from-square"></i>
+									</a>
+								</p>
+							</div>
+						</div>
+						<div className="act-col__cw-6">
+							<div className="act-box">
+								<h3 style={{ fontFamily: "Source Sans Pro" }}>Source Sans Pro</h3>
+								<p style={{ fontFamily: "Source Sans Pro" }}>
+									Source® Sans Pro, Adobe's first open source typeface family, was designed by Paul D. Hunt. It is a sans serif typeface intended to work well in user interfaces.
+								</p>
+								<p>
+									<a href="https://fonts.google.com/specimen/Source+Sans+Pro/" target="_blank" title="Google Fonts">
+										Source Sans Pro on Google Fonts <i className="fa-solid fa-arrow-up-right-from-square"></i>
+									</a>
+								</p>
+							</div>
+						</div>
+						<div className="act-col__cw-12">
+							<div className="act-box">
+								<div className="act-table-container">
+									<table className="act-table">
+										<thead>
+											<tr>
+												<th>Font Name</th>
+												<th>CSS</th>
+												<th>Class</th>
+												<th>Sass Variable</th>
+												<th>Available Styles</th>
+												<th>Available Weights</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Montserrat</td>
+												<td>
+													<code>"Montserrat", sans-serif</code>
+												</td>
+												<td>
+													<code className="class">.act-montserrat</code>
+												</td>
+												<td>
+													<code className="sass-var">$montserrat</code>
+												</td>
+												<td>
+													<code>normal</code>
+												</td>
+												<td>
+													<code>regular - 400</code>
+													<br />
+													<code>semibold - 600</code>
+													<br />
+													<code>bold - 700</code>
+												</td>
+											</tr>
+											<tr>
+												<td>Source Sans Pro</td>
+												<td>
+													<code>"Source Sans Pro", sans-serif</code>
+												</td>
+												<td>
+													<code className="class">.act-source-sans-pro</code>
+												</td>
+												<td>
+													<code className="sass-var">$sourcesanspro</code>
+												</td>
+												<td>
+													<code>normal</code>
+												</td>
+												<td>
+													<code>regular - 400</code>
+													<br />
+													<code>semibold - 600</code>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div className="act-flex">
+			<div className="act-flex__container">
+				<div className="act-flex__grid">
+					<div className="act-flex__row">
+						<div className="act-col__cw-12">
+							<div className="act-box">
+								<h2>Icons</h2>
+								<p>The ACT Government Design System utilises Font Awesome to render icons.</p>
+							</div>
+						</div>
+						<div className="act-col__cw-6">
+							<div className="act-box">
+								<h3>Font Awesome</h3>
+								<p>
+									<a href="https://fontawesome.com/" target="_blank" title="Font Awesome">
+										Font Awesome <i className="fa-solid fa-arrow-up-right-from-square"></i>
+									</a>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div className="act-flex">
+			<div className="act-flex__container">
+				<div className="act-flex__grid">
+					<div className="act-flex__row">
+						<div className="act-col__cw-12">
+							<div className="act-box">
+								<h2>Headings</h2>
+								<div className="act-table-container">
+									<table className="act-table">
+										<thead>
+											<tr>
+												<th>Size</th>
+												<th>Tag</th>
+												<th>Class</th>
+												<th>font-family</th>
+												<th>font-size</th>
+												<th>font-weight</th>
+												<th>line-height</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>
+													<h1 className="large">H1.L</h1>
+												</td>
+												<td>
+													<code className="hex">&lt;h1 class="large"&gt;</code>
+												</td>
+												<td>
+													<code className="class">.act-h1-large</code>
+												</td>
+												<td>
+													<code className="sass-var">$montserrat</code>
+												</td>
+												<td>
+													<code>64px</code>
+												</td>
+												<td>
+													<code>semibold - 600</code>
+												</td>
+												<td>
+													<code>100%</code>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<h1>H1</h1>
+												</td>
+												<td>
+													<code className="hex">&lt;h1&gt;</code>
+												</td>
+												<td>
+													<code className="class">.act-h1</code>
+												</td>
+												<td>
+													<code className="sass-var">$montserrat</code>
+												</td>
+												<td>
+													<code>48px</code>
+												</td>
+												<td>
+													<code>bold - 700</code>
+												</td>
+												<td>
+													<code>100%</code>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<h2>H2</h2>
+												</td>
+												<td>
+													<code className="hex">&lt;h2&gt;</code>
+												</td>
+												<td>
+													<code className="class">.act-h2</code>
+												</td>
+												<td>
+													<code className="sass-var">$montserrat</code>
+												</td>
+												<td>
+													<code>40px</code>
+												</td>
+												<td>
+													<code>semibold - 600</code>
+												</td>
+												<td>
+													<code>120%</code>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<h3>H3</h3>
+												</td>
+												<td>
+													<code className="hex">&lt;h3&gt;</code>
+												</td>
+												<td>
+													<code className="class">.act-h3</code>
+												</td>
+												<td>
+													<code className="sass-var">$montserrat</code>
+												</td>
+												<td>
+													<code>32px</code>
+												</td>
+												<td>
+													<code>semibold - 600</code>
+												</td>
+												<td>
+													<code>120%</code>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<h4>H4</h4>
+												</td>
+												<td>
+													<code className="hex">&lt;h4&gt;</code>
+												</td>
+												<td>
+													<code className="class">.act-h4</code>
+												</td>
+												<td>
+													<code className="sass-var">$montserrat</code>
+												</td>
+												<td>
+													<code>24px</code>
+												</td>
+												<td>
+													<code>semibold - 600</code>
+												</td>
+												<td>
+													<code>130%</code>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<h5>H5</h5>
+												</td>
+												<td>
+													<code className="hex">&lt;h5&gt;</code>
+												</td>
+												<td>
+													<code className="class">.act-h5</code>
+												</td>
+												<td>
+													<code className="sass-var">$montserrat</code>
+												</td>
+												<td>
+													<code>20px</code>
+												</td>
+												<td>
+													<code>semibold - 600</code>
+												</td>
+												<td>
+													<code>130%</code>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<h6>H6</h6>
+												</td>
+												<td>
+													<code className="hex">&lt;h6&gt;</code>
+												</td>
+												<td>
+													<code className="class">.act-h6</code>
+												</td>
+												<td>
+													<code className="sass-var">$montserrat</code>
+												</td>
+												<td>
+													<code>16px</code>
+												</td>
+												<td>
+													<code>semibold - 600</code>
+												</td>
+												<td>
+													<code>130%</code>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div className="act-flex">
+			<div className="act-flex__container">
+				<div className="act-flex__grid">
+					<div className="act-flex__row">
+						<div className="act-col__cw-12">
+							<div className="act-box">
+								<h2>Paragraphs</h2>
+								<div className="act-table-container">
+									<table className="act-table">
+										<thead>
+											<tr>
+												<th>Size</th>
+												<th>Tag</th>
+												<th>Class</th>
+												<th>font-family</th>
+												<th>font-size</th>
+												<th>font-weight</th>
+												<th>line-height</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>
+													<p>Paragraph</p>
+												</td>
+												<td>
+													<code className="hex">&lt;p&gt;</code>
+												</td>
+												<td>
+													<code className="class">.act-p</code>
+												</td>
+												<td>
+													<code className="sass-var">$sourcesanspro</code>
+												</td>
+												<td>
+													<code>18px</code>
+												</td>
+												<td>
+													<code>regular - 400</code>
+												</td>
+												<td>
+													<code>150%</code>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<p className="bold">Paragraph Bold</p>
+												</td>
+												<td>
+													<code className="hex">&lt;p class="bold"&gt;</code>
+												</td>
+												<td>
+													<code className="class">.act-p-bold</code>
+												</td>
+												<td>
+													<code className="sass-var">$sourcesanspro</code>
+												</td>
+												<td>
+													<code>18px</code>
+												</td>
+												<td>
+													<code>semibold - 600</code>
+												</td>
+												<td>
+													<code>150%</code>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<p className="large">Paragraph Large</p>
+												</td>
+												<td>
+													<code className="hex">&lt;p class="large"&gt;</code>
+												</td>
+												<td>
+													<code className="class">.act-p-large</code>
+												</td>
+												<td>
+													<code className="sass-var">$sourcesanspro</code>
+												</td>
+												<td>
+													<code>20px</code>
+												</td>
+												<td>
+													<code>regular - 400</code>
+												</td>
+												<td>
+													<code>150%</code>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<p className="small">Paragraph Small</p>
+												</td>
+												<td>
+													<code className="hex">&lt;p class="small"&gt;</code>
+												</td>
+												<td>
+													<code className="class">.act-p-small</code>
+												</td>
+												<td>
+													<code className="sass-var">$sourcesanspro</code>
+												</td>
+												<td>
+													<code>14px</code>
+												</td>
+												<td>
+													<code>regular - 400</code>
+												</td>
+												<td>
+													<code>150%</code>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<p className="xsmall">Paragraph XSmall</p>
+												</td>
+												<td>
+													<code className="hex">&lt;p class="xsmall"&gt;</code>
+												</td>
+												<td>
+													<code className="class">.act-p-xsmall</code>
+												</td>
+												<td>
+													<code className="sass-var">$sourcesanspro</code>
+												</td>
+												<td>
+													<code>10px</code>
+												</td>
+												<td>
+													<code>regular - 400</code>
+												</td>
+												<td>
+													<code>150%</code>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<footer className="act-footer">
+		<AoC />
+		<Footer />
+	</footer>
+</div>

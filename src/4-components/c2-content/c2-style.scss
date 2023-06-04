@@ -1,0 +1,130 @@
+.act-breaker {
+	align-items: flex-start;
+	background-color: $act-colour__light-purple;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	padding: map-get($act-space, "desktop-2");
+	width: 100%;
+	&__content {
+		color: $act-colour__purple;
+		font-size: $act-font-size__desktop-h4;
+		font-weight: $act-font-weight__semibold;
+		line-height: $act-line-height__130;
+	}
+}
+
+.act-key-message {
+	align-items: flex-start;
+	background-color: $act-colour__light-purple;
+	border: 1px solid $act-colour__purple;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	padding: map-get($act-space, "desktop-3");
+	margin-bottom: map-get($act-space, "desktop-3");
+	width: 100%;
+	&__content {
+		color: $act-colour__black;
+		font-size: $act-font-size__desktop-h4;
+		font-weight: $act-font-weight__semibold;
+		line-height: $act-line-height__130;
+	}
+}
+
+.act-quote {
+	align-items: flex-start;
+	color: $act-colour__purple;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	padding: map-get($act-space, "desktop-2") 0px;
+	width: 100%;
+	&__icon {
+		align-items: flex-start;
+		display: flex;
+		font-size: $act-font-size__desktop-h2;
+		justify-content: flex-start;
+		margin-right: map-get($act-space, "desktop-2");
+	}
+	&__content {
+		color: $act-colour__purple;
+		font-size: $act-font-size__desktop-h4;
+		font-style: italic;
+		font-weight: $act-font-weight__semibold;
+		line-height: $act-line-height__130;
+		margin-top: map-get($act-space, "desktop-0");
+	}
+}
+
+.act-service-card {
+	background-color: $act-colour__light-grey;
+	box-shadow: inset 4px 0 0 0 $act-colour__purple, inset 0 0 0 0px $act-colour__purple, inset 0 0 0 0 $act-colour__purple, inset 0 0 0 0 $act-colour__purple;
+	display: flex;
+	flex-direction: column;
+	margin: map-get($act-space, "desktop-4") 0px;
+	padding: map-get($act-space, "desktop-3");
+	width: fit-content;
+	&__title {
+		color: $act-colour__black;
+		font-size: $act-font-size__desktop-h4;
+		font-weight: $act-font-weight__semibold;
+		margin-bottom: map-get($act-space, "desktop-1");
+	}
+	&__body {
+		color: $act-colour__black;
+		font-size: $act-font-size__desktop-h6;
+		font-weight: $act-font-weight__regular;
+		line-height: $act-line-height__150;
+	}
+	&__cta {
+		margin-top: map-get($act-space, "desktop-1");
+	}
+}
+
+.act-content__managed-by {
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	border-top: 1px solid $act-colour__grey;
+	padding: 0 map-get($act-space, "desktop-2") 0 map-get($act-space, "desktop-2");
+	p {
+		padding: map-get($act-space, "desktop-4") 0 map-get($act-space, "desktop-4") 0;
+	}
+}
+
+//for demo purposes only
+.act-body > .act-content__managed-by {
+	margin-top: 50px;
+}
+
+.act-table-contents {
+	&__container {
+		padding-left: map-get($act-space, "desktop-2");
+		border-left: 1px solid $act-colour__black;
+	}
+	&__content {
+		list-style-type: none;
+		&__item {
+			padding: map-get($act-space, "desktop-1") 0;
+		}
+	}
+}
+
+.act-links-list {
+	&__container {
+		padding: map-get($act-space, "desktop-2");
+	}
+	&__content {
+		list-style-type: none;
+		&__item {
+			align-items: center;
+			border-bottom: 1px solid $act-colour__black;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			padding: map-get($act-space, "desktop-2") 0;
+			width: 100%;
+		}
+	}
+}

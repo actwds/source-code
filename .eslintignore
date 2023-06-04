@@ -1,0 +1,9 @@
+*.log
+.cache
+.env
+.eslintrc.js
+.nova
+.vscode
+.DS_Store
+node_modules
+storybook-static

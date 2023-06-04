@@ -1,0 +1,154 @@
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { linkTo } from "@storybook/addon-links";
+import Masthead from "../_docs/masthead";
+import AoC from "../_docs/aoc";
+import Footer from "../_docs/footer";
+import LinkTo from "@storybook/addon-links/react";
+
+<Meta
+	title="About/About"
+	parameters={{
+		previewTabs: {
+			canvas: { hidden: true },
+			"storybook/docs/panel": { hidden: true },
+		},
+	}}
+/>
+
+<div className="act-docs-container">
+	<Masthead />
+	<main className="act-body">
+		<div className="act-flex act-flex-light-purple">
+			<div className="act-flex__container act-flex__container-padding-trim">
+				<div className="act-flex__grid">
+					<div className="act-flex__row">
+						<div className="act-col__cw-12">
+							<div className="act-box">
+								<div className="act-breadcrumbs">
+									<ul className="act-breadcrumbs__container">
+										<li className="act-breadcrumbs__crumb act-h6">
+											<LinkTo className="act-breadcrumbs__crumb__link" kind="about-about--page">
+												Design System <i className="fa-solid fa-angle-right"></i>
+											</LinkTo>
+										</li>
+										<li className="act-breadcrumbs__crumb act-h6">
+											<LinkTo className="act-breadcrumbs__crumb__link" kind="about-about--page">
+												About <i className="fa-solid fa-angle-right"></i>
+											</LinkTo>
+										</li>
+									</ul>
+								</div>
+								<h1>ACT Government Website Design System</h1>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div className="act-flex">
+			<div className="act-flex__container">
+				<div className="act-flex__grid">
+					<div className="act-flex__row">
+						<div className="act-col__cw-12">
+							<div className="act-box">
+								<p>Helping teams create a consistent, accessible and inclusive digital experience across ACT Government websites and digital services.</p>
+								<div className="act-card-grid">
+									<LinkTo className="act-card act-card__homepage act-card__feature--none" kind="design-overview--page">
+										<div class="act-card__container">
+											<div class="act-card__content">
+												<div class="act-card__icon">
+													<i class="fa-solid fa-ticket"></i>
+												</div>
+												<div class="act-card__title">Design Tokens</div>
+												<div class="act-card__cta">
+													<i class="fa-solid fa-arrow-right"></i>
+												</div>
+											</div>
+										</div>
+									</LinkTo>
+									<LinkTo className="act-card act-card__homepage act-card__feature--none" kind="layout-overview--page">
+										<div class="act-card__container">
+											<div class="act-card__content">
+												<div class="act-card__icon">
+													<i class="fa-solid fa-table-columns"></i>
+												</div>
+												<div class="act-card__title">Layout</div>
+												<div class="act-card__cta">
+													<i class="fa-solid fa-arrow-right"></i>
+												</div>
+											</div>
+										</div>
+									</LinkTo>
+									<LinkTo className="act-card act-card__homepage act-card__feature--none" kind="components-overview--page">
+										<div class="act-card__container">
+											<div class="act-card__content">
+												<div class="act-card__icon">
+													<i class="fa-solid fa-play"></i>
+												</div>
+												<div class="act-card__title">Components</div>
+												<div class="act-card__cta">
+													<i class="fa-solid fa-arrow-right"></i>
+												</div>
+											</div>
+										</div>
+									</LinkTo>
+									<LinkTo className="act-card act-card__homepage act-card__feature--none" kind="patterns-overview--page">
+										<div class="act-card__container">
+											<div class="act-card__content">
+												<div class="act-card__icon">
+													<i class="fa-solid fa-shapes"></i>
+												</div>
+												<div class="act-card__title">Patterns</div>
+												<div class="act-card__cta">
+													<i class="fa-solid fa-arrow-right"></i>
+												</div>
+											</div>
+										</div>
+									</LinkTo>
+									<LinkTo className="act-card act-card__homepage act-card__feature--none" kind="previews-overview--page">
+										<div class="act-card__container">
+											<div class="act-card__content">
+												<div class="act-card__icon">
+													<i class="fa-solid fa-eye"></i>
+												</div>
+												<div class="act-card__title">Previews</div>
+												<div class="act-card__cta">
+													<i class="fa-solid fa-arrow-right"></i>
+												</div>
+											</div>
+										</div>
+									</LinkTo>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div className="act-flex__row">
+						<div className="act-col__cw-12">
+							<div className="act-box">
+								<h2>What is the design system</h2>
+								<p>
+									The design system is used to create customer-centred digital products and services that meet branding and accessibility guidelines. It’s a collection of
+									repeatable components including usage and interaction guidance.
+								</p>
+								<h2>Who should use it</h2>
+								<p>
+									The Design System should be used by all directorates and agencies to help meet ACT Government{" "}
+									<a href="https://www.act.gov.au/branding" target="_blank" title="ACT Brand Guardian">
+										design and brand guidelines
+									</a>{" "}
+									and digital standards. The components are UI building blocks, providing a consistent approach to UI and UX designers and engineers.
+								</p>
+								<h2>How it works</h2>
+								<p>View core styles, browse components, read guidance on how they can be used, and follow links to documented UI kits in Figma and HTML.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<footer className="act-footer">
+		<AoC />
+		<Footer />
+	</footer>
+</div>

@@ -1,0 +1,93 @@
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { linkTo } from "@storybook/addon-links";
+import Masthead from "../_docs/masthead";
+import AoC from "../_docs/aoc";
+import Footer from "../_docs/footer";
+import LinkTo from "@storybook/addon-links/react";
+
+<Meta
+	title="Design/Extending the Design System"
+	parameters={{
+		previewTabs: {
+			canvas: { hidden: true },
+			"storybook/docs/panel": { hidden: true },
+		},
+	}}
+/>
+
+<div className="act-docs-container">
+	<Masthead />
+	<main className="act-body">
+		<div className="act-flex act-flex-light-purple">
+			<div className="act-flex__container act-flex__container-padding-trim">
+				<div className="act-flex__grid">
+					<div className="act-flex__row">
+						<div className="act-col__cw-12">
+							<div className="act-box">
+								<div className="act-breadcrumbs">
+									<ul className="act-breadcrumbs__container">
+										<li className="act-breadcrumbs__crumb act-h6">
+											<LinkTo className="act-breadcrumbs__crumb__link" kind="about-about--page">
+												Design System <i className="fa-solid fa-angle-right"></i>
+											</LinkTo>
+										</li>
+										<li className="act-breadcrumbs__crumb act-h6">
+											<LinkTo className="act-breadcrumbs__crumb__link" kind="design-overview--page">
+												Design <i className="fa-solid fa-angle-right"></i>
+											</LinkTo>
+										</li>
+										<li className="act-breadcrumbs__crumb act-h6">
+											<LinkTo className="act-breadcrumbs__crumb__link" kind="design-overview--page">
+												Extending the Design System <i className="fa-solid fa-angle-right"></i>
+											</LinkTo>
+										</li>
+									</ul>
+								</div>
+								<h1>Extending the Design System</h1>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div className="act-flex">
+			<div className="act-flex__container">
+				<div className="act-flex__grid">
+					<div className="act-flex__row">
+						<div className="act-col__cw-12">
+							<div className="act-box">
+								<h3>Designing using common approaches</h3>
+								<p>
+									Where existing components or patterns do not meet the needs of your users or unique project, designers can create custom solutions by extending on the core
+									elements of the ACT Gov Design System.
+								</p>
+								<p>
+									CMTEDD Communications and Online Services should be engaged in the first instance to explore and ask teams who have faced similar user needs or researched similar
+									solutions. We encourage re-use when designing to keep experiences consistent across our digital platforms.
+								</p>
+								<p>
+									When designing custom solutions, ensure you align to the core styles and components (for brand requirements) and the graphic elements that underpin our design
+									language, to ensure you create solutions that are consistent with the ACT Government look and feel.
+								</p>
+								<p>
+									Instead of starting from scratch, utilise already built components and customise to meet your user need. This helps to create consistent services for users and
+									saves time and effort by building with already tested and accessible solutions.
+								</p>
+								<p>
+									For further information please contact 
+									<a href="mailto:cmtedd.webmaster@act.gov.au" target="_blank">
+										cmtedd.webmaster@act.gov.au
+									</a>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<footer className="act-footer">
+		<AoC />
+		<Footer />
+	</footer>
+</div>

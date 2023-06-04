@@ -1,0 +1,105 @@
+import { Meta, ColorPalette, ColorItem } from "@storybook/addon-docs";
+import { themes, ThemeProvider, convert, ensure } from "@storybook/theming";
+import Masthead from "../../_docs/masthead";
+import AoC from "../../_docs/aoc";
+import Footer from "../../_docs/footer";
+import LinkTo from "@storybook/addon-links/react";
+
+<Meta
+	title="Components/Hero Rows/Guidance"
+	parameters={{
+		previewTabs: {
+			canvas: { hidden: true },
+			"storybook/docs/panel": { hidden: true },
+		},
+	}}
+/>
+
+<div className="act-docs-container">
+	<Masthead />
+	<main className="act-body">
+		<div className="act-flex act-flex-light-purple">
+			<div className="act-flex__container act-flex__container-padding-trim">
+				<div className="act-flex__grid">
+					<div className="act-flex__row">
+						<div className="act-col__cw-12">
+							<div className="act-box">
+								<div className="act-breadcrumbs">
+									<ul className="act-breadcrumbs__container">
+										<li className="act-breadcrumbs__crumb act-h6">
+											<LinkTo className="act-breadcrumbs__crumb__link" kind="about-about--page">
+												Design System <i className="fa-solid fa-angle-right"></i>
+											</LinkTo>
+										</li>
+										<li className="act-breadcrumbs__crumb act-h6">
+											<LinkTo className="act-breadcrumbs__crumb__link" kind="components-overview--page">
+												Components <i className="fa-solid fa-angle-right"></i>
+											</LinkTo>
+										</li>
+										<li className="act-breadcrumbs__crumb act-h6">
+											<LinkTo className="act-breadcrumbs__crumb__link" kind="components-overview--pageoverview--page">
+												Hero Rows <i className="fa-solid fa-angle-right"></i>
+											</LinkTo>
+										</li>
+									</ul>
+								</div>
+								<h1>Hero Rows</h1>
+								<p>Hero rows are used on the homepage to introduce the goals or purpose of the website and guide users to specific content on the website.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div className="act-flex">
+			<div className="act-flex__container">
+				<div className="act-flex__grid">
+					<div className="act-flex__row">
+						<div className="act-col__cw-12">
+							<div className="act-box">
+								<h3>Usage</h3>
+								<p>Use a hero banners to:</p>
+								<ul>
+									<li>introduce and give context to the product or service</li>
+									<li>communicate and drive users to a specific call to action</li>
+								</ul>
+								<h4>Do:</h4>
+								<ul>
+									<li>only use on a home page or category/landing page. Overuse may decrease their effectiveness and lead to ‘banner blindness’.</li>
+									<li>use simple and concise messaging</li>
+									<li>use clear call to actions that aligns to the message or task</li>
+									<li>only use images where they add value to the content and support the message</li>
+								</ul>
+								<h4>When to avoid</h4>
+								<p>Do not use:</p>
+								<ul>
+									<li>to replace titles on content pages, instead use H1 typography styles</li>
+									<li>for sites or products where the primary navigation of your users is via search, consider Hero Search</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div className="act-flex__row">
+						<div className="act-col__cw-12">
+							<div className="act-box">
+								<h3>Building heros</h3>
+								<p>
+									Heros layout UI elements to communicate a focused message. They should feature a primary message and/or call to action, and can be accompanied by supporting
+									content such a images or graphics.
+								</p>
+								<p>
+									Our base component shows example layouts, and are designed to adapt to your content. If these do not meet your user needs (ie. content type or layout), you can
+									use the foundational elements of the design system to build your own in a similar style.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<footer className="act-footer">
+		<AoC />
+		<Footer />
+	</footer>
+</div>

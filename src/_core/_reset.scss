@@ -1,0 +1,54 @@
+/* ACT Design System */
+/* Resets CSS within Storybook Story */
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+*:not[class^="act-"],
+*:not(.prismjs, .prismjs div, .prismjs span) {
+	font-family: sans-serif;
+}
+*[class^="act-"] {
+	font-family: $montserrat;
+}
+.sr-only {
+	border: 0 !important;
+	clip: rect(1px, 1px, 1px, 1px) !important;
+	-webkit-clip-path: inset(50%) !important;
+	clip-path: inset(50%) !important;
+	height: 1px !important;
+	overflow: hidden !important;
+	padding: 0 !important;
+	position: absolute !important;
+	width: 1px !important;
+	white-space: nowrap !important;
+}
+code {
+	font-family: monospace !important;
+}
+i.fa,
+i.fa-solid,
+i.fa-brands {
+	/* Centre align Fontawesome icons within their container */
+	align-items: center;
+	justify-content: center;
+}
+.innerZoomElementWrapper > div > div > div {
+	/* This is the div the component is rendered into in Docs mode */
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	padding: map-get($act-space, "desktop-1");
+}
+
+/* Canvas */
+.sb-show-main {
+	#root {
+		/* This is the div the component is rendered into in Canvas mode */
+		// display: flex;
+		// flex-direction: column;
+		// width: 100%;
+	}
+}

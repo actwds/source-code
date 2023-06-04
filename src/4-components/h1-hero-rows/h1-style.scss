@@ -1,0 +1,372 @@
+$act-hero-max-height: 460px;
+$act-hero-widget-height: 300px;
+
+.act-hero-row {
+	&__cards {
+		align-items: center;
+		background: linear-gradient(180deg, #dfdfdf 0%, #e6e5e5 0.01%, #f0f0f0 100%);
+		background-color: linear-gradient(180deg, #dfdfdf 0%, #e6e5e5 0.01%, #f0f0f0 100%);
+		display: flex;
+		justify-content: center;
+		&__container {
+			align-items: flex-start;
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+			max-width: $act-page-max-width;
+			width: $act-page-full-width;
+			@include devices(mobile) {
+				padding: map-get($act-space, "desktop-2") map-get($act-space, "desktop-1");
+			}
+			@include devices(tablet) {
+				padding: map-get($act-space, "desktop-3") map-get($act-space, "desktop-2");
+			}
+			@include devices(desktop) {
+				padding: map-get($act-space, "desktop-4") map-get($act-space, "desktop-5");
+			}
+		}
+		.act-box {
+			width: 100%;
+			@include devices(mobile) {
+				margin: map-get($act-space, "desktop-0");
+				padding: map-get($act-space, "desktop-0");
+			}
+			@include devices(tablet) {
+				margin: map-get($act-space, "desktop-1");
+				padding: map-get($act-space, "desktop-1");
+			}
+			@include devices(desktop) {
+				margin: map-get($act-space, "desktop-2");
+				padding: map-get($act-space, "desktop-2");
+			}
+		}
+	}
+	&__links {
+		align-items: center;
+		background-color: $act-colour__purple;
+		color: $act-colour__white;
+		display: flex;
+		flex-direction: column;
+		height: $act-hero-max-height;
+		justify-content: center;
+		max-height: $act-hero-max-height;
+		min-height: $act-hero-max-height;
+		position: relative;
+		width: 100%;
+		&:after {
+			content: ".";
+			display: block;
+			height: 0;
+			clear: both;
+			visibility: hidden;
+		}
+		&__container {
+			align-items: flex-start;
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+			max-width: $act-page-max-width;
+			position: absolute;
+			width: $act-page-full-width;
+			z-index: 2;
+			@include devices(mobile) {
+				padding: map-get($act-space, "desktop-2") map-get($act-space, "desktop-1");
+			}
+			@include devices(tablet) {
+				padding: map-get($act-space, "desktop-3") map-get($act-space, "desktop-2");
+			}
+			@include devices(desktop) {
+				padding: map-get($act-space, "desktop-4") map-get($act-space, "desktop-5");
+			}
+		}
+		&__background {
+			align-items: center;
+			display: flex;
+			max-height: $act-hero-max-height;
+			min-height: $act-hero-max-height;
+			flex-direction: row;
+			justify-content: center;
+			width: 100%;
+			z-index: 1;
+			@include devices(mobile) {
+				display: none;
+			}
+			[class*="act-col"] {
+				height: $act-hero-max-height;
+				min-height: $act-hero-max-height;
+			}
+			[class*="__bgimg"] {
+				background-image: url("/images/purple.jpg");
+				background-color: $act-colour__violet;
+				height: $act-hero-max-height;
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: cover;
+			}
+		}
+		.act-col {
+			flex-grow: 1;
+			&__cw-4 {
+				/* 4 Column */ /* 33.333% */ /* 100/33/33 */
+				@include devices(mobile) {
+					max-width: 100%;
+					width: 100%;
+				}
+				@include devices(tablet) {
+					max-width: 33.333%;
+					width: 33.333%;
+				}
+				@include devices(desktop) {
+					max-width: 33.333%;
+					width: 33.333%;
+				}
+			}
+			&__cw-8 {
+				/* 8 Column */ /* 66.666% */ /* 100/66/66 */
+				@include devices(mobile) {
+					max-width: 100%;
+					width: 100%;
+				}
+				@include devices(tablet) {
+					max-width: 66.666%;
+					width: 66.666%;
+				}
+				@include devices(desktop) {
+					max-width: 66.666%;
+					width: 66.666%;
+				}
+			}
+		}
+		.act-box {
+			@include devices(mobile) {
+				margin: map-get($act-space, "desktop-0");
+				padding: map-get($act-space, "desktop-0");
+			}
+			@include devices(tablet) {
+				margin: map-get($act-space, "desktop-1");
+				padding: map-get($act-space, "desktop-1");
+			}
+			@include devices(desktop) {
+				margin: map-get($act-space, "desktop-2");
+				padding: map-get($act-space, "desktop-2");
+			}
+		}
+		&__link {
+			align-items: center;
+			border: none;
+			box-shadow: inset 0 0 0 0 $act-colour__purple, inset 0 0 0 0 $act-colour__purple, inset 0 0 0 0 $act-colour__purple, 0 2px 0 $act-colour__purple;
+			color: $act-colour__white;
+			cursor: pointer;
+			display: flex;
+			justify-content: flex-start;
+			padding: map-get($act-space, "desktop-1") 0px;
+			text-decoration: none;
+			width: fit-content;
+			&:first-of-type {
+				margin-top: map-get($act-space, "desktop-2");
+			}
+			&:nth-of-type(1n + 4) {
+				display: none !important;
+			}
+			&__text {
+				font-size: $act-font-size__desktop-h4;
+				font-weight: $act-font-weight__semibold;
+				line-height: $act-line-height__130;
+			}
+			&__icon {
+				font-size: $act-font-size__desktop-h4;
+				font-weight: $act-font-weight__semibold;
+				line-height: $act-line-height__130;
+				margin-left: map-get($act-space, "desktop-2");
+			}
+			&:hover {
+				border: none;
+				box-shadow: inset 0 0 0 0 $act-colour__white, inset 0 0 0 0 $act-colour__white, inset 0 0 0 0 $act-colour__white, 0 2px 0 $act-colour__white;
+				text-decoration: none;
+			}
+			&:hover &__text,
+			&:hover &__icon {
+				border: none;
+				color: $act-colour__white;
+				text-decoration: none;
+			}
+		}
+	}
+	&__widget {
+		align-items: center;
+		background-color: $act-colour__purple;
+		color: $act-colour__white;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		&__container {
+			align-items: center;
+			display: flex;
+			flex-direction: row;
+			height: $act-hero-widget-height;
+			justify-content: space-between;
+			max-width: $act-page-max-width;
+			width: $act-page-full-width;
+			@include devices(mobile) {
+				padding: map-get($act-space, "desktop-2") map-get($act-space, "desktop-1");
+			}
+			@include devices(tablet) {
+				padding: map-get($act-space, "desktop-3") map-get($act-space, "desktop-2");
+			}
+			@include devices(desktop) {
+				padding: map-get($act-space, "desktop-4") map-get($act-space, "desktop-5");
+			}
+		}
+		.act-col {
+			flex-grow: 1;
+			&__cw-6 {
+				/* 6 Column */ /* 50% */ /* 100/50/50 */
+				@include devices(mobile) {
+					max-width: 100%;
+					width: 100%;
+				}
+				@include devices(tablet) {
+					max-width: 50%;
+					width: 50%;
+				}
+				@include devices(desktop) {
+					max-width: 50%;
+					width: 50%;
+				}
+			}
+		}
+		.act-box {
+			width: 100%;
+			@include devices(mobile) {
+				margin: map-get($act-space, "desktop-0");
+				padding: map-get($act-space, "desktop-0");
+			}
+			@include devices(tablet) {
+				margin: map-get($act-space, "desktop-1");
+				padding: map-get($act-space, "desktop-1");
+			}
+			@include devices(desktop) {
+				margin: map-get($act-space, "desktop-2");
+				padding: map-get($act-space, "desktop-2");
+			}
+		}
+		&__position {
+			position: relative;
+			height: $act-hero-widget-height;
+		}
+		&__frame {
+			align-items: center;
+			background-color: $act-colour__light-grey;
+			color: $act-colour__black;
+			display: flex;
+			justify-content: center;
+			padding: map-get($act-space, "desktop-3");
+			position: absolute;
+			top: $act-space__desktop-6;
+			width: 100%;
+			&__demo {
+				height: 300px;
+			}
+		}
+	}
+	&__search {
+		align-items: center;
+		background-image: url("/images/purple.jpg");
+		background-color: $act-colour__violet;
+		height: $act-hero-widget-height;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		color: $act-colour__white;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		&__container {
+			align-items: center;
+			display: flex;
+			flex-direction: row;
+			height: $act-hero-widget-height;
+			justify-content: space-between;
+			max-width: $act-page-max-width;
+			width: $act-page-full-width;
+			@include devices(mobile) {
+				padding: map-get($act-space, "desktop-2") map-get($act-space, "desktop-1");
+			}
+			@include devices(tablet) {
+				padding: map-get($act-space, "desktop-3") map-get($act-space, "desktop-2");
+			}
+			@include devices(desktop) {
+				padding: map-get($act-space, "desktop-4") map-get($act-space, "desktop-5");
+			}
+		}
+		.act-col {
+			flex-grow: 1;
+			&__cw-6 {
+				/* 6 Column */ /* 50% */ /* 100/50/50 */
+				@include devices(mobile) {
+					max-width: 100%;
+					width: 100%;
+				}
+				@include devices(tablet) {
+					max-width: 100%;
+					width: 100%;
+				}
+				@include devices(desktop) {
+					max-width: 50%;
+					width: 50%;
+				}
+			}
+			&__cw-12 {
+				/* 12 Column */ /* 100% */ /* 100/100/100 */
+				@include devices(mobile) {
+					max-width: 100%;
+					width: 100%;
+				}
+				@include devices(tablet) {
+					max-width: 100%;
+					width: 100%;
+				}
+				@include devices(desktop) {
+					max-width: 100%;
+					width: 100%;
+				}
+			}
+		}
+		.act-box {
+			@include devices(mobile) {
+				margin: map-get($act-space, "desktop-0");
+				padding: map-get($act-space, "desktop-0");
+			}
+			@include devices(tablet) {
+				margin: map-get($act-space, "desktop-1");
+				padding: map-get($act-space, "desktop-1");
+			}
+			@include devices(desktop) {
+				margin: map-get($act-space, "desktop-2");
+				padding: map-get($act-space, "desktop-2");
+			}
+		}
+		&__position {
+			position: relative;
+			height: $act-hero-widget-height;
+		}
+		&__frame {
+			align-items: center;
+			background-color: $act-colour__purple;
+			color: $act-colour__white;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			padding: map-get($act-space, "desktop-3");
+			position: absolute;
+			top: $act-space__desktop-10;
+			width: 100%;
+			&__demo {
+				min-height: $act-space__desktop-8;
+			}
+			&__block {
+				display: flex;
+			}
+		}
+	}
+}

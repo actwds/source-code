@@ -1,0 +1,103 @@
+.act-progress {
+	display: flex;
+	flex-direction: row;
+	justify-content: start;
+	align-items: center;
+	gap: 1rem;
+	overflow-x: scroll;
+	width: 100%;
+	padding: map-get($act-space, "desktop-2");
+
+	@include devices(mobile) {
+		flex-direction: column;
+	}
+	&__step {
+		align-items: center;
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+		&__icon {
+			align-items: center;
+			border: 1px solid map-get($act-colour, "grey-2");
+			border-radius: 50%;
+			display: flex;
+			height: map-get($act-space, "desktop-2");
+			justify-content: center;
+			width: map-get($act-space, "desktop-2");
+			padding: map-get($act-space, "desktop-2");
+			.multi-step-icon-edit {
+				display: block;
+			}
+			.multi-step-icon-check {
+				display: none;
+			}
+		}
+		&.large > &__icon {
+			height: map-get($act-space, "desktop-3");
+			width: map-get($act-space, "desktop-3");
+			padding: map-get($act-space, "desktop-3");
+			//TODO: are these the correct sizes
+		}
+
+		// Green tick
+		&.complete > &__icon {
+			background-color: map-get($act-colour, "green");
+			border: 1px solid map-get($act-colour, "green");
+			color: map-get($act-colour, "white");
+			.multi-step-icon-edit {
+				display: none;
+			}
+			.multi-step-icon-check {
+				display: block;
+			}
+			.multi-step-icon-circle {
+				display: none;
+			}
+		}
+		&.complete.substep > &__icon {
+			.multi-step-icon-check {
+				display: none;
+			}
+			.multi-step-icon-circle {
+				display: none;
+			}
+		}
+
+		//Circle
+		&.incomplete > &__icon {
+			background-color: map-get($act-colour, "white");
+			border: 1px solid map-get($act-colour, "black");
+			color: map-get($act-colour, "black");
+			.multi-step-icon-edit {
+				display: none;
+			}
+			.multi-step-icon-check {
+				display: none;
+			}
+			.multi-step-icon-circle {
+				display: block;
+			}
+		}
+		&.incomplete.substep > &__icon {
+			.multi-step-icon-circle {
+				display: none;
+			}
+		}
+
+		// Grey pencil
+		&.active > &__icon {
+			background-color: map-get($act-colour, "light-grey");
+			border: 1px solid map-get($act-colour, "black");
+			color: map-get($act-colour, "black");
+			.multi-step-icon-edit {
+				display: block;
+			}
+			.multi-step-icon-check {
+				display: none;
+			}
+			.multi-step-icon-circle {
+				display: none;
+			}
+		}
+	}
+}

@@ -1,0 +1,40 @@
+.act-pagination {
+	align-items: center;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	&__title {
+		font-size: $act-font-size__desktop-p-small;
+		font-weight: $act-font-weight__semibold;
+		margin-right: map-get($act-space, "desktop-0");
+	}
+	&__next {
+		font-size: $act-font-size__desktop-p-small;
+	}
+	.act-page-marker {
+		align-items: center;
+		cursor: pointer;
+		display: flex;
+		font-size: $act-font-size__desktop-p-small;
+		font-weight: $act-font-weight__semibold;
+		height: $act-space__desktop-3;
+		justify-content: center;
+		margin: 0px calc(map-get($act-space, "desktop-0") / 2);
+		min-width: $act-space__desktop-3;
+		width: fit-content;
+		&:hover {
+			background-color: $act-colour__medium-purple;
+		}
+		&__current {
+			background-color: $act-colour__purple;
+			color: $act-colour__white;
+			&:hover {
+				background-color: $act-colour__purple;
+				color: $act-colour__white;
+			}
+		}
+		&__more {
+			pointer-events: none;
+		}
+	}
+}

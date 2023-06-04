@@ -1,0 +1,392 @@
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { linkTo } from "@storybook/addon-links";
+import Masthead from "../_docs/masthead";
+import AoC from "../_docs/aoc";
+import Footer from "../_docs/footer";
+import LinkTo from "@storybook/addon-links/react";
+
+<Meta
+	title="Layout/Overview"
+	parameters={{
+		previewTabs: {
+			canvas: { hidden: true },
+			"storybook/docs/panel": { hidden: true },
+		},
+	}}
+/>
+
+<div className="act-docs-container">
+	<Masthead />
+	<main className="act-body">
+		<div className="act-flex act-flex-light-purple">
+			<div className="act-flex__container act-flex__container-padding-trim">
+				<div className="act-flex__grid">
+					<div className="act-flex__row">
+						<div className="act-col__cw-12">
+							<div className="act-box">
+								<div className="act-breadcrumbs">
+									<ul className="act-breadcrumbs__container">
+										<li className="act-breadcrumbs__crumb act-h6">
+											<LinkTo className="act-breadcrumbs__crumb__link" kind="about-about--page">
+												Design System <i className="fa-solid fa-angle-right"></i>
+											</LinkTo>
+										</li>
+										<li className="act-breadcrumbs__crumb act-h6">
+											<LinkTo className="act-breadcrumbs__crumb__link" kind="layout-overview--page">
+												Layout <i className="fa-solid fa-angle-right"></i>
+											</LinkTo>
+										</li>
+									</ul>
+								</div>
+								<h1>Layout</h1>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div className="act-flex">
+			<div className="act-flex__container">
+				<div className="act-flex__grid">
+					<div className="act-flex__row">
+						<div className="act-col__cw-12">
+							<div className="act-box">
+								<h2>Page Structure</h2>
+								<div className="act-img">
+									<img src="/images/3-layout-page-rows-1.png" alt="Illustration of the Design System page structure" />
+									<div className="act-img__description act-p-small">
+										<i class="fa-solid fa-circle-info"></i> Illustration of the Design System page structure
+									</div>
+								</div>
+								<p>
+									Page structure in this Design System is defined with class names prefixed with <code>act-flex__</code>
+								</p>
+								<div className="act-table-container">
+									<table>
+										<thead>
+											<tr>
+												<th>Class</th>
+												<th>Extension</th>
+												<th>flex-direction</th>
+												<th>Size</th>
+												<th>Purpose</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>
+													<code>.act-flex</code>
+												</td>
+												<td>&nbsp;</td>
+												<td>
+													<code>column</code>
+												</td>
+												<td>
+													<code>100vw</code>
+												</td>
+												<td>
+													Provides a parent row that expands to the entire viewport width
+													<br />
+													This parent row can also handle colour/gradient/image backgrounds
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<code>.act-flex</code>
+												</td>
+												<td>
+													<code>__container</code>
+												</td>
+												<td>
+													<code>column</code>
+												</td>
+												<td>
+													<code>100%</code>
+												</td>
+												<td>
+													Provides an element that expands to fill the parent container
+													<br />
+													Responsible for centering content on the page
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<code>.act-flex</code>
+												</td>
+												<td>
+													<code>__grid</code>
+												</td>
+												<td>
+													<code>column</code>
+												</td>
+												<td>
+													<code>100%</code>
+												</td>
+												<td>
+													Provides an element to handle rows of content
+													<br />
+													Responsible for stacking content rows vertically and capping content width to <code>1248px</code>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<code>.act-flex</code>
+												</td>
+												<td>
+													<code>__row</code>
+												</td>
+												<td>
+													<code>row</code>
+												</td>
+												<td>
+													<code>100%</code>
+												</td>
+												<td>
+													Provides an element to handle columns of content
+													<br />
+													Responsible for the layout of columns on the page
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div className="act-flex__row">
+						<div className="act-col__cw-12">
+							<div className="act-box">
+								<h2>Column Structure</h2>
+								<p>
+									Column structure within row elements are controlled using the class name <code>act-col</code>
+								</p>
+								<p>
+									Columns are based on a 12 column layout - they are defined in the CSS using <code>%</code> values
+								</p>
+								<div className="act-img">
+									<img src="/images/3-layout-page-columns-1.png" alt="Illustration of the Design System column structure" />
+									<div className="act-img__description act-p-small">
+										<i class="fa-solid fa-circle-info"></i> Illustration of the Design System column structure
+									</div>
+								</div>
+								<div className="act-table-container">
+									<table>
+										<thead>
+											<tr>
+												<th>Class</th>
+												<th>Extension</th>
+												<th>Desktop Size</th>
+												<th>Tablet Size</th>
+												<th>Mobile Size</th>
+												<th>Purpose</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>
+													<code>.act-col</code>
+												</td>
+												<td>&nbsp;</td>
+												<td>&nbsp;</td>
+												<td>&nbsp;</td>
+												<td>&nbsp;</td>
+												<td>
+													Provides a default column
+													<br />
+													Accepts a class name extension to render at different widths
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<code>.act-col</code>
+												</td>
+												<td>
+													<code>__cw-2</code>
+												</td>
+												<td>
+													<code>16.666%</code>
+												</td>
+												<td>
+													<code>33.333%</code>
+												</td>
+												<td>
+													<code>50%</code>
+												</td>
+												<td>2-column element (1/6)</td>
+											</tr>
+											<tr>
+												<td>
+													<code>.act-col</code>
+												</td>
+												<td>
+													<code>__cw-3</code>
+												</td>
+												<td>
+													<code>25%</code>
+												</td>
+												<td>
+													<code>50%</code>
+												</td>
+												<td>
+													<code>100%</code>
+												</td>
+												<td>3-column element (1/4)</td>
+											</tr>
+											<tr>
+												<td>
+													<code>.act-col</code>
+												</td>
+												<td>
+													<code>__cw-4</code>
+												</td>
+												<td>
+													<code>33.333%</code>
+												</td>
+												<td>
+													<code>33.333%</code>
+												</td>
+												<td>
+													<code>100%</code>
+												</td>
+												<td>4-column element (1/3)</td>
+											</tr>
+											<tr>
+												<td>
+													<code>.act-col</code>
+												</td>
+												<td>
+													<code>__cw-6</code>
+												</td>
+												<td>
+													<code>50%</code>
+												</td>
+												<td>
+													<code>50%</code>
+												</td>
+												<td>
+													<code>100%</code>
+												</td>
+												<td>6-column element (1/2)</td>
+											</tr>
+											<tr>
+												<td>
+													<code>.act-col</code>
+												</td>
+												<td>
+													<code>__cw-8</code>
+												</td>
+												<td>
+													<code>66.666%</code>
+												</td>
+												<td>
+													<code>66.666%</code>
+												</td>
+												<td>
+													<code>100%</code>
+												</td>
+												<td>8-column element (2/3)</td>
+											</tr>
+											<tr>
+												<td>
+													<code>.act-col</code>
+												</td>
+												<td>
+													<code>__cw-9</code>
+												</td>
+												<td>
+													<code>75%</code>
+												</td>
+												<td>
+													<code>100%</code>
+												</td>
+												<td>
+													<code>100%</code>
+												</td>
+												<td>9-column element (3/4)</td>
+											</tr>
+											<tr>
+												<td>
+													<code>.act-col</code>
+												</td>
+												<td>
+													<code>__cw-12</code>
+												</td>
+												<td>
+													<code>100%</code>
+												</td>
+												<td>
+													<code>100%</code>
+												</td>
+												<td>
+													<code>100%</code>
+												</td>
+												<td>12-column element (1/1)</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div className="act-flex__row">
+						<div className="act-col__cw-12">
+							<div className="act-box">
+								<h2>Box Structure</h2>
+								<p>
+									Within each column there must be an element with the class name <code>act-box</code>
+								</p>
+								<p>This element provides margin and padding to maintain accurate positioning of elements onscreen</p>
+								<p>Components and patterns are then placed directly inside this element</p>
+								<div className="act-table-container">
+									<table>
+										<thead>
+											<tr>
+												<th>Class</th>
+												<th>Desktop Spacing</th>
+												<th>Tablet Spacing</th>
+												<th>Mobile Spacing</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>
+													<code>.act-box</code>
+												</td>
+												<td>
+													<code>margin: $act-space__desktop-2;</code>
+													<br />
+													<code>padding: $act-space__desktop-2;</code>
+												</td>
+												<td>
+													<code>margin: $act-space__desktop-1;</code>
+													<br />
+													<code>padding: $act-space__desktop-1;</code>
+												</td>
+												<td>
+													<code>margin: $act-space__desktop-0;</code>
+													<br />
+													<code>padding: $act-space__desktop-0;</code>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div className="act-flex__row">
+						<div className="act-col__cw-12">
+							<div className="act-box">
+								<h2>Footer Structure</h2>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<footer className="act-footer">
+		<AoC />
+		<Footer />
+	</footer>
+</div>
