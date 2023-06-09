@@ -27,6 +27,17 @@
 	&__nav {
 		display: flex;
 		flex-direction: row;
+		& a {
+			color:#fff;
+			border-bottom:1px solid $act-colour__white;
+			margin: 0 8px 0;
+			font-size:10px;
+			font-family: "Montserrat", sans-serif;
+			&:hover {
+				color:#fff;
+				border-bottom: 1px dashed $act-colour__white;
+			}
+		}
 	}
 	@include devices(mobile) {
 		&__container {

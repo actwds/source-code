@@ -37,8 +37,7 @@
 					margin-left: map-get($act-space, "desktop-0");
 				}
 				&:hover {
-					border-bottom: 1px dashed $act-colour__middle-grey;
-					color: $act-colour__middle-grey;
+					border-bottom: 1px dashed;
 				}
 			}
 		}

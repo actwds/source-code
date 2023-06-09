@@ -19,11 +19,11 @@ export const createF11 = () => {
             <div class="act-footer-nav">
             <h4>Bunburung</h4>
             <ul>
-              <li>Galu</li>
-              <li>Bimbiang</li>
-              <li>Dyindan</li>
-              <li>Bunduluk</li>
-              <li>Bural</li>
+              <li><a href="#">Galu</a></li>
+              <li><a href="#">Bimbiang</a></li>
+              <li><a href="#">Dyindan</a></li>
+              <li><a href="#">Bunduluk</a></li>
+              <li><a href="#">Bural</a></li>
             </ul>
             </div>
           </div>

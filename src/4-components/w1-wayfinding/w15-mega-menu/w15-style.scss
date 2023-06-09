@@ -191,7 +191,7 @@
 		flex-direction: column;
 		gap: map-get($act-space, "desktop-1");
 		height: auto;
-		.act-megamenu__link:hover {
+		.act-megamenu__link:hover a {
 			background-color: $act-colour__white;
 			color: $act-colour__violet;
 		}
@@ -208,6 +208,9 @@
 			font-size: $act-font-size__desktop-p-small;
 			font-weight: $act-font-weight__semibold;
 			line-height: $act-line-height__130;
+			& a {
+				color: $act-colour__white;
+			}
 		}
 		&__icon {
 			font-size: $act-font-size__desktop-p-small;
