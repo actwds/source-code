@@ -1,6 +1,13 @@
+/*****************************************/
+/*                                       */
+/*  ACT Website Design System - spf3.js  */
+/*                                       */
+/*****************************************/
+
 document.addEventListener("DOMContentLoaded", function() {
 	//console.log("spf3.js running...");
 });
+
 //A11 - Accordion
 document.addEventListener("DOMContentLoaded", function() {
   const sectionHeadings = document.querySelectorAll(".act-accordion__section__heading");

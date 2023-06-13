@@ -17,7 +17,7 @@
 		height: auto;
 	}
 	&__container {
-		max-width: calc($act-page-max-width/2);
+		max-width: calc(#{$act-page-max-width/2});
 		padding: map-get($act-space, "desktop-2");
 		width: 100%;
 		&.act-cookie-consent {

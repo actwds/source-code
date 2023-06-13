@@ -1,5 +1,4 @@
-/* ACT Design System */
-/* Resets CSS within Storybook Story */
+// Resets CSS within Storybook Story
 
 * {
 	box-sizing: border-box;
@@ -31,22 +30,22 @@ code {
 i.fa,
 i.fa-solid,
 i.fa-brands {
-	/* Centre align Fontawesome icons within their container */
+	// Centre align Fontawesome icons within their container
 	align-items: center;
 	justify-content: center;
 }
 .innerZoomElementWrapper > div > div > div {
-	/* This is the div the component is rendered into in Docs mode */
+	// This is the div the component is rendered into in Docs mode
 	display: flex;
 	flex-direction: column;
 	width: 100%;
 	padding: map-get($act-space, "desktop-1");
 }
 
-/* Canvas */
+// Canvas
 .sb-show-main {
 	#root {
-		/* This is the div the component is rendered into in Canvas mode */
+		// This is the div the component is rendered into in Canvas mode
 		// display: flex;
 		// flex-direction: column;
 		// width: 100%;

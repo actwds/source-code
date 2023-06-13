@@ -47,7 +47,7 @@
 	}
 	&__xsmall {
 		height: 24px;
-		font-size: calc($act-font-size__desktop-p-small - 1px);
+		font-size: calc(#{$act-font-size__desktop-p-small} - 1px);
 		padding: map-get($act-space, "desktop-0") map-get($act-space, "desktop-2");
 		i {
 			height: 12px;

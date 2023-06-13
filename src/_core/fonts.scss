@@ -1,19 +1,18 @@
-/* ACT Design System */
-/* Design Tokens */ /* Fonts */
-/* Reference: /?path=/docs/design-typography--page */
+// Fonts
+// Reference: /?path=/docs/design-typography--page
 
-/* Import Montserrat & Source Sans Pro from Google Fonts */
+// Import Montserrat & Source Sans Pro from Google Fonts
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap");
 
-/* Import FontAwesome from Local */
+// Import FontAwesome from Local
 @import url("/fonts/fontawesome/css/fontawesome.css");
 @import url("/fonts/fontawesome/css/solid.css");
 @import url("/fonts/fontawesome/css/brands.css");
 @import url("/fonts/fontawesome/css/regular.css");
 @import url("/fonts/fontawesome/css/light.css");
 
-/* Variables */
+// Variables
 $montserrat: "Montserrat", sans-serif;
 $sourcesanspro: "Source Sans Pro", sans-serif;
 

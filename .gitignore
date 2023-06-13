@@ -47,6 +47,3 @@ out
 
 # Storybook files
 storybook-static
-
-# Dist files
-dist
