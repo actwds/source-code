@@ -2,10 +2,10 @@
 
 This repo contains the documentation and components for the ACT Government Website Design System (ACTWDS).
 
-| Directory          | Function                         | Description                                                                          |
-| ------------------ | -------------------------------- | ------------------------------------------------------------------------------------ |
-| `src`              | design system files              | documentation, design tokens, scripts, components, patterns and previews             |
-| `.storybook`       | internal dev UI tool (optional)  | Storybook configuration files                                                        |
+| Directory    | Function                        | Description                                                              |
+| ------------ | ------------------------------- | ------------------------------------------------------------------------ |
+| `src`        | design system files             | documentation, design tokens, scripts, components, patterns and previews |
+| `.storybook` | internal dev UI tool (optional) | Storybook configuration files                                            |
 
 ## ➡️ Getting started
 
@@ -23,4 +23,4 @@ Build the application using the following command:
 npm run build
 ```
 
-Once built, the required files will be available in the *dist* folder.
+Once built, the required files will be available in the _dist_ folder.

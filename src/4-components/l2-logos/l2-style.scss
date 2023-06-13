@@ -3,10 +3,10 @@ $act-local-logo-space: map-get($act-space, "desktop-2");
 $act-local-logo-height-mobile: 36px;
 $act-local-logo-height-tablet: map-get($act-space, "desktop-5");
 $act-local-logo-height-desktop: map-get($act-space, "desktop-6");
-$act-local-cobrand-logo-height-mobile: calc(($act-local-logo-height-mobile/100) * 90);
-$act-local-cobrand-logo-height-tablet: calc(($act-local-logo-height-tablet/100) * 90);
-$act-local-cobrand-logo-height-desktop: calc(($act-local-logo-height-desktop/100) * 90);
-$act-local-cobrand-text-height-desktop: calc(($act-local-logo-height-desktop/100) * 68);
+$act-local-cobrand-logo-height-mobile: calc(#{($act-local-logo-height-mobile/100) * 90});
+$act-local-cobrand-logo-height-tablet: calc(#{($act-local-logo-height-tablet/100) * 90});
+$act-local-cobrand-logo-height-desktop: calc(#{($act-local-logo-height-desktop/100) * 90});
+$act-local-cobrand-text-height-desktop: calc(#{($act-local-logo-height-desktop/100) * 68});
 
 .act-logos {
 	&__container {

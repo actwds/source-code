@@ -1,8 +1,7 @@
-/* ACT Design System */
-/* Design Tokens */ /* Colours */
-/* Reference: /?path=/docs/design-colours--page */
+// Colours
+// Reference: /?path=/docs/design-colours--page
 
-/* Variables */
+// Variables
 $act-colour__azure: #ecfdff;
 $act-colour__black: #111111;
 $act-colour__blue-crayola: #01cee8;
@@ -40,7 +39,7 @@ $act-colour__district-woden: $act-colour__region-woden;
 $act-colour__health-dark-blue: #2c4eab;
 $act-colour__health-light-blue: #0076c8;
 
-/* Map */
+// Map
 $act-colour: (
 	"black": $act-colour__black,
 	"district-inner-north": $act-colour__district-inner-north,

@@ -19,7 +19,7 @@
 		font-weight: $act-font-weight__semibold;
 		height: $act-space__desktop-3;
 		justify-content: center;
-		margin: 0px calc(map-get($act-space, "desktop-0") / 2);
+		margin: 0px calc(#{map-get($act-space, "desktop-0") / 2});
 		min-width: $act-space__desktop-3;
 		width: fit-content;
 		&:hover {

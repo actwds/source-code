@@ -1,14 +1,17 @@
-/* ACT Design System */
-
-/* Design Token Import */
+/******************************************/
+/*                                        */
+/*  ACT Website Design System - spf3.css  */
+/*                                        */
+/******************************************/
+// Design Token Import
 @import "./_tokens.scss";
 
-/* Core Style Import */
+// Core Style Import
 @import "./_reset.scss";
 @import "./_flex.scss";
 @import "./_typography.scss";
 
-/* Component Style Import */
+// Component Style Import
 @import "./src/4-components/a1-accordion/a1-style.scss";
 @import "./src/4-components/a2-alerts/a2-style.scss";
 @import "./src/4-components/c1-cards/c1-style.scss";
@@ -27,7 +30,8 @@
 @import "./src/4-components/t2-tabs/t2-style.scss";
 @import "./src/4-components/t3-tags/t3-style.scss";
 @import "./src/4-components/t4-tooltips/t4-style.scss";
-/* Info: */ /* Wayfinding components retain their own stylesheet as they are more diverse than those above */
+
+// Wayfinding components retain their own stylesheet as they are more diverse than those above
 @import "./src/4-components/w1-wayfinding/w11-masthead/w11-style.scss";
 @import "./src/4-components/w1-wayfinding/w12-navbar/w12-style.scss";
 @import "./src/4-components/w1-wayfinding/w13-sidebar/w13-style.scss";

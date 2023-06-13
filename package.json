@@ -17,7 +17,7 @@
 		"fix-prettier": "npx prettier --write .",
 		"fix-all": "npm run fix-eslint && npm run fix-prettier",
 		"build-storybook": "set NODE_OPTIONS=--openssl-legacy-provider && npm run fix-eslint && npm run fix-prettier && build-storybook",
-		"build": "npm run fix-eslint && npm run fix-prettier && copyfiles -f src/_scripts/*.* dist && echo Dist folder created with scripts && node-sass src/_core/_core.scss dist/spf3.css",
+		"build": "npm run fix-eslint && npm run fix-prettier && copyfiles -f src/_scripts/spf3.js dist && uglifyjs dist/spf3.js -o dist/spf3.min.js && echo Dist folder created with scripts && node-sass src/_core/_core.scss dist/spf3.css && node-sass src/_core/_core.scss dist/spf3.min.css --output-style compressed",
 		"serve": "npx http-server ./storybook-static -p 9001"
 	},
 	"repository": {
@@ -52,7 +52,8 @@
 		"react": "17.0.2",
 		"react-dom": "^17.0.2",
 		"react-syntax-highlighter": "^15.5.0",
-		"storybook-addon-run-script": "^0.1.4"
+		"storybook-addon-run-script": "^0.1.4",
+		"uglify-js": "^3.17.4"
 	},
 	"dependencies": {
 		"@etchteam/storybook-addon-status": "^4.2.2",

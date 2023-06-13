@@ -64,7 +64,9 @@ form p,
 		}
 	}
 	&__cw-2 {
-		/* 2 Column */ /* 16.666% */ /* 50/33/16 */
+		// 2 Column
+		// 16.666%
+		// 50/33/16
 		@include devices(mobile) {
 			max-width: 50%;
 			width: 50%;
@@ -79,7 +81,9 @@ form p,
 		}
 	}
 	&__cw-3 {
-		/* 3 Column */ /* 25% */ /* 100/50/25 */
+		// 3 Column
+		// 25%
+		// 100/50/25
 		@include devices(mobile) {
 			max-width: 100%;
 			width: 100%;
@@ -94,7 +98,9 @@ form p,
 		}
 	}
 	&__cw-4 {
-		/* 4 Column */ /* 33.333% */ /* 100/33/33 */
+		// 4 Column
+		// 33.333%
+		// 100/33/33
 		@include devices(mobile) {
 			max-width: 100%;
 			width: 100%;
@@ -109,7 +115,9 @@ form p,
 		}
 	}
 	&__cw-6 {
-		/* 6 Column */ /* 50% */ /* 100/50/50 */
+		// 6 Column
+		// 50%
+		// 100/50/50
 		@include devices(mobile) {
 			max-width: 100%;
 			width: 100%;
@@ -124,7 +132,9 @@ form p,
 		}
 	}
 	&__cw-8 {
-		/* 8 Column */ /* 66.666% */ /* 100/66/66 */
+		// 8 Column
+		// 66.666%
+		// 100/66/66
 		@include devices(mobile) {
 			max-width: 100%;
 			width: 100%;
@@ -139,7 +149,9 @@ form p,
 		}
 	}
 	&__cw-9 {
-		/* 9 Column */ /* 75% */ /* 100/100/75 */
+		// 9 Column
+		// 75%
+		// 100/100/75
 		@include devices(mobile) {
 			max-width: 100%;
 			width: 100%;
@@ -154,7 +166,9 @@ form p,
 		}
 	}
 	&__cw-12 {
-		/* 12 Column */ /* 100% */ /* 100/100/100 */
+		// 12 Column
+		// 100%
+		// 100/100/100
 		@include devices(mobile) {
 			max-width: 100%;
 			width: 100%;
@@ -291,13 +305,13 @@ form p,
 	&__toggle {
 		cursor: pointer;
 		height: map-get($act-space, "desktop-4");
-		width: calc(map-get($act-space, "desktop-6"));
+		width: calc(#{map-get($act-space, "desktop-6")});
 		opacity: 0;
 		z-index: 2;
 		&__slider {
 			background: $act-colour__white;
 			border: 2px solid $act-colour__purple;
-			border-radius: calc(map-get($act-space, "desktop-4") / 2);
+			border-radius: calc(#{map-get($act-space, "desktop-4") / 2});
 			bottom: 0;
 			display: flex;
 			position: absolute;
@@ -306,14 +320,14 @@ form p,
 			top: 0;
 			-webkit-transition: 0.4s;
 			transition: 0.4s;
-			width: calc(map-get($act-space, "desktop-6"));
+			width: calc(#{map-get($act-space, "desktop-6")});
 			z-index: 1;
 			&::before {
 				position: absolute;
 				border-radius: 50%;
 				content: "";
-				height: calc(map-get($act-space, "desktop-4") - 12px);
-				width: calc(map-get($act-space, "desktop-4") - 12px);
+				height: calc(#{map-get($act-space, "desktop-4") - 12px});
+				width: calc(#{map-get($act-space, "desktop-4") - 12px});
 				left: 4px;
 				bottom: 4px;
 				background-color: $act-colour__purple;
@@ -362,7 +376,7 @@ form p,
 
 ::placeholder {
 	color: $act-colour__black !important;
-	opacity: 1; /* Firefox */
+	opacity: 1; // Firefox
 }
 :-ms-input-placeholder {
 	color: $act-colour__black !important;
