@@ -32,7 +32,8 @@
 		border-color: $act-colour__white;
 		a {
 			color: $act-colour__white;
-			&:hover {
+			&:hover,
+			&:focus {
 				color: $act-colour__white;
 			}
 		}
@@ -45,7 +46,8 @@
 		a {
 			border-color: $act-colour__black;
 			color: $act-colour__black;
-			&:hover {
+			&:hover,
+			&:focus {
 				border-color: $act-colour__black;
 				color: $act-colour__black;
 			}
@@ -58,7 +60,8 @@
 		background-color: $act-colour__red;
 		a {
 			color: $act-colour__white;
-			&:hover {
+			&:hover,
+			&:focus {
 				color: $act-colour__white;
 			}
 		}
@@ -137,7 +140,8 @@
 		}
 		a {
 			text-decoration: underline !important;
-			&:hover {
+			&:hover,
+			&:focus {
 				text-decoration-style: dashed !important;
 			}
 		}
@@ -148,7 +152,8 @@
 		color: $act-colour__black;
 		a {
 			color: $act-colour__black;
-			&:hover {
+			&:hover,
+			&:focus {
 				color: $act-colour__black;
 			}
 		}
@@ -163,7 +168,8 @@
 		a {
 			border-color: $act-colour__black;
 			color: $act-colour__black;
-			&:hover {
+			&:hover,
+			&:focus {
 				border-color: $act-colour__black;
 				color: $act-colour__black;
 			}
@@ -178,7 +184,8 @@
 		color: $act-colour__black;
 		a {
 			color: $act-colour__black;
-			&:hover {
+			&:hover,
+			&:focus {
 				color: $act-colour__black;
 			}
 		}

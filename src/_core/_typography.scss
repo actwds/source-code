@@ -267,7 +267,8 @@ a,
 		font-size: 80%;
 		margin-left: map-get($act-space, "desktop-0");
 	}
-	&:hover {
+	&:hover,
+	&:focus {
 		border-bottom: 1px dashed $act-colour__plum-purple;
 		color: $act-colour__plum-purple;
 	}

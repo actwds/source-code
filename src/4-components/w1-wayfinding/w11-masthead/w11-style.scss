@@ -33,7 +33,8 @@
 			margin: 0 8px 0;
 			font-size:10px;
 			font-family: "Montserrat", sans-serif;
-			&:hover {
+			&:hover,
+			&:focus {
 				color:#fff;
 				border-bottom: 1px dashed $act-colour__white;
 			}

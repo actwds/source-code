@@ -29,14 +29,16 @@
 			padding: map-get($act-space, "desktop-2");
 			width: 100%;
 			list-style: none;
-			&:hover {
+			&:hover,
+			&:focus {
 				background-color: $act-colour__medium-purple;
 				color: $act-colour__white;
 			}
 			&__selected {
 				background-color: $act-colour__purple;
 				color: $act-colour__white;
-				&:hover {
+				&:hover,
+				&:focus {
 					background-color: $act-colour__purple;
 					color: $act-colour__white;
 				}
@@ -63,7 +65,8 @@
 			&__item {
 				padding: map-get($act-space, "desktop-2");
 				border-bottom: 1px solid $act-colour__white;
-				&:hover {
+				&:hover,
+				&:focus {
 					background-color: $act-colour__medium-purple;
 					color: $act-colour__black;
 					a {

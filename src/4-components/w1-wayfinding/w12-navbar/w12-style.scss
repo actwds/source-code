@@ -112,7 +112,8 @@
 				width: map-get($act-space, "desktop-3");
 			}
 			&:hover,
-			&-hover {
+			&-hover,
+			&:focus {
 				background-color: $act-colour__indigo;
 			}
 		}

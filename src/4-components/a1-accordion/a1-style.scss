@@ -39,7 +39,8 @@
 		[class*="__heading"] {
 			background-color: $act-colour__light-grey;
 			color: $act-colour__black;
-			&:hover {
+			&:hover,
+			&:focus {
 				background-color: $act-colour__middle-grey;
 			}
 		}
@@ -69,7 +70,8 @@
 			background-color: $act-colour__white;
 			border: 1px solid $act-colour__middle-grey;
 			color: $act-colour__black;
-			&:hover {
+			&:hover,
+			&:focus {
 				background-color: $act-colour__middle-grey;
 			}
 		}

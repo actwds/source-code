@@ -17,14 +17,16 @@
 		margin: 0px calc(map-get($act-space, "desktop-0") / 1);
 		min-width: $act-space__desktop-3;
 		width: fit-content;
-		&:hover {
+		&:hover,
+		&:focus {
 			background-color: $act-colour__black;
 			color: $act-colour__white;
 		}
 		&__current {
 			background-color: $act-colour__health-light-blue;
 			color: $act-colour__white;
-			&:hover {
+			&:hover,
+			&:focus {
 				background-color: $act-colour__health-light-blue;
 				color: $act-colour__white;
 			}
