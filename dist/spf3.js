@@ -1,6 +1,6 @@
 /*****************************************/
 /*                                       */
-/*  ACT Website Design System - sfp3.js  */
+/*  ACT Website Design System - spf3.js  */
 /*                                       */
 /*****************************************/
 
