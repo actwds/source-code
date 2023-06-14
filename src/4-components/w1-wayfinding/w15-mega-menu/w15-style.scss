@@ -198,6 +198,7 @@
 		.act-megamenu__link:focus a {
 			background-color: $act-colour__white;
 			color: $act-colour__violet;
+			border-bottom: 1px dashed $act-colour__plum-purple;
 		}
 	}
 	&__link {

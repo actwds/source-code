@@ -1,16 +1,7 @@
-import { createB11 } from "../../b1-buttons/b11-button-main/component";
-
 export const createW11 = ({
   title,
   buttonText,
 }) => {
-
-  const button = createB11({
-    type: "primary",
-    size: "xsmall",
-    icon: "no-icon",
-    label: buttonText,
-  });
 
   const mastheadHTML = `
   <div class="act-masthead">
@@ -32,7 +23,6 @@ export const createW11 = ({
             Contact us
           </a>
         </div>
-        `+button+`
       </div>
     </div>
   </div>

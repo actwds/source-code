@@ -2,6 +2,7 @@
 	background-color: $act-colour__white;
 	display: flex;
 	width: $act-page-full-width;
+	justify-content: center;
 	&__container {
 		align-items: center;
 		display: flex;
@@ -11,6 +12,7 @@
 		line-height: $act-line-height__100;
 		padding: 0px 0px 0px map-get($act-space, "desktop-2");
 		width: 100%;
+		max-width: $act-page-max-width;
 	}
 	&__content {
 		align-items: center;
@@ -47,6 +49,9 @@
 			&:hover {
 				border: 2px solid $act-colour__middle-grey;
 			}
+			&:last-of-type {
+				display: none;
+			}
 			input {
 				border: none;
 				outline: none;
@@ -82,9 +87,39 @@
 				i {
 					margin-left: 0px;
 				}
+				&:first-of-type {
+					display: none;
+				}
+				&:last-of-type {
+					display: flex;
+				}
+				&.act-search__open {
+					display: flex;
+					position: absolute;
+					z-index: 2;
+					transform: translateY(68px);
+					/*inline-size: calc(100vw - 20%);*/
+					/*inset-block-start: 149px;*/
+					/*inset-inline-start: 5%;*/
+					/*inset-inline-end;*/
+					border-radius: 4px;
+					background: #fff;
+					outline: 2px solid #adadad;
+					left: 5%;
+					right: 5%;
+				}
+				input {
+					width: 100%;
+				}
+				input.active,
+				input:active,
+				input:focus {
+					width: 100% !important;
+				}
 			}
 			&__text {
-				display: none;
+				// display: none;
+				display: inline-block;
 			}
 		}
 	}

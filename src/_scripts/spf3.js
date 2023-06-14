@@ -3,11 +3,6 @@
 /*  ACT Website Design System - spf3.js  */
 /*                                       */
 /*****************************************/
-
-document.addEventListener("DOMContentLoaded", function() {
-	//console.log("spf3.js running...");
-});
-
 //A11 - Accordion
 document.addEventListener("DOMContentLoaded", function() {
 	const sectionHeadings = document.querySelectorAll(".act-accordion__section__heading");
@@ -123,28 +118,13 @@ function openChildLinks(e) {
 document.addEventListener("DOMContentLoaded", function() {
 	const megaMenu = document.getElementsByClassName("act-megamenu")[0];
 	const megaMenuToggle = document.querySelectorAll(".act-navbar__menu");
-	document.getElementsByClassName("act-navbar__menu")[0].innerHTML;
 	megaMenuToggle.forEach(function(button) {
 		button.addEventListener("click", function() {
-			if (megaMenu.classList.contains("act-megamenu__open")) {
-				//do nothing
-			} else {
+			if (!megaMenu.classList.contains("act-megamenu__open")) {
 				megaMenu.classList.toggle("act-megamenu__open");
 			}
 		});
 	});
-});
-
-document.addEventListener("keydown", function() {
-	const megaMenu = document.getElementsByClassName("act-megamenu")[0];
-	const megaMenuToggle = document.querySelectorAll(".act-navbar__menu");
-	document.getElementsByClassName("act-navbar__menu")[0].innerHTML;
-	if(event.keyCode === 27) {
-		if (megaMenu.classList.contains("act-megamenu__open")) {
-			megaMenu.classList.toggle("act-megamenu__open");
-		}
-	}
-	
 });
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -155,3 +135,50 @@ document.addEventListener("DOMContentLoaded", function() {
 		});
 	});
 });
+
+
+//Search
+document.addEventListener("DOMContentLoaded", function() {
+	const searchContainer = document.getElementsByClassName("act-navbar__search__container")[0];
+	const searchInput = document.getElementsByClassName("act-navbar__search__text")[0];
+	const searchToggle = document.querySelectorAll(".act-navbar__search__container i");
+	searchToggle.forEach(function(button) {
+		button.addEventListener("click", function() {
+			searchContainer.classList.toggle("act-search__open");
+		});
+	});
+});
+
+
+//Close events
+document.addEventListener("keydown", function() {
+	const megaMenu = document.getElementsByClassName("act-megamenu")[0];
+	const searchContainer = document.getElementsByClassName("act-navbar__search__container")[0];
+	if(event.keyCode === 27) {
+		if (megaMenu.classList.contains("act-megamenu__open")) {
+			megaMenu.classList.toggle("act-megamenu__open");
+		}
+
+		if (searchContainer.classList.contains("act-search__open")) {
+			searchContainer.classList.toggle("act-search__open");
+		}
+	}
+	
+});
+
+document.addEventListener("click", function(e) {
+	const megaMenu = document.getElementsByClassName("act-megamenu")[0];
+	const searchContainer = document.getElementsByClassName("act-navbar__search__container")[0];
+	const navbar = document.getElementsByClassName("act-navbar")[0];
+	if (!navbar.contains(e.target) && !megaMenu.contains(e.target)) {
+		if (megaMenu.classList.contains("act-megamenu__open")) {
+			megaMenu.classList.toggle("act-megamenu__open");
+		}
+	}
+	if (!navbar.contains(e.target) && !searchContainer.contains(e.target)) {
+		if (searchContainer.classList.contains("act-search__open")) {
+			searchContainer.classList.toggle("act-search__open");
+		}
+	}	
+});
+
