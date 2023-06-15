@@ -34,38 +34,38 @@ const Footer = () => {
 							<div className="act-box">
 								<div className="act-footer-nav">
 									<h4>
-										<LinkTo kind="design-overview--page">
+										<LinkTo kind="design-getting-started--page">
 											Design
 										</LinkTo>
 									</h4>
 									<ul>
 										<li>
-											<LinkTo kind="design-breakpoints--page">
+											<LinkTo kind="design-design-tokens-breakpoints--page">
 												Breakpoints
 											</LinkTo>
 										</li>
 										<li>
-											<LinkTo kind="design-colours--page">
+											<LinkTo kind="design-design-tokens-colours--page">
 												Colours
 											</LinkTo>
 										</li>
 										<li>
-											<LinkTo kind="design-radius--page">
+											<LinkTo kind="design-design-tokens-radius--page">
 												Radius
 											</LinkTo>
 										</li>
 										<li>
-											<LinkTo kind="design-shadows--page">
+											<LinkTo kind="design-design-tokens-shadows--page">
 												Shadows
 											</LinkTo>
 										</li>
 										<li>
-											<LinkTo kind="design-spacing--page">
+											<LinkTo kind="design-design-tokens-spacing--page">
 												Spacing
 											</LinkTo>
 										</li>
 										<li>
-											<LinkTo kind="design-typography--page">
+											<LinkTo kind="design-design-tokens-typography--page">
 												Typography
 											</LinkTo>
 										</li>
@@ -101,7 +101,7 @@ const Footer = () => {
 								<div className="act-footer-nav">
 									<h4>
 										<LinkTo kind="components-overview--page">
-											Components
+											Core Components
 										</LinkTo>
 									</h4>
 									<ul>
@@ -146,17 +146,12 @@ const Footer = () => {
 											</LinkTo>
 										</li>
 										<li>
-											<LinkTo kind="components-form-elements-input-fields--input-fields">
-												Loaders
-											</LinkTo>
-										</li>
-										<li>
 											<LinkTo kind="components-logos-act-government--horizontal">
 												Logos
 											</LinkTo>
 										</li>
 										<li>
-											<LinkTo kind="components-logos-act-government--horizontal">
+											<LinkTo kind="components-popups-guidance--page">
 												Popups
 											</LinkTo>
 										</li>
@@ -166,27 +161,27 @@ const Footer = () => {
 											</LinkTo>
 										</li>
 										<li>
-											<LinkTo kind="components-tables--table">
+											<LinkTo kind="components-tables-guidance--page">
 												Tables
 											</LinkTo>
 										</li>
 										<li>
-											<LinkTo kind="components-tags--default">
+											<LinkTo kind="components-tabs-guidance--page">
 												Tabs
 											</LinkTo>
 										</li>
 										<li>
-											<LinkTo kind="components-tags--default">
+											<LinkTo kind="components-tags-guidance--page">
 												Tags
 											</LinkTo>
 										</li>
 										<li>
-											<LinkTo kind="components-tags--default">
+											<LinkTo kind="components-tooltips-guidance--page">
 												Tooltips
 											</LinkTo>
 										</li>
 										<li>
-											<LinkTo kind="components-wayfinding-masthead--masthead">
+											<LinkTo kind="components-wayfinding-overview--page">
 												Wayfinding
 											</LinkTo>
 										</li>
@@ -278,13 +273,8 @@ const Footer = () => {
 											</a>
 										</li>
 										<li>
-											<a href="https://github.com/ACTGov-Design-System" target="_blank" title="ACT Government GitHub" rel="noreferrer">
+											<a href="https://github.com/ACTWDS/source-code" target="_blank" title="ACTWDS GitHub" rel="noreferrer">
 												GitHub <i className="fa-solid fa-arrow-up-right-from-square"></i>
-											</a>
-										</li>
-										<li>
-											<a href="https://www.pollen.com.au" target="_blank" title="Pollen" rel="noreferrer">
-												Pollen <i className="fa-solid fa-arrow-up-right-from-square"></i>
 											</a>
 										</li>
 									</ul>
