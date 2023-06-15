@@ -5,12 +5,12 @@ export const createW11 = ({
   buttonText,
 }) => {
 
-    const button = createB11({
-      type: "primary",
-      size: "xsmall",
-      icon: "no-icon",
-      label: buttonText,
-    });
+  const button = createB11({
+    type: "primary",
+    size: "xsmall",
+    icon: "no-icon",
+    label: buttonText,
+  });
 
   const mastheadHTML = `
   <div class="act-masthead">
