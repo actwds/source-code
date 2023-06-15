@@ -61,7 +61,7 @@ export const createW15 = ({
         <div class="act-megamenu__link-container">
           <div class="act-megamenu__link" id="main-menu-link-1" onclick="openChildLinks(event)">
             <div class="act-megamenu__link__text">
-              Link 1
+              <a href="#">Link 1</a>
             </div>
             <div class="act-megamenu__link__icon">
               <i class="fa-solid fa-angle-right"></i>
@@ -69,7 +69,7 @@ export const createW15 = ({
           </div>
           <div class="act-megamenu__link" id="main-menu-link-2" onclick="openChildLinks(event)">
             <div class="act-megamenu__link__text">
-            Information and support
+            <a href="#">Information and support</a>
             </div>
             <div class="act-megamenu__link__icon">
               <i class="fa-solid fa-angle-right"></i>
@@ -77,7 +77,7 @@ export const createW15 = ({
           </div>
           <div class="act-megamenu__link" id="main-menu-link-3" onclick="openChildLinks(event)">
             <div class="act-megamenu__link__text">
-              Link 3
+              <a href="#">Link 3</a>
             </div>
             <div class="act-megamenu__link__icon">
               <i class="fa-solid fa-angle-right"></i>
@@ -125,7 +125,7 @@ export const createW15 = ({
             Child Links 1
           </div>
           <div class="sub-menu-links-list">
-            <a class="act-megamenu__link">
+            <a href="#" class="act-megamenu__link">
               <div class="act-megamenu__link__text">
                 Sub Link 11
               </div>
@@ -133,7 +133,7 @@ export const createW15 = ({
                 <i class="fa-solid fa-arrow-right"></i>
               </div>
             </a>
-            <a class="act-megamenu__link">
+            <a href="#" class="act-megamenu__link">
               <div class="act-megamenu__link__text">
                 Sub Link 12
               </div>
@@ -141,7 +141,7 @@ export const createW15 = ({
                 <i class="fa-solid fa-arrow-right"></i>
               </div>
             </a>
-            <a class="act-megamenu__link">
+            <a href="#" class="act-megamenu__link">
               <div class="act-megamenu__link__text">
                 Sub Link 13
               </div>
@@ -149,7 +149,7 @@ export const createW15 = ({
                 <i class="fa-solid fa-arrow-right"></i>
               </div>
             </a>
-            <a class="act-megamenu__link">
+            <a href="#" class="act-megamenu__link">
               <div class="act-megamenu__link__text">
                 External Link
               </div>
@@ -157,7 +157,7 @@ export const createW15 = ({
                 <i class="fa-solid fa-external-link"></i>
               </div>
             </a>
-            <a class="act-megamenu__link">
+            <a href="#" class="act-megamenu__link">
               <div class="act-megamenu__link__text">
                 Sub Link 15
               </div>
@@ -165,7 +165,7 @@ export const createW15 = ({
                 <i class="fa-solid fa-arrow-right"></i>
               </div>
             </a>
-            <a class="act-megamenu__link">
+            <a href="#" class="act-megamenu__link">
               <div class="act-megamenu__link__text">
                 Sub Link 16
               </div>
@@ -180,7 +180,7 @@ export const createW15 = ({
             Information and support
           </div>
           <div class="sub-menu-links-list">
-            <a class="act-megamenu__link">
+            <a href="#" class="act-megamenu__link">
               <div class="act-megamenu__link__text">
                 External Link
               </div>
@@ -188,7 +188,7 @@ export const createW15 = ({
                 <i class="fa-solid fa-external-link"></i>
               </div>
             </a>
-            <a class="act-megamenu__link">
+            <a href="#" class="act-megamenu__link">
               <div class="act-megamenu__link__text">
                 Sub Link 22
               </div>
@@ -196,7 +196,7 @@ export const createW15 = ({
                 <i class="fa-solid fa-arrow-right"></i>
               </div>
             </a>
-            <a class="act-megamenu__link">
+            <a href="#" class="act-megamenu__link">
               <div class="act-megamenu__link__text">
                 Sub Link 23
               </div>
@@ -204,7 +204,7 @@ export const createW15 = ({
                 <i class="fa-solid fa-arrow-right"></i>
               </div>
             </a>
-            <a class="act-megamenu__link">
+            <a href="#" class="act-megamenu__link">
               <div class="act-megamenu__link__text">
                 Sub Link 24
               </div>
@@ -212,7 +212,7 @@ export const createW15 = ({
                 <i class="fa-solid fa-arrow-right"></i>
               </div>
             </a>
-            <a class="act-megamenu__link">
+            <a href="#" class="act-megamenu__link">
               <div class="act-megamenu__link__text">
                 Sub Link 25
               </div>
@@ -220,7 +220,7 @@ export const createW15 = ({
                 <i class="fa-solid fa-arrow-right"></i>
               </div>
             </a>
-            <a class="act-megamenu__link">
+            <a href="#" class="act-megamenu__link">
               <div class="act-megamenu__link__text">
                 Sub Link 26
               </div>
@@ -235,7 +235,7 @@ export const createW15 = ({
             Child Links 3
           </div>
           <div class="sub-menu-links-list">
-            <a class="act-megamenu__link">
+            <a href="#" class="act-megamenu__link">
               <div class="act-megamenu__link__text">
                 Sub Link 31
               </div>
@@ -243,7 +243,7 @@ export const createW15 = ({
                 <i class="fa-solid fa-arrow-right"></i>
               </div>
             </a>
-            <a class="act-megamenu__link">
+            <a href="#" class="act-megamenu__link">
               <div class="act-megamenu__link__text">
                 Sub Link 32
               </div>
@@ -251,7 +251,7 @@ export const createW15 = ({
                 <i class="fa-solid fa-arrow-right"></i>
               </div>
             </a>
-            <a class="act-megamenu__link">
+            <a href="#" class="act-megamenu__link">
               <div class="act-megamenu__link__text">
                 Sub Link 33
               </div>
@@ -259,7 +259,7 @@ export const createW15 = ({
                 <i class="fa-solid fa-arrow-right"></i>
               </div>
             </a>
-            <a class="act-megamenu__link">
+            <a href="#" class="act-megamenu__link">
               <div class="act-megamenu__link__text">
                 Sub Link 34
               </div>
@@ -267,7 +267,7 @@ export const createW15 = ({
                 <i class="fa-solid fa-arrow-right"></i>
               </div>
             </a>
-            <a class="act-megamenu__link">
+            <a href="#" class="act-megamenu__link">
               <div class="act-megamenu__link__text">
                 Sub Link 35
               </div>
@@ -275,7 +275,7 @@ export const createW15 = ({
                 <i class="fa-solid fa-arrow-right"></i>
               </div>
             </a>
-            <a class="act-megamenu__link">
+            <a href="#" class="act-megamenu__link">
               <div class="act-megamenu__link__text">
                 Sub Link 36
               </div>

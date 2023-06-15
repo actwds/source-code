@@ -13,7 +13,7 @@ export const createA22 = ({
     </div>
     <div class="act-alert-inpage__content">
       <div class="title">`+alert+`</div>
-      <a class="description" href="#" target="_self" title="">`+description+`</a>
+      `+description+`
     </div>
   </div>
 </div>

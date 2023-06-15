@@ -9,7 +9,8 @@
 			line-height: $act-line-height__100;
 			text-decoration: none;
 			margin-right: map-get($act-space, "desktop-1");
-			&:hover {
+			&:hover,
+			&:focus {
 				border-bottom: 1px dashed $act-colour__middle-grey;
 			}
 		}
@@ -114,7 +115,8 @@
 						text-decoration: none;
 					}
 				}
-				.act-megamenu__link:hover {
+				.act-megamenu__link:hover,
+				.act-megamenu__link:focus {
 					a {
 						color: $act-colour__violet;
 					}
@@ -129,7 +131,8 @@
 					padding: map-get($act-space, "desktop-1");
 					width: 100%;
 				}
-				button:hover {
+				button:hover,
+				button:focus {
 					background-color: $act-colour__light-grey;
 					color: $act-colour__black;
 					cursor: pointer;
@@ -191,9 +194,11 @@
 		flex-direction: column;
 		gap: map-get($act-space, "desktop-1");
 		height: auto;
-		.act-megamenu__link:hover {
+		.act-megamenu__link:hover a,
+		.act-megamenu__link:focus a {
 			background-color: $act-colour__white;
 			color: $act-colour__violet;
+			border-bottom: 1px dashed $act-colour__plum-purple;
 		}
 	}
 	&__link {
@@ -208,13 +213,17 @@
 			font-size: $act-font-size__desktop-p-small;
 			font-weight: $act-font-weight__semibold;
 			line-height: $act-line-height__130;
+			& a {
+				color: $act-colour__white;
+			}
 		}
 		&__icon {
 			font-size: $act-font-size__desktop-p-small;
 			font-weight: $act-font-weight__semibold;
 			line-height: $act-line-height__130;
 		}
-		&:hover {
+		&:hover,
+		&:focus {
 			background-color: white;
 		}
 	}
@@ -245,7 +254,8 @@
 					color: $act-colour__violet;
 				}
 			}
-			.act-megamenu__link:hover {
+			.act-megamenu__link:hover,
+			.act-megamenu__link:focus {
 				background-color: $act-colour__violet;
 				color: $act-colour__white;
 

@@ -22,13 +22,15 @@
 		margin: 0px calc(#{map-get($act-space, "desktop-0") / 2});
 		min-width: $act-space__desktop-3;
 		width: fit-content;
-		&:hover {
+		&:hover,
+		&:focus {
 			background-color: $act-colour__medium-purple;
 		}
 		&__current {
 			background-color: $act-colour__purple;
 			color: $act-colour__white;
-			&:hover {
+			&:hover,
+			&:focus {
 				background-color: $act-colour__purple;
 				color: $act-colour__white;
 			}

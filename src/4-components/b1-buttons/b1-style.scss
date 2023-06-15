@@ -219,7 +219,8 @@
 			text-decoration: none;
 			padding: map-get($act-space, "desktop-1") !important;
 			&:hover,
-			&-hover {
+			&-hover,
+			&:focus {
 				color: $act-colour__middle-grey;
 			}
 			@include devices(mobile) {

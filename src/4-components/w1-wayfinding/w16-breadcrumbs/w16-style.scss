@@ -47,7 +47,8 @@ main,
 					display: none;
 				}
 			}
-			&:hover {
+			&:hover,
+			&:focus {
 				border: none;
 				color: $act-colour__purple;
 			}

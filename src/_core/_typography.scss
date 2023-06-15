@@ -9,13 +9,32 @@
 }
 
 /* H1 */
-h1,
+h1 {
+	// color: $act-colour__black;
+	font-size: $act-font-size__desktop-h1;
+	font-weight: $act-font-weight__bold;
+	line-height: $act-line-height__120;
+	&.large {
+		font-size: $act-font-size__desktop-h1-large;
+		font-weight: $act-font-weight__semibold;
+		line-height: $act-line-height__100;
+	}
+	&:last-child {
+		margin-bottom: 0px;
+	}
+	@include devices(mobile) {
+		font-size: $act-font-size__mobile-h1;
+		&.large {
+			font-size: $act-font-size__mobile-h1-large;
+		}
+	}
+}
+
 .act-h1 {
 	// color: $act-colour__black;
 	font-size: $act-font-size__desktop-h1;
 	font-weight: $act-font-weight__bold;
 	line-height: $act-line-height__120;
-	&.large,
 	&-large {
 		font-size: $act-font-size__desktop-h1-large;
 		font-weight: $act-font-weight__semibold;
@@ -26,7 +45,6 @@ h1,
 	}
 	@include devices(mobile) {
 		font-size: $act-font-size__mobile-h1;
-		&.large,
 		&-large {
 			font-size: $act-font-size__mobile-h1-large;
 		}
@@ -67,7 +85,22 @@ h3,
 }
 
 /* H4 */
-h4,
+h4 {
+	font-size: $act-font-size__desktop-h4;
+	font-weight: $act-font-weight__semibold;
+	line-height: $act-line-height__130;
+	margin-bottom: map-get($act-space, "desktop-1");
+	&:last-child {
+		margin-bottom: 0px;
+	}
+	@include devices(mobile) {
+		font-size: $act-font-size__mobile-h4;
+	}
+	&.white {
+		color: $act-colour__white;
+	}
+}
+
 .act-h4 {
 	font-size: $act-font-size__desktop-h4;
 	font-weight: $act-font-weight__semibold;
@@ -79,7 +112,6 @@ h4,
 	@include devices(mobile) {
 		font-size: $act-font-size__mobile-h4;
 	}
-	&.white,
 	&-white {
 		color: $act-colour__white;
 	}
@@ -116,7 +148,50 @@ h6,
 }
 
 /* P */
-p,
+p {
+	color: $act-colour__black;
+	font-family: $sourcesanspro;
+	font-size: $act-font-size__desktop-p;
+	font-weight: $act-font-weight__regular;
+	line-height: $act-line-height__150;
+	margin-bottom: map-get($act-space, "desktop-1");
+	&:last-child {
+		margin-bottom: 0px;
+	}
+	&.bold {
+		font-family: $sourcesanspro;
+		font-weight: $act-font-weight__semibold;
+	}
+	&.white {
+		font-family: $sourcesanspro;
+		color: $act-colour__white;
+	}
+	&.large {
+		font-family: $sourcesanspro;
+		font-size: $act-font-size__desktop-p-large;
+	}
+	&.small {
+		font-family: $sourcesanspro;
+		font-size: $act-font-size__desktop-p-small;
+	}
+	&.xsmall {
+		font-family: $sourcesanspro;
+		font-size: $act-font-size__desktop-p-xsmall;
+	}
+	@include devices(mobile) {
+		font-size: $act-font-size__mobile-p;
+		&.large {
+			font-size: $act-font-size__mobile-p-large;
+		}
+		&.small {
+			font-size: $act-font-size__desktop-p-small;
+		}
+		&.xsmall {
+			font-size: $act-font-size__desktop-p-xsmall;
+		}
+	}
+}
+
 .act-p {
 	color: $act-colour__black;
 	font-family: $sourcesanspro;
@@ -127,42 +202,34 @@ p,
 	&:last-child {
 		margin-bottom: 0px;
 	}
-	&.bold,
 	&-bold {
 		font-family: $sourcesanspro;
 		font-weight: $act-font-weight__semibold;
 	}
-	&.white,
 	&-white {
 		font-family: $sourcesanspro;
 		color: $act-colour__white;
 	}
-	&.large,
 	&-large {
 		font-family: $sourcesanspro;
 		font-size: $act-font-size__desktop-p-large;
 	}
-	&.small,
 	&-small {
 		font-family: $sourcesanspro;
 		font-size: $act-font-size__desktop-p-small;
 	}
-	&.xsmall,
 	&-xsmall {
 		font-family: $sourcesanspro;
 		font-size: $act-font-size__desktop-p-xsmall;
 	}
 	@include devices(mobile) {
 		font-size: $act-font-size__mobile-p;
-		&.large,
 		&-large {
 			font-size: $act-font-size__mobile-p-large;
 		}
-		&.small,
 		&-small {
 			font-size: $act-font-size__desktop-p-small;
 		}
-		&.xsmall,
 		&-xsmall {
 			font-size: $act-font-size__desktop-p-xsmall;
 		}
@@ -199,7 +266,8 @@ a,
 		font-size: 80%;
 		margin-left: map-get($act-space, "desktop-0");
 	}
-	&:hover {
+	&:hover,
+	&:focus {
 		border-bottom: 1px dashed $act-colour__plum-purple;
 		color: $act-colour__plum-purple;
 	}

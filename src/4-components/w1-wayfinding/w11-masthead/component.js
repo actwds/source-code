@@ -22,17 +22,17 @@ export const createW11 = ({
       </div>
       <div class="act-masthead__content right">
         <div class="act-masthead__nav">
-          <a class="act-button act-button__inline act-button__inline-white act-button__inline-small" href="#" target="_self" title="Accessibility">
+          <a class="" href="#" target="_self" title="Accessibility">
             Accessibility
           </a>
-          <a class="act-button act-button__inline act-button__inline-white act-button__inline-small" href="#" target="_self" title="Language">
+          <a class="" href="#" target="_self" title="Language">
             Language
           </a>
-          <a class="act-button act-button__inline act-button__inline-white act-button__inline-small" href="#" target="_self" title="Contact us">
+          <a class="" href="#" target="_self" title="Contact us">
             Contact us
           </a>
         </div>
-        `+button+`
+        <!--`+button+`-->
       </div>
     </div>
   </div>

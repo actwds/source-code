@@ -122,7 +122,8 @@
 		position: absolute;
 		right: 0px;
 		width: map-get($act-space, "desktop-6");
-		&:hover {
+		&:hover,
+		&:focus {
 			background-color: $act-colour__violet;
 		}
 	}

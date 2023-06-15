@@ -32,7 +32,8 @@
 			top: 100%;
 		}
 	}
-	&:hover &__text {
+	&:hover &__text,
+	&:focus &__text {
 		visibility: visible;
 	}
 
@@ -53,7 +54,8 @@
 	&.active &__content {
 		visibility: visible;
 	}
-	&:hover &__content {
+	&:hover &__content,
+	&:focus &__content {
 		visibility: visible;
 	}
 	&__content {
