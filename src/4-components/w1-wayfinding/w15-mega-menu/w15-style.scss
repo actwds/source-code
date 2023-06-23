@@ -33,7 +33,7 @@
 	height: 100%;
 	min-height: 50vh;
 	@include devices(mobile) {
-		height: 75vh;
+		height: auto;
 	}
 	left: 0px;
 	position: absolute;
@@ -199,6 +199,10 @@
 			background-color: $act-colour__white;
 			color: $act-colour__violet;
 			border-bottom: 1px dashed $act-colour__plum-purple;
+		}		
+		.act-megamenu__link:hover i,
+		.act-megamenu__link:focus i {
+			color: $act-colour__violet;
 		}
 	}
 	&__link {
@@ -236,6 +240,9 @@
 			line-height: $act-line-height__130;
 			padding: map-get($act-space, "desktop-1");
 			margin-left: map-get($act-space, "desktop-1");
+			& a {
+				color: $act-colour__purple;
+			}
 		}
 		.sub-menu-links-list {
 			display: grid;
@@ -247,7 +254,7 @@
 			justify-content: space-between;
 			.act-megamenu__link {
 				color: $act-colour__black;
-				border-bottom: 1px solid white;
+				border-bottom: 1px solid $act-colour__black;
 				align-items: center;
 				padding: map-get($act-space, "desktop-2");
 				&__icon {
