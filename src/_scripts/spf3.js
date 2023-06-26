@@ -120,8 +120,8 @@ document.addEventListener("DOMContentLoaded", function() {
 	const megaMenuToggle = document.querySelectorAll(".act-navbar__menu");
 	megaMenuToggle.forEach(function(button) {
 		button.addEventListener("click", function() {
-			if (!megaMenu.classList.contains("act-megamenu__open")) {
-				megaMenu.classList.toggle("act-megamenu__open");
+			megaMenu.classList.toggle("act-megamenu__open");
+			if (!megaMenu.classList.contains("act-megamenu__open")) {				
 				megaMenu.querySelector("a").focus();
 			}
 		});
