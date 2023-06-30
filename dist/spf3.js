@@ -125,10 +125,10 @@ document.addEventListener("DOMContentLoaded", function() {
 			if (!megaMenu.classList.contains("act-megamenu__open")) {
 				megaMenuIcon.classList.add("fa-bars");
 				megaMenuIcon.classList.remove("fa-xmark");
-				megaMenu.querySelector("a").focus();
 			} else {
 				megaMenuIcon.classList.remove("fa-bars");
 				megaMenuIcon.classList.add("fa-xmark");
+				megaMenu.querySelector("a").focus();
 			}
 		});
 	});
@@ -199,7 +199,7 @@ document.addEventListener("click", function(e) {
 document.addEventListener("keydown", function(e) {
 	if(event.keyCode === 37 || event.keyCode === 38 || event.keyCode === 39 || event.keyCode === 40) {
 		e.preventDefault();
-	}	
+	}
 	if (document.activeElement.closest(".act-megamenu__open")) {
 		if (document.activeElement.closest(".act-megamenu__sub-menu-link-container")) {
 			let active = document.activeElement;
@@ -233,7 +233,7 @@ document.addEventListener("keydown", function(e) {
 			//right
 			if(event.keyCode === 39) {
 				if (i % 2 == 1) {
-					//do nothing
+					active.focus();
 				} else if (i < (activeSubnavCount-1)) {		
 					document.activeElement.nextElementSibling.focus();
 				}				
@@ -243,7 +243,7 @@ document.addEventListener("keydown", function(e) {
 				if (active.parentNode.classList.contains("section-heading")) {
 					document.activeElement.parentNode.nextElementSibling.querySelector("a").focus();
 				} else if ((activeSubnavCount-2) == i || (activeSubnavCount-1) == i) {
-					//do nothing
+					active.focus();
 				} else {
 					document.activeElement.nextElementSibling.nextElementSibling.focus();
 				}
@@ -254,14 +254,12 @@ document.addEventListener("keydown", function(e) {
 			let i = Array.from(active.closest(".act-megamenu__link-container").children).indexOf(active.closest(".act-megamenu__link"));
 			//up
 			if(event.keyCode === 38) {
-				if (i == 0) {
-					//do nothing
-				} else {
+				if (!i == 0) {
 					active.previousElementSibling.focus();
 				}
 			}
 			//right
-			if(event.keyCode === 39) {
+			if(event.keyCode === 39 || event.keyCode === 13) {
 				let active = document.activeElement;
 				let activeID = active.closest(".act-megamenu__link").id.split("-")[3];
 				toggleSubMenu(true);
@@ -278,9 +276,7 @@ document.addEventListener("keydown", function(e) {
 			}
 			//down
 			if(event.keyCode === 40) {
-				if ((activeCount-1) == i) {
-					// do nothing
-				} else {
+				if ((activeCount-1) != i) {
 					active.nextElementSibling.focus();				
 				}
 			}
