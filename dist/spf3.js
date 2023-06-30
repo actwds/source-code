@@ -253,7 +253,7 @@ document.addEventListener("keydown", function(e) {
 				if (!i == 0) {
 					//do nothing
 				} else {
-					active.closest(".act-megamenu__link").previousElementSibling.querySelector("a").focus();
+					active.previousElementSibling.focus();
 				}
 			}
 			//right
@@ -277,7 +277,7 @@ document.addEventListener("keydown", function(e) {
 				if ((activeCount-1) == i) {
 					// do nothing
 				} else {
-					active.closest(".act-megamenu__link").nextElementSibling.querySelector("a").focus();				
+					active.nextElementSibling.focus();				
 				}
 			}
 		}

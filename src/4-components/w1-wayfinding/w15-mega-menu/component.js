@@ -59,30 +59,30 @@ export const createW15 = ({
           Home
         </div>
         <div class="act-megamenu__link-container">
-          <div class="act-megamenu__link" id="main-menu-link-1" onclick="openChildLinks(event)">
+          <a href="#" class="act-megamenu__link" id="main-menu-link-1" onclick="openChildLinks(event)">
             <div class="act-megamenu__link__text">
-              <a href="#">Link 1</a>
+              Link 1
             </div>
             <div class="act-megamenu__link__icon">
               <i class="fa-solid fa-angle-right"></i>
             </div>
-          </div>
-          <div class="act-megamenu__link" id="main-menu-link-2" onclick="openChildLinks(event)">
+          </a>
+          <a href="#" class="act-megamenu__link" id="main-menu-link-2" onclick="openChildLinks(event)">
             <div class="act-megamenu__link__text">
-            <a href="#">Information and support</a>
+            Information and support
             </div>
             <div class="act-megamenu__link__icon">
               <i class="fa-solid fa-angle-right"></i>
             </div>
-          </div>
-          <div class="act-megamenu__link" id="main-menu-link-3" onclick="openChildLinks(event)">
+          </a>
+          <a href="#" class="act-megamenu__link" id="main-menu-link-3" onclick="openChildLinks(event)">
             <div class="act-megamenu__link__text">
-              <a href="#">Link 3</a>
+              Link 3
             </div>
             <div class="act-megamenu__link__icon">
               <i class="fa-solid fa-angle-right"></i>
             </div>
-          </div>
+          </a>
         </div>
         <div class="act-megamenu__content__block-main-menu__additional-links">
           <div class="act-megamenu__link">
