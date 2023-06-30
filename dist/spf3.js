@@ -214,7 +214,7 @@ document.addEventListener("keydown", function(e) {
 						container.style.display = "none";
 					});
 					let numMega = document.activeElement.closest(".act-megamenu__sub-menu-link-container").id.split("-")[2];
-					document.querySelector("#main-menu-link-" + numMega).querySelector("a").focus();
+					document.querySelector("#main-menu-link-" + numMega).focus();
 				} else {
 					//right col
 					document.activeElement.previousElementSibling.focus();
@@ -223,7 +223,9 @@ document.addEventListener("keydown", function(e) {
 			//up
 			if(event.keyCode === 38) {
 				if (i == 0 || i == 1) {
-					//do nothing 
+					if (!active.parentNode.classList.contains("section-heading")) {
+						document.activeElement.parentNode.previousElementSibling.querySelector("a").focus();
+					}
 				} else {
 					document.activeElement.previousElementSibling.previousElementSibling.focus();
 				}
@@ -238,7 +240,9 @@ document.addEventListener("keydown", function(e) {
 			}
 			//down
 			if(event.keyCode === 40) {
-				if ((activeSubnavCount-2) == i || (activeSubnavCount-1) == i) {
+				if (active.parentNode.classList.contains("section-heading")) {
+					document.activeElement.parentNode.nextElementSibling.querySelector("a").focus();
+				} else if ((activeSubnavCount-2) == i || (activeSubnavCount-1) == i) {
 					//do nothing
 				} else {
 					document.activeElement.nextElementSibling.nextElementSibling.focus();
@@ -250,7 +254,7 @@ document.addEventListener("keydown", function(e) {
 			let i = Array.from(active.closest(".act-megamenu__link-container").children).indexOf(active.closest(".act-megamenu__link"));
 			//up
 			if(event.keyCode === 38) {
-				if (!i == 0) {
+				if (i == 0) {
 					//do nothing
 				} else {
 					active.previousElementSibling.focus();
