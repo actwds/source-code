@@ -250,7 +250,7 @@ document.addEventListener("keydown", function(e) {
 			let i = Array.from(active.closest(".act-megamenu__link-container").children).indexOf(active.closest(".act-megamenu__link"));
 			//up
 			if(event.keyCode === 38) {
-				if (i == 0) {
+				if (!i == 0) {
 					//do nothing
 				} else {
 					active.closest(".act-megamenu__link").previousElementSibling.querySelector("a").focus();

@@ -3196,14 +3196,13 @@ table,
   height: 100%;
   min-height: 50vh;
   left: 0px;
-  position: absolute;
   top: 0px;
   width: 100%;
   z-index: 9999;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06); }
   @media only screen and (min-width: 0px) and (max-width: 478px) {
     .act-megamenu {
-      height: 75vh; } }
+      height: auto; } }
   .act-megamenu__container {
     color: #ffffff;
     display: flex;
@@ -3332,13 +3331,16 @@ table,
       background-color: #ffffff;
       color: #1e0f48;
       border-bottom: 1px dashed #6042ae; }
+    .act-megamenu__link-container .act-megamenu__link:hover i,
+    .act-megamenu__link-container .act-megamenu__link:focus i {
+      color: #1e0f48; }
   .act-megamenu__link {
     align-items: center;
     color: #ffffff;
     cursor: pointer;
     display: flex;
     justify-content: space-between;
-    padding: 8px;
+    padding: 16px;
     width: 100%; }
     .act-megamenu__link__text {
       font-size: 14px;
@@ -3361,6 +3363,8 @@ table,
       line-height: 130%;
       padding: 8px;
       margin-left: 8px; }
+      .act-megamenu__sub-menu-link-container .section-heading a {
+        color: #472d8c; }
     .act-megamenu__sub-menu-link-container .sub-menu-links-list {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -3371,7 +3375,7 @@ table,
           grid-template-columns: 1fr; } }
       .act-megamenu__sub-menu-link-container .sub-menu-links-list .act-megamenu__link {
         color: #111111;
-        border-bottom: 1px solid white;
+        border-bottom: 1px solid #111111;
         align-items: center;
         padding: 16px; }
         .act-megamenu__sub-menu-link-container .sub-menu-links-list .act-megamenu__link__icon {

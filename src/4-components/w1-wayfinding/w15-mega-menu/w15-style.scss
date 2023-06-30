@@ -198,7 +198,7 @@
 			background-color: $act-colour__white;
 			color: $act-colour__violet;
 			border-bottom: 1px dashed $act-colour__plum-purple;
-		}		
+		}
 		.act-megamenu__link:hover i,
 		.act-megamenu__link:focus i {
 			color: $act-colour__violet;
@@ -210,7 +210,7 @@
 		cursor: pointer;
 		display: flex;
 		justify-content: space-between;
-		padding: map-get($act-space, "desktop-1");
+		padding: map-get($act-space, "desktop-2");
 		width: 100%;
 		&__text {
 			font-size: $act-font-size__desktop-p-small;
