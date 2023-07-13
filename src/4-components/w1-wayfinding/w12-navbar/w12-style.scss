@@ -12,7 +12,7 @@
 		line-height: $act-line-height__100;
 		padding: 0px 0px 0px map-get($act-space, "desktop-2");
 		width: 100%;
-		max-width: $act-page-max-width;
+		max-width: $act-top-bar-max-width;
 	}
 	&__content {
 		align-items: center;

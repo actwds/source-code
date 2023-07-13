@@ -2884,7 +2884,7 @@ table,
     font-weight: 600;
     justify-content: space-between;
     line-height: 100%;
-    max-width: 1248px;
+    max-width: 1440px;
     padding: 8px 16px;
     width: 100%; }
   .act-masthead__content {
@@ -2938,7 +2938,7 @@ table,
     line-height: 100%;
     padding: 0px 0px 0px 16px;
     width: 100%;
-    max-width: 1248px; }
+    max-width: 1440px; }
   .act-navbar__content {
     align-items: center;
     display: flex;
