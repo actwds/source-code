@@ -119,15 +119,18 @@ document.addEventListener("DOMContentLoaded", function() {
 	const megaMenu = document.getElementsByClassName("act-megamenu")[0];
 	const megaMenuToggle = document.querySelectorAll(".act-navbar__menu");
 	const megaMenuIcon = document.querySelectorAll(".act-navbar__menu .act-navbar__menu__container i")[0];
+	const megaMenuText = document.getElementsByClassName("act-navbar__menu__text")[0];
 	megaMenuToggle.forEach(function(button) {
 		button.addEventListener("click", function() {
 			megaMenu.classList.toggle("act-megamenu__open");			
 			if (!megaMenu.classList.contains("act-megamenu__open")) {
 				megaMenuIcon.classList.add("fa-bars");
 				megaMenuIcon.classList.remove("fa-xmark");
+				megaMenuText.childNodes[0].replaceWith("Menu");
 			} else {
 				megaMenuIcon.classList.remove("fa-bars");
 				megaMenuIcon.classList.add("fa-xmark");
+				megaMenuText.childNodes[0].replaceWith("Close");
 				megaMenu.querySelector("a").focus();
 			}
 		});
@@ -161,12 +164,14 @@ document.addEventListener("DOMContentLoaded", function() {
 document.addEventListener("keydown", function() {
 	const megaMenu = document.getElementsByClassName("act-megamenu")[0];
 	const megaMenuIcon = document.querySelectorAll(".act-navbar__menu .act-navbar__menu__container i")[0];
+	const megaMenuText = document.getElementsByClassName("act-navbar__menu__text")[0];
 	const searchContainer = document.getElementsByClassName("act-navbar__search__container")[0];
 	if(event.keyCode === 27) {
 		if (megaMenu.classList.contains("act-megamenu__open")) {
 			megaMenu.classList.toggle("act-megamenu__open");
 			megaMenuIcon.classList.add("fa-bars");
 			megaMenuIcon.classList.remove("fa-xmark");
+			megaMenuText.childNodes[0].replaceWith("Menu");
 		}
 
 		if (searchContainer.classList.contains("act-search__open")) {
@@ -179,6 +184,7 @@ document.addEventListener("keydown", function() {
 document.addEventListener("click", function(e) {
 	const megaMenu = document.getElementsByClassName("act-megamenu")[0];
 	const megaMenuIcon = document.querySelectorAll(".act-navbar__menu .act-navbar__menu__container i")[0];
+	const megaMenuText = document.getElementsByClassName("act-navbar__menu__text")[0];
 	const searchContainer = document.getElementsByClassName("act-navbar__search__container")[0];
 	const navbar = document.getElementsByClassName("act-navbar")[0];
 	if (!navbar.contains(e.target) && !megaMenu.contains(e.target)) {
@@ -186,6 +192,7 @@ document.addEventListener("click", function(e) {
 			megaMenu.classList.toggle("act-megamenu__open");
 			megaMenuIcon.classList.add("fa-bars");
 			megaMenuIcon.classList.remove("fa-xmark");
+			megaMenuText.childNodes[0].replaceWith("Menu");
 		}
 	}
 	if (!navbar.contains(e.target) && !searchContainer.contains(e.target)) {
@@ -283,4 +290,3 @@ document.addEventListener("keydown", function(e) {
 		}
 	}
 });
-
