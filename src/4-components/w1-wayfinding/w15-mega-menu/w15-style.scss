@@ -249,6 +249,7 @@
 			@include devices(mobile) {
 				grid-template-columns: 1fr;
 			}
+			grid-column-gap: $act-space__desktop-4;
 			height: auto;
 			justify-content: space-between;
 			.act-megamenu__link {

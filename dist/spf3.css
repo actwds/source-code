@@ -3368,6 +3368,7 @@ table,
     .act-megamenu__sub-menu-link-container .sub-menu-links-list {
       display: grid;
       grid-template-columns: 1fr 1fr;
+      grid-column-gap: 32px;
       height: auto;
       justify-content: space-between; }
       @media only screen and (min-width: 0px) and (max-width: 478px) {
