@@ -99,19 +99,21 @@ function toggleSubMenu(open) {
 function openChildLinks(e) {
 	const element = e.currentTarget;
 	const num = element.id.split("-")[3];
-
-	//make sub-menu visible
-	toggleSubMenu(true);
+    
     
 	const visibleChildElements = document.querySelectorAll("[id^=sub-menu-]");
 	for (const childElement of visibleChildElements) {
 		childElement.style.display = "none";
 	}
 	const childElement = document.querySelector("#sub-menu-" + num);
-	if (!childElement) {
-		return;
+
+	//make sub-menu visible
+	if (childElement) {
+		childElement.style.display = "grid";
+		toggleSubMenu(true);
+	} else if (!childElement) {
+		toggleSubMenu(false);
 	}
-	childElement.style.display = "grid";
 }
 
 
@@ -289,4 +291,20 @@ document.addEventListener("keydown", function(e) {
 			}
 		}
 	}
+});
+
+
+//W-15 Mega Menu close submenu when left portion clicked
+document.addEventListener("DOMContentLoaded", function() {
+	const megaMenuLeft = document.getElementsByClassName("act-megamenu__content__block-main-menu")[0];
+	megaMenuLeft.addEventListener("click", function(e) {
+		if (e.target.closest(".act-megamenu__link")) {
+			//do nothing
+		} else {
+			document.getElementsByClassName("act-megamenu__content__block-sub-menu")[0].classList.add("hidden-mobile");
+			Array.from(document.getElementsByClassName("act-megamenu__sub-menu-link-container")).forEach(function(container) {
+				container.style.display = "none";
+			});
+		}
+	});
 });
