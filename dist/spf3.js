@@ -224,6 +224,7 @@ document.addEventListener("keydown", function(e) {
 					});
 					let numMega = document.activeElement.closest(".act-megamenu__sub-menu-link-container").id.split("-")[2];
 					document.querySelector("#main-menu-link-" + numMega).focus();
+					toggleSubMenu(false);
 				} else {
 					//right col
 					document.activeElement.previousElementSibling.focus();
