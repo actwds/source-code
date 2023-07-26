@@ -3187,6 +3187,9 @@ table,
   @media only screen and (min-width: 479px) and (max-width: 991px) {
     .storybook-container {
       margin: 0; } }
+  @media only screen and (min-width: 0px) and (max-width: 478px) {
+    .storybook-container {
+      margin: 0; } }
 
 .act-megamenu {
   align-items: stretch;
@@ -3203,6 +3206,9 @@ table,
   @media only screen and (min-width: 479px) and (max-width: 991px) {
     .act-megamenu {
       height: auto; } }
+  @media only screen and (min-width: 0px) and (max-width: 478px) {
+    .act-megamenu {
+      height: auto; } }
   .act-megamenu__container {
     color: #ffffff;
     display: flex;
@@ -3216,6 +3222,9 @@ table,
     @media only screen and (min-width: 479px) and (max-width: 991px) {
       .act-megamenu .hidden-mobile {
         display: none; } }
+    @media only screen and (min-width: 0px) and (max-width: 478px) {
+      .act-megamenu .hidden-mobile {
+        display: none; } }
   .act-megamenu .hidden {
     display: none; }
   .act-megamenu__content {
@@ -3223,6 +3232,9 @@ table,
     .act-megamenu__content__block {
       padding: 48px 16px; }
       @media only screen and (min-width: 479px) and (max-width: 991px) {
+        .act-megamenu__content__block {
+          width: 100%; } }
+      @media only screen and (min-width: 0px) and (max-width: 478px) {
         .act-megamenu__content__block {
           width: 100%; } }
     .act-megamenu__content__header {
@@ -3251,6 +3263,13 @@ table,
         .act-megamenu__content__block-main-menu {
           padding-left: 8px;
           width: 100%; } }
+      @media only screen and (min-width: 0px) and (max-width: 478px) {
+        .act-megamenu__content__block-main-menu {
+          padding: 16px 16px; } }
+      @media only screen and (min-width: 0px) and (max-width: 478px) {
+        .act-megamenu__content__block-main-menu {
+          padding-left: 8px;
+          width: 100%; } }
       .act-megamenu__content__block-main-menu__additional-links {
         border-top: 1px solid #f6f6f6;
         box-sizing: border-box;
@@ -3262,6 +3281,9 @@ table,
         margin-top: auto;
         width: 100%; }
         @media only screen and (min-width: 479px) and (max-width: 991px) {
+          .act-megamenu__content__block-main-menu__additional-links {
+            display: flex; } }
+        @media only screen and (min-width: 0px) and (max-width: 478px) {
           .act-megamenu__content__block-main-menu__additional-links {
             display: flex; } }
         .act-megamenu__content__block-main-menu__additional-links .act-megamenu__link a {
@@ -3298,6 +3320,11 @@ table,
           padding-left: 8px;
           padding-right: 8px;
           width: 100%; } }
+      @media only screen and (min-width: 0px) and (max-width: 478px) {
+        .act-megamenu__content__block-sub-menu {
+          padding-left: 8px;
+          padding-right: 8px;
+          width: 100%; } }
       .act-megamenu__content__block-sub-menu .back-button {
         all: unset;
         cursor: pointer;
@@ -3306,6 +3333,10 @@ table,
         margin-bottom: 8px;
         color: #111111; }
         @media only screen and (min-width: 479px) and (max-width: 991px) {
+          .act-megamenu__content__block-sub-menu .back-button {
+            display: flex;
+            gap: 8px; } }
+        @media only screen and (min-width: 0px) and (max-width: 478px) {
           .act-megamenu__content__block-sub-menu .back-button {
             display: flex;
             gap: 8px; } }
@@ -3378,6 +3409,9 @@ table,
       height: auto;
       justify-content: space-between; }
       @media only screen and (min-width: 479px) and (max-width: 991px) {
+        .act-megamenu__sub-menu-link-container .sub-menu-links-list {
+          grid-template-columns: 1fr; } }
+      @media only screen and (min-width: 0px) and (max-width: 478px) {
         .act-megamenu__sub-menu-link-container .sub-menu-links-list {
           grid-template-columns: 1fr; } }
       .act-megamenu__sub-menu-link-container .sub-menu-links-list .act-megamenu__link {

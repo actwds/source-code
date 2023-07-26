@@ -24,6 +24,9 @@
 	@include devices(tablet) {
 		margin: 0;
 	}
+	@include devices(mobile) {
+		margin: 0;
+	}
 }
 .act-megamenu {
 	align-items: stretch;
@@ -33,6 +36,9 @@
 	height: 100%;
 	min-height: 50vh;
 	@include devices(tablet) {
+		height: auto;
+	}
+	@include devices(mobile) {
 		height: auto;
 	}
 	left: 0px;
@@ -56,6 +62,9 @@
 		@include devices(tablet) {
 			display: none;
 		}
+		@include devices(mobile) {
+			display: none;
+		}
 	}
 	.hidden {
 		display: none;
@@ -65,6 +74,9 @@
 		&__block {
 			padding: map-get($act-space, "desktop-5") map-get($act-space, "desktop-2");
 			@include devices(tablet) {
+				width: 100%;
+			}
+			@include devices(mobile) {
 				width: 100%;
 			}
 		}
@@ -97,11 +109,21 @@
 				padding-left: map-get($act-space, "desktop-1");
 				width: 100%;
 			}
+			@include devices(mobile) {
+				padding: map-get($act-space, "desktop-2") map-get($act-space, "desktop-2");
+			}
+			@include devices(mobile) {
+				padding-left: map-get($act-space, "desktop-1");
+				width: 100%;
+			}
 			&__additional-links {
 				border-top: 1px solid $act-colour__light-grey;
 				box-sizing: border-box;
 				display: none;
 				@include devices(tablet) {
+					display: flex;
+				}
+				@include devices(mobile) {
 					display: flex;
 				}
 				flex-direction: column;
@@ -158,6 +180,11 @@
 				padding-right: map-get($act-space, "desktop-1");
 				width: 100%;
 			}
+			@include devices(mobile) {
+				padding-left: map-get($act-space, "desktop-1");
+				padding-right: map-get($act-space, "desktop-1");
+				width: 100%;
+			}
 			.back-button {
 				all: unset;
 				cursor: pointer;
@@ -165,6 +192,10 @@
 				margin-left: map-get($act-space, "desktop-2");
 				margin-bottom: map-get($act-space, "desktop-1");
 				@include devices(tablet) {
+					display: flex;
+					gap: map-get($act-space, "desktop-1");
+				}
+				@include devices(mobile) {
 					display: flex;
 					gap: map-get($act-space, "desktop-1");
 				}
@@ -255,6 +286,9 @@
 			display: grid;
 			grid-template-columns: 1fr 1fr;
 			@include devices(tablet) {
+				grid-template-columns: 1fr;
+			}
+			@include devices(mobile) {
 				grid-template-columns: 1fr;
 			}
 			grid-column-gap: $act-space__desktop-4;
