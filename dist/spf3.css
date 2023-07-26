@@ -3184,7 +3184,7 @@ table,
   position: relative;
   width: 100%;
   margin: 16px 0; }
-  @media only screen and (min-width: 0px) and (max-width: 478px) {
+  @media only screen and (min-width: 479px) and (max-width: 991px) {
     .storybook-container {
       margin: 0; } }
 
@@ -3200,7 +3200,7 @@ table,
   width: 100%;
   z-index: 9999;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06); }
-  @media only screen and (min-width: 0px) and (max-width: 478px) {
+  @media only screen and (min-width: 479px) and (max-width: 991px) {
     .act-megamenu {
       height: auto; } }
   .act-megamenu__container {
@@ -3213,7 +3213,7 @@ table,
     visibility: hidden; }
   .act-megamenu .hidden-mobile {
     background-color: #1e0f48; }
-    @media only screen and (min-width: 0px) and (max-width: 478px) {
+    @media only screen and (min-width: 479px) and (max-width: 991px) {
       .act-megamenu .hidden-mobile {
         display: none; } }
   .act-megamenu .hidden {
@@ -3222,7 +3222,7 @@ table,
     display: flex; }
     .act-megamenu__content__block {
       padding: 48px 16px; }
-      @media only screen and (min-width: 0px) and (max-width: 478px) {
+      @media only screen and (min-width: 479px) and (max-width: 991px) {
         .act-megamenu__content__block {
           width: 100%; } }
     .act-megamenu__content__header {
@@ -3244,7 +3244,10 @@ table,
       padding-right: 8px;
       position: relative;
       width: 33%; }
-      @media only screen and (min-width: 0px) and (max-width: 478px) {
+      @media only screen and (min-width: 479px) and (max-width: 991px) {
+        .act-megamenu__content__block-main-menu {
+          padding: 16px 16px; } }
+      @media only screen and (min-width: 479px) and (max-width: 991px) {
         .act-megamenu__content__block-main-menu {
           padding-left: 8px;
           width: 100%; } }
@@ -3258,7 +3261,7 @@ table,
         padding: 16px 0;
         margin-top: auto;
         width: 100%; }
-        @media only screen and (min-width: 0px) and (max-width: 478px) {
+        @media only screen and (min-width: 479px) and (max-width: 991px) {
           .act-megamenu__content__block-main-menu__additional-links {
             display: flex; } }
         .act-megamenu__content__block-main-menu__additional-links .act-megamenu__link a {
@@ -3290,7 +3293,7 @@ table,
       width: 100%; }
       .act-megamenu__content__block-sub-menu a {
         color: #111111; }
-      @media only screen and (min-width: 0px) and (max-width: 478px) {
+      @media only screen and (min-width: 479px) and (max-width: 991px) {
         .act-megamenu__content__block-sub-menu {
           padding-left: 8px;
           padding-right: 8px;
@@ -3302,7 +3305,7 @@ table,
         margin-left: 16px;
         margin-bottom: 8px;
         color: #111111; }
-        @media only screen and (min-width: 0px) and (max-width: 478px) {
+        @media only screen and (min-width: 479px) and (max-width: 991px) {
           .act-megamenu__content__block-sub-menu .back-button {
             display: flex;
             gap: 8px; } }
@@ -3365,13 +3368,16 @@ table,
       margin-left: 8px; }
       .act-megamenu__sub-menu-link-container .section-heading a {
         color: #472d8c; }
+        .act-megamenu__sub-menu-link-container .section-heading a:hover, .act-megamenu__sub-menu-link-container .section-heading a:focus {
+          background-color: #1e0f48;
+          color: #ffffff; }
     .act-megamenu__sub-menu-link-container .sub-menu-links-list {
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-column-gap: 32px;
       height: auto;
       justify-content: space-between; }
-      @media only screen and (min-width: 0px) and (max-width: 478px) {
+      @media only screen and (min-width: 479px) and (max-width: 991px) {
         .act-megamenu__sub-menu-link-container .sub-menu-links-list {
           grid-template-columns: 1fr; } }
       .act-megamenu__sub-menu-link-container .sub-menu-links-list .act-megamenu__link {

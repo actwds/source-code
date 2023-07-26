@@ -21,7 +21,7 @@
 	position: relative;
 	width: 100%;
 	margin: 16px 0;
-	@include devices(mobile) {
+	@include devices(tablet) {
 		margin: 0;
 	}
 }
@@ -32,7 +32,7 @@
 	flex-direction: column;
 	height: 100%;
 	min-height: 50vh;
-	@include devices(mobile) {
+	@include devices(tablet) {
 		height: auto;
 	}
 	left: 0px;
@@ -53,7 +53,7 @@
 	.hidden-mobile {
 		// visibility: hidden;
 		background-color: $act-colour__violet;
-		@include devices(mobile) {
+		@include devices(tablet) {
 			display: none;
 		}
 	}
@@ -64,7 +64,7 @@
 		display: flex;
 		&__block {
 			padding: map-get($act-space, "desktop-5") map-get($act-space, "desktop-2");
-			@include devices(mobile) {
+			@include devices(tablet) {
 				width: 100%;
 			}
 		}
@@ -90,7 +90,10 @@
 			padding-right: map-get($act-space, "desktop-1");
 			position: relative;
 			width: 33%;
-			@include devices(mobile) {
+			@include devices(tablet) {
+				padding: map-get($act-space, "desktop-2") map-get($act-space, "desktop-2");
+			}
+			@include devices(tablet) {
 				padding-left: map-get($act-space, "desktop-1");
 				width: 100%;
 			}
@@ -98,7 +101,7 @@
 				border-top: 1px solid $act-colour__light-grey;
 				box-sizing: border-box;
 				display: none;
-				@include devices(mobile) {
+				@include devices(tablet) {
 					display: flex;
 				}
 				flex-direction: column;
@@ -150,7 +153,7 @@
 			padding-left: map-get($act-space, "desktop-2");
 			padding-right: map-get($act-space, "desktop-8");
 			width: 100%;
-			@include devices(mobile) {
+			@include devices(tablet) {
 				padding-left: map-get($act-space, "desktop-1");
 				padding-right: map-get($act-space, "desktop-1");
 				width: 100%;
@@ -161,7 +164,7 @@
 				display: none;
 				margin-left: map-get($act-space, "desktop-2");
 				margin-bottom: map-get($act-space, "desktop-1");
-				@include devices(mobile) {
+				@include devices(tablet) {
 					display: flex;
 					gap: map-get($act-space, "desktop-1");
 				}
@@ -241,12 +244,17 @@
 			margin-left: map-get($act-space, "desktop-1");
 			& a {
 				color: $act-colour__purple;
+				&:hover,
+				&:focus {
+					background-color: $act-colour__violet;
+					color: $act-colour__white;
+				}
 			}
 		}
 		.sub-menu-links-list {
 			display: grid;
 			grid-template-columns: 1fr 1fr;
-			@include devices(mobile) {
+			@include devices(tablet) {
 				grid-template-columns: 1fr;
 			}
 			grid-column-gap: $act-space__desktop-4;
