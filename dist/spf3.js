@@ -214,6 +214,7 @@ document.addEventListener("keydown", function(e) {
 			let active = document.activeElement;
 			let activeSubnavCount = document.activeElement.parentNode.childElementCount;
 			let i = Array.from(active.parentNode.children).indexOf(active);
+			let sw = screen.width;
 			//left
 			if(event.keyCode === 37) {
 				if (i % 2 == 0) { //left col
@@ -236,6 +237,8 @@ document.addEventListener("keydown", function(e) {
 					if (!active.parentNode.classList.contains("section-heading")) {
 						document.activeElement.parentNode.previousElementSibling.querySelector("a").focus();
 					}
+				} else if (sw < 991) {
+					document.activeElement.previousElementSibling.focus();
 				} else {
 					document.activeElement.previousElementSibling.previousElementSibling.focus();
 				}
@@ -254,6 +257,8 @@ document.addEventListener("keydown", function(e) {
 					document.activeElement.parentNode.nextElementSibling.querySelector("a").focus();
 				} else if ((activeSubnavCount-2) == i || (activeSubnavCount-1) == i) {
 					active.focus();
+				} else if (sw < 991) {
+					document.activeElement.nextElementSibling.focus();
 				} else {
 					document.activeElement.nextElementSibling.nextElementSibling.focus();
 				}
