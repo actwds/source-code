@@ -76,7 +76,7 @@
 										width: 14px;
 									}
 									&:hover {
-										background-color: $act-colour__purple;
+										background-color: $act-colour__middle-lavender;
 										color: $act-colour__white;
 									}
 								}
@@ -99,7 +99,7 @@
 				line-height: 1em;
 				outline: none;
 				&:hover {
-					background-color: $act-colour__purple;
+					background-color: $act-colour__middle-lavender;
 					color: $act-colour__white;
 				}
 			}
@@ -198,7 +198,7 @@
 				padding: map-get($act-space, "desktop-1") map-get($act-space, "desktop-1") !important;
 				vertical-align: middle;
 				a {
-					color: $act-colour__purple;
+					color: $act-colour__middle-lavender;
 				}
 				ul,
 				ol {
