@@ -51,7 +51,7 @@
 			margin-bottom: map-get($act-space, "desktop-1");
 			i {
 				align-items: center;
-				color: $act-colour__purple;
+				color: $act-colour__middle-lavender;
 				display: inline-flex;
 				font-size: 32px;
 				justify-content: center;
@@ -90,7 +90,7 @@
 			text-decoration: none;
 			i {
 				align-items: center;
-				color: $act-colour__purple;
+				color: $act-colour__middle-lavender;
 				display: inline-flex;
 				justify-content: center;
 				::before {
@@ -132,17 +132,17 @@
 		}
 		&:focus {
 			[class*="__container"] {
-				border-color: $act-colour__purple;
+				border-color: $act-colour__middle-lavender;
 				border-width: 1px;
 			}
 		}
 		&:hover,
 		&:focus {
 			border: 0px solid transparent;
-			background-color: $act-colour__purple;
+			background-color: $act-colour__middle-lavender;
 			color: $act-colour__white;
 			[class*="__container"] {
-				border-color: $act-colour__purple;
+				border-color: $act-colour__middle-lavender;
 				border-width: 1px;
 				color: $act-colour__white;
 			}
@@ -191,31 +191,31 @@
 		}
 		&:focus {
 			[class*="__container"] {
-				border-color: $act-colour__purple;
+				border-color: $act-colour__middle-lavender;
 			}
 		}
 		&:hover,
 		&:focus {
 			border: 0px solid transparent;
-			color: $act-colour__purple;
+			color: $act-colour__middle-lavender;
 			[class*="__title"],
 			[class*="__description"] {
 				text-decoration: underline;
-				color: $act-colour__purple;
+				color: $act-colour__middle-lavender;
 			}
 			[class*="__icon"],
 			[class*="__cta"] {
 				i,
 				span {
-					color: $act-colour__purple;
+					color: $act-colour__middle-lavender;
 				}
 			}
 			.act-tag {
-				border: 1px solid $act-colour__purple;
-				color: $act-colour__purple;
+				border: 1px solid $act-colour__middle-lavender;
+				color: $act-colour__middle-lavender;
 				&__filled {
-					background-color: $act-colour__purple;
-					color: $act-colour__purple;
+					background-color: $act-colour__middle-lavender;
+					color: $act-colour__middle-lavender;
 				}
 			}
 		}
@@ -252,16 +252,16 @@
 		}
 		&:focus {
 			[class*="__container"] {
-				border-color: $act-colour__purple;
+				border-color: $act-colour__middle-lavender;
 			}
 		}
 		&:hover,
 		&:focus {
-			background-color: $act-colour__purple;
+			background-color: $act-colour__middle-lavender;
 			border: 0px solid transparent;
 			color: $act-colour__white;
 			[class*="__container"] {
-				border-color: $act-colour__purple;
+				border-color: $act-colour__middle-lavender;
 			}
 			[class*="__title"],
 			[class*="__icon"],
@@ -281,7 +281,7 @@
 		[class*="__container"] {
 			border: none;
 			border-width: 0px;
-			box-shadow: inset 0 4px 0 0 $act-colour__light-purple, inset 4px 0 0 0 $act-colour__light-purple, inset -4px 0 0 0 $act-colour__light-purple, 0 4px 0 $act-colour__purple;
+			box-shadow: inset 0 4px 0 0 $act-colour__light-purple, inset 4px 0 0 0 $act-colour__light-purple, inset -4px 0 0 0 $act-colour__light-purple, 0 4px 0 $act-colour__middle-lavender;
 		}
 		[class*="__icon"] {
 			display: flex;
@@ -296,18 +296,18 @@
 		&:focus {
 			/* Card in focus state */
 			[class*="__container"] {
-				border-color: $act-colour__purple;
+				border-color: $act-colour__middle-lavender;
 				border-width: 4px;
 			}
 		}
 		&:hover,
 		&:focus {
 			/* Card in hover state */
-			background-color: $act-colour__purple;
+			background-color: $act-colour__middle-lavender;
 			border: 0px solid transparent;
 			color: $act-colour__white;
 			[class*="__container"] {
-				box-shadow: inset 0 4px 0 0 $act-colour__purple, inset 4px 0 0 0 $act-colour__purple, inset -4px 0 0 0 $act-colour__purple, 0 4px 0 $act-colour__purple;
+				box-shadow: inset 0 4px 0 0 $act-colour__middle-lavender, inset 4px 0 0 0 $act-colour__middle-lavender, inset -4px 0 0 0 $act-colour__middle-lavender, 0 4px 0 $act-colour__middle-lavender;
 			}
 			[class*="__title"],
 			[class*="__icon"],

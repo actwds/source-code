@@ -59,30 +59,30 @@ export const createW15 = ({
           Home
         </div>
         <div class="act-megamenu__link-container">
-          <div class="act-megamenu__link" id="main-menu-link-1" onclick="openChildLinks(event)">
+          <a href="#" class="act-megamenu__link" id="main-menu-link-1" onclick="openChildLinks(event)">
             <div class="act-megamenu__link__text">
-              <a href="#">Link 1</a>
+              Link 1
             </div>
             <div class="act-megamenu__link__icon">
               <i class="fa-solid fa-angle-right"></i>
             </div>
-          </div>
-          <div class="act-megamenu__link" id="main-menu-link-2" onclick="openChildLinks(event)">
+          </a>
+          <a href="#" class="act-megamenu__link" id="main-menu-link-2" onclick="openChildLinks(event)">
             <div class="act-megamenu__link__text">
-            <a href="#">Information and support</a>
+            Information and support
             </div>
             <div class="act-megamenu__link__icon">
               <i class="fa-solid fa-angle-right"></i>
             </div>
-          </div>
-          <div class="act-megamenu__link" id="main-menu-link-3" onclick="openChildLinks(event)">
+          </a>
+          <a href="#" class="act-megamenu__link" id="main-menu-link-3" onclick="openChildLinks(event)">
             <div class="act-megamenu__link__text">
-              <a href="#">Link 3</a>
+              Link 3
             </div>
             <div class="act-megamenu__link__icon">
               <i class="fa-solid fa-angle-right"></i>
             </div>
-          </div>
+          </a>
         </div>
         <div class="act-megamenu__content__block-main-menu__additional-links">
           <div class="act-megamenu__link">
@@ -122,7 +122,7 @@ export const createW15 = ({
         </button>
         <div class="act-megamenu__sub-menu-link-container hidden" id="sub-menu-1">
           <div class="section-heading">
-            Child Links 1
+            <a href="#">Child Links 1</a>
           </div>
           <div class="sub-menu-links-list">
             <a href="#" class="act-megamenu__link">
@@ -177,7 +177,7 @@ export const createW15 = ({
         </div>
         <div class="act-megamenu__sub-menu-link-container hidden" id="sub-menu-2">
           <div class="section-heading">
-            Information and support
+            <a href="#">Information and support</a>
           </div>
           <div class="sub-menu-links-list">
             <a href="#" class="act-megamenu__link">
@@ -232,7 +232,7 @@ export const createW15 = ({
         </div>
         <div class="act-megamenu__sub-menu-link-container hidden" id="sub-menu-3">
           <div class="section-heading">
-            Child Links 3
+            <a href="#">Child Links 3</a>
           </div>
           <div class="sub-menu-links-list">
             <a href="#" class="act-megamenu__link">

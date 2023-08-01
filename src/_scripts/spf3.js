@@ -99,29 +99,41 @@ function toggleSubMenu(open) {
 function openChildLinks(e) {
 	const element = e.currentTarget;
 	const num = element.id.split("-")[3];
-
-	//make sub-menu visible
-	toggleSubMenu(true);
+    
     
 	const visibleChildElements = document.querySelectorAll("[id^=sub-menu-]");
 	for (const childElement of visibleChildElements) {
 		childElement.style.display = "none";
 	}
 	const childElement = document.querySelector("#sub-menu-" + num);
-	if (!childElement) {
-		return;
+
+	//make sub-menu visible
+	if (childElement) {
+		childElement.style.display = "grid";
+		toggleSubMenu(true);
+	} else if (!childElement) {
+		toggleSubMenu(false);
 	}
-	childElement.style.display = "grid";
 }
 
 
 document.addEventListener("DOMContentLoaded", function() {
 	const megaMenu = document.getElementsByClassName("act-megamenu")[0];
 	const megaMenuToggle = document.querySelectorAll(".act-navbar__menu");
+	const megaMenuIcon = document.querySelectorAll(".act-navbar__menu .act-navbar__menu__container i")[0];
+	const megaMenuText = document.getElementsByClassName("act-navbar__menu__text")[0];
 	megaMenuToggle.forEach(function(button) {
 		button.addEventListener("click", function() {
+			megaMenu.classList.toggle("act-megamenu__open");			
 			if (!megaMenu.classList.contains("act-megamenu__open")) {
-				megaMenu.classList.toggle("act-megamenu__open");
+				megaMenuIcon.classList.add("fa-bars");
+				megaMenuIcon.classList.remove("fa-xmark");
+				megaMenuText.childNodes[0].replaceWith("Menu");
+			} else {
+				megaMenuIcon.classList.remove("fa-bars");
+				megaMenuIcon.classList.add("fa-xmark");
+				megaMenuText.childNodes[0].replaceWith("Close");
+				megaMenu.querySelector("a").focus();
 			}
 		});
 	});
@@ -153,10 +165,15 @@ document.addEventListener("DOMContentLoaded", function() {
 //Close events
 document.addEventListener("keydown", function() {
 	const megaMenu = document.getElementsByClassName("act-megamenu")[0];
+	const megaMenuIcon = document.querySelectorAll(".act-navbar__menu .act-navbar__menu__container i")[0];
+	const megaMenuText = document.getElementsByClassName("act-navbar__menu__text")[0];
 	const searchContainer = document.getElementsByClassName("act-navbar__search__container")[0];
 	if(event.keyCode === 27) {
 		if (megaMenu.classList.contains("act-megamenu__open")) {
 			megaMenu.classList.toggle("act-megamenu__open");
+			megaMenuIcon.classList.add("fa-bars");
+			megaMenuIcon.classList.remove("fa-xmark");
+			megaMenuText.childNodes[0].replaceWith("Menu");
 		}
 
 		if (searchContainer.classList.contains("act-search__open")) {
@@ -168,11 +185,16 @@ document.addEventListener("keydown", function() {
 
 document.addEventListener("click", function(e) {
 	const megaMenu = document.getElementsByClassName("act-megamenu")[0];
+	const megaMenuIcon = document.querySelectorAll(".act-navbar__menu .act-navbar__menu__container i")[0];
+	const megaMenuText = document.getElementsByClassName("act-navbar__menu__text")[0];
 	const searchContainer = document.getElementsByClassName("act-navbar__search__container")[0];
 	const navbar = document.getElementsByClassName("act-navbar")[0];
 	if (!navbar.contains(e.target) && !megaMenu.contains(e.target)) {
 		if (megaMenu.classList.contains("act-megamenu__open")) {
 			megaMenu.classList.toggle("act-megamenu__open");
+			megaMenuIcon.classList.add("fa-bars");
+			megaMenuIcon.classList.remove("fa-xmark");
+			megaMenuText.childNodes[0].replaceWith("Menu");
 		}
 	}
 	if (!navbar.contains(e.target) && !searchContainer.contains(e.target)) {
@@ -182,3 +204,113 @@ document.addEventListener("click", function(e) {
 	}	
 });
 
+//W-15 Mega Menu keyboard arrow navigation
+document.addEventListener("keydown", function(e) {
+	if(event.keyCode === 37 || event.keyCode === 38 || event.keyCode === 39 || event.keyCode === 40) {
+		e.preventDefault();
+	}
+	if (document.activeElement.closest(".act-megamenu__open")) {
+		if (document.activeElement.closest(".act-megamenu__sub-menu-link-container")) {
+			let active = document.activeElement;
+			let activeSubnavCount = document.activeElement.parentNode.childElementCount;
+			let i = Array.from(active.parentNode.children).indexOf(active);
+			let sw = screen.width;
+			//left
+			if(event.keyCode === 37) {
+				if (i % 2 == 0) { //left col
+					//
+					document.getElementsByClassName("act-megamenu__content__block-sub-menu")[0].classList.add("hidden-mobile");
+					Array.from(document.getElementsByClassName("act-megamenu__sub-menu-link-container")).forEach(function(container) {
+						container.style.display = "none";
+					});
+					let numMega = document.activeElement.closest(".act-megamenu__sub-menu-link-container").id.split("-")[2];
+					document.querySelector("#main-menu-link-" + numMega).focus();
+					toggleSubMenu(false);
+				} else {
+					//right col
+					document.activeElement.previousElementSibling.focus();
+				}				
+			}
+			//up
+			if(event.keyCode === 38) {
+				if (i == 0 || i == 1) {
+					if (!active.parentNode.classList.contains("section-heading")) {
+						document.activeElement.parentNode.previousElementSibling.querySelector("a").focus();
+					}
+				} else if (sw < 991) {
+					document.activeElement.previousElementSibling.focus();
+				} else {
+					document.activeElement.previousElementSibling.previousElementSibling.focus();
+				}
+			}
+			//right
+			if(event.keyCode === 39) {
+				if (i % 2 == 1) {
+					active.focus();
+				} else if (i < (activeSubnavCount-1)) {		
+					document.activeElement.nextElementSibling.focus();
+				}				
+			}
+			//down
+			if(event.keyCode === 40) {
+				if (active.parentNode.classList.contains("section-heading")) {
+					document.activeElement.parentNode.nextElementSibling.querySelector("a").focus();
+				} else if ((activeSubnavCount-2) == i || (activeSubnavCount-1) == i) {
+					active.focus();
+				} else if (sw < 991) {
+					document.activeElement.nextElementSibling.focus();
+				} else {
+					document.activeElement.nextElementSibling.nextElementSibling.focus();
+				}
+			}
+		} else {
+			let active = document.activeElement;
+			let activeCount = active.closest(".act-megamenu__link-container").childElementCount;
+			let i = Array.from(active.closest(".act-megamenu__link-container").children).indexOf(active.closest(".act-megamenu__link"));
+			//up
+			if(event.keyCode === 38) {
+				if (!i == 0) {
+					active.previousElementSibling.focus();
+				}
+			}
+			//right
+			if(event.keyCode === 39 || event.keyCode === 13) {
+				let active = document.activeElement;
+				let activeID = active.closest(".act-megamenu__link").id.split("-")[3];
+				toggleSubMenu(true);
+				const visibleChildElements = document.querySelectorAll("[id^=sub-menu-]");
+				for (const childElement of visibleChildElements) {
+					childElement.style.display = "none";
+				}
+				const childElement = document.querySelector("#sub-menu-" + activeID);
+				if (!childElement) {
+					return;
+				}
+				childElement.style.display = "grid";
+				childElement.querySelector("a").focus();
+			}
+			//down
+			if(event.keyCode === 40) {
+				if ((activeCount-1) != i) {
+					active.nextElementSibling.focus();				
+				}
+			}
+		}
+	}
+});
+
+
+//W-15 Mega Menu close submenu when left portion clicked
+document.addEventListener("DOMContentLoaded", function() {
+	const megaMenuLeft = document.getElementsByClassName("act-megamenu__content__block-main-menu")[0];
+	megaMenuLeft.addEventListener("click", function(e) {
+		if (e.target.closest(".act-megamenu__link")) {
+			//do nothing
+		} else {
+			document.getElementsByClassName("act-megamenu__content__block-sub-menu")[0].classList.add("hidden-mobile");
+			Array.from(document.getElementsByClassName("act-megamenu__sub-menu-link-container")).forEach(function(container) {
+				container.style.display = "none";
+			});
+		}
+	});
+});

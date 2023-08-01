@@ -11,7 +11,7 @@
 		font-weight: $act-font-weight__semibold;
 		justify-content: space-between;
 		line-height: $act-line-height__100;
-		max-width: $act-page-max-width;
+		max-width: $act-top-bar-max-width;
 		padding: map-get($act-space, "desktop-1") map-get($act-space, "desktop-2");
 		width: 100%;
 	}

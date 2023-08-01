@@ -7,7 +7,7 @@
 	padding: map-get($act-space, "desktop-2");
 	width: 100%;
 	&__content {
-		color: $act-colour__purple;
+		color: $act-colour__middle-lavender;
 		font-size: $act-font-size__desktop-h4;
 		font-weight: $act-font-weight__semibold;
 		line-height: $act-line-height__130;
@@ -17,7 +17,7 @@
 .act-key-message {
 	align-items: flex-start;
 	background-color: $act-colour__light-purple;
-	border: 1px solid $act-colour__purple;
+	border: 1px solid $act-colour__middle-lavender;
 	display: flex;
 	flex-direction: row;
 	justify-content: flex-start;
@@ -34,7 +34,7 @@
 
 .act-quote {
 	align-items: flex-start;
-	color: $act-colour__purple;
+	color: $act-colour__middle-lavender;
 	display: flex;
 	flex-direction: row;
 	justify-content: flex-start;
@@ -48,7 +48,7 @@
 		margin-right: map-get($act-space, "desktop-2");
 	}
 	&__content {
-		color: $act-colour__purple;
+		color: $act-colour__middle-lavender;
 		font-size: $act-font-size__desktop-h4;
 		font-style: italic;
 		font-weight: $act-font-weight__semibold;
@@ -59,7 +59,7 @@
 
 .act-service-card {
 	background-color: $act-colour__light-grey;
-	box-shadow: inset 4px 0 0 0 $act-colour__purple, inset 0 0 0 0px $act-colour__purple, inset 0 0 0 0 $act-colour__purple, inset 0 0 0 0 $act-colour__purple;
+	box-shadow: inset 4px 0 0 0 $act-colour__middle-lavender, inset 0 0 0 0px $act-colour__middle-lavender, inset 0 0 0 0 $act-colour__middle-lavender, inset 0 0 0 0 $act-colour__middle-lavender;
 	display: flex;
 	flex-direction: column;
 	margin: map-get($act-space, "desktop-4") 0px;

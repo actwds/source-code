@@ -1,6 +1,6 @@
 .act-tooltip {
-	box-shadow: inset 0 0 0 0 $act-colour__white, inset 0 0 0 0 $act-colour__white, inset 0 0 0 0 $act-colour__white, 0 2px 0 $act-colour__purple;
-	color: $act-colour__purple;
+	box-shadow: inset 0 0 0 0 $act-colour__white, inset 0 0 0 0 $act-colour__white, inset 0 0 0 0 $act-colour__white, 0 2px 0 $act-colour__middle-lavender;
+	color: $act-colour__middle-lavender;
 	cursor: pointer;
 	font-weight: $act-font-weight__semibold;
 	display: inline-block;
@@ -44,7 +44,7 @@
 }
 
 .act-utility-set {
-	color: $act-colour__purple;
+	color: $act-colour__middle-lavender;
 	cursor: pointer;
 	display: inline-block;
 	font-weight: $act-font-weight__semibold;
@@ -79,7 +79,7 @@
 		z-index: 1;
 		&__item {
 			align-items: center;
-			background-color: $act-colour__purple;
+			background-color: $act-colour__middle-lavender;
 			border-radius: 50%;
 			display: flex;
 			height: map-get($act-space, "desktop-4");

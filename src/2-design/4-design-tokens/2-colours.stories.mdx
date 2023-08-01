@@ -59,10 +59,37 @@ import LinkTo from "@storybook/addon-links/react";
 								<h2>Primary Colours</h2>
 								<ColorPalette>
 									<ColorItem
-										title="Purple"
+										title="Lavender"
 										subtitle="Whole of Government Purple"
 										colors={{
-											Purple: "#472D8C",
+											MiddleLavender: "#472D8C",
+										}}
+									/>
+									<ColorItem
+										title="Lavender Shades"
+										subtitle="Variations to accompany Whole of Government Purple"
+										colors={{
+											MiddleLavender: "#472D8C",
+											MiddleLavenderActive: "#352269",
+											MiddleLavenderHover: "#40297E",
+										}}
+									/>
+									<ColorItem
+										title="Dark Lavender Shades"
+										subtitle="Variations to accompany Whole of Government Purple"
+										colors={{
+											DarkLavender: "#191031",
+											DarkLavenderActive: "#20143F",
+											DarkLavenderHover: "#2B1B54",
+										}}
+									/>
+									<ColorItem
+										title="Light Lavender Shades"
+										subtitle="Variations to accompany Whole of Government Purple"
+										colors={{
+											LightLavender: "#EDEAF4",
+											LightLavenderActive: "#C6BEDB",
+											LightLavenderHover: "#E3E0EE",
 										}}
 									/>
 									<ColorItem
@@ -81,7 +108,9 @@ import LinkTo from "@storybook/addon-links/react";
 										colors={{
 											Black: "#111111",
 											Grey: "#777777",
+											MidDarkGrey: "#4b4b4b",
 											MiddleGrey: "#ADADAD",
+											LightGrey: "#f6f6f6",
 											White: "#FFFFFF",
 										}}
 									/>
@@ -100,16 +129,136 @@ import LinkTo from "@storybook/addon-links/react";
 											<tr>
 												<td>
 													<span className="act-icon" style={{ backgroundColor: "#472D8C" }}></span>
-													<p className="act-p-small">Purple</p>
+													<p className="act-p-small">Middle Lavender</p>
 												</td>
 												<td>
 													<code className="hex">#472D8C</code>
 												</td>
 												<td>
-													<code className="sass-var">$act-colour__purple</code>
+													<code className="sass-var">$act-colour__middle-lavender</code>
 												</td>
 												<td>
-													<code>map-get($act-colour, "purple")</code>
+													<code>map-get($act-colour, "middle-lavender")</code>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<span className="act-icon" style={{ backgroundColor: "#352269" }}></span>
+													<p className="act-p-small">Middle Lavender Active</p>
+												</td>
+												<td>
+													<code className="hex">#352269</code>
+												</td>
+												<td>
+													<code className="sass-var">$act-colour__middle-lavender-active</code>
+												</td>
+												<td>
+													<code>map-get($act-colour, "middle-lavender-active")</code>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<span className="act-icon" style={{ backgroundColor: "#40297E" }}></span>
+													<p className="act-p-small">Middle Lavender Hover</p>
+												</td>
+												<td>
+													<code className="hex">#40297E</code>
+												</td>
+												<td>
+													<code className="sass-var">$act-colour__middle-lavender-hover</code>
+												</td>
+												<td>
+													<code>map-get($act-colour, "middle-lavender-hover")</code>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<span className="act-icon" style={{ backgroundColor: "#191031" }}></span>
+													<p className="act-p-small">Dark Lavender</p>
+												</td>
+												<td>
+													<code className="hex">#191031</code>
+												</td>
+												<td>
+													<code className="sass-var">$act-colour__dark-lavender</code>
+												</td>
+												<td>
+													<code>map-get($act-colour, "dark-lavender")</code>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<span className="act-icon" style={{ backgroundColor: "#20143F" }}></span>
+													<p className="act-p-small">Dark Lavender Active</p>
+												</td>
+												<td>
+													<code className="hex">#20143F</code>
+												</td>
+												<td>
+													<code className="sass-var">$act-colour__dark-lavender-active</code>
+												</td>
+												<td>
+													<code>map-get($act-colour, "dark-lavender-active")</code>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<span className="act-icon" style={{ backgroundColor: "#2B1B54" }}></span>
+													<p className="act-p-small">Dark Lavender Hover</p>
+												</td>
+												<td>
+													<code className="hex">#2B1B54</code>
+												</td>
+												<td>
+													<code className="sass-var">$act-colour__dark-lavender-hover</code>
+												</td>
+												<td>
+													<code>map-get($act-colour, "dark-lavender-hover")</code>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<span className="act-icon" style={{ backgroundColor: "#EDEAF4" }}></span>
+													<p className="act-p-small">Light Lavender</p>
+												</td>
+												<td>
+													<code className="hex">#EDEAF4</code>
+												</td>
+												<td>
+													<code className="sass-var">$act-colour__light-lavender</code>
+												</td>
+												<td>
+													<code>map-get($act-colour, "light-lavender")</code>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<span className="act-icon" style={{ backgroundColor: "#C6BEDB" }}></span>
+													<p className="act-p-small">Light Lavender Active</p>
+												</td>
+												<td>
+													<code className="hex">#C6BEDB</code>
+												</td>
+												<td>
+													<code className="sass-var">$act-colour__light-lavender-active</code>
+												</td>
+												<td>
+													<code>map-get($act-colour, "light-lavender-active")</code>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<span className="act-icon" style={{ backgroundColor: "#E3E0EE" }}></span>
+													<p className="act-p-small">Light Lavender Hover</p>
+												</td>
+												<td>
+													<code className="hex">#E3E0EE</code>
+												</td>
+												<td>
+													<code className="sass-var">$act-colour__light-lavender-hover</code>
+												</td>
+												<td>
+													<code>map-get($act-colour, "light-lavender-hover")</code>
 												</td>
 											</tr>
 											<tr>

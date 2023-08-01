@@ -16,8 +16,17 @@ $act-colour__middle-grey: #adadad;
 $act-colour__middle-dark-grey: #4b4b4b;
 $act-colour__misty-rose: #ffe9eb;
 $act-colour__old-lace: #fff6e9;
-$act-colour__purple: #472d8c;
+$act-colour__dark-lavender: #191031;
+$act-colour__dark-lavender-active: #20143f;
+$act-colour__dark-lavender-hover: #2b1b54;
+$act-colour__middle-lavender: #472d8c;
+$act-colour__middle-lavender-active: #352269;
+$act-colour__middle-lavender-hover: #40297e;
+$act-colour__light-lavender: #edeaf4;
+$act-colour__light-lavender-active: #c6bedb;
+$act-colour__light-lavender-hover: #e3e0ee;
 $act-colour__plum-purple: #6042ae;
+
 $act-colour__red: #ba2133;
 $act-colour__violet: #1e0f48;
 $act-colour__white: #ffffff;
@@ -54,7 +63,15 @@ $act-colour: (
 	"light-grey": $act-colour__light-grey,
 	"light-purple": $act-colour__light-purple,
 	"middle-grey": $act-colour__middle-grey,
-	"purple": $act-colour__purple,
+	"middle-lavender": $act-colour__middle-lavender,
+	"middle-lavender-active": $act-colour__middle-lavender-active,
+	"middle-lavender-hover": $act-colour__middle-lavender-hover,
+	"dark-lavender": $act-colour__dark-lavender,
+	"dark-lavender-active": $act-colour__dark-lavender-active,
+	"dark-lavender-hover": $act-colour__dark-lavender-hover,
+	"light-lavender": $act-colour__light-lavender,
+	"light-lavender-active": $act-colour__light-lavender-active,
+	"light-lavender-hover": $act-colour__light-lavender-hover,
 	"red": $act-colour__red,
 	"region-belconnen": $act-colour__region-belconnen,
 	"region-gungahlin": $act-colour__region-gungahlin,

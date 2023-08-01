@@ -21,6 +21,9 @@
 	position: relative;
 	width: 100%;
 	margin: 16px 0;
+	@include devices(tablet) {
+		margin: 0;
+	}
 	@include devices(mobile) {
 		margin: 0;
 	}
@@ -32,11 +35,13 @@
 	flex-direction: column;
 	height: 100%;
 	min-height: 50vh;
+	@include devices(tablet) {
+		height: auto;
+	}
 	@include devices(mobile) {
-		height: 75vh;
+		height: auto;
 	}
 	left: 0px;
-	position: absolute;
 	top: 0px;
 	width: 100%;
 	z-index: 9999;
@@ -54,6 +59,9 @@
 	.hidden-mobile {
 		// visibility: hidden;
 		background-color: $act-colour__violet;
+		@include devices(tablet) {
+			display: none;
+		}
 		@include devices(mobile) {
 			display: none;
 		}
@@ -65,6 +73,9 @@
 		display: flex;
 		&__block {
 			padding: map-get($act-space, "desktop-5") map-get($act-space, "desktop-2");
+			@include devices(tablet) {
+				width: 100%;
+			}
 			@include devices(mobile) {
 				width: 100%;
 			}
@@ -91,6 +102,16 @@
 			padding-right: map-get($act-space, "desktop-1");
 			position: relative;
 			width: 33%;
+			@include devices(tablet) {
+				padding: map-get($act-space, "desktop-2") map-get($act-space, "desktop-2");
+			}
+			@include devices(tablet) {
+				padding-left: map-get($act-space, "desktop-1");
+				width: 100%;
+			}
+			@include devices(mobile) {
+				padding: map-get($act-space, "desktop-2") map-get($act-space, "desktop-2");
+			}
 			@include devices(mobile) {
 				padding-left: map-get($act-space, "desktop-1");
 				width: 100%;
@@ -99,6 +120,9 @@
 				border-top: 1px solid $act-colour__light-grey;
 				box-sizing: border-box;
 				display: none;
+				@include devices(tablet) {
+					display: flex;
+				}
 				@include devices(mobile) {
 					display: flex;
 				}
@@ -151,6 +175,11 @@
 			padding-left: map-get($act-space, "desktop-2");
 			padding-right: map-get($act-space, "desktop-8");
 			width: 100%;
+			@include devices(tablet) {
+				padding-left: map-get($act-space, "desktop-1");
+				padding-right: map-get($act-space, "desktop-1");
+				width: 100%;
+			}
 			@include devices(mobile) {
 				padding-left: map-get($act-space, "desktop-1");
 				padding-right: map-get($act-space, "desktop-1");
@@ -162,6 +191,10 @@
 				display: none;
 				margin-left: map-get($act-space, "desktop-2");
 				margin-bottom: map-get($act-space, "desktop-1");
+				@include devices(tablet) {
+					display: flex;
+					gap: map-get($act-space, "desktop-1");
+				}
 				@include devices(mobile) {
 					display: flex;
 					gap: map-get($act-space, "desktop-1");
@@ -200,6 +233,10 @@
 			color: $act-colour__violet;
 			border-bottom: 1px dashed $act-colour__plum-purple;
 		}
+		.act-megamenu__link:hover i,
+		.act-megamenu__link:focus i {
+			color: $act-colour__violet;
+		}
 	}
 	&__link {
 		align-items: center;
@@ -207,7 +244,7 @@
 		cursor: pointer;
 		display: flex;
 		justify-content: space-between;
-		padding: map-get($act-space, "desktop-1");
+		padding: map-get($act-space, "desktop-2");
 		width: 100%;
 		&__text {
 			font-size: $act-font-size__desktop-p-small;
@@ -230,24 +267,36 @@
 	&__sub-menu-link-container {
 		height: auto;
 		.section-heading {
-			color: $act-colour__purple;
+			color: $act-colour__middle-lavender;
 			font-size: $act-font-size__desktop-h4;
 			font-weight: $act-font-weight__bold;
 			line-height: $act-line-height__130;
 			padding: map-get($act-space, "desktop-1");
 			margin-left: map-get($act-space, "desktop-1");
+			& a {
+				color: $act-colour__middle-lavender;
+				&:hover,
+				&:focus {
+					background-color: $act-colour__violet;
+					color: $act-colour__white;
+				}
+			}
 		}
 		.sub-menu-links-list {
 			display: grid;
 			grid-template-columns: 1fr 1fr;
+			@include devices(tablet) {
+				grid-template-columns: 1fr;
+			}
 			@include devices(mobile) {
 				grid-template-columns: 1fr;
 			}
+			grid-column-gap: $act-space__desktop-4;
 			height: auto;
 			justify-content: space-between;
 			.act-megamenu__link {
 				color: $act-colour__black;
-				border-bottom: 1px solid white;
+				border-bottom: 1px solid $act-colour__black;
 				align-items: center;
 				padding: map-get($act-space, "desktop-2");
 				&__icon {
