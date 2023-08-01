@@ -128,7 +128,7 @@
 		cursor: pointer;
 		&__container {
 			align-items: center;
-			background: $act-colour__purple;
+			background: $act-colour__middle-lavender;
 			color: $act-colour__white;
 			display: flex;
 			justify-content: center;
@@ -154,7 +154,7 @@
 		}
 		@include devices(mobile) {
 			&__container {
-				background: $act-colour__purple;
+				background: $act-colour__middle-lavender;
 				i {
 					margin-left: 0px;
 				}
