@@ -59,7 +59,8 @@
 
 .act-service-card {
 	background-color: $act-colour__light-grey;
-	box-shadow: inset 4px 0 0 0 $act-colour__middle-lavender, inset 0 0 0 0px $act-colour__middle-lavender, inset 0 0 0 0 $act-colour__middle-lavender, inset 0 0 0 0 $act-colour__middle-lavender;
+	box-shadow: inset 4px 0 0 0 $act-colour__middle-lavender, inset 0 0 0 0px $act-colour__middle-lavender, inset 0 0 0 0 $act-colour__middle-lavender,
+		inset 0 0 0 0 $act-colour__middle-lavender;
 	display: flex;
 	flex-direction: column;
 	margin: map-get($act-space, "desktop-4") 0px;
