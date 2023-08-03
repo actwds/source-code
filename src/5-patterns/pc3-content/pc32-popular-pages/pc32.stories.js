@@ -1,4 +1,4 @@
-import { createPC31 } from "./component";
+import { createPC32 } from "./component";
 
 export default {
 	title: "Patterns/Content/Popular Pages",
@@ -10,6 +10,6 @@ export default {
 	},
 };
 
-const Template = (args) => createPC31(args);
+const Template = (args) => createPC32(args);
 
 export const PopularPages = Template.bind({});

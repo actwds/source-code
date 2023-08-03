@@ -5,18 +5,18 @@ export const createPC32 = () => {
   const linksListHTML = createC29({});
 
   const contentHTML = `
-<div class="act-flex">
+<div class="act-flex act-flex-light-grey">
   <div class="act-flex__container">
     <div class="act-flex__grid">
       <div class="act-flex__row">
         <div class="act-col__cw-4">
           <div class="act-box act-box__content">
-            <h2>Popular pages</h2>
+            <p class="act-h2 popular-pages-p">Popular pages</p>
           </div>
         </div>
         <div class="act-col__cw-4">
           <div class="act-box act-box__content">
-            `+ linksListHTML +`
+            ` + linksListHTML +`
           </div>
         </div>
         <div class="act-col__cw-4">

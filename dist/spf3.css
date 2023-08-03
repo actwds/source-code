@@ -400,6 +400,11 @@ p {
   p.xsmall {
     font-family: "Source Sans Pro", sans-serif;
     font-size: 10px; }
+  p.popular-pages-p {
+    margin-top: 32px; }
+    @media only screen and (min-width: 0px) and (max-width: 478px) {
+      p.popular-pages-p {
+        font-size: 32px; } }
   @media only screen and (min-width: 0px) and (max-width: 478px) {
     p {
       font-size: 18px; }
