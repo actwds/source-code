@@ -68,7 +68,7 @@
 	}
 	/* Button Types */
 	&__primary {
-		background-color: $act-colour__middle-lavender;
+		background-color: $act-colour__purple;
 		color: $act-colour__white;
 		i {
 			color: $act-colour__white;
@@ -85,8 +85,8 @@
 		}
 		&:focus,
 		&-focus {
-			border-color: $act-colour__middle-lavender;
-			box-shadow: 0 0 0 2px $act-colour__white, 0 0 0 4px $act-colour__middle-lavender;
+			border-color: $act-colour__purple;
+			box-shadow: 0 0 0 2px $act-colour__white, 0 0 0 4px $act-colour__purple;
 			i {
 				color: $act-colour__white;
 			}
@@ -99,8 +99,8 @@
 	}
 	&__secondary {
 		background-color: $act-colour__white;
-		border: 2px solid $act-colour__middle-lavender;
-		color: $act-colour__middle-lavender;
+		border: 2px solid $act-colour__purple;
+		color: $act-colour__purple;
 		&:hover,
 		&-hover {
 			background-color: $act-colour__light-purple;
@@ -121,10 +121,10 @@
 		}
 		&:focus,
 		&-focus {
-			border-color: $act-colour__middle-lavender;
-			box-shadow: 0 0 0 2px $act-colour__white, 0 0 0 4px $act-colour__middle-lavender;
+			border-color: $act-colour__purple;
+			box-shadow: 0 0 0 2px $act-colour__white, 0 0 0 4px $act-colour__purple;
 			i {
-				color: $act-colour__middle-lavender;
+				color: $act-colour__purple;
 			}
 		}
 		&:disabled,
@@ -140,9 +140,9 @@
 	&__tertiary {
 		background-color: $act-colour__white;
 		border: 2px solid $act-colour__white;
-		color: $act-colour__middle-lavender;
+		color: $act-colour__purple;
 		i {
-			color: $act-colour__middle-lavender;
+			color: $act-colour__purple;
 		}
 		&:hover,
 		&-hover {
@@ -163,9 +163,9 @@
 		&:focus,
 		&-focus {
 			border-color: $act-colour__white;
-			box-shadow: 0 0 0 2px $act-colour__white, 0 0 0 4px $act-colour__middle-lavender;
+			box-shadow: 0 0 0 2px $act-colour__white, 0 0 0 4px $act-colour__purple;
 			i {
-				color: $act-colour__middle-lavender;
+				color: $act-colour__purple;
 			}
 		}
 		&:disabled,
@@ -181,7 +181,7 @@
 	/* Link Types */
 	&__inline {
 		background-color: transparent;
-		color: $act-colour__middle-lavender;
+		color: $act-colour__purple;
 		height: unset;
 		display: inline;
 		margin: 0px !important;

@@ -17,7 +17,7 @@
 
 		width: 100%;
 		&:active {
-			background-color: $act-colour__middle-lavender;
+			background-color: $act-colour__purple;
 			color: $act-colour__white;
 		}
 		&__summary {
@@ -35,11 +35,11 @@
 				color: $act-colour__white;
 			}
 			&__selected {
-				background-color: $act-colour__middle-lavender;
+				background-color: $act-colour__purple;
 				color: $act-colour__white;
 				&:hover,
 				&:focus {
-					background-color: $act-colour__middle-lavender;
+					background-color: $act-colour__purple;
 					color: $act-colour__white;
 				}
 			}
@@ -101,7 +101,7 @@
 		}
 	}
 	details[open] > summary {
-		background-color: $act-colour__middle-lavender;
+		background-color: $act-colour__purple;
 		color: $act-colour__white;
 	}
 	details[open] > summary > .summary-chevron > svg {

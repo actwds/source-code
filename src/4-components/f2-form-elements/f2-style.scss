@@ -229,7 +229,7 @@ form p,
 		&:focus,
 		&__focus {
 			border-color: $act-colour__grey;
-			box-shadow: 0 0 0 1px $act-colour__white, 0 0 0 4px $act-colour__middle-lavender;
+			box-shadow: 0 0 0 1px $act-colour__white, 0 0 0 4px $act-colour__purple;
 		}
 		&.error,
 		&__error {
@@ -276,8 +276,8 @@ form p,
 		height: unset;
 	}
 	&__checkbox {
-		accent-color: $act-colour__middle-lavender;
-		color: $act-colour__middle-lavender;
+		accent-color: $act-colour__purple;
+		color: $act-colour__purple;
 		height: 20px;
 		margin-right: map-get($act-space, "desktop-1");
 		margin-top: 1px;
@@ -285,12 +285,12 @@ form p,
 		&.focus,
 		&:focus,
 		&__focus {
-			box-shadow: 0 0 0 1px $act-colour__white, 0 0 0 4px $act-colour__middle-lavender;
+			box-shadow: 0 0 0 1px $act-colour__white, 0 0 0 4px $act-colour__purple;
 		}
 	}
 	&__radio {
-		accent-color: $act-colour__middle-lavender;
-		color: $act-colour__middle-lavender;
+		accent-color: $act-colour__purple;
+		color: $act-colour__purple;
 		height: 20px;
 		margin-right: map-get($act-space, "desktop-1");
 		margin-top: 1px;
@@ -298,7 +298,7 @@ form p,
 		&.focus,
 		&:focus,
 		&__focus {
-			box-shadow: 0 0 0 1px $act-colour__white, 0 0 0 4px $act-colour__middle-lavender;
+			box-shadow: 0 0 0 1px $act-colour__white, 0 0 0 4px $act-colour__purple;
 			border-radius: 0px;
 		}
 	}
@@ -310,7 +310,7 @@ form p,
 		z-index: 2;
 		&__slider {
 			background: $act-colour__white;
-			border: 2px solid $act-colour__middle-lavender;
+			border: 2px solid $act-colour__purple;
 			border-radius: calc(#{map-get($act-space, "desktop-4") / 2});
 			bottom: 0;
 			display: flex;
@@ -330,19 +330,19 @@ form p,
 				width: calc(#{map-get($act-space, "desktop-4") - 12px});
 				left: 4px;
 				bottom: 4px;
-				background-color: $act-colour__middle-lavender;
+				background-color: $act-colour__purple;
 				-webkit-transition: 0.4s;
 				transition: 0.4s;
 			}
 		}
 		:checked + &__slider {
-			background-color: $act-colour__middle-lavender;
+			background-color: $act-colour__purple;
 		}
 		&.focus,
 		&:focus,
 		&__focus,
 		:focus + &__slider {
-			box-shadow: 0 0 0 1px $act-colour__white, 0 0 0 4px $act-colour__middle-lavender;
+			box-shadow: 0 0 0 1px $act-colour__white, 0 0 0 4px $act-colour__purple;
 		}
 		:checked + &__slider:before {
 			background-color: $act-colour__white;
