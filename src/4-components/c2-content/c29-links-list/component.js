@@ -14,7 +14,19 @@ export const createC29= ({
         </div>
       </li>
       <li class="act-links-list__content__item">
-        <a class="act-links-list__content__item__text">Link #1</a>
+        <a class="act-links-list__content__item__text">Link #2</a>
+        <div class="act-links-list__content__item__icon">
+          <i class="fa-solid fa-arrow-right"></i>
+        </div>
+      </li>
+      <li class="act-links-list__content__item">
+        <a class="act-links-list__content__item__text">Link #3</a>
+        <div class="act-links-list__content__item__icon">
+          <i class="fa-solid fa-arrow-right"></i>
+        </div>
+      </li>
+      <li class="act-links-list__content__item">
+        <a class="act-links-list__content__item__text">Link #4</a>
         <div class="act-links-list__content__item__icon">
           <i class="fa-solid fa-arrow-right"></i>
         </div>

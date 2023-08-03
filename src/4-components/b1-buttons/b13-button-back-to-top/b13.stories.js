@@ -49,7 +49,7 @@ export default {
 	argTypes: {
 		size: {
 			control: { type: "select", },
-			options: ["default", "large", "small", "xsmall",],
+			options: ["default", "mobile",],
 			defaultValue: "default",
 			description: "Sets the button size",
 			table: {

@@ -258,8 +258,28 @@
 	}
 	/* Back To Top */
 	&__back-to-top {
+		border: 2px solid $act-colour__middle-dark-grey;
+		border-radius: $act-radius__desktop-full;
+		background: none;
+		color: $act-colour__middle-dark-grey;
+		padding: 32px 24px;
+		margin: 0 !important;
+		transition: background 100ms cubic-bezier(0, 0, 0.58, 1);
 		i {
 			margin-left: 0px;
+			font-size: $act-font-size__desktop-h1;
+			height: 40px;
+			max-height: 40px;
+			min-height: 40px;
+		}
+		&:hover {
+			background-color: $act-colour__black;
+		}
+		&__mobile {
+			padding: 24px 16px;
+			i {
+				font-size: $act-font-size__desktop-h2;
+			}
 		}
 	}
 }
