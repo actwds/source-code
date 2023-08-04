@@ -97,7 +97,7 @@ $act-hero-widget-height: 300px;
 			}
 			[class*="__bgimg"] {
 				background-image: url("/images/purple.jpg");
-				background-color: $act-colour__violet;
+				background-color: $act-colour__dark-deep-violet;
 				height: $act-hero-max-height;
 				background-position: center;
 				background-repeat: no-repeat;
@@ -275,7 +275,7 @@ $act-hero-widget-height: 300px;
 	&__search {
 		align-items: center;
 		background-image: url("/images/purple.jpg");
-		background-color: $act-colour__violet;
+		background-color: $act-colour__dark-deep-violet;
 		height: $act-hero-widget-height;
 		background-position: center;
 		background-repeat: no-repeat;

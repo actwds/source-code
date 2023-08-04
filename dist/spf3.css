@@ -695,7 +695,7 @@ a,
       color: #01cee8; }
   .act-alert-inpage__warning {
     background-color: #fff6e9;
-    box-shadow: inset 0 4px 0 0 #fff6e9, inset 4px 0 0 0 #fff6e9, inset -4px 0 0 0 #fff6e9, 0 4px 0 #ff9500;
+    box-shadow: inset 0 4px 0 0 #fff6e9, inset 4px 0 0 0 #fff6e9, inset -4px 0 0 0 #fff6e9, 0 4px 0 #f2c94c;
     color: #111111; }
     .act-alert-inpage__warning a {
       border-color: #111111;
@@ -704,7 +704,7 @@ a,
         border-color: #111111;
         color: #111111; }
     .act-alert-inpage__warning i {
-      color: #ff9500; }
+      color: #f2c94c; }
   .act-alert-inpage__error {
     background-color: #ffe9eb;
     box-shadow: inset 0 4px 0 0 #ffe9eb, inset 4px 0 0 0 #ffe9eb, inset -4px 0 0 0 #ffe9eb, 0 4px 0 #ba2133;
@@ -1342,8 +1342,14 @@ a,
       height: 40px;
       max-height: 40px;
       min-height: 40px; }
-    .act-button__back-to-top:hover {
+    .act-button__back-to-top:hover, .act-button__back-to-top-hover {
       background-color: #111111; }
+    .act-button__back-to-top:active, .act-button__back-to-top-active {
+      background-color: #111111; }
+    .act-button__back-to-top:focus, .act-button__back-to-top-focus {
+      background-color: #111111; }
+      .act-button__back-to-top:focus i, .act-button__back-to-top-focus i {
+        color: #ffffff; }
     .act-button__back-to-top__mobile {
       padding: 24px 16px; }
       .act-button__back-to-top__mobile i {

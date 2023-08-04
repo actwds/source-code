@@ -68,20 +68,20 @@
 		}
 		&.error,
 		&__error {
-			border-color: $act-colour__red !important;
+			border-color: $act-colour__alert-red !important;
 			&:active,
 			&:focus {
-				border-color: $act-colour__red;
-				box-shadow: 0 0 0 1px $act-colour__white, 0 0 0 4px $act-colour__red;
+				border-color: $act-colour__alert-red;
+				box-shadow: 0 0 0 1px $act-colour__white, 0 0 0 4px $act-colour__alert-red;
 			}
 		}
 		&.success,
 		&__success {
-			border-color: $act-colour__green !important;
+			border-color: $act-colour__success-green !important;
 			&:active,
 			&:focus {
-				border-color: $act-colour__green;
-				box-shadow: 0 0 0 1px $act-colour__white, 0 0 0 4px $act-colour__green;
+				border-color: $act-colour__success-green;
+				box-shadow: 0 0 0 1px $act-colour__white, 0 0 0 4px $act-colour__success-green;
 			}
 		}
 		&.disabled,
@@ -108,7 +108,7 @@
 		}
 	}
 	&__button {
-		background-color: $act-colour__indigo;
+		background-color: $act-colour__deep-violet;
 		border: none;
 		color: $act-colour__white;
 		cursor: pointer;
@@ -124,7 +124,7 @@
 		width: map-get($act-space, "desktop-6");
 		&:hover,
 		&:focus {
-			background-color: $act-colour__violet;
+			background-color: $act-colour__dark-deep-violet;
 		}
 	}
 }
@@ -153,7 +153,7 @@
 	justify-content: flex-start;
 	width: 100%;
 	&__title {
-		background-color: $act-colour__light-purple;
+		background-color: $act-colour__success-light-purple-background;
 		font-size: $act-font-size__desktop-h6;
 		font-weight: $act-font-weight__semibold;
 		padding: map-get($act-space, "desktop-2");

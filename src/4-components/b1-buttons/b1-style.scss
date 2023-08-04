@@ -75,12 +75,12 @@
 		}
 		&:hover,
 		&-hover {
-			background-color: $act-colour__violet;
+			background-color: $act-colour__dark-deep-violet;
 			color: $act-colour__white;
 		}
 		&:active,
 		&-active {
-			background-color: $act-colour__violet;
+			background-color: $act-colour__dark-deep-violet;
 			color: $act-colour__white;
 		}
 		&:focus,
@@ -103,20 +103,20 @@
 		color: $act-colour__purple;
 		&:hover,
 		&-hover {
-			background-color: $act-colour__light-purple;
-			border-color: $act-colour__violet;
-			color: $act-colour__violet;
+			background-color: $act-colour__success-light-purple-background;
+			border-color: $act-colour__dark-deep-violet;
+			color: $act-colour__dark-deep-violet;
 			i {
 				color: inherit;
 			}
 		}
 		&:active,
 		&-active {
-			background-color: $act-colour__light-purple;
-			border-color: $act-colour__violet;
-			color: $act-colour__violet;
+			background-color: $act-colour__success-light-purple-background;
+			border-color: $act-colour__dark-deep-violet;
+			color: $act-colour__dark-deep-violet;
 			i {
-				color: $act-colour__violet;
+				color: $act-colour__dark-deep-violet;
 			}
 		}
 		&:focus,
@@ -147,17 +147,17 @@
 		&:hover,
 		&-hover {
 			border-color: $act-colour__white;
-			color: $act-colour__violet;
+			color: $act-colour__dark-deep-violet;
 			i {
-				color: $act-colour__violet;
+				color: $act-colour__dark-deep-violet;
 			}
 		}
 		&:active,
 		&-active {
 			border-color: $act-colour__white;
-			color: $act-colour__violet;
+			color: $act-colour__dark-deep-violet;
 			i {
-				color: $act-colour__violet;
+				color: $act-colour__dark-deep-violet;
 			}
 		}
 		&:focus,
@@ -192,16 +192,16 @@
 		&:hover,
 		&-hover {
 			border-color: transparent;
-			color: $act-colour__plum-purple;
+			color: $act-colour__light-deep-violet;
 		}
 		&:active,
 		&-active {
-			color: $act-colour__medium-purple;
+			color: $act-colour__bright-violet;
 		}
 		&:focus,
 		&-focus {
-			border: 2px solid $act-colour__violet;
-			color: $act-colour__violet;
+			border: 2px solid $act-colour__dark-deep-violet;
+			color: $act-colour__dark-deep-violet;
 		}
 		&:disabled,
 		&-disabled {
@@ -272,8 +272,20 @@
 			max-height: 40px;
 			min-height: 40px;
 		}
-		&:hover {
+		&:hover,
+		&-hover {
 			background-color: $act-colour__black;
+		}
+		&:active,
+		&-active {
+			background-color: $act-colour__black;
+		}
+		&:focus,
+		&-focus {
+			background-color: $act-colour__black;
+			i {
+				color: $act-colour__white;
+			}
 		}
 		&__mobile {
 			padding: 24px 16px;

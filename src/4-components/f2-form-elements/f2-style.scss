@@ -33,7 +33,7 @@ form,
 			margin-bottom: map-get($act-space, "desktop-1");
 			span,
 			.required {
-				color: $act-colour__red;
+				color: $act-colour__alert-red;
 				padding-left: map-get($act-space, "desktop-0");
 			}
 		}
@@ -194,7 +194,7 @@ form p,
 		margin-bottom: map-get($act-space, "desktop-0");
 		span,
 		.required {
-			color: $act-colour__red;
+			color: $act-colour__alert-red;
 			padding-left: map-get($act-space, "desktop-0");
 		}
 	}
@@ -233,20 +233,20 @@ form p,
 		}
 		&.error,
 		&__error {
-			border-color: $act-colour__red !important;
+			border-color: $act-colour__alert-red !important;
 			&:active,
 			&:focus {
-				border-color: $act-colour__red;
-				box-shadow: 0 0 0 1px $act-colour__white, 0 0 0 4px $act-colour__red;
+				border-color: $act-colour__alert-red;
+				box-shadow: 0 0 0 1px $act-colour__white, 0 0 0 4px $act-colour__alert-red;
 			}
 		}
 		&.success,
 		&__success {
-			border-color: $act-colour__green !important;
+			border-color: $act-colour__success-green !important;
 			&:active,
 			&:focus {
-				border-color: $act-colour__green;
-				box-shadow: 0 0 0 1px $act-colour__white, 0 0 0 4px $act-colour__green;
+				border-color: $act-colour__success-green;
+				box-shadow: 0 0 0 1px $act-colour__white, 0 0 0 4px $act-colour__success-green;
 			}
 		}
 		&.disabled,
@@ -359,7 +359,7 @@ form p,
 		margin-top: map-get($act-space, "desktop-0");
 	}
 	&__alert {
-		background-color: $act-colour__misty-rose;
+		background-color: $act-colour__alert-light-red;
 		color: $act-colour__black;
 		font-size: $act-font-size__desktop-p-small;
 		font-weight: $act-font-weight__semibold;
@@ -368,7 +368,7 @@ form p,
 		padding: map-get($act-space, "desktop-1");
 		width: 100%;
 		i {
-			color: $act-colour__red;
+			color: $act-colour__alert-red;
 			margin-right: map-get($act-space, "desktop-1");
 		}
 	}

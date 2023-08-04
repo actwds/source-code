@@ -6,7 +6,7 @@
 	display: inline-block;
 	position: relative;
 	&__text {
-		background-color: $act-colour__light-purple;
+		background-color: $act-colour__success-light-purple-background;
 		border-radius: 6px;
 		bottom: 120%;
 		color: $act-colour__black;
@@ -22,7 +22,7 @@
 		width: 260px;
 		z-index: 1;
 		&:after {
-			border-color: $act-colour__light-purple transparent transparent transparent;
+			border-color: $act-colour__success-light-purple-background transparent transparent transparent;
 			border-style: solid;
 			border-width: 5px;
 			content: " ";

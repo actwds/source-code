@@ -23,10 +23,10 @@
 				white-space: nowrap;
 				vertical-align: baseline;
 				&.class {
-					color: $act-colour__green;
+					color: $act-colour__success-green;
 				}
 				&.sass-var {
-					color: $act-colour__plum-purple;
+					color: $act-colour__light-deep-violet;
 				}
 			}
 		}
@@ -140,7 +140,7 @@
 
 .act-docs-container {
 	/* Allows the ACT Design System to run within the MDX docs pages */
-	background-color: $act-colour__violet;
+	background-color: $act-colour__dark-deep-violet;
 	font-family: $sourcesanspro;
 	left: 0px;
 	position: absolute;
@@ -161,7 +161,7 @@
 	&__description {
 		margin-top: map-get($act-space, "desktop-1");
 		i {
-			color: $act-colour__plum-purple;
+			color: $act-colour__light-deep-violet;
 			margin-right: map-get($act-space, "desktop-0");
 		}
 	}

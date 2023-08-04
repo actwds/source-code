@@ -31,11 +31,11 @@
 		&:hover,
 		&:focus {
 			color: $act-colour__purple;
-			background-color: $act-colour__light-purple;
+			background-color: $act-colour__success-light-purple-background;
 			// font-weight: $act-font-weight__semibold;
 		}
 		&__active {
-			background-color: $act-colour__light-purple;
+			background-color: $act-colour__success-light-purple-background;
 			color: $act-colour__purple;
 			font-weight: $act-font-weight__semibold;
 		}
