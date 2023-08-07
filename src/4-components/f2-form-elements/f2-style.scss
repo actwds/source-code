@@ -217,13 +217,13 @@ form p,
 		font-family: $sourcesanspro;
 		font-size: $act-font-size__desktop-p;
 		font-weight: $act-font-weight__regular;
-		height: map-get($act-space, "desktop-6");
+		height: map-get($act-space, "desktop-5");
 		line-height: $act-line-height__130;
 		max-width: 100%;
-		min-height: map-get($act-space, "desktop-6");
+		min-height: map-get($act-space, "desktop-5");
 		min-width: 100%;
 		outline: none !important;
-		padding: map-get($act-space, "desktop-2");
+		padding: map-get($act-space, "desktop-1");
 		width: 100%;
 		&.focus,
 		&:focus,

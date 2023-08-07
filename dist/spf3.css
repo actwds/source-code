@@ -1762,13 +1762,13 @@ form p,
   font-family: "Source Sans Pro", sans-serif;
   font-size: 18px;
   font-weight: 400;
-  height: 64px;
+  height: 48px;
   line-height: 130%;
   max-width: 100%;
-  min-height: 64px;
+  min-height: 48px;
   min-width: 100%;
   outline: none !important;
-  padding: 16px;
+  padding: 8px;
   width: 100%; }
   .act-form__field__input.focus, .act-form__field__input:focus, .act-form__field__input__focus, .act-form__field__text.focus, .act-form__field__text:focus, .act-form__field__text__focus, .act-form__field__email.focus, .act-form__field__email:focus, .act-form__field__email__focus, .act-form__field__password.focus, .act-form__field__password:focus, .act-form__field__password__focus, .act-form__field__date.focus, .act-form__field__date:focus, .act-form__field__date__focus, .act-form__field__tel.focus, .act-form__field__tel:focus, .act-form__field__tel__focus, .act-form__field__url.focus, .act-form__field__url:focus, .act-form__field__url__focus, .act-form__field__select.focus, .act-form__field__select:focus, .act-form__field__select__focus, .act-form__field__textarea.focus, .act-form__field__textarea:focus, .act-form__field__textarea__focus {
     border-color: #777777;
