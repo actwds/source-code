@@ -24,14 +24,14 @@
 		width: fit-content;
 		&:hover,
 		&:focus {
-			background-color: $act-colour__medium-purple;
+			background-color: $act-colour__bright-violet;
 		}
 		&__current {
-			background-color: $act-colour__middle-lavender;
+			background-color: $act-colour__purple;
 			color: $act-colour__white;
 			&:hover,
 			&:focus {
-				background-color: $act-colour__middle-lavender;
+				background-color: $act-colour__purple;
 				color: $act-colour__white;
 			}
 		}

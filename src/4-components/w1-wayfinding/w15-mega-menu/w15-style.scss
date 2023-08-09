@@ -30,7 +30,7 @@
 }
 .act-megamenu {
 	align-items: stretch;
-	background-color: $act-colour__violet;
+	background-color: $act-colour__dark-deep-violet;
 	display: flex;
 	flex-direction: column;
 	height: 100%;
@@ -58,7 +58,7 @@
 	}
 	.hidden-mobile {
 		// visibility: hidden;
-		background-color: $act-colour__violet;
+		background-color: $act-colour__dark-deep-violet;
 		@include devices(tablet) {
 			display: none;
 		}
@@ -142,7 +142,7 @@
 				.act-megamenu__link:hover,
 				.act-megamenu__link:focus {
 					a {
-						color: $act-colour__violet;
+						color: $act-colour__dark-deep-violet;
 					}
 				}
 				button {
@@ -230,12 +230,12 @@
 		.act-megamenu__link:hover a,
 		.act-megamenu__link:focus a {
 			background-color: $act-colour__white;
-			color: $act-colour__violet;
-			border-bottom: 1px dashed $act-colour__plum-purple;
+			color: $act-colour__dark-deep-violet;
+			border-bottom: 1px dashed $act-colour__light-deep-violet;
 		}
 		.act-megamenu__link:hover i,
 		.act-megamenu__link:focus i {
-			color: $act-colour__violet;
+			color: $act-colour__dark-deep-violet;
 		}
 	}
 	&__link {
@@ -267,17 +267,17 @@
 	&__sub-menu-link-container {
 		height: auto;
 		.section-heading {
-			color: $act-colour__middle-lavender;
+			color: $act-colour__purple;
 			font-size: $act-font-size__desktop-h4;
 			font-weight: $act-font-weight__bold;
 			line-height: $act-line-height__130;
 			padding: map-get($act-space, "desktop-1");
 			margin-left: map-get($act-space, "desktop-1");
 			& a {
-				color: $act-colour__middle-lavender;
+				color: $act-colour__purple;
 				&:hover,
 				&:focus {
-					background-color: $act-colour__violet;
+					background-color: $act-colour__dark-deep-violet;
 					color: $act-colour__white;
 				}
 			}
@@ -300,12 +300,12 @@
 				align-items: center;
 				padding: map-get($act-space, "desktop-2");
 				&__icon {
-					color: $act-colour__violet;
+					color: $act-colour__dark-deep-violet;
 				}
 			}
 			.act-megamenu__link:hover,
 			.act-megamenu__link:focus {
-				background-color: $act-colour__violet;
+				background-color: $act-colour__dark-deep-violet;
 				color: $act-colour__white;
 
 				&__icon {

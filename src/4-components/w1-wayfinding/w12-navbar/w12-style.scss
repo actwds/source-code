@@ -128,7 +128,7 @@
 		cursor: pointer;
 		&__container {
 			align-items: center;
-			background: $act-colour__middle-lavender;
+			background: $act-colour__purple;
 			color: $act-colour__white;
 			display: flex;
 			justify-content: center;
@@ -149,12 +149,12 @@
 			&:hover,
 			&-hover,
 			&:focus {
-				background-color: $act-colour__indigo;
+				background-color: $act-colour__deep-violet;
 			}
 		}
 		@include devices(mobile) {
 			&__container {
-				background: $act-colour__middle-lavender;
+				background: $act-colour__purple;
 				i {
 					margin-left: 0px;
 				}

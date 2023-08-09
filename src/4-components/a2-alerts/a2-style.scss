@@ -1,6 +1,6 @@
 .act-alert-global {
 	align-items: center;
-	background-color: $act-colour__middle-lavender;
+	background-color: $act-colour__purple;
 	display: flex;
 	flex-grow: 1;
 	justify-content: center;
@@ -28,7 +28,7 @@
 		}
 	}
 	&__success {
-		background-color: $act-colour__green;
+		background-color: $act-colour__success-green;
 		border-color: $act-colour__white;
 		a {
 			color: $act-colour__white;
@@ -42,7 +42,7 @@
 		}
 	}
 	&__warning {
-		background-color: $act-colour__yellow;
+		background-color: $act-colour__warning-yellow;
 		a {
 			border-color: $act-colour__black;
 			color: $act-colour__black;
@@ -57,7 +57,7 @@
 		}
 	}
 	&__error {
-		background-color: $act-colour__red;
+		background-color: $act-colour__alert-red;
 		a {
 			color: $act-colour__white;
 			&:hover,
@@ -103,7 +103,7 @@
 
 .act-alert-inpage {
 	align-items: center;
-	background-color: $act-colour__middle-lavender;
+	background-color: $act-colour__purple;
 	display: flex;
 	flex-grow: 1;
 	justify-content: center;
@@ -147,8 +147,9 @@
 		}
 	}
 	&__success {
-		background-color: $act-colour__azure;
-		box-shadow: inset 0 4px 0 0 $act-colour__azure, inset 4px 0 0 0 $act-colour__azure, inset -4px 0 0 0 $act-colour__azure, 0 4px 0 $act-colour__blue-crayola;
+		background-color: $act-colour__attention-light-blue;
+		box-shadow: inset 0 4px 0 0 $act-colour__attention-light-blue, inset 4px 0 0 0 $act-colour__attention-light-blue, inset -4px 0 0 0 $act-colour__attention-light-blue,
+			0 4px 0 $act-colour__attention-blue;
 		color: $act-colour__black;
 		a {
 			color: $act-colour__black;
@@ -158,12 +159,13 @@
 			}
 		}
 		i {
-			color: $act-colour__blue-crayola;
+			color: $act-colour__attention-blue;
 		}
 	}
 	&__warning {
-		background-color: $act-colour__old-lace;
-		box-shadow: inset 0 4px 0 0 $act-colour__old-lace, inset 4px 0 0 0 $act-colour__old-lace, inset -4px 0 0 0 $act-colour__old-lace, 0 4px 0 $act-colour__yellow-orange;
+		background-color: $act-colour__warning-light-yellow;
+		box-shadow: inset 0 4px 0 0 $act-colour__warning-light-yellow, inset 4px 0 0 0 $act-colour__warning-light-yellow, inset -4px 0 0 0 $act-colour__warning-light-yellow,
+			0 4px 0 $act-colour__warning-yellow;
 		color: $act-colour__black;
 		a {
 			border-color: $act-colour__black;
@@ -175,12 +177,13 @@
 			}
 		}
 		i {
-			color: $act-colour__yellow-orange;
+			color: $act-colour__warning-yellow;
 		}
 	}
 	&__error {
-		background-color: $act-colour__misty-rose;
-		box-shadow: inset 0 4px 0 0 $act-colour__misty-rose, inset 4px 0 0 0 $act-colour__misty-rose, inset -4px 0 0 0 $act-colour__misty-rose, 0 4px 0 $act-colour__red;
+		background-color: $act-colour__alert-light-red;
+		box-shadow: inset 0 4px 0 0 $act-colour__alert-light-red, inset 4px 0 0 0 $act-colour__alert-light-red, inset -4px 0 0 0 $act-colour__alert-light-red,
+			0 4px 0 $act-colour__alert-red;
 		color: $act-colour__black;
 		a {
 			color: $act-colour__black;
@@ -190,7 +193,7 @@
 			}
 		}
 		i {
-			color: $act-colour__red;
+			color: $act-colour__alert-red;
 		}
 	}
 	&__no-icon {

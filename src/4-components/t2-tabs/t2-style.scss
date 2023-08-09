@@ -19,7 +19,7 @@
 	}
 	&__tab {
 		align-items: center;
-		box-shadow: inset 0 0 0 0 $act-colour__white, inset 0 0 0 0 $act-colour__white, inset 0 0 0 0 $act-colour__white, 0 2px 0 $act-colour__middle-lavender;
+		box-shadow: inset 0 0 0 0 $act-colour__white, inset 0 0 0 0 $act-colour__white, inset 0 0 0 0 $act-colour__white, 0 2px 0 $act-colour__purple;
 		cursor: pointer;
 		display: flex;
 		flex-direction: row;
@@ -30,13 +30,13 @@
 		width: fit-content;
 		&:hover,
 		&:focus {
-			color: $act-colour__middle-lavender;
-			background-color: $act-colour__light-purple;
+			color: $act-colour__purple;
+			background-color: $act-colour__success-light-purple-background;
 			// font-weight: $act-font-weight__semibold;
 		}
 		&__active {
-			background-color: $act-colour__light-purple;
-			color: $act-colour__middle-lavender;
+			background-color: $act-colour__success-light-purple-background;
+			color: $act-colour__purple;
 			font-weight: $act-font-weight__semibold;
 		}
 	}

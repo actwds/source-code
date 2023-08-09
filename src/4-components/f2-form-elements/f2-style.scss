@@ -33,7 +33,7 @@ form,
 			margin-bottom: map-get($act-space, "desktop-1");
 			span,
 			.required {
-				color: $act-colour__red;
+				color: $act-colour__alert-red;
 				padding-left: map-get($act-space, "desktop-0");
 			}
 		}
@@ -194,7 +194,7 @@ form p,
 		margin-bottom: map-get($act-space, "desktop-0");
 		span,
 		.required {
-			color: $act-colour__red;
+			color: $act-colour__alert-red;
 			padding-left: map-get($act-space, "desktop-0");
 		}
 	}
@@ -217,36 +217,36 @@ form p,
 		font-family: $sourcesanspro;
 		font-size: $act-font-size__desktop-p;
 		font-weight: $act-font-weight__regular;
-		height: map-get($act-space, "desktop-6");
+		height: map-get($act-space, "desktop-5");
 		line-height: $act-line-height__130;
 		max-width: 100%;
-		min-height: map-get($act-space, "desktop-6");
+		min-height: map-get($act-space, "desktop-5");
 		min-width: 100%;
 		outline: none !important;
-		padding: map-get($act-space, "desktop-2");
+		padding: map-get($act-space, "desktop-1");
 		width: 100%;
 		&.focus,
 		&:focus,
 		&__focus {
 			border-color: $act-colour__grey;
-			box-shadow: 0 0 0 1px $act-colour__white, 0 0 0 4px $act-colour__middle-lavender;
+			box-shadow: 0 0 0 1px $act-colour__white, 0 0 0 4px $act-colour__purple;
 		}
 		&.error,
 		&__error {
-			border-color: $act-colour__red !important;
+			border-color: $act-colour__alert-red !important;
 			&:active,
 			&:focus {
-				border-color: $act-colour__red;
-				box-shadow: 0 0 0 1px $act-colour__white, 0 0 0 4px $act-colour__red;
+				border-color: $act-colour__alert-red;
+				box-shadow: 0 0 0 1px $act-colour__white, 0 0 0 4px $act-colour__alert-red;
 			}
 		}
 		&.success,
 		&__success {
-			border-color: $act-colour__green !important;
+			border-color: $act-colour__success-green !important;
 			&:active,
 			&:focus {
-				border-color: $act-colour__green;
-				box-shadow: 0 0 0 1px $act-colour__white, 0 0 0 4px $act-colour__green;
+				border-color: $act-colour__success-green;
+				box-shadow: 0 0 0 1px $act-colour__white, 0 0 0 4px $act-colour__success-green;
 			}
 		}
 		&.disabled,
@@ -276,8 +276,8 @@ form p,
 		height: unset;
 	}
 	&__checkbox {
-		accent-color: $act-colour__middle-lavender;
-		color: $act-colour__middle-lavender;
+		accent-color: $act-colour__purple;
+		color: $act-colour__purple;
 		height: 20px;
 		margin-right: map-get($act-space, "desktop-1");
 		margin-top: 1px;
@@ -285,12 +285,12 @@ form p,
 		&.focus,
 		&:focus,
 		&__focus {
-			box-shadow: 0 0 0 1px $act-colour__white, 0 0 0 4px $act-colour__middle-lavender;
+			box-shadow: 0 0 0 1px $act-colour__white, 0 0 0 4px $act-colour__purple;
 		}
 	}
 	&__radio {
-		accent-color: $act-colour__middle-lavender;
-		color: $act-colour__middle-lavender;
+		accent-color: $act-colour__purple;
+		color: $act-colour__purple;
 		height: 20px;
 		margin-right: map-get($act-space, "desktop-1");
 		margin-top: 1px;
@@ -298,7 +298,7 @@ form p,
 		&.focus,
 		&:focus,
 		&__focus {
-			box-shadow: 0 0 0 1px $act-colour__white, 0 0 0 4px $act-colour__middle-lavender;
+			box-shadow: 0 0 0 1px $act-colour__white, 0 0 0 4px $act-colour__purple;
 			border-radius: 0px;
 		}
 	}
@@ -310,7 +310,7 @@ form p,
 		z-index: 2;
 		&__slider {
 			background: $act-colour__white;
-			border: 2px solid $act-colour__middle-lavender;
+			border: 2px solid $act-colour__purple;
 			border-radius: calc(#{map-get($act-space, "desktop-4") / 2});
 			bottom: 0;
 			display: flex;
@@ -330,19 +330,19 @@ form p,
 				width: calc(#{map-get($act-space, "desktop-4") - 12px});
 				left: 4px;
 				bottom: 4px;
-				background-color: $act-colour__middle-lavender;
+				background-color: $act-colour__purple;
 				-webkit-transition: 0.4s;
 				transition: 0.4s;
 			}
 		}
 		:checked + &__slider {
-			background-color: $act-colour__middle-lavender;
+			background-color: $act-colour__purple;
 		}
 		&.focus,
 		&:focus,
 		&__focus,
 		:focus + &__slider {
-			box-shadow: 0 0 0 1px $act-colour__white, 0 0 0 4px $act-colour__middle-lavender;
+			box-shadow: 0 0 0 1px $act-colour__white, 0 0 0 4px $act-colour__purple;
 		}
 		:checked + &__slider:before {
 			background-color: $act-colour__white;
@@ -359,7 +359,7 @@ form p,
 		margin-top: map-get($act-space, "desktop-0");
 	}
 	&__alert {
-		background-color: $act-colour__misty-rose;
+		background-color: $act-colour__alert-light-red;
 		color: $act-colour__black;
 		font-size: $act-font-size__desktop-p-small;
 		font-weight: $act-font-weight__semibold;
@@ -368,7 +368,7 @@ form p,
 		padding: map-get($act-space, "desktop-1");
 		width: 100%;
 		i {
-			color: $act-colour__red;
+			color: $act-colour__alert-red;
 			margin-right: map-get($act-space, "desktop-1");
 		}
 	}

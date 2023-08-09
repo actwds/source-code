@@ -41,7 +41,7 @@ main,
 			&.active,
 			&-active,
 			&:last-of-type {
-				color: $act-colour__middle-lavender;
+				color: $act-colour__purple;
 				font-weight: $act-font-weight__semibold;
 				i {
 					display: none;
@@ -50,12 +50,12 @@ main,
 			&:hover,
 			&:focus {
 				border: none;
-				color: $act-colour__middle-lavender;
+				color: $act-colour__purple;
 			}
 			@include devices(mobile) {
 				display: none;
 				&:first-of-type {
-					color: $act-colour__middle-lavender;
+					color: $act-colour__purple;
 					display: flex;
 					font-weight: $act-font-weight__semibold;
 					a {

@@ -400,6 +400,11 @@ p {
   p.xsmall {
     font-family: "Source Sans Pro", sans-serif;
     font-size: 10px; }
+  p.popular-pages-p {
+    margin-top: 32px; }
+    @media only screen and (min-width: 0px) and (max-width: 478px) {
+      p.popular-pages-p {
+        font-size: 32px; } }
   @media only screen and (min-width: 0px) and (max-width: 478px) {
     p {
       font-size: 18px; }
@@ -690,7 +695,7 @@ a,
       color: #01cee8; }
   .act-alert-inpage__warning {
     background-color: #fff6e9;
-    box-shadow: inset 0 4px 0 0 #fff6e9, inset 4px 0 0 0 #fff6e9, inset -4px 0 0 0 #fff6e9, 0 4px 0 #ff9500;
+    box-shadow: inset 0 4px 0 0 #fff6e9, inset 4px 0 0 0 #fff6e9, inset -4px 0 0 0 #fff6e9, 0 4px 0 #f2c94c;
     color: #111111; }
     .act-alert-inpage__warning a {
       border-color: #111111;
@@ -699,7 +704,7 @@ a,
         border-color: #111111;
         color: #111111; }
     .act-alert-inpage__warning i {
-      color: #ff9500; }
+      color: #f2c94c; }
   .act-alert-inpage__error {
     background-color: #ffe9eb;
     box-shadow: inset 0 4px 0 0 #ffe9eb, inset 4px 0 0 0 #ffe9eb, inset -4px 0 0 0 #ffe9eb, 0 4px 0 #ba2133;
@@ -1323,8 +1328,32 @@ a,
       color: inherit;
       display: flex;
       margin-left: 8px; }
-  .act-button__back-to-top i {
-    margin-left: 0px; }
+  .act-button__back-to-top {
+    border: 2px solid #4b4b4b;
+    border-radius: 50%;
+    background: none;
+    color: #4b4b4b;
+    padding: 32px 24px;
+    margin: 0 !important;
+    transition: background 100ms cubic-bezier(0, 0, 0.58, 1); }
+    .act-button__back-to-top i {
+      margin-left: 0px;
+      font-size: 48px;
+      height: 40px;
+      max-height: 40px;
+      min-height: 40px; }
+    .act-button__back-to-top:hover, .act-button__back-to-top-hover {
+      background-color: #111111; }
+    .act-button__back-to-top:active, .act-button__back-to-top-active {
+      background-color: #111111; }
+    .act-button__back-to-top:focus, .act-button__back-to-top-focus {
+      background-color: #111111; }
+      .act-button__back-to-top:focus i, .act-button__back-to-top-focus i {
+        color: #ffffff; }
+    .act-button__back-to-top__mobile {
+      padding: 24px 16px; }
+      .act-button__back-to-top__mobile i {
+        font-size: 40px; }
 
 [class*="act-footer"] p a {
   border-bottom: 1px solid #ffffff;
@@ -1733,13 +1762,13 @@ form p,
   font-family: "Source Sans Pro", sans-serif;
   font-size: 18px;
   font-weight: 400;
-  height: 64px;
+  height: 48px;
   line-height: 130%;
   max-width: 100%;
-  min-height: 64px;
+  min-height: 48px;
   min-width: 100%;
   outline: none !important;
-  padding: 16px;
+  padding: 8px;
   width: 100%; }
   .act-form__field__input.focus, .act-form__field__input:focus, .act-form__field__input__focus, .act-form__field__text.focus, .act-form__field__text:focus, .act-form__field__text__focus, .act-form__field__email.focus, .act-form__field__email:focus, .act-form__field__email__focus, .act-form__field__password.focus, .act-form__field__password:focus, .act-form__field__password__focus, .act-form__field__date.focus, .act-form__field__date:focus, .act-form__field__date__focus, .act-form__field__tel.focus, .act-form__field__tel:focus, .act-form__field__tel__focus, .act-form__field__url.focus, .act-form__field__url:focus, .act-form__field__url__focus, .act-form__field__select.focus, .act-form__field__select:focus, .act-form__field__select__focus, .act-form__field__textarea.focus, .act-form__field__textarea:focus, .act-form__field__textarea__focus {
     border-color: #777777;
@@ -3053,7 +3082,7 @@ table,
 
 .act-sidebar {
   align-items: flex-start;
-  background-color: #f4f2fa;
+  background-color: #e0d5ff;
   display: flex;
   flex-direction: column;
   justify-content: flex-start; }

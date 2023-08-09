@@ -23,10 +23,13 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 //A21 - Global Alerts
-function dismissGlobalAlbert() {
-	const e = document.querySelector(".act-alert-global");
-	e.remove();
-}
+let globalAlertDismiss = document.querySelectorAll(".act-alert-global__dismiss");
+let alerts = globalAlertDismiss.forEach(function(alert, index) {
+	alert.addEventListener("click", function() {
+		const e = document.querySelector(".act-alert-global");
+		e.remove();
+	});
+});
 
 //B11 - Back to top Button
 function backToTop() {

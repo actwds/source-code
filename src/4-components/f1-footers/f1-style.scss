@@ -86,7 +86,7 @@
 		}
 		&__button {
 			align-items: center;
-			background-color: $act-colour__middle-lavender;
+			background-color: $act-colour__purple;
 			border-radius: 50%;
 			color: $act-colour__white;
 			cursor: pointer;
@@ -174,7 +174,7 @@
 			align-items: center;
 			background-color: $act-colour__white;
 			border: none;
-			color: $act-colour__violet;
+			color: $act-colour__dark-deep-violet;
 			display: inline-flex;
 			height: map-get($act-space, "desktop-4");
 			justify-content: center;
@@ -199,7 +199,7 @@
 			}
 			&:hover,
 			&:focus {
-				background-color: $act-colour__medium-purple;
+				background-color: $act-colour__bright-violet;
 				border: none;
 				color: $act-colour__white;
 			}

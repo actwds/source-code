@@ -178,6 +178,12 @@ p {
 		font-family: $sourcesanspro;
 		font-size: $act-font-size__desktop-p-xsmall;
 	}
+	&.popular-pages-p {
+		margin-top: map-get($act-space, "desktop-4");
+		@include devices(mobile) {
+			font-size: $act-font-size__mobile-h2;
+		}
+	}
 	@include devices(mobile) {
 		font-size: $act-font-size__mobile-p;
 		&.large {
@@ -253,8 +259,8 @@ ul {
 /* A */
 a,
 .act-a {
-	border-bottom: 1px solid $act-colour__middle-lavender;
-	color: $act-colour__middle-lavender;
+	border-bottom: 1px solid $act-colour__purple;
+	color: $act-colour__purple;
 	cursor: pointer;
 	font-family: $sourcesanspro;
 	font-size: inherit;
@@ -268,8 +274,8 @@ a,
 	}
 	&:hover,
 	&:focus {
-		border-bottom: 1px dashed $act-colour__plum-purple;
-		color: $act-colour__plum-purple;
+		border-bottom: 1px dashed $act-colour__light-deep-violet;
+		color: $act-colour__light-deep-violet;
 	}
 }
 
