@@ -17,10 +17,10 @@
 		display: flex;
 		font-size: $act-font-size__desktop-pagination;
 		font-weight: $act-font-weight__semibold;
-		height: $act-space__desktop-3;
+		height: $act-space__desktop-4;
 		justify-content: center;
 		margin: 0px calc(#{map-get($act-space, "desktop-0") / 2});
-		min-width: $act-space__desktop-3;
+		min-width: $act-space__desktop-4;
 		width: fit-content;
 		&:hover,
 		&:focus {
