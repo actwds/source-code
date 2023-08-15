@@ -1,6 +1,6 @@
 .act-sidebar {
 	align-items: flex-start;
-	background-color: $act-colour__pastel-violet;
+	background-color: $act-colour__success-light-purple-background;
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
@@ -31,11 +31,11 @@
 			list-style: none;
 			&:hover,
 			&:focus {
-				background-color: $act-colour__bright-violet;
-				color: $act-colour__white;
+				background-color: $act-colour__pastel-violet;
+				color: $act-colour__black;
 				a {
-					color: $act-colour__white;
-					border-color: $act-colour__white;
+					color: $act-colour__black;
+					border-color: $act-colour__black;
 				}
 			}
 			&__selected {
