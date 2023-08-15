@@ -88,7 +88,7 @@ i.fa-brands {
         padding: 32px 16px; } }
     @media only screen and (min-width: 992px) and (max-width: 99999px) {
       .act-flex__container {
-        padding: 48px 48px; } }
+        padding: 32px 32px; } }
     @media only screen and (min-width: 0px) and (max-width: 478px) {
       .act-flex__container-padding-trim {
         padding: 0px 8px; } }
@@ -97,7 +97,7 @@ i.fa-brands {
         padding: 0px 16px; } }
     @media only screen and (min-width: 992px) and (max-width: 99999px) {
       .act-flex__container-padding-trim {
-        padding: 0px 48px; } }
+        padding: 0px 32px; } }
   .act-flex__grid {
     align-items: center;
     display: flex;
@@ -236,8 +236,8 @@ i.fa-brands {
       padding: 8px; } }
   @media only screen and (min-width: 992px) and (max-width: 99999px) {
     .act-flex .act-box {
-      margin: 16px;
-      padding: 16px; } }
+      margin: 8px;
+      padding: 8px; } }
   .act-flex__demo [class*="__row"] {
     border: 1px solid black; }
   .act-flex__demo [class*="act-col"] {
@@ -3111,6 +3111,9 @@ table,
       .act-sidebar__item__summary:hover, .act-sidebar__item__summary:focus {
         background-color: #9a78f2;
         color: #ffffff; }
+        .act-sidebar__item__summary:hover a, .act-sidebar__item__summary:focus a {
+          color: #ffffff;
+          border-color: #ffffff; }
       .act-sidebar__item__summary__selected {
         background-color: #472d8c;
         color: #ffffff; }
@@ -3160,6 +3163,8 @@ table,
   .act-sidebar details[open] > summary {
     background-color: #472d8c;
     color: #ffffff; }
+    .act-sidebar details[open] > summary > a {
+      color: #ffffff; }
   .act-sidebar details[open] > summary > .summary-chevron > svg {
     transform: rotate(180deg); }
 
@@ -3169,7 +3174,7 @@ table,
   flex-direction: row;
   justify-content: flex-start; }
   .act-pagination__title {
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 600;
     margin-right: 4px; }
   .act-pagination__next {
@@ -3178,7 +3183,7 @@ table,
     align-items: center;
     cursor: pointer;
     display: flex;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 600;
     height: 24px;
     justify-content: center;

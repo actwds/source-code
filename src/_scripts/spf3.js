@@ -308,12 +308,12 @@ document.addEventListener("DOMContentLoaded", function() {
 	const megaMenuLeft = document.getElementsByClassName("act-megamenu__content__block-main-menu")[0];
 	megaMenuLeft.addEventListener("click", function(e) {
 		if (e.target.closest(".act-megamenu__link")) {
-			//do nothing
-		} else {
-			document.getElementsByClassName("act-megamenu__content__block-sub-menu")[0].classList.add("hidden-mobile");
-			Array.from(document.getElementsByClassName("act-megamenu__sub-menu-link-container")).forEach(function(container) {
-				container.style.display = "none";
-			});
-		}
+			return;
+		} 
+		document.getElementsByClassName("act-megamenu__content__block-sub-menu")[0].classList.add("hidden-mobile");
+		Array.from(document.getElementsByClassName("act-megamenu__sub-menu-link-container")).forEach(function(container) {
+			container.style.display = "none";
+		});
+		
 	});
 });

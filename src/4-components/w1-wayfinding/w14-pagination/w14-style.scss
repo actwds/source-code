@@ -4,7 +4,7 @@
 	flex-direction: row;
 	justify-content: flex-start;
 	&__title {
-		font-size: $act-font-size__desktop-p-small;
+		font-size: $act-font-size__desktop-pagination;
 		font-weight: $act-font-weight__semibold;
 		margin-right: map-get($act-space, "desktop-0");
 	}
@@ -15,7 +15,7 @@
 		align-items: center;
 		cursor: pointer;
 		display: flex;
-		font-size: $act-font-size__desktop-p-small;
+		font-size: $act-font-size__desktop-pagination;
 		font-weight: $act-font-weight__semibold;
 		height: $act-space__desktop-3;
 		justify-content: center;

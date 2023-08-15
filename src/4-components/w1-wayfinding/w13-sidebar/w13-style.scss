@@ -33,6 +33,10 @@
 			&:focus {
 				background-color: $act-colour__bright-violet;
 				color: $act-colour__white;
+				a {
+					color: $act-colour__white;
+					border-color: $act-colour__white;
+				}
 			}
 			&__selected {
 				background-color: $act-colour__purple;
@@ -103,6 +107,9 @@
 	details[open] > summary {
 		background-color: $act-colour__purple;
 		color: $act-colour__white;
+		> a {
+			color: $act-colour__white;
+		}
 	}
 	details[open] > summary > .summary-chevron > svg {
 		transform: rotate(180deg);
