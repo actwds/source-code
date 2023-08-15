@@ -3108,12 +3108,14 @@ table,
       padding: 16px;
       width: 100%;
       list-style: none; }
+      .act-sidebar__item__summary a {
+        font-family: "Montserrat", sans-serif;
+        border: none; }
       .act-sidebar__item__summary:hover, .act-sidebar__item__summary:focus {
         background-color: #e0d5ff;
         color: #111111; }
         .act-sidebar__item__summary:hover a, .act-sidebar__item__summary:focus a {
-          color: #111111;
-          border-color: #111111; }
+          color: #111111; }
       .act-sidebar__item__summary__selected {
         background-color: #472d8c;
         color: #ffffff; }

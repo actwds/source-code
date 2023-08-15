@@ -29,13 +29,16 @@
 			padding: map-get($act-space, "desktop-2");
 			width: 100%;
 			list-style: none;
+			a {
+				font-family: $montserrat;
+				border: none;
+			}
 			&:hover,
 			&:focus {
 				background-color: $act-colour__pastel-violet;
 				color: $act-colour__black;
 				a {
 					color: $act-colour__black;
-					border-color: $act-colour__black;
 				}
 			}
 			&__selected {
