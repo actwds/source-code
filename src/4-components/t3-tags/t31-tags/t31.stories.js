@@ -19,7 +19,18 @@ export default {
 			table: {
 				defaultValue: {
 					summary: "Gurubun",
-					detail: "koala",
+					detail: "Koala",
+				},
+			},
+		},
+		tag2: {
+			control: { type: "text", },
+			defaultValue: "Koala",
+			description: "Sets the tag text",
+			table: {
+				defaultValue: {
+					summary: "Koala",
+					detail: "Gurubun",
 				},
 			},
 		},
@@ -31,6 +42,28 @@ export default {
 			table: {
 				defaultValue: {
 					summary: "stroke",
+				},
+			},
+		},
+		colour: {
+			control: { type: "radio", },
+			options: ["black", "white", "purple",],
+			defaultValue: "black",
+			description: "Sets the tag colour",
+			table: {
+				defaultValue: {
+					summary: "black",
+				},
+			},
+		},
+		type: {
+			control: { type: "radio", },
+			options: ["text", "link", "checkbox",],
+			defaultValue: "text",
+			description: "Sets the tag type",
+			table: {
+				defaultValue: {
+					summary: "text",
 				},
 			},
 		},

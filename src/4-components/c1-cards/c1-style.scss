@@ -88,6 +88,7 @@
 			justify-content: flex-end;
 			margin-top: map-get($act-space, "desktop-3");
 			text-decoration: none;
+			transition: margin 0.2s $act-animation__cubic-bezier;
 			i {
 				align-items: center;
 				color: $act-colour__purple;
@@ -125,19 +126,13 @@
 	/* Show/Hide Elements by Card Type */
 	&__primary {
 		border: 0px solid transparent;
+		transition: background-color 0.2s $act-animation__cubic-bezier;
 		[class*="__cta"] {
 			span {
 				display: none;
 			}
 		}
-		&:focus {
-			[class*="__container"] {
-				border-color: $act-colour__purple;
-				border-width: 1px;
-			}
-		}
-		&:hover,
-		&:focus {
+		&:hover {
 			border: 0px solid transparent;
 			background-color: $act-colour__purple;
 			color: $act-colour__white;
@@ -158,10 +153,54 @@
 			}
 			.act-tag {
 				border: 1px solid $act-colour__white;
+				&__stroke {
+					background: none;
+					color: $act-colour__white;
+					&__black {
+						background: none;
+						color: $act-colour__white;
+						&:focus {
+							// outline: $act-colour__black solid 2px;
+							box-shadow: 0 0 0 1px $act-colour__white, 0 0 0 4px $act-colour__black;
+						}
+					}
+					&__purple {
+						&:hover {
+							background: $act-colour__purple;
+							color: $act-colour__white;
+						}
+						&:focus {
+							// outline: $act-colour__purple solid 2px;
+							box-shadow: 0 0 0 1px $act-colour__white, 0 0 0 4px $act-colour__purple;
+						}
+					}
+					&__white {
+						&:hover {
+							background: $act-colour__white;
+							color: $act-colour__black;
+						}
+						&:focus {
+							// outline: $act-colour__white solid 2px;
+							box-shadow: 0 0 0 1px $act-colour__white, 0 0 0 4px $act-colour__white;
+						}
+					}
+				}
 				&__filled {
 					background-color: $act-colour__black;
 					color: $act-colour__white;
 				}
+			}
+		}
+		&:focus {
+			[class*="__container"] {
+				border-color: $act-colour__purple;
+				border-width: 1px;
+			}
+		}
+		&:hover,
+		&:focus {
+			[class*="__cta"] {
+				margin-left: 2rem;
 			}
 		}
 	}
@@ -278,11 +317,13 @@
 		background-color: $act-colour__success-light-purple-background;
 		border: 0px solid transparent;
 		color: $act-colour__black;
+		transition: background-color 0.2s $act-animation__cubic-bezier;
 		[class*="__container"] {
 			border: none;
 			border-width: 0px;
 			box-shadow: inset 0 4px 0 0 $act-colour__success-light-purple-background, inset 4px 0 0 0 $act-colour__success-light-purple-background,
 				inset -4px 0 0 0 $act-colour__success-light-purple-background, 0 4px 0 $act-colour__purple;
+			transition: background-color 0.2s $act-animation__cubic-bezier, box-shadow 0.2s $act-animation__cubic-bezier;
 		}
 		[class*="__icon"] {
 			display: flex;
@@ -294,22 +335,11 @@
 		[class*="__cta"] span {
 			display: none;
 		}
-		&:focus {
-			/* Card in focus state */
-			[class*="__container"] {
-				border-color: $act-colour__purple;
-				border-width: 4px;
-			}
-		}
-		&:hover,
-		&:focus {
+		&:hover {
 			/* Card in hover state */
 			background-color: $act-colour__purple;
 			border: 0px solid transparent;
 			color: $act-colour__white;
-			[class*="__container"] {
-				box-shadow: inset 0 4px 0 0 $act-colour__purple, inset 4px 0 0 0 $act-colour__purple, inset -4px 0 0 0 $act-colour__purple, 0 4px 0 $act-colour__purple;
-			}
 			[class*="__title"],
 			[class*="__icon"],
 			[class*="__cta"] {
@@ -317,6 +347,23 @@
 				i {
 					color: $act-colour__white;
 				}
+			}
+			[class*="__cta"] {
+				margin-left: 2rem;
+			}
+		}
+		&:focus {
+			/* Card in focus state */
+			[class*="__container"] {
+				border-color: $act-colour__purple;
+				border-width: 4px;
+				transition: 0s;
+			}
+		}
+		&:hover,
+		&:focus {
+			[class*="__container"] {
+				box-shadow: inset 0 4px 0 0 $act-colour__purple, inset 4px 0 0 0 $act-colour__purple, inset -4px 0 0 0 $act-colour__purple, 0 4px 0 $act-colour__purple;
 			}
 		}
 	}

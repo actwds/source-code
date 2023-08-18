@@ -217,13 +217,13 @@ form p,
 		font-family: $sourcesanspro;
 		font-size: $act-font-size__desktop-p;
 		font-weight: $act-font-weight__regular;
-		height: map-get($act-space, "desktop-5");
+		height: map-get($act-space, "desktop-6");
 		line-height: $act-line-height__130;
 		max-width: 100%;
-		min-height: map-get($act-space, "desktop-5");
+		min-height: map-get($act-space, "desktop-6");
 		min-width: 100%;
 		outline: none !important;
-		padding: map-get($act-space, "desktop-1");
+		padding: map-get($act-space, "desktop-2");
 		width: 100%;
 		&.focus,
 		&:focus,
@@ -318,8 +318,8 @@ form p,
 			left: 0;
 			right: 0;
 			top: 0;
-			-webkit-transition: 0.4s;
-			transition: 0.4s;
+			-webkit-transition: 0.3s $act-animation__cubic-bezier;
+			transition: 0.3s $act-animation__cubic-bezier;
 			width: calc(#{map-get($act-space, "desktop-6")});
 			z-index: 1;
 			&::before {
@@ -331,8 +331,8 @@ form p,
 				left: 4px;
 				bottom: 4px;
 				background-color: $act-colour__purple;
-				-webkit-transition: 0.4s;
-				transition: 0.4s;
+				-webkit-transition: 0.3s $act-animation__cubic-bezier;
+				transition: 0.3s $act-animation__cubic-bezier;
 			}
 		}
 		:checked + &__slider {

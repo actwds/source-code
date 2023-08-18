@@ -24,11 +24,13 @@
 		width: fit-content;
 		&:hover,
 		&:focus {
-			background-color: $act-colour__bright-violet;
+			// background-color: $act-colour__bright-violet;
+			text-decoration: underline;
 		}
 		&__current {
 			background-color: $act-colour__purple;
 			color: $act-colour__white;
+			transition: background-color 0.1s $act-animation__cubic-bezier, color 0.1s $act-animation__cubic-bezier;
 			&:hover,
 			&:focus {
 				background-color: $act-colour__purple;
@@ -37,6 +39,24 @@
 		}
 		&__more {
 			pointer-events: none;
+		}
+	}
+	&__health {
+		.act-page-marker {
+			background-color: $act-colour__light-grey;
+			transition: background-color 0.1s $act-animation__cubic-bezier, color 0.1s $act-animation__cubic-bezier;
+			&:hover,
+			&:focus {
+				background-color: $act-colour__black;
+				color: $act-colour__white;
+				text-decoration: none;
+			}
+			&:focus {
+				transition: all 0s;
+			}
+			&__current {
+				background-color: $act-colour__health-light-blue;
+			}
 		}
 	}
 }

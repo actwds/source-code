@@ -1,7 +1,15 @@
-export const createW14 = () => {
+export const createW14 = ({
+  style,
+}) => {
+  var health = "";
+  if (style == "health"){ 
+    health = `act-pagination__health`;
+  } else {
+    health = ``;
+  }
 
   return `
-<div class="act-pagination">
+<div class="act-pagination `+health+`">
   <div class="act-pagination__title">
     Pages
   </div>

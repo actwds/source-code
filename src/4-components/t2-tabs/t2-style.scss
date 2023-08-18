@@ -28,6 +28,7 @@
 		padding: map-get($act-space, "desktop-1") map-get($act-space, "desktop-2");
 		min-width: 140px;
 		width: fit-content;
+		transition: background-color 0.2s $act-animation__cubic-bezier;
 		&:hover,
 		&:focus {
 			color: $act-colour__purple;
@@ -38,6 +39,7 @@
 			background-color: $act-colour__success-light-purple-background;
 			color: $act-colour__purple;
 			font-weight: $act-font-weight__semibold;
+			transition: 0s;
 		}
 	}
 	&__content {

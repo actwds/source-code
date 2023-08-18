@@ -17,7 +17,7 @@
 
 		width: 100%;
 		&:active {
-			background-color: $act-colour__purple;
+			// background-color: $act-colour__purple;
 			color: $act-colour__white;
 		}
 		&__summary {
@@ -29,6 +29,7 @@
 			padding: map-get($act-space, "desktop-2");
 			width: 100%;
 			list-style: none;
+			transition: background-color 0.1s $act-animation__cubic-bezier;
 			a {
 				font-family: $montserrat;
 				border: none;
@@ -72,6 +73,7 @@
 			&__item {
 				padding: map-get($act-space, "desktop-2");
 				border-bottom: 1px solid $act-colour__white;
+				transition: background-color 0.1s $act-animation__cubic-bezier;
 				&:hover,
 				&:focus {
 					background-color: $act-colour__bright-violet;
