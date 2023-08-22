@@ -45,7 +45,11 @@
 			}
 		}
 		[class*="__content"] {
-			display: none;
+			visibility: hidden;
+			height: 0;
+			opacity: 0;
+			transition: all 0.1s $act-animation__cubic-bezier;
+			padding: 0;
 		}
 	}
 	[class*="__open"] {
@@ -59,7 +63,10 @@
 		[class*="__content"] {
 			background-color: $act-colour__light-grey;
 			color: $act-colour__black;
-			display: flex;
+			visibility: visible;
+			height: auto;
+			padding: 16px;
+			opacity: 1;
 		}
 	}
 }
@@ -76,7 +83,11 @@
 			}
 		}
 		[class*="__content"] {
-			display: none;
+			visibility: hidden;
+			height: 0;
+			opacity: 0;
+			transition: all 0.1s $act-animation__cubic-bezier;
+			padding: 0;
 		}
 	}
 	[class*="__open"] {
@@ -90,7 +101,10 @@
 		[class*="__content"] {
 			background-color: $act-colour__white;
 			color: $act-colour__black;
-			display: flex;
+			visibility: visible;
+			height: auto;
+			padding: 16px;
+			opacity: 1;
 		}
 	}
 }
