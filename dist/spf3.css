@@ -3081,7 +3081,8 @@ table,
         font-size: 18px;
         font-weight: 600;
         padding: 16px;
-        width: 100px; }
+        width: 100px;
+        transition: width 0.2s cubic-bezier(0, 0, 0.58, 1); }
         .act-navbar__search__container input.active, .act-navbar__search__container input:active, .act-navbar__search__container input:focus {
           border: none;
           outline: none;

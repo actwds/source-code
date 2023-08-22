@@ -59,6 +59,7 @@
 				font-weight: $act-font-weight__semibold;
 				padding: map-get($act-space, "desktop-2");
 				width: 100px;
+				transition: width 0.2s $act-animation__cubic-bezier;
 				&.active,
 				&:active,
 				&:focus {
