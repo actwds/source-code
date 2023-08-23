@@ -178,7 +178,7 @@ p {
 		font-family: $sourcesanspro;
 		font-size: $act-font-size__desktop-p-xsmall;
 	}
-	&.popular-pages-p {
+	&.popular-links-p {
 		margin-top: map-get($act-space, "desktop-4");
 		@include devices(mobile) {
 			font-size: $act-font-size__mobile-h2;
