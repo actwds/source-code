@@ -1,5 +1,5 @@
 import { createH14 } from "../../4-components/h1-hero-rows/h14-home-search-row/component";
-import { createPC32 } from "../../5-patterns/pc3-content/pc32-popular-pages/component";
+import { createW18 } from "../../4-components/w1-wayfinding/w18-popular-links/component";
 import { createPC11 } from "../../5-patterns/pc1-card-grid/pc11-default-card-grid/component";
 
 
@@ -13,7 +13,7 @@ export const createPR2 = () => {
   const homeSearchRow = createH14({});
 
 
-  const popularPages = createPC32({
+  const popularPages = createW18({
   });
 
   const cards = createPC11({
