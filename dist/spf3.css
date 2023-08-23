@@ -512,12 +512,12 @@ a,
 
 .act-accordion__section {
   border-bottom: 2px solid #ffffff;
-  cursor: pointer;
   flex-grow: 1;
   width: 100%; }
   .act-accordion__section__heading {
     align-items: center;
     border: 1px solid transparent;
+    cursor: pointer;
     display: flex;
     flex-direction: row;
     flex-grow: 1;
