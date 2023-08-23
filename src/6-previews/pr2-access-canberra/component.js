@@ -1,4 +1,4 @@
-import { createH14 } from "../../4-components/h1-hero-rows/h14-home-search-row/component"
+import { createH14 } from "../../4-components/h1-hero-rows/h14-home-search-row/component";
 import { createPC32 } from "../../5-patterns/pc3-content/pc32-popular-pages/component";
 import { createPC11 } from "../../5-patterns/pc1-card-grid/pc11-default-card-grid/component";
 
@@ -29,7 +29,7 @@ export const createPR2 = () => {
     description: "Card description",
     ctaVisible: "True",
     ctaText: "Learn more",
-  })
+  });
 
   const cards2 = createPC11({
     type: "homepage",
@@ -44,7 +44,7 @@ export const createPR2 = () => {
     description: "Card description",
     ctaVisible: "True",
     ctaText: "Learn more",
-  })
+  });
 
   const topbarHTML = createPT1({
     title: "An ACT Government Website",
