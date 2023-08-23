@@ -5,7 +5,7 @@ export const createPC32 = () => {
   const linksListHTML = createC29({});
 
   const contentHTML = `
-<div class="act-flex act-flex-light-grey">
+<div class="act-flex act-flex-light-grey act-popular-pages">
   <div class="act-flex__container">
     <div class="act-flex__grid">
       <div class="act-flex__row">

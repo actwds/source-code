@@ -1,0 +1,16 @@
+.act-popular-pages {
+	.act-box {
+		@include devices(mobile) {
+			margin: 0 map-get($act-space, "desktop-0");
+			padding: 0 map-get($act-space, "desktop-0");
+		}
+	}
+	.act-links-list {
+		&__container {
+			padding: 0 map-get($act-space, "desktop-2");
+		}
+		&__content {
+			margin: 0;
+		}
+	}
+}

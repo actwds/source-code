@@ -8,7 +8,7 @@ export const createC11 = ({
   dateVisible,
   tagVisible,
   tag1,
-  tag3,
+  tag2,
   header,
   description,
   ctaVisible,
@@ -18,12 +18,8 @@ export const createC11 = ({
   const tags1HTML = createT31({
     style: "stroke",
     tag1: tag1,
+    tag2: tag2,
     colour: "black",
-  });
-  const tags2HTML = createT31({
-    style: "stroke",
-    tag1: tag1,
-    colour: "purple",
   });
 
   var featureImageHTML = "";
