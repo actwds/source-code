@@ -1255,7 +1255,8 @@ a,
       padding-left: 8px; }
       .act-links-list__content__item__text:focus, .act-links-list__content__item__text:hover {
         color: #111111;
-        background-color: #e3e0ee; }
+        background-color: #e3e0ee;
+        border-color: #e3e0ee; }
     .act-links-list__content__item__icon {
       color: #472d8c;
       margin-right: 16px; }
