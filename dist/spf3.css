@@ -1237,12 +1237,29 @@ a,
   list-style-type: none; }
   .act-links-list__content__item {
     align-items: center;
-    border-bottom: 1px solid #111111;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin-left: 8px;
     padding: 16px 0;
     width: 100%; }
+    .act-links-list__content__item__text {
+      align-items: center;
+      border-bottom: 1px solid #adadad;
+      display: flex;
+      flex-direction: row;
+      font-family: "Source Sans Pro", sans-serif;
+      justify-content: space-between;
+      padding: 16px 0;
+      width: 100%;
+      color: #111111;
+      padding-left: 8px; }
+      .act-links-list__content__item__text:focus, .act-links-list__content__item__text:hover {
+        color: #111111;
+        background-color: #e3e0ee; }
+    .act-links-list__content__item__icon {
+      color: #472d8c;
+      margin-right: 16px; }
 
 .act-button-group {
   display: grid;
@@ -3842,6 +3859,13 @@ main .act-breadcrumbs,
       .act-index .act-index-marker__current:hover, .act-index .act-index-marker__current:focus {
         background-color: #0076c8;
         color: #ffffff; }
+
+.act-popular-links .act-links-list__content__item__text {
+  font-weight: bold; }
+
+.act-popular-links .act-links-list__content__item__icon {
+  color: #472d8c;
+  margin-right: 16px; }
 
 @media only screen and (min-width: 0px) and (max-width: 478px) {
   .act-popular-links .act-box {

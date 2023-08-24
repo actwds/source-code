@@ -1,0 +1,15 @@
+.act-popular-links {
+	.act-links-list {
+		&__content {
+			&__item {
+				&__text {
+					font-weight: bold;
+				}
+				&__icon {
+					color: $act-colour__purple;
+					margin-right: $act-space__desktop-2;
+				}
+			}
+		}
+	}
+}

@@ -123,12 +123,33 @@
 		list-style-type: none;
 		&__item {
 			align-items: center;
-			border-bottom: 1px solid $act-colour__black;
 			display: flex;
 			flex-direction: row;
 			justify-content: space-between;
+			margin-left: map-get($act-space, "desktop-1");
 			padding: map-get($act-space, "desktop-2") 0;
 			width: 100%;
+			&__text {
+				align-items: center;
+				border-bottom: 1px solid $act-colour__middle-grey;
+				display: flex;
+				flex-direction: row;
+				font-family: $sourcesanspro;
+				justify-content: space-between;
+				padding: 16px 0;
+				width: 100%;
+				color: $act-colour__black;
+				padding-left: map-get($act-space, "desktop-1");
+				&:focus,
+				&:hover {
+					color: $act-colour__black;
+					background-color: $act-colour__light-lavender-hover;
+				}
+			}
+			&__icon {
+				color: $act-colour__purple;
+				margin-right: $act-space__desktop-2;
+			}
 		}
 	}
 }
