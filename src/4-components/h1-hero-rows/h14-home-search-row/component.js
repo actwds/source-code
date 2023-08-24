@@ -9,8 +9,8 @@ export const createH14 = () => {
   <div class="act-hero-row__search__container">
     <div class="act-col__cw-12">
       <div class="act-box">
-        <div class="act-hero-row__search__position act-hero-row__search__position__demo">
-          <div class="act-hero-row__search__frame act-hero-row__search__frame__demo">
+        <div class="act-hero-row__search__position">
+          <div class="act-hero-row__search__frame">
             <div class="act-col__cw-6">
               <h3>An easier way to access government services</h3>
             </div>
