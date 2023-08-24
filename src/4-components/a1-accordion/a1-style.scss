@@ -32,79 +32,121 @@
 			width: 100%;
 		}
 	}
-}
-
-.act-accordion__primary {
-	[class*="__closed"] {
-		[class*="__heading"] {
-			background-color: $act-colour__light-grey;
-			color: $act-colour__black;
-			&:hover,
-			&:focus {
-				background-color: $act-colour__middle-grey;
+	&__filled {
+		[class*="__closed"] {
+			[class*="__heading"] {
+				background-color: $act-colour__light-grey;
+				color: $act-colour__black;
+				i {
+					color: $act-colour__purple;
+				}
+				&:hover,
+				&:focus {
+					background-color: $act-colour__middle-grey;
+				}
+			}
+			[class*="__content"] {
+				visibility: hidden;
+				height: 0;
+				opacity: 0;
+				transition: all 0.1s $act-animation__cubic-bezier;
+				padding: 0;
 			}
 		}
-		[class*="__content"] {
-			visibility: hidden;
-			height: 0;
-			opacity: 0;
-			transition: all 0.1s $act-animation__cubic-bezier;
-			padding: 0;
+		[class*="__open"] {
+			[class*="__heading"] {
+				background-color: $act-colour__purple;
+				color: $act-colour__white;
+				i {
+					transform: rotate(0deg);
+				}
+			}
+			[class*="__content"] {
+				background-color: $act-colour__light-grey;
+				color: $act-colour__black;
+				visibility: visible;
+				height: auto;
+				padding: 16px;
+				opacity: 1;
+			}
 		}
 	}
-	[class*="__open"] {
-		[class*="__heading"] {
-			background-color: $act-colour__purple;
-			color: $act-colour__white;
-			i {
-				transform: rotate(0deg);
+	&__bordered {
+		[class*="__closed"] {
+			[class*="__heading"] {
+				background-color: $act-colour__white;
+				border: 1px solid $act-colour__middle-grey;
+				color: $act-colour__black;
+				i {
+					color: $act-colour__purple;
+				}
+				&:hover,
+				&:focus {
+					background-color: $act-colour__middle-grey;
+				}
+			}
+			[class*="__content"] {
+				visibility: hidden;
+				height: 0;
+				opacity: 0;
+				transition: all 0.1s $act-animation__cubic-bezier;
+				padding: 0;
 			}
 		}
-		[class*="__content"] {
-			background-color: $act-colour__light-grey;
-			color: $act-colour__black;
-			visibility: visible;
-			height: auto;
-			padding: 16px;
-			opacity: 1;
+		[class*="__open"] {
+			[class*="__heading"] {
+				background-color: $act-colour__purple;
+				color: $act-colour__white;
+				i {
+					transform: rotate(0deg);
+				}
+			}
+			[class*="__content"] {
+				background-color: $act-colour__white;
+				color: $act-colour__black;
+				visibility: visible;
+				height: auto;
+				padding: 16px;
+				opacity: 1;
+			}
 		}
 	}
-}
-
-.act-accordion__secondary {
-	[class*="__closed"] {
-		[class*="__heading"] {
-			background-color: $act-colour__white;
-			border: 1px solid $act-colour__middle-grey;
-			color: $act-colour__black;
-			&:hover,
-			&:focus {
-				background-color: $act-colour__middle-grey;
+	&__underlined {
+		[class*="__closed"] {
+			[class*="__heading"] {
+				background-color: $act-colour__white;
+				border-bottom: 1px solid $act-colour__middle-grey;
+				color: $act-colour__black;
+				&:hover,
+				&:focus {
+					background-color: $act-colour__middle-grey;
+				}
+			}
+			[class*="__content"] {
+				visibility: hidden;
+				height: 0;
+				opacity: 0;
+				transition: all 0.1s $act-animation__cubic-bezier;
+				padding: 0;
 			}
 		}
-		[class*="__content"] {
-			visibility: hidden;
-			height: 0;
-			opacity: 0;
-			transition: all 0.1s $act-animation__cubic-bezier;
-			padding: 0;
-		}
-	}
-	[class*="__open"] {
-		[class*="__heading"] {
-			background-color: $act-colour__purple;
-			color: $act-colour__white;
-			i {
-				transform: rotate(0deg);
+		[class*="__open"] {
+			[class*="__heading"] {
+				border-bottom: 1px solid $act-colour__purple;
+				color: $act-colour__purple;
+				i {
+					transform: rotate(0deg);
+					color: $act-colour__black;
+				}
 			}
-		}
-		[class*="__content"] {
-			background-color: $act-colour__white;
-			color: $act-colour__black;
-			visibility: visible;
-			height: auto;
-			padding: 16px;
-			opacity: 1;
+			[class*="__content"] {
+				background-color: $act-colour__white;
+				color: $act-colour__black;
+				visibility: visible;
+				height: auto;
+				padding: 16px;
+				opacity: 1;
+			}
 		}
 	}
 }
