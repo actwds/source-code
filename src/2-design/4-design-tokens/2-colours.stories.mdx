@@ -956,6 +956,79 @@ import LinkTo from "@storybook/addon-links/react";
 				</div>
 			</div>
 		</div>
+		<div className="act-flex">
+			<div className="act-flex__container">
+				<div className="act-flex__grid">
+					<div className="act-flex__row">
+						<div className="act-col__cw-12">
+							<div className="act-box">
+								<h3>ACT Health Colours</h3>
+								<ColorPalette>
+									<ColorItem
+										title="Dark Blue"
+										subtitle=""
+										colors={{
+											DarkBlue: "#2C4EAB",
+										}}
+									/>
+									<ColorItem
+										title="Light Blue"
+										subtitle=""
+										colors={{
+											LightBlue: "#0076C8",
+										}}
+									/>
+								</ColorPalette>
+								<div className="act-table-container">
+									<table className="act-table">
+										<thead>
+											<tr>
+												<th>Colour</th>
+												<th>HEX</th>
+												<th>Sass Variable</th>
+												<th>Sass Map</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>
+													<span className="act-icon" style={{ backgroundColor: "#2C4EAB" }}></span>
+													<p className="act-p-small">Dark Blue</p>
+												</td>
+												<td>
+													<code className="hex">#2C4EAB</code>
+												</td>
+												<td>
+													<code className="sass-var">$act-colour__health-dark-blue</code>
+												</td>
+												<td>
+													<code>map-get($act-colour, "health-dark-blue")</code>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<span className="act-icon" style={{ backgroundColor: "#0076C8" }}></span>
+													<p className="act-p-small">Light Blue</p>
+												</td>
+												<td>
+													<code className="hex">#0076C8</code>
+												</td>
+												<td>
+													<code className="sass-var">$act-colour__health-light-blue</code>
+												</td>
+												<td>
+													<code>map-get($act-colour, "health-light-blue")</code>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</main>
 	<footer className="act-footer">
 		<AoC />
