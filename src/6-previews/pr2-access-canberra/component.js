@@ -1,9 +1,6 @@
 import { createH14 } from "../../4-components/h1-hero-rows/h14-home-search-row/component";
 import { createW18 } from "../../4-components/w1-wayfinding/w18-popular-links/component";
 import { createPC11 } from "../../5-patterns/pc1-card-grid/pc11-default-card-grid/component";
-
-
-
 import { createPT1 } from "../../5-patterns/pt1-topbar/component";
 import { createPF2 } from "../../5-patterns/pf2-footers/component";
 

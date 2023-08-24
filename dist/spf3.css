@@ -400,10 +400,10 @@ p {
   p.xsmall {
     font-family: "Source Sans Pro", sans-serif;
     font-size: 10px; }
-  p.popular-pages-p {
+  p.popular-links-p {
     margin-top: 32px; }
     @media only screen and (min-width: 0px) and (max-width: 478px) {
-      p.popular-pages-p {
+      p.popular-links-p {
         font-size: 32px; } }
   @media only screen and (min-width: 0px) and (max-width: 478px) {
     p {
@@ -3811,12 +3811,6 @@ main .act-breadcrumbs,
         color: #ffffff; }
 
 @media only screen and (min-width: 0px) and (max-width: 478px) {
-  .act-popular-pages .act-box {
+  .act-popular-links .act-box {
     margin: 0 4px;
     padding: 0 4px; } }
-
-.act-popular-pages .act-links-list__container {
-  padding: 0 16px; }
-
-.act-popular-pages .act-links-list__content {
-  margin: 0; }

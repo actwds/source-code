@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		heading.addEventListener("click", function() {
 			const section = heading.parentElement;
 			section.classList.toggle("act-accordion__section__open");
+			section.classList.toggle("act-accordion__section__closed");
 			const icon = heading.querySelector(".fa-solid");
 			if (section.classList.contains("act-accordion__section__open")) {
 				icon.classList.remove("fa-xmark");
