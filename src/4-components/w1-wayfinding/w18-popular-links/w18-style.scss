@@ -10,6 +10,20 @@
 					margin-right: $act-space__desktop-2;
 				}
 			}
+			@include devices(mobile) {
+				margin: 0 map-get($act-space, "desktop-0");
+			}
+		}
+		&__container {
+			@include devices(mobile) {
+				padding: 0 map-get($act-space, "desktop-0");
+			}
+		}
+	}
+	.act-box {
+		@include devices(mobile) {
+			margin: 0 map-get($act-space, "desktop-0");
+			padding: 0 map-get($act-space, "desktop-0");
 		}
 	}
 }

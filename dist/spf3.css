@@ -3915,6 +3915,19 @@ main .act-breadcrumbs,
   margin-right: 16px; }
 
 @media only screen and (min-width: 0px) and (max-width: 478px) {
+  .act-popular-links .act-links-list__content {
+    margin: 0 4px; } }
+
+@media only screen and (min-width: 0px) and (max-width: 478px) {
+  .act-popular-links .act-links-list__container {
+    padding: 0 4px; } }
+
+@media only screen and (min-width: 0px) and (max-width: 478px) {
+  .act-popular-links .act-box {
+    margin: 0 4px;
+    padding: 0 4px; } }
+
+@media only screen and (min-width: 0px) and (max-width: 478px) {
   .act-popular-links .act-box {
     margin: 0 4px;
     padding: 0 4px; } }
