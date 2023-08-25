@@ -53,6 +53,7 @@
 	}
 	&__content {
 		color: $act-colour__purple;
+		font-family: $montserrat;
 		font-size: $act-font-size__desktop-h4;
 		font-style: italic;
 		font-weight: $act-font-weight__semibold;
@@ -71,6 +72,7 @@
 	width: fit-content;
 	&__title {
 		color: $act-colour__black;
+		font-family: $montserrat;
 		font-size: $act-font-size__desktop-h4;
 		font-weight: $act-font-weight__semibold;
 		margin-bottom: map-get($act-space, "desktop-1");
@@ -134,6 +136,7 @@
 				display: flex;
 				flex-direction: row;
 				font-family: $sourcesanspro;
+				font-weight: normal;
 				justify-content: space-between;
 				padding: 16px 0;
 				width: 100%;

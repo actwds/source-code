@@ -23,6 +23,7 @@
 		cursor: pointer;
 		display: flex;
 		flex-direction: row;
+		font-family: $montserrat;
 		font-size: $act-font-size__desktop-h6;
 		justify-content: flex-start;
 		padding: map-get($act-space, "desktop-1") map-get($act-space, "desktop-2");

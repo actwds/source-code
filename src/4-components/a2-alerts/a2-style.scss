@@ -126,6 +126,7 @@
 		font-size: $act-font-size__desktop-h6;
 		min-height: map-get($act-space, "desktop-3");
 		.title {
+			font-family: $montserrat;
 			font-size: $act-font-size__desktop-p-large;
 			font-weight: $act-font-weight__semibold;
 			padding-bottom: map-get($act-space, "desktop-0");

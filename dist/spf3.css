@@ -20,7 +20,7 @@
   font-family: sans-serif; }
 
 *[class^="act-"] {
-  font-family: "Montserrat", sans-serif; }
+  font-family: "Source Sans Pro", sans-serif; }
 
 .sr-only {
   border: 0 !important;
@@ -255,6 +255,7 @@ i.fa-brands {
 
 /* H1 */
 h1 {
+  font-family: "Montserrat", sans-serif;
   font-size: 48px;
   font-weight: 700;
   line-height: 120%; }
@@ -271,6 +272,7 @@ h1 {
         font-size: 54px; } }
 
 .act-h1 {
+  font-family: "Montserrat", sans-serif;
   font-size: 48px;
   font-weight: 700;
   line-height: 120%; }
@@ -290,6 +292,7 @@ h1 {
 h2,
 .act-h2 {
   color: #111111;
+  font-family: "Montserrat", sans-serif;
   font-size: 40px;
   font-weight: 600;
   line-height: 120%;
@@ -306,6 +309,7 @@ h2,
 /* H3 */
 h3,
 .act-h3 {
+  font-family: "Montserrat", sans-serif;
   font-size: 32px;
   font-weight: 600;
   line-height: 120%;
@@ -320,6 +324,7 @@ h3,
 
 /* H4 */
 h4 {
+  font-family: "Montserrat", sans-serif;
   font-size: 24px;
   font-weight: 600;
   line-height: 130%;
@@ -333,6 +338,7 @@ h4 {
     color: #ffffff; }
 
 .act-h4 {
+  font-family: "Montserrat", sans-serif;
   font-size: 24px;
   font-weight: 600;
   line-height: 130%;
@@ -348,6 +354,7 @@ h4 {
 /* H5 */
 h5,
 .act-h5 {
+  font-family: "Montserrat", sans-serif;
   font-size: 20px;
   font-weight: 600;
   line-height: 130%; }
@@ -362,6 +369,7 @@ h5,
 /* H6 */
 h6,
 .act-h6 {
+  font-family: "Montserrat", sans-serif;
   color: #111111;
   font-size: 16px;
   font-weight: 600;
@@ -716,6 +724,7 @@ a,
     font-size: 16px;
     min-height: 24px; }
     .act-alert-inpage__content .title {
+      font-family: "Montserrat", sans-serif;
       font-size: 20px;
       font-weight: 600;
       padding-bottom: 4px;
@@ -903,6 +912,7 @@ a,
       margin-bottom: 8px; }
     .act-card__content [class*="__title"] {
       color: #111111;
+      font-family: "Montserrat", sans-serif;
       font-size: 20px;
       font-weight: 600;
       line-height: 130%;
@@ -1182,6 +1192,7 @@ a,
     margin-right: 16px; }
   .act-quote__content {
     color: #472d8c;
+    font-family: "Montserrat", sans-serif;
     font-size: 24px;
     font-style: italic;
     font-weight: 600;
@@ -1198,6 +1209,7 @@ a,
   width: fit-content; }
   .act-service-card__title {
     color: #111111;
+    font-family: "Montserrat", sans-serif;
     font-size: 24px;
     font-weight: 600;
     margin-bottom: 8px; }
@@ -1248,6 +1260,7 @@ a,
       display: flex;
       flex-direction: row;
       font-family: "Source Sans Pro", sans-serif;
+      font-weight: normal;
       justify-content: space-between;
       padding: 16px 0;
       width: 100%;
@@ -2628,6 +2641,7 @@ aside {
         padding: 16px; } }
     .act-full-page-banner__content .demo-content__title {
       color: white;
+      font-family: "Montserrat", sans-serif;
       font-size: 2rem;
       font-weight: bold; }
     .act-full-page-banner__content .demo-content__subtitle {
@@ -2663,6 +2677,7 @@ aside {
     .act-search-results-container .act-search-result__title {
       box-shadow: inset 0 0 0 0 #ffffff, inset 0 0 0 0 #ffffff, inset 0 0 0 0 #ffffff, 0 2px 0 #472d8c;
       color: #472d8c;
+      font-family: "Montserrat", sans-serif;
       font-size: 24px;
       font-weight: 600;
       margin-bottom: 16px;
@@ -2770,6 +2785,7 @@ aside {
   width: 100%; }
   .act-search-filter__title {
     background-color: #f4f2fa;
+    font-family: "Montserrat", sans-serif;
     font-size: 16px;
     font-weight: 600;
     padding: 16px;
@@ -2879,6 +2895,7 @@ table,
     cursor: pointer;
     display: flex;
     flex-direction: row;
+    font-family: "Montserrat", sans-serif;
     font-size: 16px;
     justify-content: flex-start;
     padding: 8px 16px;
@@ -3180,6 +3197,7 @@ table,
       .act-navbar__search__container input {
         border: none;
         outline: none;
+        font-family: "Montserrat", sans-serif;
         font-size: 18px;
         font-weight: 600;
         padding: 16px;
@@ -3256,6 +3274,8 @@ table,
         width: 24px; }
       .act-navbar__menu__container:hover, .act-navbar__menu__container-hover, .act-navbar__menu__container:focus {
         background-color: #311c6a; }
+    .act-navbar__menu__text {
+      font-family: "Montserrat", sans-serif; }
     @media only screen and (min-width: 0px) and (max-width: 478px) {
       .act-navbar__menu__container {
         background: #472d8c; }
@@ -3272,6 +3292,7 @@ table,
   justify-content: flex-start; }
   .act-sidebar__title {
     color: #111111;
+    font-family: "Montserrat", sans-serif;
     font-size: 20px;
     font-weight: 600;
     padding: 16px;
@@ -3584,6 +3605,7 @@ table,
       flex-direction: row;
       justify-content: space-between; }
   .act-megamenu__section-heading {
+    font-family: "Montserrat", sans-serif;
     font-size: 24px;
     font-weight: 700;
     line-height: 130%;
@@ -3610,6 +3632,7 @@ table,
     padding: 16px;
     width: 100%; }
     .act-megamenu__link__text {
+      font-family: "Montserrat", sans-serif;
       font-size: 14px;
       font-weight: 600;
       line-height: 130%; }
