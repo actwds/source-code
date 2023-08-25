@@ -54,12 +54,12 @@ export default {
 	argTypes: {
 		type: {
 			control: { type: "radio", },
-			options: ["primary", "secondary", "tertiary", "homepage",],
-			defaultValue: "primary",
+			options: ["bordered", "borderless", "heading-only", "homepage",],
+			defaultValue: "bordered",
 			description: "Sets the card type",
 			table: {
 				defaultValue: {
-					summary: "primary",
+					summary: "filled",
 				},
 			},
 		},

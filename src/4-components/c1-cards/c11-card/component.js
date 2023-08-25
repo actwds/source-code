@@ -34,7 +34,7 @@ export const createC11 = ({
 
   if (type != "homepage"){
     if (feature == "image"){
-      if (type == "primary"){
+      if (type == "bordered"){
         if (tagVisible == true){
           featureTagHTML = `<div class="act-tag__container">` + tags1HTML +  `</div>` ;
         } else {

@@ -14,7 +14,7 @@
 		grid-template-columns: repeat(4, minmax(0, 1fr));
 	}
 	.act-card {
-		&__span-2 {
+		&__col-span-2 {
 			@include devices(tablet) {
 				grid-column: span 1;
 			}
@@ -22,7 +22,7 @@
 				grid-column: span 1;
 			}
 		}
-		&__span-3 {
+		&__col-span-3 {
 			@include devices(tablet) {
 				grid-column: span 2;
 			}
@@ -30,12 +30,36 @@
 				grid-column: span 1;
 			}
 		}
-		&__span-4 {
+		&__col-span-4 {
 			@include devices(tablet) {
 				grid-column: span 2;
 			}
 			@include devices(mobile) {
 				grid-column: span 1;
+			}
+		}
+		&__row-span-2 {
+			@include devices(tablet) {
+				grid-row: span 1;
+			}
+			@include devices(mobile) {
+				grid-row: span 1;
+			}
+		}
+		&__row-span-3 {
+			@include devices(tablet) {
+				grid-row: span 2;
+			}
+			@include devices(mobile) {
+				grid-row: span 1;
+			}
+		}
+		&__row-span-4 {
+			@include devices(tablet) {
+				grid-row: span 2;
+			}
+			@include devices(mobile) {
+				grid-row: span 1;
 			}
 		}
 	}
@@ -80,20 +104,32 @@
 	align-items: stretch;
 	border: 0px solid transparent;
 	display: flex;
-	&__span-1 {
+	&__col-span-1 {
 		grid-column: span 1;
 	}
-	&__span-2 {
+	&__col-span-2 {
 		grid-column: span 2;
 	}
-	&__span-3 {
+	&__col-span-3 {
 		grid-column: span 3;
 		@include devices(tablet) {
 			grid-column: span 2;
 		}
 	}
-	&__span-4 {
+	&__col-span-4 {
 		grid-column: span 4;
+	}
+	&__row-span-1 {
+		grid-row: span 1;
+	}
+	&__row-span-2 {
+		grid-row: span 2;
+	}
+	&__row-span-3 {
+		grid-row: span 3;
+	}
+	&__row-span-4 {
+		grid-row: span 4;
 	}
 	&__container {
 		align-items: flex-start;
@@ -202,7 +238,7 @@
 	}
 
 	/* Show/Hide Elements by Card Type */
-	&__primary {
+	&__bordered {
 		border: 0px solid transparent;
 		transition: background-color 0.2s $act-animation__cubic-bezier;
 		[class*="__cta"] {
@@ -258,7 +294,7 @@
 			}
 		}
 	}
-	&__secondary {
+	&__borderless {
 		border: 0px solid transparent;
 		color: $act-colour__black;
 		[class*="__container"] {
@@ -305,7 +341,7 @@
 			}
 		}
 	}
-	&__tertiary {
+	&__heading-only {
 		border: 0px solid transparent;
 		color: $act-colour__black;
 		.act-tag__container,
