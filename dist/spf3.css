@@ -2370,8 +2370,6 @@ form p,
     position: absolute;
     top: 64px;
     width: 100%; }
-    .act-hero-row__widget__frame__demo {
-      height: 300px; }
 
 .act-hero-row__search {
   align-items: center;
@@ -2458,12 +2456,45 @@ form p,
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 24px;
-    position: absolute;
-    top: 210px;
-    width: 100%; }
+    padding: 24px; }
+    .act-hero-row__search__frame .act-col__cw-6 {
+      max-width: 50%;
+      width: 50%; }
+      @media only screen and (min-width: 0px) and (max-width: 478px) {
+        .act-hero-row__search__frame .act-col__cw-6 {
+          max-width: 100%;
+          width: 100%; } }
+      @media only screen and (min-width: 479px) and (max-width: 991px) {
+        .act-hero-row__search__frame .act-col__cw-6 {
+          max-width: 100%;
+          width: 100%; } }
     .act-hero-row__search__frame__block {
       display: flex; }
+
+@media only screen and (min-width: 0px) and (max-width: 478px) {
+  .act-hero-row__something {
+    padding: 0 16px; } }
+
+@media only screen and (min-width: 479px) and (max-width: 991px) {
+  .act-hero-row__something {
+    padding: 0 32px; } }
+
+@media only screen and (min-width: 992px) and (max-width: 99999px) {
+  .act-hero-row__something {
+    padding: 0 80px; } }
+
+.act-hero-row__container {
+  margin: -90px auto 0;
+  max-width: 1248px; }
+  @media only screen and (min-width: 0px) and (max-width: 478px) {
+    .act-hero-row__container {
+      padding: 0 16px; } }
+  @media only screen and (min-width: 479px) and (max-width: 991px) {
+    .act-hero-row__container {
+      padding: 0 32px; } }
+  @media only screen and (min-width: 992px) and (max-width: 99999px) {
+    .act-hero-row__container {
+      padding: 0 80px; } }
 
 .act-logos__container {
   align-items: center;
