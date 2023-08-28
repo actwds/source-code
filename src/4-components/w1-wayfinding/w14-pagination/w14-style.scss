@@ -4,7 +4,7 @@
 	flex-direction: row;
 	justify-content: flex-start;
 	&__title {
-		font-size: $act-font-size__desktop-p-small;
+		font-size: $act-font-size__desktop-pagination;
 		font-weight: $act-font-weight__semibold;
 		margin-right: map-get($act-space, "desktop-0");
 	}
@@ -15,20 +15,22 @@
 		align-items: center;
 		cursor: pointer;
 		display: flex;
-		font-size: $act-font-size__desktop-p-small;
+		font-size: $act-font-size__desktop-pagination;
 		font-weight: $act-font-weight__semibold;
-		height: $act-space__desktop-3;
+		height: $act-space__desktop-4;
 		justify-content: center;
 		margin: 0px calc(#{map-get($act-space, "desktop-0") / 2});
-		min-width: $act-space__desktop-3;
+		min-width: $act-space__desktop-4;
 		width: fit-content;
 		&:hover,
 		&:focus {
-			background-color: $act-colour__bright-violet;
+			// background-color: $act-colour__bright-violet;
+			text-decoration: underline;
 		}
 		&__current {
 			background-color: $act-colour__purple;
 			color: $act-colour__white;
+			transition: background-color 0.1s $act-animation__cubic-bezier, color 0.1s $act-animation__cubic-bezier;
 			&:hover,
 			&:focus {
 				background-color: $act-colour__purple;
@@ -37,6 +39,24 @@
 		}
 		&__more {
 			pointer-events: none;
+		}
+	}
+	&__health {
+		.act-page-marker {
+			background-color: $act-colour__light-grey;
+			transition: background-color 0.1s $act-animation__cubic-bezier, color 0.1s $act-animation__cubic-bezier;
+			&:hover,
+			&:focus {
+				background-color: $act-colour__black;
+				color: $act-colour__white;
+				text-decoration: none;
+			}
+			&:focus {
+				transition: all 0s;
+			}
+			&__current {
+				background-color: $act-colour__health-light-blue;
+			}
 		}
 	}
 }

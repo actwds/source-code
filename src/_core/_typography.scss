@@ -11,6 +11,7 @@
 /* H1 */
 h1 {
 	// color: $act-colour__black;
+	font-family: $montserrat;
 	font-size: $act-font-size__desktop-h1;
 	font-weight: $act-font-weight__bold;
 	line-height: $act-line-height__120;
@@ -32,6 +33,7 @@ h1 {
 
 .act-h1 {
 	// color: $act-colour__black;
+	font-family: $montserrat;
 	font-size: $act-font-size__desktop-h1;
 	font-weight: $act-font-weight__bold;
 	line-height: $act-line-height__120;
@@ -55,6 +57,7 @@ h1 {
 h2,
 .act-h2 {
 	color: $act-colour__black;
+	font-family: $montserrat;
 	font-size: $act-font-size__desktop-h2;
 	font-weight: $act-font-weight__semibold;
 	line-height: $act-line-height__120;
@@ -72,6 +75,7 @@ h2,
 h3,
 .act-h3 {
 	// color: $act-colour__black;
+	font-family: $montserrat;
 	font-size: $act-font-size__desktop-h3;
 	font-weight: $act-font-weight__semibold;
 	line-height: $act-line-height__120;
@@ -86,6 +90,7 @@ h3,
 
 /* H4 */
 h4 {
+	font-family: $montserrat;
 	font-size: $act-font-size__desktop-h4;
 	font-weight: $act-font-weight__semibold;
 	line-height: $act-line-height__130;
@@ -102,6 +107,7 @@ h4 {
 }
 
 .act-h4 {
+	font-family: $montserrat;
 	font-size: $act-font-size__desktop-h4;
 	font-weight: $act-font-weight__semibold;
 	line-height: $act-line-height__130;
@@ -120,6 +126,7 @@ h4 {
 /* H5 */
 h5,
 .act-h5 {
+	font-family: $montserrat;
 	font-size: $act-font-size__desktop-h5;
 	font-weight: $act-font-weight__semibold;
 	line-height: $act-line-height__130;
@@ -134,6 +141,7 @@ h5,
 /* H6 */
 h6,
 .act-h6 {
+	font-family: $montserrat;
 	color: $act-colour__black;
 	font-size: $act-font-size__desktop-h6;
 	font-weight: $act-font-weight__semibold;
@@ -178,7 +186,7 @@ p {
 		font-family: $sourcesanspro;
 		font-size: $act-font-size__desktop-p-xsmall;
 	}
-	&.popular-pages-p {
+	&.popular-links-p {
 		margin-top: map-get($act-space, "desktop-4");
 		@include devices(mobile) {
 			font-size: $act-font-size__mobile-h2;

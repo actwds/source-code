@@ -217,6 +217,7 @@
 		}
 	}
 	&__section-heading {
+		font-family: $montserrat;
 		font-size: $act-font-size__desktop-h4;
 		font-weight: $act-font-weight__bold;
 		line-height: $act-line-height__130;
@@ -243,10 +244,12 @@
 		color: $act-colour__white;
 		cursor: pointer;
 		display: flex;
+
 		justify-content: space-between;
 		padding: map-get($act-space, "desktop-2");
 		width: 100%;
 		&__text {
+			font-family: $montserrat;
 			font-size: $act-font-size__desktop-p-small;
 			font-weight: $act-font-weight__semibold;
 			line-height: $act-line-height__130;

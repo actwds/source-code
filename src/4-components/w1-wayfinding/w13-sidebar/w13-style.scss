@@ -1,11 +1,12 @@
 .act-sidebar {
 	align-items: flex-start;
-	background-color: $act-colour__pastel-violet;
+	background-color: $act-colour__success-light-purple-background;
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
 	&__title {
 		color: $act-colour__black;
+		font-family: $montserrat;
 		font-size: $act-font-size__desktop-h5;
 		font-weight: $act-font-weight__semibold;
 		padding: map-get($act-space, "desktop-2");
@@ -17,7 +18,7 @@
 
 		width: 100%;
 		&:active {
-			background-color: $act-colour__purple;
+			// background-color: $act-colour__purple;
 			color: $act-colour__white;
 		}
 		&__summary {
@@ -29,10 +30,18 @@
 			padding: map-get($act-space, "desktop-2");
 			width: 100%;
 			list-style: none;
+			transition: background-color 0.1s $act-animation__cubic-bezier;
+			a {
+				font-family: $montserrat;
+				border: none;
+			}
 			&:hover,
 			&:focus {
-				background-color: $act-colour__bright-violet;
-				color: $act-colour__white;
+				background-color: $act-colour__pastel-violet;
+				color: $act-colour__black;
+				a {
+					color: $act-colour__black;
+				}
 			}
 			&__selected {
 				background-color: $act-colour__purple;
@@ -65,6 +74,7 @@
 			&__item {
 				padding: map-get($act-space, "desktop-2");
 				border-bottom: 1px solid $act-colour__white;
+				transition: background-color 0.1s $act-animation__cubic-bezier;
 				&:hover,
 				&:focus {
 					background-color: $act-colour__bright-violet;
@@ -103,6 +113,9 @@
 	details[open] > summary {
 		background-color: $act-colour__purple;
 		color: $act-colour__white;
+		> a {
+			color: $act-colour__white;
+		}
 	}
 	details[open] > summary > .summary-chevron > svg {
 		transform: rotate(180deg);

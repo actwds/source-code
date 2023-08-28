@@ -13,11 +13,124 @@
 	@include devices(desktop) {
 		grid-template-columns: repeat(4, minmax(0, 1fr));
 	}
+	.act-card {
+		&__col-span-2 {
+			@include devices(tablet) {
+				grid-column: span 1;
+			}
+			@include devices(mobile) {
+				grid-column: span 1;
+			}
+		}
+		&__col-span-3 {
+			@include devices(tablet) {
+				grid-column: span 2;
+			}
+			@include devices(mobile) {
+				grid-column: span 1;
+			}
+		}
+		&__col-span-4 {
+			@include devices(tablet) {
+				grid-column: span 2;
+			}
+			@include devices(mobile) {
+				grid-column: span 1;
+			}
+		}
+		&__row-span-2 {
+			@include devices(tablet) {
+				grid-row: span 1;
+			}
+			@include devices(mobile) {
+				grid-row: span 1;
+			}
+		}
+		&__row-span-3 {
+			@include devices(tablet) {
+				grid-row: span 2;
+			}
+			@include devices(mobile) {
+				grid-row: span 1;
+			}
+		}
+		&__row-span-4 {
+			@include devices(tablet) {
+				grid-row: span 2;
+			}
+			@include devices(mobile) {
+				grid-row: span 1;
+			}
+		}
+	}
+	&__1-col {
+		@include devices(mobile) {
+			grid-template-columns: repeat(1, minmax(0, 1fr));
+			column-gap: 0;
+		}
+		@include devices(tablet) {
+			grid-template-columns: repeat(1, minmax(0, 1fr));
+		}
+		@include devices(desktop) {
+			grid-template-columns: repeat(1, minmax(0, 1fr));
+		}
+	}
+	&__2-col {
+		@include devices(mobile) {
+			grid-template-columns: repeat(1, minmax(0, 1fr));
+			column-gap: 0;
+		}
+		@include devices(tablet) {
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+		}
+		@include devices(desktop) {
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+		}
+	}
+	&__3-col {
+		@include devices(mobile) {
+			grid-template-columns: repeat(1, minmax(0, 1fr));
+			column-gap: 0;
+		}
+		@include devices(tablet) {
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+		}
+		@include devices(desktop) {
+			grid-template-columns: repeat(3, minmax(0, 1fr));
+		}
+	}
 }
 .act-card {
 	align-items: stretch;
 	border: 0px solid transparent;
 	display: flex;
+	&__col-span-1 {
+		grid-column: span 1;
+	}
+	&__col-span-2 {
+		grid-column: span 2;
+	}
+	&__col-span-3 {
+		grid-column: span 3;
+		@include devices(tablet) {
+			grid-column: span 2;
+		}
+	}
+	&__col-span-4 {
+		grid-column: span 4;
+	}
+	&__row-span-1 {
+		grid-row: span 1;
+	}
+	&__row-span-2 {
+		grid-row: span 2;
+	}
+	&__row-span-3 {
+		grid-row: span 3;
+	}
+	&__row-span-4 {
+		grid-row: span 4;
+	}
 	&__container {
 		align-items: flex-start;
 		border: 1px solid $act-colour__middle-grey;
@@ -68,6 +181,7 @@
 		}
 		[class*="__title"] {
 			color: $act-colour__black;
+			font-family: $montserrat;
 			font-size: $act-font-size__desktop-h5;
 			font-weight: $act-font-weight__semibold;
 			line-height: $act-line-height__130;
@@ -88,6 +202,7 @@
 			justify-content: flex-end;
 			margin-top: map-get($act-space, "desktop-3");
 			text-decoration: none;
+			transition: margin 0.2s $act-animation__cubic-bezier;
 			i {
 				align-items: center;
 				color: $act-colour__purple;
@@ -123,21 +238,15 @@
 	}
 
 	/* Show/Hide Elements by Card Type */
-	&__primary {
+	&__bordered {
 		border: 0px solid transparent;
+		transition: background-color 0.2s $act-animation__cubic-bezier;
 		[class*="__cta"] {
 			span {
 				display: none;
 			}
 		}
-		&:focus {
-			[class*="__container"] {
-				border-color: $act-colour__purple;
-				border-width: 1px;
-			}
-		}
-		&:hover,
-		&:focus {
+		&:hover {
 			border: 0px solid transparent;
 			background-color: $act-colour__purple;
 			color: $act-colour__white;
@@ -158,14 +267,34 @@
 			}
 			.act-tag {
 				border: 1px solid $act-colour__white;
-				&__filled {
-					background-color: $act-colour__black;
+				&__stroke {
+					background: none;
 					color: $act-colour__white;
+					&__black {
+						background: none;
+						color: $act-colour__white;
+						&:focus {
+							// outline: $act-colour__black solid 2px;
+							box-shadow: 0 0 0 1px $act-colour__white, 0 0 0 4px $act-colour__black;
+						}
+					}
 				}
 			}
 		}
+		&:focus {
+			[class*="__container"] {
+				border-color: $act-colour__purple;
+				border-width: 1px;
+			}
+		}
+		&:hover,
+		&:focus {
+			[class*="__cta"] {
+				margin-left: 2rem;
+			}
+		}
 	}
-	&__secondary {
+	&__borderless {
 		border: 0px solid transparent;
 		color: $act-colour__black;
 		[class*="__container"] {
@@ -210,17 +339,9 @@
 					color: $act-colour__purple;
 				}
 			}
-			.act-tag {
-				border: 1px solid $act-colour__purple;
-				color: $act-colour__purple;
-				&__filled {
-					background-color: $act-colour__purple;
-					color: $act-colour__purple;
-				}
-			}
 		}
 	}
-	&__tertiary {
+	&__heading-only {
 		border: 0px solid transparent;
 		color: $act-colour__black;
 		.act-tag__container,
@@ -278,11 +399,13 @@
 		background-color: $act-colour__success-light-purple-background;
 		border: 0px solid transparent;
 		color: $act-colour__black;
+		transition: background-color 0.2s $act-animation__cubic-bezier;
 		[class*="__container"] {
 			border: none;
 			border-width: 0px;
 			box-shadow: inset 0 4px 0 0 $act-colour__success-light-purple-background, inset 4px 0 0 0 $act-colour__success-light-purple-background,
 				inset -4px 0 0 0 $act-colour__success-light-purple-background, 0 4px 0 $act-colour__purple;
+			transition: background-color 0.2s $act-animation__cubic-bezier, box-shadow 0.2s $act-animation__cubic-bezier;
 		}
 		[class*="__icon"] {
 			display: flex;
@@ -294,22 +417,11 @@
 		[class*="__cta"] span {
 			display: none;
 		}
-		&:focus {
-			/* Card in focus state */
-			[class*="__container"] {
-				border-color: $act-colour__purple;
-				border-width: 4px;
-			}
-		}
-		&:hover,
-		&:focus {
+		&:hover {
 			/* Card in hover state */
 			background-color: $act-colour__purple;
 			border: 0px solid transparent;
 			color: $act-colour__white;
-			[class*="__container"] {
-				box-shadow: inset 0 4px 0 0 $act-colour__purple, inset 4px 0 0 0 $act-colour__purple, inset -4px 0 0 0 $act-colour__purple, 0 4px 0 $act-colour__purple;
-			}
 			[class*="__title"],
 			[class*="__icon"],
 			[class*="__cta"] {
@@ -317,6 +429,23 @@
 				i {
 					color: $act-colour__white;
 				}
+			}
+			[class*="__cta"] {
+				margin-left: 2rem;
+			}
+		}
+		&:focus {
+			/* Card in focus state */
+			[class*="__container"] {
+				border-color: $act-colour__purple;
+				border-width: 4px;
+				transition: 0s;
+			}
+		}
+		&:hover,
+		&:focus {
+			[class*="__container"] {
+				box-shadow: inset 0 4px 0 0 $act-colour__purple, inset 4px 0 0 0 $act-colour__purple, inset -4px 0 0 0 $act-colour__purple, 0 4px 0 $act-colour__purple;
 			}
 		}
 	}

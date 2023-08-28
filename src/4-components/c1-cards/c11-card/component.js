@@ -18,10 +18,8 @@ export const createC11 = ({
   const tags1HTML = createT31({
     style: "stroke",
     tag1: tag1,
-  });
-  const tags2HTML = createT31({
-    style: "stroke",
     tag2: tag2,
+    colour: "black",
   });
 
   var featureImageHTML = "";
@@ -31,12 +29,14 @@ export const createC11 = ({
   var featureHeaderHTML = `<div class="act-card__title">`+header+`</div>`;
   var featureDescriptionHTML = `<div class="act-card__description">`+description+`</div>`;
   var featureCTAHTML = "";
+  var tagTypeOpen = "a";
+  var tagTypeClose = "as";
 
   if (type != "homepage"){
     if (feature == "image"){
-      if (type == "primary"){
+      if (type == "bordered"){
         if (tagVisible == true){
-          featureTagHTML = `<div class="act-tag__container">` + tags1HTML + tags2HTML + `</div>` ;
+          featureTagHTML = `<div class="act-tag__container">` + tags1HTML +  `</div>` ;
         } else {
           featureTagHTML = "";
         }

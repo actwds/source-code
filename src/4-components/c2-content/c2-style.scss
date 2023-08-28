@@ -14,6 +14,10 @@
 	}
 }
 
+.act-download-link {
+	font-family: $sourcesanspro;
+}
+
 .act-key-message {
 	align-items: flex-start;
 	background-color: $act-colour__success-light-purple-background;
@@ -49,6 +53,7 @@
 	}
 	&__content {
 		color: $act-colour__purple;
+		font-family: $montserrat;
 		font-size: $act-font-size__desktop-h4;
 		font-style: italic;
 		font-weight: $act-font-weight__semibold;
@@ -67,6 +72,7 @@
 	width: fit-content;
 	&__title {
 		color: $act-colour__black;
+		font-family: $montserrat;
 		font-size: $act-font-size__desktop-h4;
 		font-weight: $act-font-weight__semibold;
 		margin-bottom: map-get($act-space, "desktop-1");
@@ -119,12 +125,34 @@
 		list-style-type: none;
 		&__item {
 			align-items: center;
-			border-bottom: 1px solid $act-colour__black;
 			display: flex;
 			flex-direction: row;
 			justify-content: space-between;
-			padding: map-get($act-space, "desktop-2") 0;
+			margin-left: map-get($act-space, "desktop-1");
 			width: 100%;
+			&__text {
+				align-items: center;
+				border-bottom: 1px solid $act-colour__middle-grey;
+				display: flex;
+				flex-direction: row;
+				font-family: $sourcesanspro;
+				font-weight: normal;
+				justify-content: space-between;
+				padding: 16px 0;
+				width: 100%;
+				color: $act-colour__black;
+				padding-left: map-get($act-space, "desktop-1");
+				&:focus,
+				&:hover {
+					color: $act-colour__black;
+					background-color: $act-colour__light-lavender-hover;
+					border-color: $act-colour__light-lavender-hover;
+				}
+			}
+			&__icon {
+				color: $act-colour__purple;
+				margin-right: $act-space__desktop-2;
+			}
 		}
 	}
 }

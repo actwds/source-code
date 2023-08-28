@@ -364,9 +364,6 @@ $act-hero-widget-height: 300px;
 			position: absolute;
 			top: $act-space__desktop-10;
 			width: 100%;
-			&__demo {
-				min-height: $act-space__desktop-8;
-			}
 			&__block {
 				display: flex;
 			}

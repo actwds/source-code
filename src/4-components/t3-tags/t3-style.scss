@@ -17,14 +17,118 @@
 		margin-bottom: map-get($act-space, "desktop-0");
 		padding: 0px map-get($act-space, "desktop-1");
 		width: fit-content;
+		transition: background-color 0.2s $act-animation__cubic-bezier, color 0.2s $act-animation__cubic-bezier;
 		&__stroke {
+			color: $act-colour__black;
+			&__black {
+				color: $act-colour__black;
+			}
+			&__purple {
+				color: $act-colour__purple;
+				border-color: $act-colour__purple;
+			}
+			&__white {
+				color: $act-colour__white;
+				border-color: $act-colour__white;
+			}
 		}
 		&__filled {
 			background-color: $act-colour__black;
 			color: $act-colour__white;
+			&__black {
+				background: $act-colour__black;
+				color: $act-colour__white;
+			}
+			&__purple {
+				color: $act-colour__white;
+				border-color: $act-colour__purple;
+				background: $act-colour__purple;
+			}
+			&__white {
+				color: $act-colour__black;
+				border-color: $act-colour__white;
+				background: $act-colour__white;
+			}
 		}
 		&:nth-of-type(1n + 3) {
 			display: none;
+		}
+		&:focus {
+			// outline-offset: 2px;
+		}
+	}
+	a.act-tag {
+		&__stroke {
+			&:hover {
+				background: $act-colour__black;
+				color: $act-colour__white;
+			}
+			&__black {
+				&:hover {
+					background: $act-colour__black;
+					color: $act-colour__white;
+				}
+				&:focus {
+					// outline: $act-colour__black solid 2px;
+					box-shadow: 0 0 0 1px $act-colour__white, 0 0 0 4px $act-colour__black;
+				}
+			}
+			&__purple {
+				&:hover {
+					background: $act-colour__purple;
+					color: $act-colour__white;
+				}
+				&:focus {
+					// outline: $act-colour__purple solid 2px;
+					box-shadow: 0 0 0 1px $act-colour__white, 0 0 0 4px $act-colour__purple;
+				}
+			}
+			&__white {
+				&:hover {
+					background: $act-colour__white;
+					color: $act-colour__black;
+				}
+				&:focus {
+					// outline: $act-colour__white solid 2px;
+					box-shadow: 0 0 0 1px $act-colour__white, 0 0 0 4px $act-colour__white;
+				}
+			}
+		}
+		&__filled {
+			&:hover {
+				background: $act-colour__black;
+				color: $act-colour__white;
+			}
+			&__black {
+				&:hover {
+					background: $act-colour__middle-dark-grey;
+					color: $act-colour__white;
+				}
+				&:focus {
+					// outline: $act-colour__black solid 2px;
+					box-shadow: 0 0 0 1px $act-colour__white, 0 0 0 4px $act-colour__black;
+				}
+			}
+			&__purple {
+				&:hover {
+					color: $act-colour__white;
+					background: $act-colour__dark-deep-violet;
+				}
+				&:focus {
+					// outline: $act-colour__purple solid 2px;
+					box-shadow: 0 0 0 1px $act-colour__white, 0 0 0 4px $act-colour__purple;
+				}
+			}
+			&__white {
+				&:hover {
+					background: $act-colour__white;
+					color: $act-colour__black;
+				}
+				&:focus {
+					// outline: $act-colour__white solid 2px;
+					box-shadow: 0 0 0 1px $act-colour__white, 0 0 0 4px $act-colour__white;
+				}
+			}
 		}
 	}
 }

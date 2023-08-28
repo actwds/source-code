@@ -318,8 +318,8 @@ form p,
 			left: 0;
 			right: 0;
 			top: 0;
-			-webkit-transition: 0.4s;
-			transition: 0.4s;
+			-webkit-transition: 0.3s $act-animation__cubic-bezier;
+			transition: 0.3s $act-animation__cubic-bezier;
 			width: calc(#{map-get($act-space, "desktop-6")});
 			z-index: 1;
 			&::before {
@@ -331,8 +331,8 @@ form p,
 				left: 4px;
 				bottom: 4px;
 				background-color: $act-colour__purple;
-				-webkit-transition: 0.4s;
-				transition: 0.4s;
+				-webkit-transition: 0.3s $act-animation__cubic-bezier;
+				transition: 0.3s $act-animation__cubic-bezier;
 			}
 		}
 		:checked + &__slider {

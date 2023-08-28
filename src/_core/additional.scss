@@ -1,0 +1,8 @@
+.act-popular-links {
+	.act-box {
+		@include devices(mobile) {
+			margin: 0 map-get($act-space, "desktop-0");
+			padding: 0 map-get($act-space, "desktop-0");
+		}
+	}
+}

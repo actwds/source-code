@@ -43,6 +43,17 @@ export default {
 		},
 	},
 	argTypes: {
+		style: {
+			control: { type: "radio", },
+			options: ["default", "health",],
+			defaultValue: "default",
+			description: "Sets the style",
+			table: {
+				defaultValue: {
+					summary: "default",
+				},
+			},
+		},
 
 	},
 };

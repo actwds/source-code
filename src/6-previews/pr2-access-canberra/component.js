@@ -1,0 +1,88 @@
+import { createH14 } from "../../4-components/h1-hero-rows/h14-home-search-row/component";
+import { createW18 } from "../../4-components/w1-wayfinding/w18-popular-links/component";
+import { createPC11 } from "../../5-patterns/pc1-card-grid/pc11-default-card-grid/component";
+import { createPT1 } from "../../5-patterns/pt1-topbar/component";
+import { createPF2 } from "../../5-patterns/pf2-footers/component";
+
+
+export const createPR2 = () => {
+
+  const homeSearchRow = createH14({});
+
+
+  const popularPages = createW18({
+  });
+
+  const cards = createPC11({
+    type: "primary",
+    feature: "image",
+    icon: "fa-pizza-slice",
+    tag: "Gamburra",
+    dateVisible: "True",
+    tagVisible: "True",
+    tag1: "Gamby",
+    tag2: "Mulleun",
+    header: "Card Header",
+    description: "Card description",
+    ctaVisible: "True",
+    ctaText: "Learn more",
+  });
+
+  const cards2 = createPC11({
+    type: "homepage",
+    feature: "image",
+    icon: "fa-pizza-slice",
+    tag: "Gamburra",
+    dateVisible: "True",
+    tagVisible: "True",
+    tag1: "Gamby",
+    tag2: "Mulleun",
+    header: "Card Header",
+    description: "Card description",
+    ctaVisible: "True",
+    ctaText: "Learn more",
+  });
+
+  const topbarHTML = createPT1({
+    title: "An ACT Government Website",
+    buttonText: "Log In",
+  });
+
+
+
+
+
+  const footerHTML = createPF2({
+    type: "primary",
+  });
+
+  const accessCanberraHTML =
+  topbarHTML +
+  `<main class="act-body">`
+  + homeSearchRow + popularPages + 
+  `<div class="act-flex">
+  <div class="act-flex__container">
+    <div class="act-flex__grid">
+      <div class="act-flex__row">
+        <div class="act-col__cw-12">
+          <div class="act-box">
+          <h2>Browse services</h2>`
+  + cards2 + cards2 +
+  `<h2>Latest</h2>`
+  + cards +
+  `</div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </main>`
+  + footerHTML;
+
+  const accessCanberra = document.createElement("div");
+  accessCanberra.className = "sb-import-container";
+  accessCanberra.innerHTML = accessCanberraHTML;
+  const accessCanberraExport = accessCanberra.innerHTML;
+  return accessCanberraExport;
+
+};

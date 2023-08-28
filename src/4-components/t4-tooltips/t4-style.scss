@@ -21,6 +21,8 @@
 		visibility: hidden;
 		width: 260px;
 		z-index: 1;
+		transition: opacity 0.1s $act-animation__cubic-bezier;
+		opacity: 0;
 		&:after {
 			border-color: $act-colour__success-light-purple-background transparent transparent transparent;
 			border-style: solid;
@@ -35,6 +37,7 @@
 	&:hover &__text,
 	&:focus &__text {
 		visibility: visible;
+		opacity: 1;
 	}
 
 	&__demo {

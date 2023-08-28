@@ -1,14 +1,33 @@
 export const createT31 = ({
   tag1,
+  tag2,
   style,
+  colour,
+  type,
 }) => {
 
+  var tagTypeOpen = "div";
+  var tagTypeClose = "div";
+  if (type == "text"){ 
+    tagTypeOpen = `div`;
+    tagTypeClose = `div`;
+  } else if (type == "link"){ 
+    tagTypeOpen = `a href="#"`;
+    tagTypeClose = `a`;
+  } else if  (type == "checkbox"){ 
+    tagTypeOpen = `a href="#"`;
+    tagTypeClose = `a`;
+  }
+
   return `
-<div class="act-tag act-tag__`+style+`">
+<`+tagTypeOpen+` class="act-tag act-tag__`+style+`__`+colour+`">
  `+tag1+`
-</div>
-<div class="act-tag act-tag__`+style+`">
- `+tag1+`
-</div>
+</`+tagTypeClose+`>
+<`+tagTypeOpen+` class="act-tag act-tag__`+style+`__`+colour+`">
+ `+tag2+`
+</`+tagTypeClose+`>
 `;
+
+
+
 };

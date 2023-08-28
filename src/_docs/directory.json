@@ -738,5 +738,19 @@
 			"production",
 			"core"
 		]
+	},
+	"W18": {
+		"details": {
+			"id": "W18",
+			"category": "🌎 Wayfinding",
+			"name": "Popular Links",
+			"type": "Component"
+		},
+		"description": "Used for showing popular links",
+		"element": "<code>&lt;div class=\"act-popular-links\"&gt;</code>",
+		"status": [
+			"production",
+			"core"
+		]
 	}
 }

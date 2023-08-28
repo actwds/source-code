@@ -55,10 +55,12 @@
 			input {
 				border: none;
 				outline: none;
+				font-family: $montserrat;
 				font-size: $act-font-size__desktop-p;
 				font-weight: $act-font-weight__semibold;
 				padding: map-get($act-space, "desktop-2");
 				width: 100px;
+				transition: width 0.2s $act-animation__cubic-bezier;
 				&.active,
 				&:active,
 				&:focus {
@@ -151,6 +153,9 @@
 			&:focus {
 				background-color: $act-colour__deep-violet;
 			}
+		}
+		&__text {
+			font-family: $montserrat;
 		}
 		@include devices(mobile) {
 			&__container {
