@@ -11,7 +11,7 @@ export const createF11 = () => {
   return `
 <div class="act-flex act-flex-middle-dark-grey">
   <div class="act-flex__container">
-    <div class="act-flex__grid">
+    <div class="act-flex__grid act-footer-main">
 
       <div class="act-flex__row">
         <div class="act-col__cw-3">

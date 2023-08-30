@@ -9,28 +9,28 @@ const componentDescription = `
 		<tbody>
 			<tr>
 				<td>Component Category</td>
-				<td>`+directory.F22.details.category+`</td>
+				<td>`+directory.F24.details.category+`</td>
 			</tr>
 			<tr>
 				<td>Component ID</td>
-				<td><code>`+directory.F22.details.id+`</code></td>
+				<td><code>`+directory.F24.details.id+`</code></td>
 			</tr>
 			<tr>
 				<td>Element</td>
-				<td>`+directory.F22.element+`</td>
+				<td>`+directory.F24.element+`</td>
 			</tr>
 			<tr>
 				<td>Description</td>
-				<td>`+directory.F22.description+`</td>
+				<td>`+directory.F24.description+`</td>
 			</tr>
 			<tr>
 				<td>Hierarchy</td>
-				<td>`+directory.F22.hierarchy+`</td>
+				<td>`+directory.F24.hierarchy+`</td>
 			</tr>
 		</tbody>
 	</table>
 </div>
-<h2>`+directory.F22.details.type+` Preview</h2>
+<h2>`+directory.F24.details.type+` Preview</h2>
 `;
 export default {
 	title: "Components/Form Elements/Toggles",
@@ -42,7 +42,7 @@ export default {
 		},
 		layout: "fullscreen",
 		status: {
-			type: directory.F22.status,
+			type: directory.F24.status,
 		},
 	},
 	argTypes: {

@@ -201,7 +201,7 @@
 			"type": "Component"
 		},
 		"description": "Are used to display a numerical list",
-		"element": "<code>&lt;div class=\"act-service-card\"&gt;</code>",
+		"element": "<code>&lt;div class=\"act-steps\"&gt;</code>",
 		"usage": "",
 		"status": [
 			"production",
@@ -216,7 +216,7 @@
 			"type": "Component"
 		},
 		"description": "To help give the user the context of who is managing pages",
-		"element": "<code>&lt;div class=\"act-managed-by\"&gt;</code>",
+		"element": "<code>&lt;div class=\"act-content__managed-by\"&gt;</code>",
 		"usage": "",
 		"status": [
 			"production",
@@ -276,7 +276,7 @@
 			"type": "Component"
 		},
 		"description": "Used at the bottom of all pages to display - related links and other relevant information",
-		"element": "<code>&lt;div class=\"act-flex\"&gt;</code>",
+		"element": "<code>&lt;div class=\"act-footer-main\"&gt;</code>",
 		"hierarchy": "Footers must always be rendered inside a <code>&lt;footer class=\"act-footer\"&gt;</code>",
 		"usage": "<ul><li>Must be the final element on the page</li><li>Do not modify the colours</li></ul>",
 		"status": [
@@ -292,7 +292,7 @@
 			"type": "Component"
 		},
 		"description": "Acknowledgment of Country footer to used at the bottom of all pages",
-		"element": "<code>&lt;div class=\"act-flex\"&gt;</code>",
+		"element": "<code>&lt;div class=\"act-footer-aoc\"&gt;</code>",
 		"hierarchy": "Footers must always be rendered inside a <code>&lt;footer class=\"act-footer\"&gt;</code>",
 		"usage": "<ul><li>Always place above the Main Footer</li><li>Do not modify the colours</li></ul>",
 		"status": [
@@ -308,7 +308,7 @@
 			"type": "Component"
 		},
 		"description": "Used on content pages to receive feedback to help continually improve ACT pages and components",
-		"element": "<code>&lt;div class=\"act-flex\"&gt;</code>",
+		"element": "<code>&lt;div class=\"act-footer-feedback\"&gt;</code>",
 		"hierarchy": "Footers must always be rendered inside a <code>&lt;footer class=\"act-footer\"&gt;</code>",
 		"usage": "<ul><li>Always place above the Acknowledgement Footer</li><li>Used on content pages</li><li>Do not modify the colours</li></ul>",
 		"status": [
@@ -338,7 +338,7 @@
 			"type": "Component"
 		},
 		"description": "Allow users to input text",
-		"element": "<code>&lt;div class=\"act-form__container\"&gt;</code>",
+		"element": "<code>&lt;input class=\"act-form\\__field\\__text\"&gt;</code>",
 		"hierarchy": "Input fields must always be rendered inside a <code>&lt;form class=\"act-form\"&gt;</code>",
 		"status": [
 			"production",
@@ -353,7 +353,7 @@
 			"type": "Component"
 		},
 		"description": "To give users the ability to choose from predefined choices, or when used single to have user check/ uncheck an option",
-		"element": "<code>&lt;div class=\"act-form__container\"&gt;</code>",
+		"element": "<code>&lt;input class=\"act-form\\__field\\__checkbox\"&gt;</code>",
 		"hierarchy": "Checkboxes must always be rendered inside a <code>&lt;form class=\"act-form\"&gt;</code>",
 		"status": [
 			"production",
@@ -367,9 +367,9 @@
 			"name": "Dropdowns",
 			"type": "Component"
 		},
-		"description": "To give users the ability to choose from predefined choices, or when used single to have user check/ uncheck an option",
-		"element": "<code>&lt;div class=\"act-form__container\"&gt;</code>",
-		"hierarchy": "Checkboxes must always be rendered inside a <code>&lt;form class=\"act-form\"&gt;</code>",
+		"description": "To give users the ability to select from a set of predefined options",
+		"element": "<code>&lt;select class=\"act-form\\__field\\__textarea\"&gt;</code>",
+		"hierarchy": "Dropdowns must always be rendered inside a <code>&lt;form class=\"act-form\"&gt;</code>",
 		"status": [
 			"production",
 			"core"
@@ -383,8 +383,8 @@
 			"type": "Component"
 		},
 		"description": "To give users the ability to switch between on and off state",
-		"element": "<code>&lt;div class=\"act-form__container\"&gt;</code>",
-		"hierarchy": "Checkboxes must always be rendered inside a <code>&lt;form class=\"act-form\"&gt;</code>",
+		"element": "<code>&lt;input class=\"act-form\\__field\\__toggle\"&gt;</code>",
+		"hierarchy": "Toggles must always be rendered inside a <code>&lt;form class=\"act-form\"&gt;</code>",
 		"status": [
 			"production",
 			"core"
@@ -398,7 +398,7 @@
 			"type": "Component"
 		},
 		"description": "Allow users to select a single option from a list of options",
-		"element": "<code>&lt;div class=\"act-form__container\"&gt;</code>",
+		"element": "<code>&lt;input class=\"act-form\\__field\\__radio\"&gt;</code>",
 		"hierarchy": "Checkboxes must always be rendered inside a <code>&lt;form class=\"act-form\"&gt;</code>",
 		"status": [
 			"production",
@@ -443,8 +443,78 @@
 			"type": "Component"
 		},
 		"description": "Allow users to input long form text, normally will expand over multiple lines",
-		"element": "<code>&lt;div class=\"act-form__container\"&gt;</code>",
+		"element": "<code>&lt;textarea class=\"act-form\\__field\\__textarea\"&gt;</code>",
 		"hierarchy": "Text areas must always be rendered inside a <code>&lt;form class=\"act-form\"&gt;</code>",
+		"status": [
+			"production",
+			"core"
+		]
+	},
+	"H11": {
+		"details": {
+			"id": "H11",
+			"category": "⌨️ Hero Rows",
+			"name": "Home Card Row",
+			"type": "Component"
+		},
+		"description": "Container element that holds a row of individual cards",
+		"element": "<code>&lt;div class=\"act-hero-row__cards\"&gt;</code>",
+		"status": [
+			"production",
+			"core"
+		]
+	},
+	"H12": {
+		"details": {
+			"id": "H12",
+			"category": "⌨️ Hero Rows",
+			"name": "Home Link Row",
+			"type": "Component"
+		},
+		"description": "Container element that holds a set of links",
+		"element": "<code>&lt;div class=\"act-hero-row__links\"&gt;</code>",
+		"status": [
+			"production",
+			"core"
+		]
+	},
+	"H13": {
+		"details": {
+			"id": "H13",
+			"category": "⌨️ Hero Rows",
+			"name": "Home Widget Row",
+			"type": "Component"
+		},
+		"description": "Container element that holds a widget",
+		"element": "<code>&lt;div class=\"act-hero-row__widget\"&gt;</code>",
+		"status": [
+			"production",
+			"core"
+		]
+	},
+	"H14": {
+		"details": {
+			"id": "H14",
+			"category": "⌨️ Hero Rows",
+			"name": "Home Search Row",
+			"type": "Component"
+		},
+		"description": "Container element that holds a search",
+		"element": "<code>&lt;div class=\"act-hero-row__search\"&gt;</code>",
+		"status": [
+			"production",
+			"core"
+		]
+	},
+	"H15": {
+		"details": {
+			"id": "H15",
+			"category": "⌨️ Hero Rows",
+			"name": "Page Title Row",
+			"type": "Component"
+		},
+		"description": "Breadcrumbs and page title",
+		"element": "<code>&lt;nav  class=\"act-breadcrumbs\"&gt;</code>",
 		"status": [
 			"production",
 			"core"
