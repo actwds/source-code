@@ -28,5 +28,3 @@ export const createH14 = () => {
   </div>
 </div>
 `;};
-
-
