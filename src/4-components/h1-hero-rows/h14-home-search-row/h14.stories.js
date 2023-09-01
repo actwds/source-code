@@ -38,7 +38,7 @@ export default {
 		},
 		layout: "fullscreen",
 		status: {
-			type: directory.F22.status,
+			type: directory.H14.status,
 		},
 	},
 	argTypes: {

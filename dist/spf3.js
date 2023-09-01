@@ -127,7 +127,8 @@ document.addEventListener("DOMContentLoaded", function() {
 	const megaMenuIcon = document.querySelectorAll(".act-navbar__menu .act-navbar__menu__container i")[0];
 	const megaMenuText = document.getElementsByClassName("act-navbar__menu__text")[0];
 	megaMenuToggle.forEach(function(button) {
-		button.addEventListener("click", function() {
+		button.addEventListener("click", function(e) {
+			e.preventDefault();
 			megaMenu.classList.toggle("act-megamenu__open");			
 			if (!megaMenu.classList.contains("act-megamenu__open")) {
 				megaMenuIcon.classList.add("fa-bars");
@@ -308,6 +309,7 @@ document.addEventListener("keydown", function(e) {
 document.addEventListener("DOMContentLoaded", function() {
 	const megaMenuLeft = document.getElementsByClassName("act-megamenu__content__block-main-menu")[0];
 	megaMenuLeft.addEventListener("click", function(e) {
+		e.preventDefault();
 		if (e.target.closest(".act-megamenu__link")) {
 			return;
 		} 
