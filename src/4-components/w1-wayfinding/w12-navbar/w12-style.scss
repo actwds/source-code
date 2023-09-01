@@ -52,6 +52,12 @@
 			&:last-of-type {
 				display: none;
 			}
+			&__form {
+				align-items: center;
+				display: flex;
+				flex-direction: row;
+				justify-content: center;
+			}
 			input {
 				border: none;
 				outline: none;
@@ -69,9 +75,13 @@
 					width: 200px !important;
 				}
 			}
+			button,
 			i {
 				align-items: center;
+				background: none;
+				border: none;
 				border-radius: 25%;
+				cursor: pointer;
 				display: flex;
 				height: map-get($act-space, "desktop-3");
 				justify-content: center;
@@ -86,6 +96,7 @@
 		@include devices(mobile) {
 			padding: 0px;
 			&__container {
+				button,
 				i {
 					margin-left: 0px;
 				}

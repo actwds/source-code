@@ -22,8 +22,10 @@ export const createW12 = ({
       <div class="act-navbar__content">
         <div class="act-navbar__search">
           <div class="act-navbar__search__container">
-            <input class="act-navbar__search__text" placeholder="Search"/>
-            <i class="fa-solid fa-magnifying-glass"></i>
+            <form class="act-navbar__search__container__form" action="/search">
+              <input class="act-navbar__search__text" placeholder="Search"/>
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </form>
           </div>
           <div class="act-navbar__search__container">
             <i class="fa-solid fa-magnifying-glass"></i>

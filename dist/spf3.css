@@ -3263,6 +3263,11 @@ table,
         border: 2px solid #adadad; }
       .act-navbar__search__container:last-of-type {
         display: none; }
+      .act-navbar__search__container__form {
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: center; }
       .act-navbar__search__container input {
         border: none;
         outline: none;
@@ -3276,9 +3281,13 @@ table,
           border: none;
           outline: none;
           width: 200px !important; }
+      .act-navbar__search__container button,
       .act-navbar__search__container i {
         align-items: center;
+        background: none;
+        border: none;
         border-radius: 25%;
+        cursor: pointer;
         display: flex;
         height: 24px;
         justify-content: center;
@@ -3291,6 +3300,7 @@ table,
     @media only screen and (min-width: 0px) and (max-width: 478px) {
       .act-navbar__search {
         padding: 0px; }
+        .act-navbar__search__container button,
         .act-navbar__search__container i {
           margin-left: 0px; }
         .act-navbar__search__container:first-of-type {
