@@ -36,6 +36,11 @@
 			&:focus {
 				color: $act-colour__white;
 			}
+			p {
+				color: $act-colour__white;
+				font-size: $act-font-size__desktop-h6;
+				line-height: normal;
+			}
 		}
 		i {
 			color: $act-colour__white;
@@ -51,6 +56,11 @@
 				border-color: $act-colour__black;
 				color: $act-colour__black;
 			}
+			p {
+				color: $act-colour__black;
+				font-size: $act-font-size__desktop-h6;
+				line-height: normal;
+			}
 		}
 		i {
 			color: $act-colour__black;
@@ -63,6 +73,11 @@
 			&:hover,
 			&:focus {
 				color: $act-colour__white;
+			}
+			p {
+				color: $act-colour__white;
+				font-size: $act-font-size__desktop-h6;
+				line-height: normal;
 			}
 		}
 		i {

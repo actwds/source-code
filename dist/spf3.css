@@ -661,6 +661,10 @@ a,
       color: #ffffff; }
       .act-alert-global__success a:hover, .act-alert-global__success a:focus {
         color: #ffffff; }
+      .act-alert-global__success a p {
+        color: #ffffff;
+        font-size: 16px;
+        line-height: normal; }
     .act-alert-global__success i {
       color: #ffffff; }
   .act-alert-global__warning {
@@ -671,6 +675,10 @@ a,
       .act-alert-global__warning a:hover, .act-alert-global__warning a:focus {
         border-color: #111111;
         color: #111111; }
+      .act-alert-global__warning a p {
+        color: #111111;
+        font-size: 16px;
+        line-height: normal; }
     .act-alert-global__warning i {
       color: #111111; }
   .act-alert-global__error {
@@ -679,6 +687,10 @@ a,
       color: #ffffff; }
       .act-alert-global__error a:hover, .act-alert-global__error a:focus {
         color: #ffffff; }
+      .act-alert-global__error a p {
+        color: #ffffff;
+        font-size: 16px;
+        line-height: normal; }
     .act-alert-global__error i {
       color: #ffffff; }
   .act-alert-global__no-icon i {
@@ -3962,3 +3974,9 @@ main .act-breadcrumbs,
   .act-popular-links .act-box {
     margin: 0 4px;
     padding: 0 4px; } }
+
+.padding-none {
+  padding: 0 !important; }
+
+.margin-none {
+  margin: 0 !important; }
