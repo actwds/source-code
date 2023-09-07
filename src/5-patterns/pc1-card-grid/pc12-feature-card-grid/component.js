@@ -18,7 +18,7 @@ export const createPC12 = ({
 
   if (card1 == undefined){
     card1 = {
-      type: "primary",
+      type: "bordered",
       feature: feature,
       icon: icon,
       dateVisible: dateVisible,
@@ -32,7 +32,7 @@ export const createPC12 = ({
     };
   }
   const card1HTML = createC11({
-    type:     "primary",
+    type:     "bordered",
     feature:    card1.feature,
     icon:    card1.icon,
     dateVisible:    card1.dateVisible,
