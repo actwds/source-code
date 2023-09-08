@@ -1033,7 +1033,6 @@ a,
     .act-card__borderless [class*="__container"] {
       border-color: transparent;
       border-width: 2px; }
-    .act-card__borderless [class*="__image"],
     .act-card__borderless [class*="__timestamp"] {
       display: none; }
     .act-card__borderless [class*="__title"],
@@ -1121,7 +1120,6 @@ a,
     .act-card__homepage .act-tag__container,
     .act-card__homepage [class*="__image"],
     .act-card__homepage [class*="__timestamp"],
-    .act-card__homepage [class*="__description"],
     .act-card__homepage [class*="__cta"] span {
       display: none; }
     .act-card__homepage:hover {

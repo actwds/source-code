@@ -301,7 +301,6 @@
 			border-color: transparent;
 			border-width: 2px;
 		}
-		[class*="__image"],
 		[class*="__timestamp"] {
 			display: none;
 		}
@@ -413,7 +412,6 @@
 		.act-tag__container,
 		[class*="__image"],
 		[class*="__timestamp"],
-		[class*="__description"],
 		[class*="__cta"] span {
 			display: none;
 		}

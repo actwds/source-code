@@ -215,7 +215,7 @@ document.addEventListener("keydown", function(e) {
 		e.preventDefault();
 	}
 	if (document.activeElement.closest(".act-megamenu__open")) {
-	    if (document.activeElement.closest(".act-megamenu__sub-menu-link-container")) {
+		if (document.activeElement.closest(".act-megamenu__sub-menu-link-container")) {
 			let active = document.activeElement;
 			let activeSubnavCount = document.activeElement.parentNode.childElementCount;
 			let i = Array.from(active.parentNode.children).indexOf(active);
@@ -239,10 +239,9 @@ document.addEventListener("keydown", function(e) {
 			}
 			//up
 			if(event.keyCode === 38) {
-			    if (sw < 991 && i != 0) {
+				if (sw < 991 && i != 0) {
 					document.activeElement.previousElementSibling.focus();
-			    } else if (i == 0 || i == 1) {
-				    console.log(i);
+				} else if (i == 0 || i == 1) {
 					if (!active.parentNode.classList.contains("section-heading")) {
 						document.activeElement.parentNode.previousElementSibling.querySelector("a").focus();
 					}
@@ -301,11 +300,10 @@ document.addEventListener("keydown", function(e) {
 				if ((activeCount-1) != i) {
 					active.nextElementSibling.focus();				
 				} else {
-				    document.querySelector(".act-megamenu__content__block-main-menu__additional-links a").focus();
+					document.querySelector(".act-megamenu__content__block-main-menu__additional-links a").focus();
 				}
 			}
 		} else if (document.activeElement.closest(".act-megamenu__content__block-main-menu__additional-links")) {
-		    console.log("hello");
 			let active = document.activeElement;
 			let activeCount = active.closest(".act-megamenu__content__block-main-menu__additional-links").childElementCount;
 			let i = Array.from(active.closest(".act-megamenu__content__block-main-menu__additional-links").children).indexOf(active.closest(".act-megamenu__link"));
@@ -314,19 +312,17 @@ document.addEventListener("keydown", function(e) {
 				if (!i == 0) {
 					active.previousElementSibling.focus();
 				} else {
-				    //This runs the 
-				    let iSomething = document.querySelector(".act-megamenu__link-container").childElementCount -1;
-				    document.querySelectorAll(".act-megamenu__link-container a")[iSomething].focus();
+					let x = document.querySelector(".act-megamenu__link-container").childElementCount -1;
+					document.querySelectorAll(".act-megamenu__link-container a")[x].focus();
 				}
 			}
-		    
+
 			//down
 			if(event.keyCode === 40) {
 				if ((activeCount-1) != i) {
 					active.nextElementSibling.focus();				
 				} else {
-				    //Need this to jump to login button?
-				    document.querySelector(".act-megamenu__content__block-main-menu__additional-links a").focus();
+					document.querySelector(".act-megamenu__content__block-main-menu__additional-links a").focus();
 				}
 			}
 		}

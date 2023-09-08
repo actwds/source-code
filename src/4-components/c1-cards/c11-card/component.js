@@ -42,7 +42,11 @@ export const createC11 = ({
         }
         featureImageHTML = `<div class="act-card__image" style="background-image: url('/images/purple.jpg');">
         &nbsp;
-      </div>`;} else {
+      </div>`;} else if (type == "borderless") {
+        featureImageHTML = `<div class="act-card__image" style="background-image: url('/images/purple.jpg');">
+        &nbsp;
+      </div>`;
+      } else {
         featureImageHTML = "";
       }
     } else if (feature == "icon"){
