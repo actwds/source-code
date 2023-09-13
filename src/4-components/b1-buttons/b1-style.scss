@@ -264,7 +264,12 @@
 		color: $act-colour__middle-dark-grey;
 		padding: 32px 24px;
 		margin: 0 !important;
-		transition: background 100ms cubic-bezier(0, 0, 0.58, 1);
+		transition: all 100ms cubic-bezier(0, 0, 0.58, 1);
+		opacity: 1;
+		&__hidden {
+			opacity: 0;
+			display: none;
+		}
 		i {
 			margin-left: 0px;
 			font-size: $act-font-size__desktop-h1;

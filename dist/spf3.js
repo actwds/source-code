@@ -32,10 +32,28 @@ let alerts = globalAlertDismiss.forEach(function(alert, index) {
 	});
 });
 
-//B11 - Back to top Button
+//B13 - Back to top Button
 function backToTop() {
-	window.scrollTo(0, 0);
+	document.getElementById("act-header").scrollIntoView({
+		behavior: "smooth",
+	});
 }
+const backToTopButton = document.getElementById("back-to-top");
+backToTopButton.addEventListener("click", function() {
+	backToTop();
+});
+
+function revealOnScroll() {
+	if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+		backToTopButton.classList.remove("act-button__back-to-top__hidden");
+	} else {
+		backToTopButton.classList.add("act-button__back-to-top__hidden");
+	}
+}
+
+window.addEventListener("scroll", function() {
+	revealOnScroll();
+});
 
 //P11 - Popover
 function togglePopover() {
