@@ -3987,11 +3987,14 @@ main .act-breadcrumbs,
     margin: 0 4px;
     padding: 0 4px; } }
 
-.padding-none {
-  padding: 0 !important; }
+.display-none {
+  display: none !important; }
 
 .margin-none {
   margin: 0 !important; }
+
+.padding-none {
+  padding: 0 !important; }
 
 .act-header {
   position: relative; }
