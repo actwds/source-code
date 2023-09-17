@@ -1129,11 +1129,13 @@ a,
       color: #ffffff; }
       .act-card__homepage:hover [class*="__title"],
       .act-card__homepage:hover [class*="__icon"],
-      .act-card__homepage:hover [class*="__cta"] {
+      .act-card__homepage:hover [class*="__cta"],
+      .act-card__homepage:hover [class*="__description"] {
         color: #ffffff; }
         .act-card__homepage:hover [class*="__title"] i,
         .act-card__homepage:hover [class*="__icon"] i,
-        .act-card__homepage:hover [class*="__cta"] i {
+        .act-card__homepage:hover [class*="__cta"] i,
+        .act-card__homepage:hover [class*="__description"] i {
           color: #ffffff; }
       .act-card__homepage:hover [class*="__cta"] {
         margin-left: 2rem; }
