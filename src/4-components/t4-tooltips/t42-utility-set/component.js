@@ -3,19 +3,19 @@ export const createT42 = () => {
   return `
   <div class="demo-container">
     <span class="act-utility-set">
-      <i class="fa-solid fa-share"></i> Hover to open 
+      <z class="fa-solid fa-share"></z> Hover to open 
       <span class="act-utility-set__content">
         <span class="act-utility-set__content__item">
-          <i class="fa-regular fa-envelope"></i>
+          <z class="fa-regular fa-envelope"></z>
         </span>
         <span class="act-utility-set__content__item">
-          <i class="fa-brands fa-linkedin"></i>
+          <z class="fa-brands fa-linkedin"></z>
         </span>
         <span class="act-utility-set__content__item">
-          <i class="fa-brands fa-facebook"></i>
+          <z class="fa-brands fa-facebook"></z>
         </span>
         <span class="act-utility-set__content__item">
-          <i class="fa-brands fa-twitter"></i>
+          <z class="fa-brands fa-twitter"></z>
         </span>
       </span>
     </span>

@@ -30,7 +30,7 @@
 	&:only-child {
 		margin: map-get($act-space, "desktop-1") 0px;
 	}
-	i {
+	z {
 		display: none;
 		height: 20px;
 		max-height: 20px;
@@ -49,7 +49,7 @@
 		height: 24px;
 		font-size: calc(#{$act-font-size__desktop-p-small} - 1px);
 		padding: map-get($act-space, "desktop-0") map-get($act-space, "desktop-2");
-		i {
+		z {
 			height: 12px;
 			max-height: 12px;
 			max-width: 12px;
@@ -70,7 +70,7 @@
 	&__primary {
 		background-color: $act-colour__purple;
 		color: $act-colour__white;
-		i {
+		z {
 			color: $act-colour__white;
 		}
 		&:hover,
@@ -87,7 +87,7 @@
 		&-focus {
 			border-color: $act-colour__purple;
 			box-shadow: 0 0 0 2px $act-colour__white, 0 0 0 4px $act-colour__purple;
-			i {
+			z {
 				color: $act-colour__white;
 			}
 		}
@@ -106,7 +106,7 @@
 			background-color: $act-colour__success-light-purple-background;
 			border-color: $act-colour__dark-deep-violet;
 			color: $act-colour__dark-deep-violet;
-			i {
+			z {
 				color: inherit;
 			}
 		}
@@ -115,7 +115,7 @@
 			background-color: $act-colour__success-light-purple-background;
 			border-color: $act-colour__dark-deep-violet;
 			color: $act-colour__dark-deep-violet;
-			i {
+			z {
 				color: $act-colour__dark-deep-violet;
 			}
 		}
@@ -123,7 +123,7 @@
 		&-focus {
 			border-color: $act-colour__purple;
 			box-shadow: 0 0 0 2px $act-colour__white, 0 0 0 4px $act-colour__purple;
-			i {
+			z {
 				color: $act-colour__purple;
 			}
 		}
@@ -132,7 +132,7 @@
 			border-color: $act-colour__middle-grey;
 			color: $act-colour__middle-grey;
 			pointer-events: none;
-			i {
+			z {
 				color: $act-colour__middle-grey;
 			}
 		}
@@ -141,14 +141,14 @@
 		background-color: $act-colour__white;
 		border: 2px solid $act-colour__white;
 		color: $act-colour__purple;
-		i {
+		z {
 			color: $act-colour__purple;
 		}
 		&:hover,
 		&-hover {
 			border-color: $act-colour__white;
 			color: $act-colour__dark-deep-violet;
-			i {
+			z {
 				color: $act-colour__dark-deep-violet;
 			}
 		}
@@ -156,7 +156,7 @@
 		&-active {
 			border-color: $act-colour__white;
 			color: $act-colour__dark-deep-violet;
-			i {
+			z {
 				color: $act-colour__dark-deep-violet;
 			}
 		}
@@ -164,7 +164,7 @@
 		&-focus {
 			border-color: $act-colour__white;
 			box-shadow: 0 0 0 2px $act-colour__white, 0 0 0 4px $act-colour__purple;
-			i {
+			z {
 				color: $act-colour__purple;
 			}
 		}
@@ -173,7 +173,7 @@
 			border-color: $act-colour__white;
 			color: $act-colour__middle-grey;
 			pointer-events: none;
-			i {
+			z {
 				color: $act-colour__middle-grey;
 			}
 		}
@@ -186,7 +186,7 @@
 		display: inline;
 		margin: 0px !important;
 		padding: 0px !important;
-		i {
+		z {
 			display: none !important;
 		}
 		&:hover,
@@ -236,13 +236,13 @@
 	}
 	/* Icon Types */
 	&__no-icon {
-		i {
+		z {
 			display: none !important;
 		}
 	}
 	&__icon-left {
 		flex-direction: row-reverse;
-		i {
+		z {
 			color: inherit;
 			display: flex;
 			margin-right: map-get($act-space, "desktop-1");
@@ -250,7 +250,7 @@
 	}
 	&__icon-right {
 		flex-direction: row;
-		i {
+		z {
 			color: inherit;
 			display: flex;
 			margin-left: map-get($act-space, "desktop-1");
@@ -270,7 +270,7 @@
 			opacity: 0;
 			display: none;
 		}
-		i {
+		z {
 			margin-left: 0px;
 			font-size: $act-font-size__desktop-h1;
 			height: 40px;
@@ -288,13 +288,13 @@
 		&:focus,
 		&-focus {
 			background-color: $act-colour__black;
-			i {
+			z {
 				color: $act-colour__white;
 			}
 		}
 		&__mobile {
 			padding: 24px 16px;
-			i {
+			z {
 				font-size: $act-font-size__desktop-h2;
 			}
 		}

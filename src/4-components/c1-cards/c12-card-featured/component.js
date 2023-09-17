@@ -9,7 +9,7 @@ export const createC12 = ({
       <div class="act-card__title">`+header+`</div>
       <div class="act-card__description">`+description+`</div>
       <div class="act-card__cta">
-        <i class="fa-solid fa-arrow-right"></i>
+        <z class="fa-solid fa-arrow-right"></z>
         <span>Learn more</span>
       </div>
     </div>

@@ -234,8 +234,8 @@
 			color: $act-colour__dark-deep-violet;
 			border-bottom: 1px dashed $act-colour__light-deep-violet;
 		}
-		.act-megamenu__link:hover i,
-		.act-megamenu__link:focus i {
+		.act-megamenu__link:hover z,
+		.act-megamenu__link:focus z {
 			color: $act-colour__dark-deep-violet;
 		}
 	}
@@ -328,7 +328,7 @@
 		font-weight: $act-font-weight__bold;
 		justify-content: center;
 		line-height: $act-line-height__100;
-		i {
+		z {
 			font-size: $act-font-size__desktop-h3;
 			margin-left: map-get($act-space, "desktop-1");
 		}

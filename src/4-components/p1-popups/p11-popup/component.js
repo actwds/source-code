@@ -18,7 +18,7 @@ export const createP11 = ({
       <div class="act-popup__block">
         <div class="act-h4">Heading</div>
         <div class="act-popup__close">
-          <i class="fa-solid fa-xmark"></i>
+          <z class="fa-solid fa-xmark"></z>
         </div>
       </div>
       <div class="act-popup__block">

@@ -13,7 +13,7 @@ export const createB11 = ({
   return `
 <button class="act-button act-button__`+type+` act-button__`+size+` act-button__`+icon+`" type="button">
   `+label+`
-  <i class="fa-solid `+fontawesome+`"></i>
+  <z class="fa-solid `+fontawesome+`"></z>
 </button>
 	`;
 };

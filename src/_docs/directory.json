@@ -412,7 +412,7 @@
 			"name": "Progress",
 			"type": "Component"
 		},
-		"description": "To help users understand their progress of completion, normally when completing a long form. Each step must have a stage of <i>active</i>, <i>complete</i> or <i>incomplete</i>",
+		"description": "To help users understand their progress of completion, normally when completing a long form. Each step must have a stage of <i>active</z>, <i>complete</z> or <i>incomplete</z>",
 		"element": "<code>&lt;div class=\"act-progress\"&gt;</code>",
 		"hierarchy": "Progress Components must always be rendered inside a Progress Group",
 		"status": [

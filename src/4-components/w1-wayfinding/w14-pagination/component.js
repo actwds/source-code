@@ -32,7 +32,7 @@ export const createW14 = ({
     99
   </div>
   <div class="act-page-marker">
-    <i class="fa-solid fa-angle-right"></i>
+    <z class="fa-solid fa-angle-right"></z>
   </div>
 </div>
 `;

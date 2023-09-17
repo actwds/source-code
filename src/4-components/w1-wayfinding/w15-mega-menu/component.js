@@ -64,7 +64,7 @@ export const createW15 = ({
               Link 1
             </div>
             <div class="act-megamenu__link__icon">
-              <i class="fa-solid fa-angle-right"></i>
+              <z class="fa-solid fa-angle-right"></z>
             </div>
           </a>
           <a href="#" class="act-megamenu__link" id="main-menu-link-2" onclick="openChildLinks(event)">
@@ -72,7 +72,7 @@ export const createW15 = ({
             Information and support
             </div>
             <div class="act-megamenu__link__icon">
-              <i class="fa-solid fa-angle-right"></i>
+              <z class="fa-solid fa-angle-right"></z>
             </div>
           </a>
           <a href="#" class="act-megamenu__link" id="main-menu-link-3" onclick="openChildLinks(event)">
@@ -80,7 +80,7 @@ export const createW15 = ({
               Link 3
             </div>
             <div class="act-megamenu__link__icon">
-              <i class="fa-solid fa-angle-right"></i>
+              <z class="fa-solid fa-angle-right"></z>
             </div>
           </a>
         </div>
@@ -105,7 +105,7 @@ export const createW15 = ({
               Login
             </span>
             <span class="button__icon">
-              <i class="fa-solid fa-user"></i>
+              <z class="fa-solid fa-user"></z>
             </span>
           </button>
         </div>
@@ -114,7 +114,7 @@ export const createW15 = ({
       <div class="act-megamenu__content__block-sub-menu hidden-mobile" id="sub-menu">
         <button class="back-button" onclick="toggleSubMenu(false)">
             <span class="back-button__icon">
-              <i class="fa-solid fa-chevron-left"></i>
+              <z class="fa-solid fa-chevron-left"></z>
             </span>
             <span class="back-button__text">
               Back
@@ -130,7 +130,7 @@ export const createW15 = ({
                 Sub Link 11
               </div>
               <div class="act-megamenu___link__icon">
-                <i class="fa-solid fa-arrow-right"></i>
+                <z class="fa-solid fa-arrow-right"></z>
               </div>
             </a>
             <a href="#" class="act-megamenu__link">
@@ -138,7 +138,7 @@ export const createW15 = ({
                 Sub Link 12
               </div>
               <div class="act-megamenu___link__icon">
-                <i class="fa-solid fa-arrow-right"></i>
+                <z class="fa-solid fa-arrow-right"></z>
               </div>
             </a>
             <a href="#" class="act-megamenu__link">
@@ -146,7 +146,7 @@ export const createW15 = ({
                 Sub Link 13
               </div>
               <div class="act-megamenu___link__icon">
-                <i class="fa-solid fa-arrow-right"></i>
+                <z class="fa-solid fa-arrow-right"></z>
               </div>
             </a>
             <a href="#" class="act-megamenu__link">
@@ -154,7 +154,7 @@ export const createW15 = ({
                 External Link
               </div>
               <div class="act-megamenu___link__icon">
-                <i class="fa-solid fa-external-link"></i>
+                <z class="fa-solid fa-external-link"></z>
               </div>
             </a>
             <a href="#" class="act-megamenu__link">
@@ -162,7 +162,7 @@ export const createW15 = ({
                 Sub Link 15
               </div>
               <div class="act-megamenu___link__icon">
-                <i class="fa-solid fa-arrow-right"></i>
+                <z class="fa-solid fa-arrow-right"></z>
               </div>
             </a>
             <a href="#" class="act-megamenu__link">
@@ -170,7 +170,7 @@ export const createW15 = ({
                 Sub Link 16
               </div>
               <div class="act-megamenu___link__icon">
-                <i class="fa-solid fa-arrow-right"></i>
+                <z class="fa-solid fa-arrow-right"></z>
               </div>
             </a>
           </div>
@@ -185,7 +185,7 @@ export const createW15 = ({
                 External Link
               </div>
               <div class="act-megamenu___link__icon">
-                <i class="fa-solid fa-external-link"></i>
+                <z class="fa-solid fa-external-link"></z>
               </div>
             </a>
             <a href="#" class="act-megamenu__link">
@@ -193,7 +193,7 @@ export const createW15 = ({
                 Sub Link 22
               </div>
               <div class="act-megamenu___link__icon">
-                <i class="fa-solid fa-arrow-right"></i>
+                <z class="fa-solid fa-arrow-right"></z>
               </div>
             </a>
             <a href="#" class="act-megamenu__link">
@@ -201,7 +201,7 @@ export const createW15 = ({
                 Sub Link 23
               </div>
               <div class="act-megamenu___link__icon">
-                <i class="fa-solid fa-arrow-right"></i>
+                <z class="fa-solid fa-arrow-right"></z>
               </div>
             </a>
             <a href="#" class="act-megamenu__link">
@@ -209,7 +209,7 @@ export const createW15 = ({
                 Sub Link 24
               </div>
               <div class="act-megamenu___link__icon">
-                <i class="fa-solid fa-arrow-right"></i>
+                <z class="fa-solid fa-arrow-right"></z>
               </div>
             </a>
             <a href="#" class="act-megamenu__link">
@@ -217,7 +217,7 @@ export const createW15 = ({
                 Sub Link 25
               </div>
               <div class="act-megamenu___link__icon">
-                <i class="fa-solid fa-arrow-right"></i>
+                <z class="fa-solid fa-arrow-right"></z>
               </div>
             </a>
             <a href="#" class="act-megamenu__link">
@@ -225,7 +225,7 @@ export const createW15 = ({
                 Sub Link 26
               </div>
               <div class="act-megamenu___link__icon">
-                <i class="fa-solid fa-arrow-right"></i>
+                <z class="fa-solid fa-arrow-right"></z>
               </div>
             </a>
           </div>
@@ -240,7 +240,7 @@ export const createW15 = ({
                 Sub Link 31
               </div>
               <div class="act-megamenu___link__icon">
-                <i class="fa-solid fa-arrow-right"></i>
+                <z class="fa-solid fa-arrow-right"></z>
               </div>
             </a>
             <a href="#" class="act-megamenu__link">
@@ -248,7 +248,7 @@ export const createW15 = ({
                 Sub Link 32
               </div>
               <div class="act-megamenu___link__icon">
-                <i class="fa-solid fa-arrow-right"></i>
+                <z class="fa-solid fa-arrow-right"></z>
               </div>
             </a>
             <a href="#" class="act-megamenu__link">
@@ -256,7 +256,7 @@ export const createW15 = ({
                 Sub Link 33
               </div>
               <div class="act-megamenu___link__icon">
-                <i class="fa-solid fa-arrow-right"></i>
+                <z class="fa-solid fa-arrow-right"></z>
               </div>
             </a>
             <a href="#" class="act-megamenu__link">
@@ -264,7 +264,7 @@ export const createW15 = ({
                 Sub Link 34
               </div>
               <div class="act-megamenu___link__icon">
-                <i class="fa-solid fa-arrow-right"></i>
+                <z class="fa-solid fa-arrow-right"></z>
               </div>
             </a>
             <a href="#" class="act-megamenu__link">
@@ -272,7 +272,7 @@ export const createW15 = ({
                 Sub Link 35
               </div>
               <div class="act-megamenu___link__icon">
-                <i class="fa-solid fa-arrow-right"></i>
+                <z class="fa-solid fa-arrow-right"></z>
               </div>
             </a>
             <a href="#" class="act-megamenu__link">
@@ -280,7 +280,7 @@ export const createW15 = ({
                 Sub Link 36
               </div>
               <div class="act-megamenu___link__icon">
-                <i class="fa-solid fa-arrow-right"></i>
+                <z class="fa-solid fa-arrow-right"></z>
               </div>
             </a>
           </div>

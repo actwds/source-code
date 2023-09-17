@@ -5,7 +5,7 @@ export const createC27= ({
 
   return `
 <a href="" class="act-download-link">
-  <i class="fa-solid fa-download"></i> Document Name (File type, 1.2MB)
+  <z class="fa-solid fa-download"></z> Document Name (File type, 1.2MB)
 </a>
 `;
 };

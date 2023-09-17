@@ -50,12 +50,12 @@ export const createC11 = ({
         featureImageHTML = "";
       }
     } else if (feature == "icon"){
-      featureIconHTML = `<div class="act-card__icon"><i class="fa-solid `+icon+`"></i></div>`;
+      featureIconHTML = `<div class="act-card__icon"><z class="fa-solid `+icon+`"></z></div>`;
     }
   }
 
   if (type == "homepage"){
-    featureIconHTML = `<div class="act-card__icon"><i class="fa-solid `+icon+`"></i></div>`;
+    featureIconHTML = `<div class="act-card__icon"><z class="fa-solid `+icon+`"></z></div>`;
   }
 
   if (dateVisible == true){
@@ -68,7 +68,7 @@ export const createC11 = ({
 
   if (ctaVisible == true){
     featureCTAHTML = `<div class="act-card__cta">
-      <i class="fa-solid fa-arrow-right"></i>
+      <z class="fa-solid fa-arrow-right"></z>
       <span>`+ctaText+`</span>
     </div>`;
   }

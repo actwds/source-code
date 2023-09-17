@@ -63,7 +63,7 @@ export const createF23 = ({
 
   var alertHTML = "";
   if ( alert == true){
-    alertHTML = `<span class="act-form__field__alert" for="`+id+`"><i class="fa-solid `+alertIcon+`"></i>`+alertValue+`</span>`;
+    alertHTML = `<span class="act-form__field__alert" for="`+id+`"><z class="fa-solid `+alertIcon+`"></z>`+alertValue+`</span>`;
   } else {
     alertHTML = "";
   }

@@ -9,15 +9,15 @@ export const createH12 = () => {
         <h5>H5 Subheading</h5>
         <a class="act-hero-row__links__link act-h4" href="#">
           <span class="act-hero-row__links__link__text">Link 1</span>
-          <span class="act-hero-row__links__link__icon"><i class="fa-solid fa-arrow-right"></i></span>
+          <span class="act-hero-row__links__link__icon"><z class="fa-solid fa-arrow-right"></z></span>
         </a>
         <a class="act-hero-row__links__link act-h4" href="#">
           <span class="act-hero-row__links__link__text">Link 2</span>
-          <span class="act-hero-row__links__link__icon"><i class="fa-solid fa-arrow-right"></i></span>
+          <span class="act-hero-row__links__link__icon"><z class="fa-solid fa-arrow-right"></z></span>
         </a>
         <a class="act-hero-row__links__link act-h4" href="#">
           <span class="act-hero-row__links__link__text">Link 3</span>
-          <span class="act-hero-row__links__link__icon"><i class="fa-solid fa-arrow-right"></i></span>
+          <span class="act-hero-row__links__link__icon"><z class="fa-solid fa-arrow-right"></z></span>
         </a>
       </div>
     </div>

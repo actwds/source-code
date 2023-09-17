@@ -4,7 +4,7 @@ export const createC23 = ({
   return `
 <div class="act-quote">
   <div class="act-quote__icon">
-    <i class="fa-solid fa-quote-left"></i>
+    <z class="fa-solid fa-quote-left"></z>
   </div>
   <div class="act-quote__content">
     `+content+`
