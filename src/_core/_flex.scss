@@ -165,6 +165,21 @@
 				width: 75%;
 			}
 		}
+		&__cw-10 {
+			/* 10 Column */ /* 83.333% */ /* 100/100/83 */
+			@include devices(mobile) {
+				max-width: 100%;
+				width: 100%;
+			}
+			@include devices(tablet) {
+				max-width: 100%;
+				width: 100%;
+			}
+			@include devices(desktop) {
+				max-width: 83.333%;
+				width: 83.333%;
+			}
+		}
 		&__cw-12 {
 			/* 12 Column */ /* 100% */ /* 100/100/100 */
 			@include devices(mobile) {

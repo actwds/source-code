@@ -210,6 +210,22 @@ z.fa-brands {
         .act-flex .act-col__cw-9 {
           max-width: 75%;
           width: 75%; } }
+    .act-flex .act-col__cw-10 {
+      /* 10 Column */
+      /* 83.333% */
+      /* 100/100/83 */ }
+      @media only screen and (min-width: 0px) and (max-width: 478px) {
+        .act-flex .act-col__cw-10 {
+          max-width: 100%;
+          width: 100%; } }
+      @media only screen and (min-width: 479px) and (max-width: 991px) {
+        .act-flex .act-col__cw-10 {
+          max-width: 100%;
+          width: 100%; } }
+      @media only screen and (min-width: 992px) and (max-width: 99999px) {
+        .act-flex .act-col__cw-10 {
+          max-width: 83.333%;
+          width: 83.333%; } }
     .act-flex .act-col__cw-12 {
       /* 12 Column */
       /* 100% */
