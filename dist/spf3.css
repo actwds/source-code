@@ -2911,25 +2911,25 @@ table,
   .act-table thead tr th,
   .act-table tfoot tr td,
   .act-table tfoot tr th {
-    background-color: #777777;
-    border: 1px solid #777777;
-    border-left: 1px solid #777777;
+    background-color: #4b4b4b;
+    border: 1px solid #4b4b4b;
+    border-left: 1px solid #4b4b4b;
     border-radius: 0px !important;
-    border-right: 1px solid #777777;
+    border-right: 1px solid #4b4b4b;
     color: #ffffff !important;
     font-size: 14px;
     font-weight: 600;
     line-height: 150%;
     padding: 16px;
     text-align: left; }
-  table__secondary thead tr td,
-  table__secondary thead tr th,
-  table__secondary tfoot tr td,
-  table__secondary tfoot tr th,
-  .act-table__secondary thead tr td,
-  .act-table__secondary thead tr th,
-  .act-table__secondary tfoot tr td,
-  .act-table__secondary tfoot tr th {
+  table__underlined thead tr td,
+  table__underlined thead tr th,
+  table__underlined tfoot tr td,
+  table__underlined tfoot tr th,
+  .act-table__underlined thead tr td,
+  .act-table__underlined thead tr th,
+  .act-table__underlined tfoot tr td,
+  .act-table__underlined tfoot tr th {
     background-color: #ffffff;
     border: 1px solid #777777;
     border-left: 0px solid #ffffff;
@@ -2937,6 +2937,48 @@ table,
     border-right: 0px solid #ffffff;
     border-top: 0px solid #ffffff;
     color: #111111 !important; }
+  table__bordered thead tr td,
+  table__bordered thead tr th,
+  table__bordered tbody tr td,
+  table__bordered tbody tr th,
+  table__bordered tfoot tr td,
+  table__bordered tfoot tr th,
+  .act-table__bordered thead tr td,
+  .act-table__bordered thead tr th,
+  .act-table__bordered tbody tr td,
+  .act-table__bordered tbody tr th,
+  .act-table__bordered tfoot tr td,
+  .act-table__bordered tfoot tr th {
+    background-color: #ffffff;
+    border: 1px solid #adadad;
+    border-left: 1px solid #adadad;
+    border-radius: 0px !important;
+    border-right: 1px solid #adadad;
+    border-top: 1px solid #adadad;
+    color: #111111 !important; }
+  table__filled-bordered thead tr td,
+  table__filled-bordered thead tr th,
+  table__filled-bordered tfoot tr td,
+  table__filled-bordered tfoot tr th,
+  .act-table__filled-bordered thead tr td,
+  .act-table__filled-bordered thead tr th,
+  .act-table__filled-bordered tfoot tr td,
+  .act-table__filled-bordered tfoot tr th {
+    background-color: #4b4b4b;
+    border: 1px solid #adadad;
+    border-left: 1px solid #adadad;
+    border-radius: 0px !important;
+    border-right: 1px solid #adadad;
+    border-top: 1px solid #adadad;
+    color: #ffffff !important; }
+  table__filled-bordered tbody tr td,
+  .act-table__filled-bordered tbody tr td {
+    background-color: #f6f6f6;
+    border: 1px solid #adadad;
+    border-left: 1px solid #adadad;
+    border-radius: 0px !important;
+    border-right: 1px solid #adadad;
+    border-top: 1px solid #adadad; }
   table tbody,
   .act-table tbody {
     border-radius: 0px !important;
@@ -2955,8 +2997,8 @@ table,
     table tbody tr:last-child td,
     .act-table tbody tr:last-child td {
       border-bottom: 1px solid #adadad !important; }
-    table tbody tr:nth-child(odd) td,
-    .act-table tbody tr:nth-child(odd) td {
+    table tbody tr:nth-child(even) td,
+    .act-table tbody tr:nth-child(even) td {
       background-color: #f6f6f6; }
 
 .act-tabs-container {

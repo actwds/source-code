@@ -53,8 +53,8 @@ export default {
 	argTypes: {
 		type: {
 			control: { type: "radio", },
-			options: ["primary", "secondary",],
-			defaultValue: "primary",
+			options: ["filled", "underlined", "bordered", "filled-bordered",],
+			defaultValue: "filled",
 			description: "Sets the table type",
 			table: {
 				defaultValue: {

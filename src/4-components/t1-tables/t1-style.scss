@@ -19,11 +19,11 @@ table,
 		tr {
 			td,
 			th {
-				background-color: $act-colour__grey;
-				border: 1px solid $act-colour__grey;
-				border-left: 1px solid $act-colour__grey;
+				background-color: $act-colour__middle-dark-grey;
+				border: 1px solid $act-colour__middle-dark-grey;
+				border-left: 1px solid $act-colour__middle-dark-grey;
 				border-radius: 0px !important;
-				border-right: 1px solid $act-colour__grey;
+				border-right: 1px solid $act-colour__middle-dark-grey;
 				color: $act-colour__white !important;
 				font-size: $act-font-size__desktop-p-small;
 				font-weight: $act-font-weight__semibold;
@@ -33,7 +33,7 @@ table,
 			}
 		}
 	}
-	&__secondary {
+	&__underlined {
 		thead,
 		tfoot {
 			tr {
@@ -46,6 +46,53 @@ table,
 					border-right: 0px solid $act-colour__white;
 					border-top: 0px solid $act-colour__white;
 					color: $act-colour__black !important;
+				}
+			}
+		}
+	}
+	&__bordered {
+		thead,
+		tbody,
+		tfoot {
+			tr {
+				td,
+				th {
+					background-color: $act-colour__white;
+					border: 1px solid $act-colour__middle-grey;
+					border-left: 1px solid $act-colour__middle-grey;
+					border-radius: 0px !important;
+					border-right: 1px solid $act-colour__middle-grey;
+					border-top: 1px solid $act-colour__middle-grey;
+					color: $act-colour__black !important;
+				}
+			}
+		}
+	}
+	&__filled-bordered {
+		thead,
+		tfoot {
+			tr {
+				td,
+				th {
+					background-color: $act-colour__middle-dark-grey;
+					border: 1px solid $act-colour__middle-grey;
+					border-left: 1px solid $act-colour__middle-grey;
+					border-radius: 0px !important;
+					border-right: 1px solid $act-colour__middle-grey;
+					border-top: 1px solid $act-colour__middle-grey;
+					color: $act-colour__white !important;
+				}
+			}
+		}
+		tbody {
+			tr {
+				td {
+					background-color: $act-colour__light-grey;
+					border: 1px solid $act-colour__middle-grey;
+					border-left: 1px solid $act-colour__middle-grey;
+					border-radius: 0px !important;
+					border-right: 1px solid $act-colour__middle-grey;
+					border-top: 1px solid $act-colour__middle-grey;
 				}
 			}
 		}
@@ -70,7 +117,7 @@ table,
 					border-bottom: 1px solid $act-colour__middle-grey !important;
 				}
 			}
-			&:nth-child(odd) {
+			&:nth-child(even) {
 				td {
 					background-color: $act-colour__light-grey;
 				}
