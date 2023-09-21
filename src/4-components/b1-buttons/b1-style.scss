@@ -260,7 +260,7 @@
 	&__back-to-top {
 		border: 2px solid $act-colour__middle-dark-grey;
 		border-radius: $act-radius__desktop-full;
-		background: none;
+		background: $act-colour__white;
 		color: $act-colour__middle-dark-grey;
 		padding: 32px 24px;
 		margin: 0 !important;

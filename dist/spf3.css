@@ -1520,7 +1520,7 @@ a,
   .act-button__back-to-top {
     border: 2px solid #4b4b4b;
     border-radius: 50%;
-    background: none;
+    background: #ffffff;
     color: #4b4b4b;
     padding: 32px 24px;
     margin: 0 !important;
