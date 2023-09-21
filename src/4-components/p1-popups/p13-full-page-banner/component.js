@@ -16,7 +16,7 @@ export const createP13 = ({
 		<p class="demo-content__subtitle">Have your say on the future of the ACT. The ACT Government is developing a new 10-year plan for the ACT. We want to hear from you about what you think is important for the future of the ACT.</p>
 		<button class="act-button act-button__primary act-button__default act-button__icon-left" type="button">
 			Birrigai
-			<i class="fa-solid fa-face-laugh"></i>
+			<z class="fa-solid fa-face-laugh"></z>
 		</button>
 	</div>
 	</div>

@@ -11,7 +11,7 @@ export const createF11 = () => {
   return `
 <div class="act-flex act-flex-middle-dark-grey">
   <div class="act-flex__container">
-    <div class="act-flex__grid">
+    <div class="act-flex__grid act-footer-main">
 
       <div class="act-flex__row">
         <div class="act-col__cw-3">
@@ -59,7 +59,7 @@ export const createF11 = () => {
               <h4>Karrugang</h4>
               <ul>
                 <li>Gamburra</li>
-                <li>Yumba<i class="fa-solid fa-arrow-up-right-from-square"></i></li>
+                <li>Yumba<z class="fa-solid fa-arrow-up-right-from-square"></z></li>
               </ul>
             </div>
           </div>
@@ -84,16 +84,16 @@ export const createF11 = () => {
                   <div class="act-footer-main__socials">
                     <h5>Follow us</h5>
                     <a class="act-footer-main__socials__icon" href="#" target="_blank" title="Facebook">
-                      <i class="fa-brands fa-facebook-f"></i>
+                      <z class="fa-brands fa-facebook-f"></z>
                     </a>
                     <a class="act-footer-main__socials__icon" href="#" target="_blank" title="Twitter">
-                      <i class="fa-brands fa-twitter"></i>
+                      <z class="fa-brands fa-twitter"></z>
                     </a>
                     <a class="act-footer-main__socials__icon" href="#" target="_blank" title="Linkedin">
-                      <i class="fa-brands fa-linkedin-in"></i>
+                      <z class="fa-brands fa-linkedin-in"></z>
                     </a>
                     <a class="act-footer-main__socials__icon" href="#" target="_blank" title="YouTube">
-                      <i class="fa-brands fa-youtube"></i>
+                      <z class="fa-brands fa-youtube"></z>
                     </a>
                   </div>
                 </div>

@@ -52,6 +52,12 @@
 			&:last-of-type {
 				display: none;
 			}
+			&__form {
+				align-items: center;
+				display: flex;
+				flex-direction: row;
+				justify-content: center;
+			}
 			input {
 				border: none;
 				outline: none;
@@ -69,9 +75,13 @@
 					width: 200px !important;
 				}
 			}
-			i {
+			button,
+			z {
 				align-items: center;
+				background: none;
+				border: none;
 				border-radius: 25%;
+				cursor: pointer;
 				display: flex;
 				height: map-get($act-space, "desktop-3");
 				justify-content: center;
@@ -86,7 +96,8 @@
 		@include devices(mobile) {
 			padding: 0px;
 			&__container {
-				i {
+				button,
+				z {
 					margin-left: 0px;
 				}
 				&:first-of-type {
@@ -139,7 +150,7 @@
 			font-size: $act-font-size__desktop-h5;
 			font-weight: $act-font-weight__semibold;
 			line-height: $act-line-height__130;
-			i {
+			z {
 				align-items: center;
 				border-radius: 25%;
 				display: flex;
@@ -160,7 +171,7 @@
 		@include devices(mobile) {
 			&__container {
 				background: $act-colour__purple;
-				i {
+				z {
 					margin-left: 0px;
 				}
 			}

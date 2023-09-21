@@ -20,7 +20,7 @@
 			justify-content: space-between;
 			padding: map-get($act-space, "desktop-2");
 			width: 100%;
-			i {
+			z {
 				font-size: $act-font-size__desktop-h4;
 				transform-origin: center;
 				transform: rotate(45deg);
@@ -37,7 +37,7 @@
 			[class*="__heading"] {
 				background-color: $act-colour__light-grey;
 				color: $act-colour__black;
-				i {
+				z {
 					color: $act-colour__purple;
 				}
 				&:hover,
@@ -57,7 +57,7 @@
 			[class*="__heading"] {
 				background-color: $act-colour__purple;
 				color: $act-colour__white;
-				i {
+				z {
 					transform: rotate(0deg);
 				}
 			}
@@ -77,7 +77,7 @@
 				background-color: $act-colour__white;
 				border: 1px solid $act-colour__middle-grey;
 				color: $act-colour__black;
-				i {
+				z {
 					color: $act-colour__purple;
 				}
 				&:hover,
@@ -97,7 +97,7 @@
 			[class*="__heading"] {
 				background-color: $act-colour__purple;
 				color: $act-colour__white;
-				i {
+				z {
 					transform: rotate(0deg);
 				}
 			}
@@ -134,7 +134,7 @@
 			[class*="__heading"] {
 				border-bottom: 1px solid $act-colour__purple;
 				color: $act-colour__purple;
-				i {
+				z {
 					transform: rotate(0deg);
 					color: $act-colour__black;
 				}

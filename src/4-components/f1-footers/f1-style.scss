@@ -34,7 +34,7 @@
 				line-height: inherit;
 				text-decoration: none;
 				width: fit-content;
-				i {
+				z {
 					margin-left: map-get($act-space, "desktop-0");
 				}
 				&:hover,
@@ -95,7 +95,7 @@
 			height: map-get($act-space, "desktop-4");
 			margin: 0px map-get($act-space, "desktop-1");
 			width: map-get($act-space, "desktop-4");
-			i {
+			z {
 				font-size: map-get($act-space, "desktop-2");
 			}
 			&:last-child {
@@ -109,7 +109,7 @@
 	&__title {
 		display: flex;
 		flex-direction: row;
-		i {
+		z {
 			background-color: $act-colour__white;
 			display: block;
 			height: map-get($act-space, "desktop-4");
@@ -125,7 +125,7 @@
 		margin-right: map-get($act-space, "desktop-2");
 		height: map-get($act-space, "desktop-4");
 		width: map-get($act-space, "desktop-4");
-		i,
+		z,
 		img {
 			height: 100%;
 			width: auto;
@@ -191,7 +191,7 @@
 			&:last-of-type {
 				margin-right: 0px;
 			}
-			i {
+			z {
 				display: flex;
 				font-size: map-get($act-space, "desktop-2");
 				height: map-get($act-space, "desktop-2");

@@ -367,7 +367,7 @@ form p,
 		margin-top: map-get($act-space, "desktop-1");
 		padding: map-get($act-space, "desktop-1");
 		width: 100%;
-		i {
+		z {
 			color: $act-colour__alert-red;
 			margin-right: map-get($act-space, "desktop-1");
 		}

@@ -33,8 +33,8 @@
 	background-color: $act-colour__dark-deep-violet;
 	display: flex;
 	flex-direction: column;
-	height: 100%;
 	min-height: 50vh;
+	position: absolute;
 	@include devices(tablet) {
 		height: auto;
 	}
@@ -42,7 +42,7 @@
 		height: auto;
 	}
 	left: 0px;
-	top: 0px;
+	top: 136px;
 	width: 100%;
 	z-index: 9999;
 	box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
@@ -234,8 +234,8 @@
 			color: $act-colour__dark-deep-violet;
 			border-bottom: 1px dashed $act-colour__light-deep-violet;
 		}
-		.act-megamenu__link:hover i,
-		.act-megamenu__link:focus i {
+		.act-megamenu__link:hover z,
+		.act-megamenu__link:focus z {
 			color: $act-colour__dark-deep-violet;
 		}
 	}
@@ -328,7 +328,7 @@
 		font-weight: $act-font-weight__bold;
 		justify-content: center;
 		line-height: $act-line-height__100;
-		i {
+		z {
 			font-size: $act-font-size__desktop-h3;
 			margin-left: map-get($act-space, "desktop-1");
 		}

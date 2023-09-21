@@ -16,7 +16,7 @@ export const createW16 = ({
     var html = `
     <li class="act-breadcrumbs__crumb">
       <a class="act-breadcrumbs__crumb__link" href="`+link+`" target="_self" title="`+label+`">
-        `+label+` <i class="fa-solid fa-angle-right"></i>
+        `+label+` <z class="fa-solid fa-angle-right"></z>
       </a>
     </li>
     `;

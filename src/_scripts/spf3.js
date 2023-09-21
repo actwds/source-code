@@ -32,10 +32,28 @@ let alerts = globalAlertDismiss.forEach(function(alert, index) {
 	});
 });
 
-//B11 - Back to top Button
+//B13 - Back to top Button
 function backToTop() {
-	window.scrollTo(0, 0);
+	document.getElementById("act-header").scrollIntoView({
+		behavior: "smooth",
+	});
 }
+const backToTopButton = document.getElementById("back-to-top");
+backToTopButton.addEventListener("click", function() {
+	backToTop();
+});
+
+function revealOnScroll() {
+	if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+		backToTopButton.classList.remove("act-button__back-to-top__hidden");
+	} else {
+		backToTopButton.classList.add("act-button__back-to-top__hidden");
+	}
+}
+
+window.addEventListener("scroll", function() {
+	revealOnScroll();
+});
 
 //P11 - Popover
 function togglePopover() {
@@ -127,7 +145,8 @@ document.addEventListener("DOMContentLoaded", function() {
 	const megaMenuIcon = document.querySelectorAll(".act-navbar__menu .act-navbar__menu__container i")[0];
 	const megaMenuText = document.getElementsByClassName("act-navbar__menu__text")[0];
 	megaMenuToggle.forEach(function(button) {
-		button.addEventListener("click", function() {
+		button.addEventListener("click", function(e) {
+			e.preventDefault();
 			megaMenu.classList.toggle("act-megamenu__open");			
 			if (!megaMenu.classList.contains("act-megamenu__open")) {
 				megaMenuIcon.classList.add("fa-bars");
@@ -221,15 +240,16 @@ document.addEventListener("keydown", function(e) {
 			let sw = screen.width;
 			//left
 			if(event.keyCode === 37) {
-				if (i % 2 == 0) { //left col
+				if (i % 2 == 0 || sw < 991) { //left col
 					//
 					document.getElementsByClassName("act-megamenu__content__block-sub-menu")[0].classList.add("hidden-mobile");
 					Array.from(document.getElementsByClassName("act-megamenu__sub-menu-link-container")).forEach(function(container) {
 						container.style.display = "none";
 					});
 					let numMega = document.activeElement.closest(".act-megamenu__sub-menu-link-container").id.split("-")[2];
-					document.querySelector("#main-menu-link-" + numMega).focus();
+					// 	document.querySelector("#main-menu-link-" + numMega).focus();
 					toggleSubMenu(false);
+					document.querySelector("#main-menu-link-" + numMega).focus();
 				} else {
 					//right col
 					document.activeElement.previousElementSibling.focus();
@@ -237,12 +257,12 @@ document.addEventListener("keydown", function(e) {
 			}
 			//up
 			if(event.keyCode === 38) {
-				if (i == 0 || i == 1) {
+				if (sw < 991 && i != 0) {
+					document.activeElement.previousElementSibling.focus();
+				} else if (i == 0 || i == 1) {
 					if (!active.parentNode.classList.contains("section-heading")) {
 						document.activeElement.parentNode.previousElementSibling.querySelector("a").focus();
 					}
-				} else if (sw < 991) {
-					document.activeElement.previousElementSibling.focus();
 				} else {
 					document.activeElement.previousElementSibling.previousElementSibling.focus();
 				}
@@ -259,15 +279,15 @@ document.addEventListener("keydown", function(e) {
 			if(event.keyCode === 40) {
 				if (active.parentNode.classList.contains("section-heading")) {
 					document.activeElement.parentNode.nextElementSibling.querySelector("a").focus();
+				} else if (sw < 991 && (activeSubnavCount-1) != i) {
+					document.activeElement.nextElementSibling.focus();
 				} else if ((activeSubnavCount-2) == i || (activeSubnavCount-1) == i) {
 					active.focus();
-				} else if (sw < 991) {
-					document.activeElement.nextElementSibling.focus();
 				} else {
 					document.activeElement.nextElementSibling.nextElementSibling.focus();
 				}
 			}
-		} else {
+		} else if (document.activeElement.closest(".act-megamenu__link-container")) {
 			let active = document.activeElement;
 			let activeCount = active.closest(".act-megamenu__link-container").childElementCount;
 			let i = Array.from(active.closest(".act-megamenu__link-container").children).indexOf(active.closest(".act-megamenu__link"));
@@ -297,6 +317,30 @@ document.addEventListener("keydown", function(e) {
 			if(event.keyCode === 40) {
 				if ((activeCount-1) != i) {
 					active.nextElementSibling.focus();				
+				} else {
+					document.querySelector(".act-megamenu__content__block-main-menu__additional-links a").focus();
+				}
+			}
+		} else if (document.activeElement.closest(".act-megamenu__content__block-main-menu__additional-links")) {
+			let active = document.activeElement;
+			let activeCount = active.closest(".act-megamenu__content__block-main-menu__additional-links").childElementCount;
+			let i = Array.from(active.closest(".act-megamenu__content__block-main-menu__additional-links").children).indexOf(active.closest(".act-megamenu__link"));
+			//up
+			if(event.keyCode === 38) {
+				if (!i == 0) {
+					active.previousElementSibling.focus();
+				} else {
+					let x = document.querySelector(".act-megamenu__link-container").childElementCount -1;
+					document.querySelectorAll(".act-megamenu__link-container a")[x].focus();
+				}
+			}
+
+			//down
+			if(event.keyCode === 40) {
+				if ((activeCount-1) != i) {
+					active.nextElementSibling.focus();				
+				} else {
+					document.querySelector(".act-megamenu__content__block-main-menu__additional-links a").focus();
 				}
 			}
 		}
@@ -308,6 +352,7 @@ document.addEventListener("keydown", function(e) {
 document.addEventListener("DOMContentLoaded", function() {
 	const megaMenuLeft = document.getElementsByClassName("act-megamenu__content__block-main-menu")[0];
 	megaMenuLeft.addEventListener("click", function(e) {
+		e.preventDefault();
 		if (e.target.closest(".act-megamenu__link")) {
 			return;
 		} 

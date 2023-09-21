@@ -29,7 +29,7 @@ main,
 				flex-direction: row;
 				text-decoration: none;
 			}
-			i {
+			z {
 				align-items: center;
 				display: inline-flex;
 				font-size: 12px;
@@ -43,7 +43,7 @@ main,
 			&:last-of-type {
 				color: $act-colour__purple;
 				font-weight: $act-font-weight__semibold;
-				i {
+				z {
 					display: none;
 				}
 			}
@@ -61,7 +61,7 @@ main,
 					a {
 						flex-direction: row-reverse;
 					}
-					i {
+					z {
 						display: flex;
 						margin-left: 0px;
 						margin-right: map-get($act-space, "desktop-1");

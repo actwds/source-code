@@ -160,7 +160,7 @@
 	}
 	&__description {
 		margin-top: map-get($act-space, "desktop-1");
-		i {
+		z {
 			color: $act-colour__light-deep-violet;
 			margin-right: map-get($act-space, "desktop-0");
 		}

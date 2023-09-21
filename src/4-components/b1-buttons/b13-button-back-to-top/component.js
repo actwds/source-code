@@ -18,7 +18,7 @@ export const createB13 = ({
 
   return `
 <button class="act-button act-button__primary act-button__default act-button__back-to-top act-button__back-to-top__`+size+` act-button__icon-right" type="button">
-  <i class="fa-solid fa-arrow-up"></i>
+  <z class="fa-solid fa-arrow-up"></z>
 </button>
 	  `;
 };

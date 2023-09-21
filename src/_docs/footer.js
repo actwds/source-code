@@ -274,7 +274,7 @@ const Footer = () => {
 										</li>
 										<li>
 											<a href="https://github.com/ACTWDS/source-code" target="_blank" title="ACTWDS GitHub" rel="noreferrer">
-												GitHub <i className="fa-solid fa-arrow-up-right-from-square"></i>
+												GitHub <z className="fa-solid fa-arrow-up-right-from-square"></z>
 											</a>
 										</li>
 									</ul>
@@ -293,16 +293,16 @@ const Footer = () => {
 											<div className="act-footer-main__socials">
 												<h5>Follow us</h5>
 												<a className="act-footer-main__socials__icon" href="#" target="_blank" title="Facebook">
-													<i className="fa-brands fa-facebook-f"></i>
+													<z className="fa-brands fa-facebook-f"></z>
 												</a>
 												<a className="act-footer-main__socials__icon" href="#" target="_blank" title="Twitter">
-													<i className="fa-brands fa-twitter"></i>
+													<z className="fa-brands fa-twitter"></z>
 												</a>
 												<a className="act-footer-main__socials__icon" href="#" target="_blank" title="Linkedin">
-													<i className="fa-brands fa-linkedin-in"></i>
+													<z className="fa-brands fa-linkedin-in"></z>
 												</a>
 												<a className="act-footer-main__socials__icon" href="#" target="_blank" title="YouTube">
-													<i className="fa-brands fa-youtube"></i>
+													<z className="fa-brands fa-youtube"></z>
 												</a>
 											</div>
 										</div>

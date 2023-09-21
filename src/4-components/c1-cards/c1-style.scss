@@ -162,7 +162,7 @@
 		[class*="__icon"] {
 			display: none;
 			margin-bottom: map-get($act-space, "desktop-1");
-			i {
+			z {
 				align-items: center;
 				color: $act-colour__purple;
 				display: inline-flex;
@@ -203,7 +203,7 @@
 			margin-top: map-get($act-space, "desktop-3");
 			text-decoration: none;
 			transition: margin 0.2s $act-animation__cubic-bezier;
-			i {
+			z {
 				align-items: center;
 				color: $act-colour__purple;
 				display: inline-flex;
@@ -261,7 +261,7 @@
 			[class*="__icon"],
 			[class*="__cta"] {
 				color: $act-colour__white;
-				i {
+				z {
 					color: $act-colour__white;
 				}
 			}
@@ -301,7 +301,6 @@
 			border-color: transparent;
 			border-width: 2px;
 		}
-		[class*="__image"],
 		[class*="__timestamp"] {
 			display: none;
 		}
@@ -311,7 +310,7 @@
 			color: $act-colour__black;
 		}
 		[class*="__cta"] {
-			i {
+			z {
 				display: none;
 			}
 			span {
@@ -334,7 +333,7 @@
 			}
 			[class*="__icon"],
 			[class*="__cta"] {
-				i,
+				z,
 				span {
 					color: $act-colour__purple;
 				}
@@ -388,7 +387,7 @@
 			[class*="__icon"],
 			[class*="__cta"] {
 				color: $act-colour__white;
-				i {
+				z {
 					color: $act-colour__white;
 				}
 			}
@@ -413,7 +412,6 @@
 		.act-tag__container,
 		[class*="__image"],
 		[class*="__timestamp"],
-		[class*="__description"],
 		[class*="__cta"] span {
 			display: none;
 		}
@@ -424,9 +422,10 @@
 			color: $act-colour__white;
 			[class*="__title"],
 			[class*="__icon"],
-			[class*="__cta"] {
+			[class*="__cta"],
+			[class*="__description"] {
 				color: $act-colour__white;
-				i {
+				z {
 					color: $act-colour__white;
 				}
 			}

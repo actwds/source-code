@@ -24,7 +24,7 @@ export const createP12 = ({
       <div class="act-popup__block ">
         <div class="act-h4">Cookie Consent Banner</div>
         <div class="act-popup__close">
-          <i class="fa-solid fa-xmark"></i>
+          <z class="fa-solid fa-xmark"></z>
         </div>
       </div>
       <div class="act-popup__block">

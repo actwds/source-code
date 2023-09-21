@@ -58,8 +58,8 @@ export const createM11 = ({
           <div class="act-progress__step complete">
             <div class="act-progress__step__icon">
               <span class="act-p-small">
-                <i class="fa-solid fa-pen multi-step-icon-edit"></i>
-                <i class="fa-solid fa-check multi-step-icon-check"></i>
+                <z class="fa-solid fa-pen multi-step-icon-edit"></z>
+                <z class="fa-solid fa-check multi-step-icon-check"></z>
               </span>
             </div>
             <div class="act-progress__step__text">
@@ -69,8 +69,8 @@ export const createM11 = ({
           <div class="act-progress__step complete">
             <div class="act-progress__step__icon">
               <span class="act-p-small">
-                <i class="fa-solid fa-pen multi-step-icon-edit"></i>
-                <i class="fa-solid fa-check multi-step-icon-check"></i>
+                <z class="fa-solid fa-pen multi-step-icon-edit"></z>
+                <z class="fa-solid fa-check multi-step-icon-check"></z>
               </span>
             </div>
             <div class="act-progress__step__text">
@@ -80,8 +80,8 @@ export const createM11 = ({
           <div class="act-progress__step">
             <div class="act-progress__step__icon">
               <span class="act-p-small">
-                <i class="fa-solid fa-pen multi-step-icon-edit"></i>
-                <i class="fa-solid fa-check multi-step-icon-check"></i>
+                <z class="fa-solid fa-pen multi-step-icon-edit"></z>
+                <z class="fa-solid fa-check multi-step-icon-check"></z>
               </span>
             </div>
             <div class="act-progress__step__text">
@@ -91,8 +91,8 @@ export const createM11 = ({
           <div class="act-progress__step">
             <div class="act-progress__step__icon">
               <span class="act-p-small">
-                <i class="fa-solid fa-pen multi-step-icon-edit"></i>
-                <i class="fa-solid fa-check multi-step-icon-check"></i>
+                <z class="fa-solid fa-pen multi-step-icon-edit"></z>
+                <z class="fa-solid fa-check multi-step-icon-check"></z>
               </span>
             </div>
             <div class="act-progress__step__text">
@@ -102,7 +102,7 @@ export const createM11 = ({
           <div class="act-progress__step">
             <div class="act-progress__step__icon">
               <span class="act-p-small">
-                <i class="fa-solid fa-pen"></i>
+                <z class="fa-solid fa-pen"></z>
               </span>
             </div>
             <div class="act-progress__step__text">
@@ -113,11 +113,11 @@ export const createM11 = ({
         <div class="act-multi-step__navigation__buttons">
            <button class="act-button act-button__secondary act-button__default act-button__no-icon act-button__secondary-undefined" type="button">
                   Previous
-							<i class="fa-solid undefined"></i>
+							<z class="fa-solid undefined"></z>
 						</button>
 						<button class="act-button act-button__primary act-button__default act-button__no-icon act-button__primary-undefined" type="button">
 							Next
-							<i class="fa-solid undefined"></i>
+							<z class="fa-solid undefined"></z>
 						</button>
       </div>
   </div>
