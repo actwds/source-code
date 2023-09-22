@@ -95,11 +95,23 @@
 			height: map-get($act-space, "desktop-4");
 			margin: 0px map-get($act-space, "desktop-1");
 			width: map-get($act-space, "desktop-4");
+			&:hover {
+				background-color: $act-colour__dark-bright-violet;
+			}
 			z {
 				font-size: map-get($act-space, "desktop-2");
 			}
 			&:last-child {
+				background-color: $act-colour__middle-dark-grey;
+				&:hover {
+					background-color: $act-colour__black;
+				}
+			}
+			&__inactive {
 				background-color: $act-colour__middle-grey;
+				&:last-child {
+					background-color: $act-colour__middle-grey;
+				}
 			}
 		}
 	}

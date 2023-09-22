@@ -1631,10 +1631,18 @@ a,
       height: 32px;
       margin: 0px 8px;
       width: 32px; }
+      .act-footer-feedback__block__button:hover {
+        background-color: #7b5bd0; }
       .act-footer-feedback__block__button z {
         font-size: 16px; }
       .act-footer-feedback__block__button:last-child {
+        background-color: #4b4b4b; }
+        .act-footer-feedback__block__button:last-child:hover {
+          background-color: #111111; }
+      .act-footer-feedback__block__button__inactive {
         background-color: #adadad; }
+        .act-footer-feedback__block__button__inactive:last-child {
+          background-color: #adadad; }
 
 .act-footer-aoc__title {
   display: flex;
