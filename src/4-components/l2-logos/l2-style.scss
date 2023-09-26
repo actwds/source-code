@@ -66,6 +66,7 @@ $act-local-cobrand-text-height-desktop: calc(#{($act-local-logo-height-desktop/1
 					color: $act-colour__black;
 					display: flex;
 					font-size: $act-font-size__desktop-p-large;
+					line-height: normal;
 					margin-left: $act-local-logo-space;
 					min-height: $act-local-cobrand-text-height-desktop;
 					padding-left: $act-local-logo-space;
