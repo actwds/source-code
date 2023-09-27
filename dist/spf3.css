@@ -3736,6 +3736,8 @@ table,
         .act-megamenu__content__block-main-menu__additional-links .act-megamenu__link:hover a,
         .act-megamenu__content__block-main-menu__additional-links .act-megamenu__link:focus a {
           color: #1e0f48; }
+        .act-megamenu__content__block-main-menu__additional-links .act-megamenu__link__text {
+          font-family: "Source Sans Pro", sans-serif; }
         .act-megamenu__content__block-main-menu__additional-links button {
           background: none;
           border: 1px solid #f6f6f6;
