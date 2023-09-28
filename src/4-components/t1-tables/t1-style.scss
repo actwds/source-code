@@ -25,7 +25,8 @@ table,
 				border-radius: 0px !important;
 				border-right: 1px solid $act-colour__middle-dark-grey;
 				color: $act-colour__white !important;
-				font-size: $act-font-size__desktop-p-small;
+				font-family: $montserrat;
+				font-size: $act-font-size__desktop-p;
 				font-weight: $act-font-weight__semibold;
 				line-height: $act-line-height__150;
 				padding: map-get($act-space, "desktop-2");
@@ -106,7 +107,7 @@ table,
 				border-left: 1px solid transparent;
 				border-radius: 0px !important;
 				border-right: 1px solid transparent;
-				font-size: $act-font-size__desktop-p-small;
+				font-size: $act-font-size__desktop-p;
 				font-weight: $act-font-weight__regular;
 				line-height: $act-line-height__150;
 				padding: map-get($act-space, "desktop-2");

@@ -46,10 +46,12 @@
 			}
 		}
 	}
-	h4 {
+	h2 {
+		margin-top: 0;
 		a {
 			color: $act-colour__white;
 			border-bottom: 1px solid transparent;
+			font-size: $act-font-size__desktop-h4;
 			&:hover,
 			&:focus {
 				border-bottom: 1px dashed $act-colour__middle-grey;

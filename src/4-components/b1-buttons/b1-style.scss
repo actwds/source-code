@@ -292,8 +292,14 @@
 				color: $act-colour__white;
 			}
 		}
+		@include devices(mobile) {
+			padding: $act-space__desktop-3 $act-space__desktop-2;
+			z {
+				font-size: $act-font-size__desktop-h2;
+			}
+		}
 		&__mobile {
-			padding: 24px 16px;
+			padding: $act-space__desktop-3 $act-space__desktop-2;
 			z {
 				font-size: $act-font-size__desktop-h2;
 			}

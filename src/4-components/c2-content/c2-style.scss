@@ -115,6 +115,9 @@
 			padding: map-get($act-space, "desktop-1") 0;
 		}
 	}
+	&__title {
+		margin: 0;
+	}
 }
 
 .act-links-list {
