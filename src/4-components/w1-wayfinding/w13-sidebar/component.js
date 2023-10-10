@@ -3,7 +3,7 @@ export const createW13 = () => {
   return `
 <div class="act-sidebar">
   <div class="act-sidebar__title">
-    Title
+    <a href="#">Title</a>
   </div>
   <details class="act-sidebar__item">
     <summary class="act-sidebar__item__summary">

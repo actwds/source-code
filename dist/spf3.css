@@ -567,6 +567,8 @@ a,
     justify-content: space-between;
     padding: 16px;
     width: 100%; }
+    .act-accordion__section__heading h5 {
+      margin: 0; }
     .act-accordion__section__heading z {
       font-size: 24px;
       transform-origin: center;
@@ -1182,6 +1184,17 @@ a,
         transition: 0s; }
     .act-card__homepage:hover [class*="__container"], .act-card__homepage:focus [class*="__container"] {
       box-shadow: inset 0 4px 0 0 #472d8c, inset 4px 0 0 0 #472d8c, inset -4px 0 0 0 #472d8c, 0 4px 0 #472d8c; }
+    @media only screen and (min-width: 0px) and (max-width: 478px) {
+      .act-card__homepage .act-card__content {
+        flex-direction: row;
+        align-items: center; }
+      .act-card__homepage [class*="__title"],
+      .act-card__homepage [class*="__icon"] {
+        margin-right: 1rem; }
+      .act-card__homepage [class*="__cta"] {
+        margin: 0; }
+      .act-card__homepage [class*="__description"] {
+        display: none; } }
   .act-card__featured {
     border: 0px solid transparent;
     background-image: url("/images/purple.jpg");
@@ -1318,6 +1331,11 @@ a,
 .act-table-contents__title {
   margin: 0; }
 
+.toc {
+  margin-bottom: 32px; }
+  .toc h2 {
+    margin: 0; }
+
 .act-links-list__container {
   padding: 16px; }
 
@@ -1425,7 +1443,8 @@ a,
       color: #ffffff; }
     .act-button__primary:focus, .act-button__primary-focus {
       border-color: #472d8c;
-      box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #472d8c; }
+      box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #472d8c;
+      color: #ffffff; }
       .act-button__primary:focus z, .act-button__primary-focus z {
         color: #ffffff; }
     .act-button__primary:disabled, .act-button__primary-disabled {
@@ -1449,7 +1468,8 @@ a,
         color: #1e0f48; }
     .act-button__secondary:focus, .act-button__secondary-focus {
       border-color: #472d8c;
-      box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #472d8c; }
+      box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #472d8c;
+      color: #1e0f48; }
       .act-button__secondary:focus z, .act-button__secondary-focus z {
         color: #472d8c; }
     .act-button__secondary:disabled, .act-button__secondary-disabled {
@@ -1476,7 +1496,8 @@ a,
         color: #1e0f48; }
     .act-button__tertiary:focus, .act-button__tertiary-focus {
       border-color: #ffffff;
-      box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #472d8c; }
+      box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #472d8c;
+      color: #1e0f48; }
       .act-button__tertiary:focus z, .act-button__tertiary-focus z {
         color: #472d8c; }
     .act-button__tertiary:disabled, .act-button__tertiary-disabled {
@@ -1713,6 +1734,7 @@ a,
           background-color: #adadad; }
 
 .act-footer-aoc__title {
+  align-items: center;
   display: flex;
   flex-direction: row; }
   .act-footer-aoc__title z {
@@ -1793,6 +1815,11 @@ a,
         background-color: #9a78f2;
         border: none;
         color: #ffffff; }
+  @media only screen and (min-width: 0px) and (max-width: 478px) {
+    .act-footer-main__container {
+      flex-flow: row wrap; }
+    .act-footer-main__socials {
+      justify-content: flex-start; } }
 
 form,
 .act-form {
@@ -3006,6 +3033,15 @@ table,
     line-height: 150%;
     padding: 16px;
     text-align: left; }
+    table thead tr td p,
+    table thead tr th p,
+    table tfoot tr td p,
+    table tfoot tr th p,
+    .act-table thead tr td p,
+    .act-table thead tr th p,
+    .act-table tfoot tr td p,
+    .act-table tfoot tr th p {
+      color: #ffffff !important; }
   table__underlined thead tr td,
   table__underlined thead tr th,
   table__underlined tfoot tr td,
@@ -3055,6 +3091,15 @@ table,
     border-right: 1px solid #adadad;
     border-top: 1px solid #adadad;
     color: #ffffff !important; }
+    table__filled-bordered thead tr td p,
+    table__filled-bordered thead tr th p,
+    table__filled-bordered tfoot tr td p,
+    table__filled-bordered tfoot tr th p,
+    .act-table__filled-bordered thead tr td p,
+    .act-table__filled-bordered thead tr th p,
+    .act-table__filled-bordered tfoot tr td p,
+    .act-table__filled-bordered tfoot tr th p {
+      color: #ffffff !important; }
   table__filled-bordered tbody tr td,
   .act-table__filled-bordered tbody tr td {
     background-color: #f6f6f6;
@@ -3369,6 +3414,11 @@ table,
   @media only screen and (min-width: 0px) and (max-width: 478px) {
     .act-masthead {
       display: none; } }
+  .act-masthead__skip {
+    position: absolute;
+    top: -1000px; }
+    .act-masthead__skip:focus {
+      position: static; }
 
 .act-navbar {
   background-color: #ffffff;
@@ -3631,6 +3681,8 @@ table,
       background-color: #472d8c;
       color: #ffffff;
       transition: background-color 0.1s cubic-bezier(0, 0, 0.58, 1), color 0.1s cubic-bezier(0, 0, 0.58, 1); }
+      .act-pagination .act-page-marker__current a {
+        color: #ffffff; }
       .act-pagination .act-page-marker__current:hover, .act-pagination .act-page-marker__current:focus {
         background-color: #472d8c;
         color: #ffffff; }
@@ -3686,7 +3738,8 @@ table,
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06); }
   @media only screen and (min-width: 479px) and (max-width: 991px) {
     .act-megamenu {
-      height: auto; } }
+      height: auto;
+      top: 130px; } }
   @media only screen and (min-width: 0px) and (max-width: 478px) {
     .act-megamenu {
       height: auto;

@@ -87,6 +87,7 @@
 		&-focus {
 			border-color: $act-colour__purple;
 			box-shadow: 0 0 0 2px $act-colour__white, 0 0 0 4px $act-colour__purple;
+			color: $act-colour__white;
 			z {
 				color: $act-colour__white;
 			}
@@ -123,6 +124,7 @@
 		&-focus {
 			border-color: $act-colour__purple;
 			box-shadow: 0 0 0 2px $act-colour__white, 0 0 0 4px $act-colour__purple;
+			color: $act-colour__dark-deep-violet;
 			z {
 				color: $act-colour__purple;
 			}
@@ -164,6 +166,7 @@
 		&-focus {
 			border-color: $act-colour__white;
 			box-shadow: 0 0 0 2px $act-colour__white, 0 0 0 4px $act-colour__purple;
+			color: $act-colour__dark-deep-violet;
 			z {
 				color: $act-colour__purple;
 			}

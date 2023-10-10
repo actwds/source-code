@@ -20,6 +20,9 @@
 			justify-content: space-between;
 			padding: map-get($act-space, "desktop-2");
 			width: 100%;
+			h5 {
+				margin: 0;
+			}
 			z {
 				font-size: $act-font-size__desktop-h4;
 				transform-origin: center;

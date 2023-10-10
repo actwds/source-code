@@ -31,6 +31,9 @@ table,
 				line-height: $act-line-height__150;
 				padding: map-get($act-space, "desktop-2");
 				text-align: left;
+				p {
+					color: $act-colour__white !important;
+				}
 			}
 		}
 	}
@@ -82,6 +85,9 @@ table,
 					border-right: 1px solid $act-colour__middle-grey;
 					border-top: 1px solid $act-colour__middle-grey;
 					color: $act-colour__white !important;
+					p {
+						color: $act-colour__white !important;
+					}
 				}
 			}
 		}

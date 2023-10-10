@@ -37,6 +37,7 @@
 	position: absolute;
 	@include devices(tablet) {
 		height: auto;
+		top: 130px;
 	}
 	@include devices(mobile) {
 		height: auto;

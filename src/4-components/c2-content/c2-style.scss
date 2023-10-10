@@ -120,6 +120,13 @@
 	}
 }
 
+.toc {
+	margin-bottom: $act-space__desktop-4;
+	h2 {
+		margin: 0;
+	}
+}
+
 .act-links-list {
 	&__container {
 		padding: map-get($act-space, "desktop-2");

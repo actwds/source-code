@@ -16,6 +16,9 @@ export const createW11 = ({
   <div class="act-masthead">
     <div class="act-masthead__container">
       <div class="act-masthead__content left">
+        <div class="act-masthead__nav">
+            <a class="act-masthead__skip" href="#act-main">Skip to content</a>
+        </div>
         <span class="sr-only">
           `+title+`
         </span>

@@ -123,6 +123,7 @@
 
 .act-footer-aoc {
 	&__title {
+		align-items: center;
 		display: flex;
 		flex-direction: row;
 		z {
@@ -219,6 +220,14 @@
 				border: none;
 				color: $act-colour__white;
 			}
+		}
+	}
+	@include devices(mobile) {
+		&__container {
+			flex-flow: row wrap;
+		}
+		&__socials {
+			justify-content: flex-start;
 		}
 	}
 }
