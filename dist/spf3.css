@@ -567,7 +567,8 @@ a,
     justify-content: space-between;
     padding: 16px;
     width: 100%; }
-    .act-accordion__section__heading h5 {
+    .act-accordion__section__heading h5,
+    .act-accordion__section__heading .act-h5 {
       margin: 0; }
     .act-accordion__section__heading z {
       font-size: 24px;
@@ -3626,7 +3627,7 @@ table,
         border-bottom: 1px solid #ffffff;
         transition: background-color 0.1s cubic-bezier(0, 0, 0.58, 1); }
         .act-sidebar__item__dropdown__item:hover, .act-sidebar__item__dropdown__item:focus {
-          background-color: #9a78f2;
+          background-color: #e0d5ff;
           color: #111111; }
           .act-sidebar__item__dropdown__item:hover a, .act-sidebar__item__dropdown__item:focus a {
             color: #111111; }
@@ -4125,3 +4126,71 @@ main .act-breadcrumbs,
 
 .act-header {
   position: relative; }
+
+@media print {
+  * {
+    color: black; }
+  .act-alert-global,
+  .act-masthead,
+  .act-navbar__content:last-of-type {
+    display: none; }
+  .act-navbar__container {
+    padding: 0; }
+  h1,
+  .act-h1 {
+    font-size: 28px; }
+  h2,
+  .act-h2 {
+    font-size: 22px; }
+  h3,
+  .act-h3 {
+    font-size: 18px; }
+  h4,
+  .act-h4 {
+    font-size: 16px; }
+  h5,
+  .act-h5 {
+    font-size: 14px; }
+  h6,
+  .act-h6 {
+    font-size: 12px; }
+  a,
+  .act-a {
+    color: #000; }
+  .act-logos__container .act-logo-horizontal img,
+  .act-logos__container .act-logo-cobrand-logo img {
+    height: 30px;
+    max-height: 30px; }
+  .act-accordion__section {
+    border-left: 2px solid #000;
+    padding-left: 8px; }
+    .act-accordion__section__heading {
+      padding-left: 0; }
+  .act-accordion__filled [class*="__closed"] [class*="__heading"] {
+    background-color: transparent; }
+    .act-accordion__filled [class*="__closed"] [class*="__heading"] z {
+      display: none; }
+  .act-accordion__filled [class*="__closed"] [class*="__content"] {
+    visibility: visible;
+    height: auto;
+    opacity: 1; }
+  main .act-breadcrumbs,
+  .act-body .act-breadcrumbs {
+    display: none; }
+  .act-flex-light-grey-gradient {
+    background: transparent; }
+  .act-footer {
+    display: none; }
+  .act-hero-row__search {
+    display: none; }
+  .act-popular-links .act-col__cw-4 {
+    width: 100%; }
+  .act-button__back-to-top {
+    display: none; }
+  .act-card-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .act-card__icon, .act-card__cta, .act-card__image {
+    display: none !important; }
+  .act-card__homepage [class*="__container"] {
+    box-shadow: none;
+    border: 1px solid #111111; } }
