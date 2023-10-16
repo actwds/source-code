@@ -152,6 +152,9 @@
 				width: 100%;
 				color: $act-colour__black;
 				padding-left: map-get($act-space, "desktop-1");
+				span {
+					position: relative;
+				}
 				&:focus,
 				&:hover {
 					color: $act-colour__black;

@@ -126,6 +126,9 @@
 			width: map-get($act-space, "desktop-3");
 		}
 	}
+	p {
+		display: inline;
+	}
 }
 
 .act-alert-inpage {

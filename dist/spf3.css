@@ -758,6 +758,8 @@ a,
     height: 24px;
     margin-right: 0px;
     width: 24px; }
+  .act-alert-global p {
+    display: inline; }
 
 .act-alert-inpage {
   align-items: center;
@@ -1370,6 +1372,8 @@ a,
       width: 100%;
       color: #111111;
       padding-left: 8px; }
+      .act-links-list__content__item__text span {
+        position: relative; }
       .act-links-list__content__item__text:focus, .act-links-list__content__item__text:hover {
         color: #111111;
         background-color: #e3e0ee;
