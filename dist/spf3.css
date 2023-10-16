@@ -692,6 +692,15 @@ a,
       font-weight: 400; }
     .act-alert-global__content span {
       font-weight: 700; }
+    .act-alert-global__content__button {
+      border-color: #111111;
+      color: #111111;
+      font-size: inherit;
+      background: none;
+      border: none;
+      border-bottom: 1px solid transparent; }
+      .act-alert-global__content__button:hover, .act-alert-global__content__button:focus {
+        border-bottom: 1px dashed; }
   .act-alert-global__success {
     background-color: #098660;
     border-color: #ffffff; }
