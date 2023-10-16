@@ -31,6 +31,9 @@
 			background-color: $act-colour__purple;
 			color: $act-colour__white;
 			transition: background-color 0.1s $act-animation__cubic-bezier, color 0.1s $act-animation__cubic-bezier;
+			a {
+				color: $act-colour__white;
+			}
 			&:hover,
 			&:focus {
 				background-color: $act-colour__purple;

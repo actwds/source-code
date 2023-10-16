@@ -26,6 +26,18 @@
 		span {
 			font-weight: $act-font-weight__bold;
 		}
+		&__button {
+			border-color: $act-colour__black;
+			color: $act-colour__black;
+			font-size: inherit;
+			background: none;
+			border: none;
+			border-bottom: 1px solid transparent;
+			&:hover,
+			&:focus {
+				border-bottom: 1px dashed;
+			}
+		}
 	}
 	&__success {
 		background-color: $act-colour__success-green;

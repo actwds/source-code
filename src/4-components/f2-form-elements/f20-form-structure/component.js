@@ -131,7 +131,7 @@ export const createF20 = ({
     <div class="act-flex__grid">
       <div class="act-flex__row">
         <div class="act-col__cw-12">
-          <div class="act-box">
+          <div class="act-box" id="act-main">
             <form class="act-form">
               <h2 class="act-form__title">`+formTitle+`</h2>
               <fieldset class="act-form__section">

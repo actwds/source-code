@@ -30,4 +30,10 @@ $act-break__ultrawide-end: 99999px;
 			@content;
 		}
 	}
+
+	@if $breakpoint == print {
+		@media print {
+			@content;
+		}
+	}
 }

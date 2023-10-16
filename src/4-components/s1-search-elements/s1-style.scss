@@ -42,6 +42,12 @@
 	justify-content: flex-start;
 	position: relative;
 	width: 100%;
+	@include devices(tablet) {
+		margin-top: $act-space__desktop-2;
+	}
+	@include devices(mobile) {
+		margin-top: $act-space__desktop-2;
+	}
 	&__input {
 		background-color: $act-colour__white;
 		box-sizing: border-box;

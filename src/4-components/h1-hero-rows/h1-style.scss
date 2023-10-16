@@ -353,11 +353,13 @@ $act-hero-widget-height: 300px;
 		&__frame {
 			align-items: center;
 			background-color: $act-colour__purple;
+			bottom: -45px;
 			color: $act-colour__white;
 			display: flex;
 			flex-wrap: wrap;
 			justify-content: center;
 			padding: map-get($act-space, "desktop-3");
+			position: absolute;
 			.act-col {
 				&__cw-6 {
 					max-width: 50%;
@@ -392,7 +394,7 @@ $act-hero-widget-height: 300px;
 		}
 	}
 	&__container {
-		margin: -90px auto 0;
+		margin: 0 auto;
 		max-width: $act-page-max-width;
 		@include devices(mobile) {
 			// padding: map-get($act-space, "desktop-2") map-get($act-space, "desktop-1");

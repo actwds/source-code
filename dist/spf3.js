@@ -24,13 +24,21 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 //A21 - Global Alerts
-let globalAlertDismiss = document.querySelectorAll(".act-alert-global__dismiss");
-let alerts = globalAlertDismiss.forEach(function(alert, index) {
-	alert.addEventListener("click", function() {
-		const e = document.querySelector(".act-alert-global");
-		e.remove();
-	});
-});
+function globalAlert() {
+	const alertGlobal = document.querySelector(".act-alert-global");
+	if (document.cookie.split(";").some((item) => item.trim().startsWith("globalAlertShut=True"))) {
+		alertGlobal.remove();
+	}
+	let globalAlertDismiss = document.querySelectorAll("#global-alert-close");
+	let alerts = globalAlertDismiss.forEach(function(alert, index) {
+		alert.addEventListener("click", function(e) {
+			e.preventDefault();
+			document.cookie = "globalAlertShut=True";
+			alertGlobal.remove();
+		});
+	});	
+}
+globalAlert();
 
 //B13 - Back to top Button
 function backToTop() {

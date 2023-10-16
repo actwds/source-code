@@ -54,7 +54,7 @@ main,
 			}
 			@include devices(mobile) {
 				display: none;
-				&:first-of-type {
+				&:nth-last-child(2) {
 					color: $act-colour__purple;
 					display: flex;
 					font-weight: $act-font-weight__semibold;

@@ -21,7 +21,7 @@ export const createA21 = ({
       <z class="fa-solid `+fontawesome+`"></z> <a class="" href="#" target="_self" title=""><p>`+alert+`</p></a>
     </div>
     <div class="act-alert-global__content">
-      <z class="fa-solid fa-xmark act-alert-global__dismiss"></z>
+      <button href="#" class="act-alert-global__content__button" id="global-alert-close" aria-label="Dismiss global alert"><z class="fa-solid fa-xmark act-alert-global__dismiss"></z></button>
     </div>
   </div>
 </div>
