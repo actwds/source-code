@@ -2597,11 +2597,13 @@ form p,
   .act-hero-row__search__frame {
     align-items: center;
     background-color: #472d8c;
+    bottom: -45px;
     color: #ffffff;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 24px; }
+    padding: 24px;
+    position: absolute; }
     .act-hero-row__search__frame .act-col__cw-6 {
       max-width: 50%;
       width: 50%; }
@@ -2629,7 +2631,7 @@ form p,
     padding: 0 80px; } }
 
 .act-hero-row__container {
-  margin: -90px auto 0;
+  margin: 0 auto;
   max-width: 1248px; }
   @media only screen and (min-width: 0px) and (max-width: 478px) {
     .act-hero-row__container {
