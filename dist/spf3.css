@@ -76,6 +76,9 @@ z.fa-brands {
   .act-flex-violet {
     background-color: #1e0f48;
     color: #ffffff; }
+  .act-flex-pastel-violet {
+    background-color: #e0d5ff;
+    color: #111111; }
   .act-flex__container {
     display: flex;
     justify-content: center;
@@ -2879,7 +2882,6 @@ aside {
   width: 100%; }
   .act-search-results-container .act-search-result {
     box-shadow: inset 0 0 0 0 #ffffff, inset 0 0 0 0 #ffffff, inset 0 0 0 0 #ffffff, 0 1px 0 #adadad;
-    cursor: pointer;
     margin-top: 32px;
     padding: 8px 0px;
     width: 100%; }
