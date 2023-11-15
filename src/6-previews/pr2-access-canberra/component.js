@@ -58,7 +58,7 @@ export const createPR2 = () => {
 
   const accessCanberraHTML =
   topbarHTML +
-  `<main class="act-body">`
+  `<main class="act-body"><h1 class="sr-only">Home</h1>`
   + homeSearchRow + popularPages + 
   `<div class="act-flex">
   <div class="act-flex__container">

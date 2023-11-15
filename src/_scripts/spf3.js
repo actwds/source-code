@@ -1,7 +1,7 @@
 /*****************************************/
-/*                                       */
+/*									   */
 /*  ACT Website Design System - spf3.js  */
-/*                                       */
+/*									   */
 /*****************************************/
 //A11 - Accordion
 document.addEventListener("DOMContentLoaded", function() {
@@ -129,8 +129,8 @@ function toggleSubMenu(open) {
 function openChildLinks(e) {
 	const element = e.currentTarget;
 	const num = element.id.split("-")[3];
-    
-    
+	
+	
 	const visibleChildElements = document.querySelectorAll("[id^=sub-menu-]");
 	for (const childElement of visibleChildElements) {
 		childElement.style.display = "none";
@@ -141,6 +141,13 @@ function openChildLinks(e) {
 	if (childElement) {
 		childElement.style.display = "grid";
 		toggleSubMenu(true);
+
+		const megaMenuLinks = document.querySelectorAll(".act-megamenu__link-container>.act-megamenu__link");
+		megaMenuLinks.forEach(function(link) {
+			link.setAttribute("aria-expanded", "false");
+		});
+
+		e.currentTarget.setAttribute("aria-expanded", "true");
 	} else if (!childElement) {
 		toggleSubMenu(false);
 	}
@@ -150,7 +157,7 @@ function openChildLinks(e) {
 document.addEventListener("DOMContentLoaded", function() {
 	const megaMenu = document.getElementsByClassName("act-megamenu")[0];
 	const megaMenuToggle = document.querySelectorAll(".act-navbar__menu");
-	const megaMenuIcon = document.querySelectorAll(".act-navbar__menu .act-navbar__menu__container i")[0];
+	const megaMenuIcon = document.querySelectorAll(".act-navbar__menu .act-navbar__menu__container z")[0];
 	const megaMenuText = document.getElementsByClassName("act-navbar__menu__text")[0];
 	megaMenuToggle.forEach(function(button) {
 		button.addEventListener("click", function(e) {
@@ -184,7 +191,7 @@ document.addEventListener("DOMContentLoaded", function() {
 document.addEventListener("DOMContentLoaded", function() {
 	const searchContainer = document.getElementsByClassName("act-navbar__search__container")[0];
 	const searchInput = document.getElementsByClassName("act-navbar__search__text")[0];
-	const searchToggle = document.querySelectorAll(".act-navbar__search__container i");
+	const searchToggle = document.querySelectorAll(".act-navbar__search__container z");
 	searchToggle.forEach(function(button) {
 		button.addEventListener("click", function() {
 			searchContainer.classList.toggle("act-search__open");
@@ -196,7 +203,7 @@ document.addEventListener("DOMContentLoaded", function() {
 //Close events
 document.addEventListener("keydown", function() {
 	const megaMenu = document.getElementsByClassName("act-megamenu")[0];
-	const megaMenuIcon = document.querySelectorAll(".act-navbar__menu .act-navbar__menu__container i")[0];
+	const megaMenuIcon = document.querySelectorAll(".act-navbar__menu .act-navbar__menu__container z")[0];
 	const megaMenuText = document.getElementsByClassName("act-navbar__menu__text")[0];
 	const searchContainer = document.getElementsByClassName("act-navbar__search__container")[0];
 	if(event.keyCode === 27) {
@@ -216,7 +223,7 @@ document.addEventListener("keydown", function() {
 
 document.addEventListener("click", function(e) {
 	const megaMenu = document.getElementsByClassName("act-megamenu")[0];
-	const megaMenuIcon = document.querySelectorAll(".act-navbar__menu .act-navbar__menu__container i")[0];
+	const megaMenuIcon = document.querySelectorAll(".act-navbar__menu .act-navbar__menu__container z")[0];
 	const megaMenuText = document.getElementsByClassName("act-navbar__menu__text")[0];
 	const searchContainer = document.getElementsByClassName("act-navbar__search__container")[0];
 	const navbar = document.getElementsByClassName("act-navbar")[0];
@@ -358,16 +365,38 @@ document.addEventListener("keydown", function(e) {
 
 //W-15 Mega Menu close submenu when left portion clicked
 document.addEventListener("DOMContentLoaded", function() {
-	const megaMenuLeft = document.getElementsByClassName("act-megamenu__content__block-main-menu")[0];
-	megaMenuLeft.addEventListener("click", function(e) {
-		e.preventDefault();
-		if (e.target.closest(".act-megamenu__link")) {
-			return;
-		} 
-		document.getElementsByClassName("act-megamenu__content__block-sub-menu")[0].classList.add("hidden-mobile");
-		Array.from(document.getElementsByClassName("act-megamenu__sub-menu-link-container")).forEach(function(container) {
-			container.style.display = "none";
+	const megaMenuLeft = document.querySelectorAll(".has-children");
+	megaMenuLeft.forEach(function(item) {
+		item.addEventListener("click", function(e) {
+			e.preventDefault();
+			if (e.target.closest(".act-megamenu__link")) {
+				return;
+			} 
+			document.getElementsByClassName("act-megamenu__content__block-sub-menu")[0].classList.add("hidden-mobile");
+			Array.from(document.getElementsByClassName("act-megamenu__sub-menu-link-container")).forEach(function(container) {
+				container.style.display = "none";
+			});
 		});
-		
 	});
+});
+
+
+/* Custom GA Tracking */
+document.addEventListener("DOMContentLoaded", function() {
+	var hrefCurrent = window.location.href;
+	function feedbackYes(e) {
+		ga("send", "event", "Feedback - Yes", "click", hrefCurrent);
+		document.getElementById("feedback-yes").removeEventListener("click", feedbackYes);
+		document.getElementById("feedback-no").removeEventListener("click", feedbackNo);
+	}
+	
+	function feedbackNo(e) {
+		ga("send", "event", "Feedback - No", "click", hrefCurrent);
+		document.getElementById("feedback-yes").removeEventListener("click", feedbackYes);
+		document.getElementById("feedback-no").removeEventListener("click", feedbackNo);
+	}
+	if (document.querySelectorAll(".act-footer-feedback").length > 0) {
+		document.getElementById("feedback-yes").addEventListener("click", feedbackYes);
+		document.getElementById("feedback-no").addEventListener("click", feedbackNo);
+	}
 });

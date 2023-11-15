@@ -11,7 +11,7 @@ export const createW18 = () => {
       <div class="act-flex__row">
         <div class="act-col__cw-4">
           <div class="act-box act-box__content">
-            <p class="act-h2 popular-links-p">Popular links</p>
+            <h2>Popular links</p>
           </div>
         </div>
         <div class="act-col__cw-4">

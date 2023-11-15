@@ -46,7 +46,7 @@
 	left: 0px;
 	top: 136px;
 	width: 100%;
-	z-index: 9999;
+	z-index: 999;
 	box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
 	&__container {
 		color: $act-colour__white;
@@ -150,7 +150,7 @@
 				.act-megamenu__link__text {
 					font-family: $sourcesanspro;
 				}
-				button {
+				.button {
 					background: none;
 					border: 1px solid $act-colour__light-grey;
 					color: $act-colour__white;
@@ -160,8 +160,8 @@
 					padding: map-get($act-space, "desktop-1");
 					width: 100%;
 				}
-				button:hover,
-				button:focus {
+				.button:hover,
+				.button:focus {
 					background-color: $act-colour__light-grey;
 					color: $act-colour__black;
 					cursor: pointer;

@@ -1,6 +1,11 @@
 .act-popular-links {
+	h2 {
+		margin-top: 16px;
+		padding: 0;
+	}
 	.act-links-list {
-		&__content {
+		&__content,
+		&__content-grid {
 			margin: 0;
 			&__item {
 				&__text {

@@ -109,7 +109,7 @@
 				&.act-search__open {
 					display: flex;
 					position: absolute;
-					z-index: 2;
+					z-index: 1000;
 					transform: translateY(68px);
 					/*inline-size: calc(100vw - 20%);*/
 					/*inset-block-start: 149px;*/
