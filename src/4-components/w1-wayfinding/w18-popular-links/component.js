@@ -1,8 +1,12 @@
 import { createC29 } from "../../../4-components/c2-content/c29-links-list/component";
 
-export const createW18 = () => {
+export const createW18 = ({
+  type,
+}) => {
 
-  const linksListHTML = createC29({});
+  const linksListHTML = createC29({
+    type: "grid",
+  });
 
   const contentHTML = `
 <div class="act-flex act-flex-light-grey act-popular-links">
@@ -14,14 +18,9 @@ export const createW18 = () => {
             <h2>Popular links</h2>
           </div>
         </div>
-        <div class="act-col__cw-4">
+        <div class="act-col__cw-8">
           <div class="act-box act-box__content">
             ` + linksListHTML +`
-          </div>
-        </div>
-        <div class="act-col__cw-4">
-          <div class="act-box act-box__content">
-            `+ linksListHTML +`
           </div>
         </div>
       </div>

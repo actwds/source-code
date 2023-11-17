@@ -46,7 +46,17 @@ export default {
 		layout: "fullscreen",
 	},
 	argTypes: {
-
+		type: {
+			control: { type: "radio", },
+			options: ["default", "grid",],
+			defaultValue: "",
+			description: "Sets the list type",
+			table: {
+				defaultValue: {
+					summary: "",
+				},
+			},
+		},
 	},
 };
 
