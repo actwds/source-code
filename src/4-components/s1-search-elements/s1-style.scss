@@ -6,7 +6,7 @@
 	width: 100%;
 	.act-search-result {
 		box-shadow: inset 0 0 0 0 $act-colour__white, inset 0 0 0 0 $act-colour__white, inset 0 0 0 0 $act-colour__white, 0 1px 0 $act-colour__middle-grey;
-		cursor: pointer;
+		// cursor: pointer;
 		margin-top: map-get($act-space, "desktop-4");
 		padding: map-get($act-space, "desktop-1") 0px;
 		width: 100%;
@@ -177,4 +177,77 @@
 			color: $act-colour__purple;
 		}
 	}
+}
+
+// Funnelback specific
+.act-search-facet {
+	margin-top: $act-space__desktop-3;
+	&__label {
+		font-family: $sourcesanspro;
+		font-size: $act-font-size__desktop-p;
+		font-weight: $act-font-weight__regular;
+		margin-bottom: $act-space__desktop-1;
+	}
+	&__category {
+		padding: $act-space__desktop-1;
+		&__link {
+			border: none;
+		}
+		&__name {
+			color: $act-colour__black;
+			display: inline-flex;
+			font-family: $sourcesanspro;
+			font-size: $act-font-size__desktop-p;
+			font-weight: $act-font-weight__bold;
+			line-height: $act-line-height__130;
+			margin-bottom: $act-space__desktop-0;
+			& z {
+				margin-right: $act-space__desktop-1;
+				font-size: $act-font-size__desktop-h4;
+				// Can't set this up with a comma, keeps adding a space before the second item
+				&.fa-circle-dot {
+					color: $act-colour__purple;
+				}
+				&.fa-square-check {
+					color: $act-colour__purple;
+				}
+			}
+		}
+		&__count {
+			color: $act-colour__purple;
+			padding-left: $act-space__desktop-0;
+		}
+	}
+}
+
+/*Predictive search*/
+.ui-autocomplete {
+	background: $act-colour__white;
+	display: block;
+	list-style-type: none;
+	width: 240px !important;
+	box-shadow: 0px 8px 20px 0px #000000;
+	z-index: 9999;
+	& .ui-menu-item {
+		margin-left: 0;
+		padding: $act-space__desktop-1;
+		margin: $act-space__desktop-0;
+		& a {
+			color: $act-colour__black;
+			border: none;
+			& strong {
+				background-color: $act-colour__pastel-violet;
+			}
+		}
+		&:hover {
+			background: $act-colour__light-grey;
+		}
+	}
+	@include devices(mobile) {
+		width: 295px !important;
+	}
+}
+
+.ui-helper-hidden-accessible {
+	display: none;
 }

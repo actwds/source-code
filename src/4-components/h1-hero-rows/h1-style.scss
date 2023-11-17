@@ -349,6 +349,9 @@ $act-hero-widget-height: 300px;
 		&__position {
 			position: relative;
 			height: $act-hero-widget-height;
+			@include devices(mobile) {
+				height: auto;
+			}
 		}
 		&__frame {
 			align-items: center;
@@ -377,6 +380,14 @@ $act-hero-widget-height: 300px;
 			&__block {
 				display: flex;
 			}
+			@include devices(mobile) {
+				position: static;
+				background-color: transparent;
+				text-align: center;
+			}
+		}
+		@include devices(mobile) {
+			background-image: none !important;
 		}
 	}
 	&__something {

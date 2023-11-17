@@ -112,7 +112,8 @@
 	&__content {
 		list-style-type: none;
 		&__item {
-			padding: map-get($act-space, "desktop-1") 0;
+			margin-left: 0;
+			padding: map-get($act-space, "desktop-0") 0;
 		}
 	}
 	&__title {
@@ -152,6 +153,51 @@
 				width: 100%;
 				color: $act-colour__black;
 				padding-left: map-get($act-space, "desktop-1");
+				span {
+					position: relative;
+				}
+				&:focus,
+				&:hover {
+					color: $act-colour__black;
+					background-color: $act-colour__light-lavender-hover;
+					border-color: $act-colour__light-lavender-hover;
+				}
+			}
+			&__icon {
+				color: $act-colour__purple;
+				margin-right: $act-space__desktop-2;
+			}
+		}
+	}
+	&__content-grid {
+		list-style-type: none;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-column-gap: 32px;
+		height: auto;
+		justify-content: space-between;
+		&__item {
+			align-items: center;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			margin-left: map-get($act-space, "desktop-1");
+			width: 100%;
+			&__text {
+				align-items: center;
+				border-bottom: 1px solid $act-colour__middle-grey;
+				display: flex;
+				flex-direction: row;
+				font-family: $sourcesanspro;
+				font-weight: normal;
+				justify-content: space-between;
+				padding: 16px 0;
+				width: 100%;
+				color: $act-colour__black;
+				padding-left: map-get($act-space, "desktop-1");
+				span {
+					position: relative;
+				}
 				&:focus,
 				&:hover {
 					color: $act-colour__black;

@@ -59,7 +59,7 @@ export const createW15 = ({
           Home
         </div>
         <div class="act-megamenu__link-container">
-          <a href="#" class="act-megamenu__link" id="main-menu-link-1" onclick="openChildLinks(event)">
+          <a href="#" class="act-megamenu__link" id="main-menu-link-1" onclick="openChildLinks(event)" aria-expanded="false">
             <div class="act-megamenu__link__text">
               Link 1
             </div>
@@ -67,7 +67,7 @@ export const createW15 = ({
               <z class="fa-solid fa-angle-right"></z>
             </div>
           </a>
-          <a href="#" class="act-megamenu__link" id="main-menu-link-2" onclick="openChildLinks(event)">
+          <a href="#" class="act-megamenu__link" id="main-menu-link-2" onclick="openChildLinks(event)" aria-expanded="false">
             <div class="act-megamenu__link__text">
             Information and support
             </div>
@@ -75,7 +75,7 @@ export const createW15 = ({
               <z class="fa-solid fa-angle-right"></z>
             </div>
           </a>
-          <a href="#" class="act-megamenu__link" id="main-menu-link-3" onclick="openChildLinks(event)">
+          <a href="#" class="act-megamenu__link" id="main-menu-link-3" onclick="openChildLinks(event)" aria-expanded="false">
             <div class="act-megamenu__link__text">
               Link 3
             </div>

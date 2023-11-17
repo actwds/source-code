@@ -32,6 +32,10 @@
 		background-color: $act-colour__dark-deep-violet;
 		color: $act-colour__white;
 	}
+	&-pastel-violet {
+		background-color: $act-colour__pastel-violet;
+		color: $act-colour__black;
+	}
 	&__container {
 		display: flex;
 		justify-content: center;

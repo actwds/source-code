@@ -12,7 +12,7 @@ export const createF12 = () => {
                 <div class="act-footer-aoc__icon">
                   <img src="/icons/footer-aoc-icon.svg" alt="symbol"/>
                 </div>
-                <h2 class="act-h2-white"><a href="#">Acknowledgement of Country</a></h2>
+                <h2 class="act-h2-white">Acknowledgement of Country</h2>
               </div>
               <div class="act-footer-aoc__body">
                 <p class="act-p-large act-p-white">
