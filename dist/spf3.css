@@ -3064,6 +3064,62 @@ aside {
     .act-search-filter__block span {
       color: #472d8c; }
 
+.act-search-facet {
+  margin-top: 24px; }
+  .act-search-facet__label {
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 8px; }
+  .act-search-facet__category {
+    padding: 8px; }
+    .act-search-facet__category__link {
+      border: none; }
+    .act-search-facet__category__name {
+      color: #111111;
+      display: inline-flex;
+      font-family: "Source Sans Pro", sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 130%;
+      margin-bottom: 4px; }
+      .act-search-facet__category__name z {
+        margin-right: 8px;
+        font-size: 24px; }
+        .act-search-facet__category__name z.fa-circle-dot {
+          color: #472d8c; }
+        .act-search-facet__category__name z.fa-square-check {
+          color: #472d8c; }
+    .act-search-facet__category__count {
+      color: #472d8c;
+      padding-left: 4px; }
+
+/*Predictive search*/
+.ui-autocomplete {
+  background: #ffffff;
+  display: block;
+  list-style-type: none;
+  width: 240px !important;
+  box-shadow: 0px 8px 20px 0px #000000;
+  z-index: 9999; }
+  .ui-autocomplete .ui-menu-item {
+    margin-left: 0;
+    padding: 8px;
+    margin: 4px; }
+    .ui-autocomplete .ui-menu-item a {
+      color: #111111;
+      border: none; }
+      .ui-autocomplete .ui-menu-item a strong {
+        background-color: #e0d5ff; }
+    .ui-autocomplete .ui-menu-item:hover {
+      background: #f6f6f6; }
+  @media only screen and (min-width: 0px) and (max-width: 478px) {
+    .ui-autocomplete {
+      width: 295px !important; } }
+
+.ui-helper-hidden-accessible {
+  display: none; }
+
 .act-table-container {
   max-width: 100%;
   overflow-x: scroll;
@@ -3532,6 +3588,10 @@ table,
         display: flex;
         flex-direction: row;
         justify-content: center; }
+        .act-navbar__search__container__form:focus-within {
+          background: #f6f6f6; }
+          .act-navbar__search__container__form:focus-within .act-navbar__search__text {
+            background: #f6f6f6; }
       .act-navbar__search__container input {
         border: none;
         outline: none;
