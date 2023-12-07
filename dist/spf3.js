@@ -376,15 +376,14 @@ document.addEventListener("DOMContentLoaded", function() {
 
 /* Custom GA Tracking */
 // document.addEventListener("DOMContentLoaded", function() {
-// 	var hrefCurrent = window.location.href;
 // 	function feedbackYes(e) {
-// 		ga("send", "event", "Feedback - Yes", "click", hrefCurrent);
+// 		gtag("event", "click", {feedback_type: "Yes"});
 // 		document.getElementById("feedback-yes").removeEventListener("click", feedbackYes);
 // 		document.getElementById("feedback-no").removeEventListener("click", feedbackNo);
 // 	}
 	
 // 	function feedbackNo(e) {
-// 		ga("send", "event", "Feedback - No", "click", hrefCurrent);
+// 		gtag("event", "click", {feedback_type: "No"});
 // 		document.getElementById("feedback-yes").removeEventListener("click", feedbackYes);
 // 		document.getElementById("feedback-no").removeEventListener("click", feedbackNo);
 // 	}
