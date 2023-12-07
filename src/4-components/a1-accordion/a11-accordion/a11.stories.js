@@ -49,7 +49,7 @@ export default {
 	argTypes: {
 		type: {
 			control: { type: "radio", },
-			options: ["filled", "bordered", "underlined",],
+			options: ["filled", "filled-dark", "bordered", "underlined",],
 			defaultValue: "filled",
 			description: "Sets the accordion type",
 			table: {

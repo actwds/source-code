@@ -4,9 +4,9 @@ export const createA11 = ({
 }) => {
   let icon = "";
   if (state == "open"){
-    icon = "fa-minus";
+    icon = "fa-chevron-down";
   } else {
-    icon = "fa-xmark";
+    icon = "fa-chevron-down";
   }
   return `
 <div class="act-accordion act-accordion__`+type+`">

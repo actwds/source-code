@@ -559,6 +559,7 @@ a,
 .act-accordion__section {
   border-bottom: 2px solid #ffffff;
   flex-grow: 1;
+  padding-bottom: 8px;
   width: 100%; }
   .act-accordion__section__heading {
     align-items: center;
@@ -576,19 +577,19 @@ a,
     .act-accordion__section__heading z {
       font-size: 24px;
       transform-origin: center;
-      transform: rotate(45deg); }
+      transform: rotate(0deg);
+      transition: all 0.2s cubic-bezier(0, 0, 0.58, 1); }
   .act-accordion__section__content {
     flex-grow: 1;
     padding: 16px;
     width: 100%; }
 
 .act-accordion__filled [class*="__closed"] [class*="__heading"] {
-  background-color: #f6f6f6;
-  color: #111111; }
-  .act-accordion__filled [class*="__closed"] [class*="__heading"] z {
-    color: #472d8c; }
+  background-color: #472d8c;
+  color: #ffffff; }
   .act-accordion__filled [class*="__closed"] [class*="__heading"]:hover, .act-accordion__filled [class*="__closed"] [class*="__heading"]:focus {
-    background-color: #adadad; }
+    background-color: #f6f6f6;
+    color: #472d8c; }
 
 .act-accordion__filled [class*="__closed"] [class*="__content"] {
   visibility: hidden;
@@ -598,10 +599,11 @@ a,
   padding: 0; }
 
 .act-accordion__filled [class*="__open"] [class*="__heading"] {
-  background-color: #472d8c;
-  color: #ffffff; }
+  background-color: #f6f6f6;
+  color: #472d8c;
+  border-bottom: 1px solid #c6bedb; }
   .act-accordion__filled [class*="__open"] [class*="__heading"] z {
-    transform: rotate(0deg); }
+    transform: rotate(180deg); }
 
 .act-accordion__filled [class*="__open"] [class*="__content"] {
   background-color: #f6f6f6;
@@ -631,7 +633,7 @@ a,
   background-color: #472d8c;
   color: #ffffff; }
   .act-accordion__bordered [class*="__open"] [class*="__heading"] z {
-    transform: rotate(0deg); }
+    transform: rotate(180deg); }
 
 .act-accordion__bordered [class*="__open"] [class*="__content"] {
   background-color: #ffffff;
@@ -659,7 +661,7 @@ a,
   border-bottom: 1px solid #472d8c;
   color: #472d8c; }
   .act-accordion__underlined [class*="__open"] [class*="__heading"] z {
-    transform: rotate(0deg);
+    transform: rotate(180deg);
     color: #111111; }
 
 .act-accordion__underlined [class*="__open"] [class*="__content"] {

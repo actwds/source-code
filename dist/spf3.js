@@ -12,13 +12,6 @@ document.addEventListener("DOMContentLoaded", function() {
 			section.classList.toggle("act-accordion__section__open");
 			section.classList.toggle("act-accordion__section__closed");
 			const icon = heading.querySelector(".fa-solid");
-			if (section.classList.contains("act-accordion__section__open")) {
-				icon.classList.remove("fa-xmark");
-				icon.classList.add("fa-minus");
-			} else {
-				icon.classList.remove("fa-minus");
-				icon.classList.add("fa-xmark");
-			}
 		});
 	});
 });
