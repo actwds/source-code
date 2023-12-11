@@ -7,7 +7,8 @@
 document.addEventListener("DOMContentLoaded", function() {
 	const sectionHeadings = document.querySelectorAll(".act-accordion__section__heading");
 	sectionHeadings.forEach(function(heading) {
-		heading.addEventListener("click", function() {
+		heading.addEventListener("click", function(e) {
+			e.preventDefault();
 			const section = heading.parentElement;
 			section.classList.toggle("act-accordion__section__open");
 			section.classList.toggle("act-accordion__section__closed");
