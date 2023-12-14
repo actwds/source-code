@@ -2719,15 +2719,12 @@ form p,
         display: block; }
         @media only screen and (min-width: 0px) and (max-width: 478px) {
           .act-logos__container .act-logo-horizontal img {
-            height: 36px;
             max-height: 36px; } }
         @media only screen and (min-width: 479px) and (max-width: 991px) {
           .act-logos__container .act-logo-horizontal img {
-            height: 48px;
             max-height: 48px; } }
         @media only screen and (min-width: 992px) and (max-width: 99999px) {
           .act-logos__container .act-logo-horizontal img {
-            height: 64px;
             max-height: 64px; } }
     .act-logos__container .act-logo-cobrand {
       border: inherit; }
@@ -3553,6 +3550,15 @@ table,
   display: flex;
   width: 100%;
   justify-content: center; }
+  @media only screen and (min-width: 0px) and (max-width: 478px) {
+    .act-navbar {
+      height: 67px; } }
+  @media only screen and (min-width: 479px) and (max-width: 991px) {
+    .act-navbar {
+      height: 90px; } }
+  @media only screen and (min-width: 992px) and (max-width: 99999px) {
+    .act-navbar {
+      height: 96px; } }
   .act-navbar__container {
     align-items: center;
     display: flex;
