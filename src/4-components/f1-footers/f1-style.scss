@@ -91,6 +91,7 @@
 		&__button {
 			align-items: center;
 			background-color: $act-colour__purple;
+			border: 0;
 			border-radius: 50%;
 			color: $act-colour__white;
 			cursor: pointer;
@@ -99,8 +100,11 @@
 			height: map-get($act-space, "desktop-4");
 			margin: 0px map-get($act-space, "desktop-1");
 			width: map-get($act-space, "desktop-4");
-			&:hover {
+			&:hover,
+			&:focus {
 				background-color: $act-colour__dark-bright-violet;
+				border: none;
+				color: $act-colour__white;
 			}
 			z {
 				font-size: map-get($act-space, "desktop-2");

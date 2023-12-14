@@ -32,8 +32,8 @@ export const createF13 = () => {
                   <div class="act-h4">Was this page useful?</div>
                 </div>
                 <div class="act-footer-feedback__block">
-                  <div class="act-footer-feedback__block__button"><z class="fa-solid fa-thumbs-up"></z></div>
-                  <div class="act-footer-feedback__block__button"><z class="fa-solid fa-thumbs-down"></z></div>
+                  <a href="#" class="act-footer-feedback__block__button"><z class="fa-solid fa-thumbs-up"></z></a>
+                  <a href="#" class="act-footer-feedback__block__button"><z class="fa-solid fa-thumbs-down"></z></a>
                 </div>
               </div>
               <div class="act-footer-feedback__text">

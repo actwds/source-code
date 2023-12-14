@@ -1769,6 +1769,7 @@ a,
     .act-footer-feedback__block__button {
       align-items: center;
       background-color: #472d8c;
+      border: 0;
       border-radius: 50%;
       color: #ffffff;
       cursor: pointer;
@@ -1777,8 +1778,10 @@ a,
       height: 32px;
       margin: 0px 8px;
       width: 32px; }
-      .act-footer-feedback__block__button:hover {
-        background-color: #7b5bd0; }
+      .act-footer-feedback__block__button:hover, .act-footer-feedback__block__button:focus {
+        background-color: #7b5bd0;
+        border: none;
+        color: #ffffff; }
       .act-footer-feedback__block__button z {
         font-size: 16px; }
       .act-footer-feedback__block__button:last-child {
