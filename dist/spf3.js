@@ -239,7 +239,9 @@ document.addEventListener("click", function(e) {
 //W-15 Mega Menu keyboard arrow navigation
 document.addEventListener("keydown", function(e) {
 	if(event.keyCode === 37 || event.keyCode === 38 || event.keyCode === 39 || event.keyCode === 40) {
-		e.preventDefault();
+		if (document.querySelector(".act-megamenu").classList.contains("act-megamenu__open")) {
+			e.preventDefault();
+		}
 	}
 	if (document.activeElement.closest(".act-megamenu__open")) {
 		if (document.activeElement.closest(".act-megamenu__sub-menu-link-container")) {
