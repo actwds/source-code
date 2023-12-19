@@ -3137,6 +3137,7 @@ aside {
 table,
 .act-table {
   border-collapse: collapse;
+  margin-top: 16px;
   width: 100%; }
   table thead tr td,
   table thead tr th,
