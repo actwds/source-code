@@ -3,7 +3,7 @@ export const createS11 = () => {
   return `
 <div class="act-search-result">
   <div class="act-search-result__title">
-    Title
+    <a href="#">Title</a>
   </div>
   <div class="act-search-result__body">
     Lorem ipsum dolor sit amet. Est sequi quod nam magni sunt vel

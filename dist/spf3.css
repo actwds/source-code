@@ -2937,7 +2937,6 @@ aside {
     padding: 8px 0px;
     width: 100%; }
     .act-search-results-container .act-search-result__title {
-      box-shadow: inset 0 0 0 0 #ffffff, inset 0 0 0 0 #ffffff, inset 0 0 0 0 #ffffff, 0 2px 0 #472d8c;
       color: #472d8c;
       font-family: "Montserrat", sans-serif;
       font-size: 24px;
