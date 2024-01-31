@@ -156,6 +156,11 @@ const Footer = () => {
 											</LinkTo>
 										</li>
 										<li>
+											<LinkTo kind="components-quick-exit--page">
+												Quick Exit
+											</LinkTo>
+										</li>
+										<li>
 											<LinkTo kind="components-search-elements-overview--page">
 												Search Elements
 											</LinkTo>

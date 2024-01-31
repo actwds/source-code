@@ -76,6 +76,14 @@
 		flex-wrap: wrap;
 		justify-content: flex-start;
 		width: 100%;
+		&__reverse {
+			@include devices(mobile) {
+				flex-direction: column-reverse;
+			}
+			@include devices(tablet) {
+				flex-direction: column-reverse;
+			}
+		}
 	}
 	.act-col {
 		flex-grow: 1;

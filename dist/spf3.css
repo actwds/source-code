@@ -115,6 +115,12 @@ z.fa-brands {
     flex-wrap: wrap;
     justify-content: flex-start;
     width: 100%; }
+    @media only screen and (min-width: 0px) and (max-width: 478px) {
+      .act-flex__row__reverse {
+        flex-direction: column-reverse; } }
+    @media only screen and (min-width: 479px) and (max-width: 991px) {
+      .act-flex__row__reverse {
+        flex-direction: column-reverse; } }
   .act-flex .act-col {
     flex-grow: 1; }
     .act-flex .act-col__cw-2 {
@@ -1333,9 +1339,6 @@ a,
   padding: 0 16px 0 16px; }
   .act-content__managed-by p {
     padding: 32px 0 32px 0; }
-
-.act-body > .act-content__managed-by {
-  margin-top: 50px; }
 
 .act-table-contents__container {
   padding-left: 16px;
@@ -2925,6 +2928,23 @@ aside {
     .act-full-page-banner__content:first-of-type {
       order: 2; } }
 
+.act-quick-exit {
+  bottom: 0%;
+  position: fixed;
+  width: 100%; }
+  .act-quick-exit__button {
+    background-color: #1e0f48;
+    color: #fff;
+    cursor: pointer;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    font-size: 3rem;
+    height: 100px;
+    width: 100%; }
+    .act-quick-exit__button:hover, .act-quick-exit__button:focus {
+      background-color: #ccb8ff;
+      color: #000; }
+
 .act-search-results-container {
   align-items: flex-start;
   display: flex;
@@ -3716,6 +3736,8 @@ table,
     color: #111111;
     font-size: 20px;
     width: 100%; }
+    .act-sidebar__item a:hover, .act-sidebar__item a:focus {
+      text-decoration: underline; }
     .act-sidebar__item:active {
       color: #ffffff; }
     .act-sidebar__item__summary {
@@ -3732,14 +3754,15 @@ table,
         font-family: "Montserrat", sans-serif;
         border: none; }
       .act-sidebar__item__summary:hover, .act-sidebar__item__summary:focus {
-        background-color: #e0d5ff;
-        color: #111111; }
+        background-color: #e0d5ff; }
         .act-sidebar__item__summary:hover a, .act-sidebar__item__summary:focus a {
-          color: #111111; }
-      .act-sidebar__item__summary__selected {
+          text-decoration: underline; }
+      .act-sidebar__item__summary.selected {
         background-color: #472d8c;
         color: #ffffff; }
-        .act-sidebar__item__summary__selected:hover, .act-sidebar__item__summary__selected:focus {
+        .act-sidebar__item__summary.selected a {
+          color: #ffffff; }
+        .act-sidebar__item__summary.selected:hover, .act-sidebar__item__summary.selected:focus {
           background-color: #472d8c;
           color: #ffffff; }
     .act-sidebar__item__summary::after {
@@ -3750,29 +3773,44 @@ table,
       border-right: 5px solid transparent;
       border-top: 5px solid #111111;
       margin-left: 5px; }
-    .act-sidebar__item__dropdown {
+    .act-sidebar__item .act-sidebar__item .act-sidebar__item__summary {
+      padding-left: 32px; }
+      .act-sidebar__item .act-sidebar__item .act-sidebar__item__summary a {
+        margin: 0; }
+    .act-sidebar__item .act-sidebar__item .act-sidebar__item__dropdown {
       list-style: none;
       border-top: 1px solid #ffffff;
-      color: #111111;
+      color: #472d8c;
       cursor: pointer;
-      font-size: 16px;
+      font-size: 18px;
       font-weight: 400;
       width: 100%;
       margin: 0; }
-      .act-sidebar__item__dropdown__item {
-        padding: 16px;
-        border-bottom: 1px solid #ffffff;
+      .act-sidebar__item .act-sidebar__item .act-sidebar__item__dropdown__item {
+        margin: 0;
+        padding: 0;
         transition: background-color 0.1s cubic-bezier(0, 0, 0.58, 1); }
-        .act-sidebar__item__dropdown__item:hover, .act-sidebar__item__dropdown__item:focus {
-          background-color: #e0d5ff;
-          color: #111111; }
-          .act-sidebar__item__dropdown__item:hover a, .act-sidebar__item__dropdown__item:focus a {
-            color: #111111; }
-      .act-sidebar__item__dropdown__item:last-of-type {
+        .act-sidebar__item .act-sidebar__item .act-sidebar__item__dropdown__item a {
+          border-bottom: 1px solid #ffffff;
+          margin: 0;
+          padding: 16px 16px 16px 48px;
+          display: block; }
+          .act-sidebar__item .act-sidebar__item .act-sidebar__item__dropdown__item a:hover, .act-sidebar__item .act-sidebar__item .act-sidebar__item__dropdown__item a:focus {
+            background-color: #e0d5ff;
+            color: #472d8c; }
+          .act-sidebar__item .act-sidebar__item .act-sidebar__item__dropdown__item a.selected {
+            background-color: #472d8c;
+            color: #ffffff; }
+            .act-sidebar__item .act-sidebar__item .act-sidebar__item__dropdown__item a.selected a {
+              color: #ffffff; }
+            .act-sidebar__item .act-sidebar__item .act-sidebar__item__dropdown__item a.selected:hover, .act-sidebar__item .act-sidebar__item .act-sidebar__item__dropdown__item a.selected:focus {
+              background-color: #472d8c;
+              color: #ffffff; }
+      .act-sidebar__item .act-sidebar__item .act-sidebar__item__dropdown__item:last-of-type a {
         border: none; }
-      .act-sidebar__item__dropdown__closed {
+      .act-sidebar__item .act-sidebar__item .act-sidebar__item__dropdown__closed {
         display: none; }
-      .act-sidebar__item__dropdown__open {
+      .act-sidebar__item .act-sidebar__item .act-sidebar__item__dropdown__open {
         display: block; }
   .act-sidebar details summary {
     display: flex;
@@ -3781,13 +3819,14 @@ table,
     align-items: center;
     list-style: none;
     user-select: none; }
+    .act-sidebar details summary .summary-chevron {
+      display: none; }
+    .act-sidebar details summary.has-children .summary-chevron {
+      display: block; }
   .act-sidebar details summary::-webkit-details-marker {
     display: none; }
-  .act-sidebar details[open] > summary {
-    background-color: #472d8c;
-    color: #ffffff; }
-    .act-sidebar details[open] > summary > a {
-      color: #ffffff; }
+  .act-sidebar details[open] > summary > a {
+    font-weight: bold; }
   .act-sidebar details[open] > summary > .summary-chevron > svg {
     transform: rotate(180deg); }
 

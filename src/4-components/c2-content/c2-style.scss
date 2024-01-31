@@ -99,11 +99,6 @@
 	}
 }
 
-//for demo purposes only
-.act-body > .act-content__managed-by {
-	margin-top: 50px;
-}
-
 .act-table-contents {
 	&__container {
 		padding-left: map-get($act-space, "desktop-2");
