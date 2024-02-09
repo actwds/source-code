@@ -1254,6 +1254,87 @@ a,
       grid-column: span 2;
       grid-row: span 2; } }
 
+.act-case-study {
+  align-items: stretch;
+  background-color: #f4f2fa;
+  border: 0px solid transparent;
+  display: flex; }
+  .act-case-study__container {
+    align-items: flex-start;
+    border: 1px solid #adadad;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%; }
+  .act-case-study [class*="__image"] {
+    background-color: #adadad;
+    height: 420px;
+    min-height: 420px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%; }
+  .act-case-study__content {
+    align-items: flex-start;
+    color: #111111;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 24px;
+    word-wrap: anywhere; }
+    .act-case-study__content [class*="__icon"] {
+      align-items: normal;
+      background: transparent;
+      margin-bottom: 8px;
+      margin-left: 0; }
+      .act-case-study__content [class*="__icon"] z {
+        align-items: center;
+        color: #472d8c;
+        display: inline-flex;
+        justify-content: center; }
+    .act-case-study__content [class*="__timestamp"] {
+      color: #111111;
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 8px; }
+    .act-case-study__content [class*="__title"] {
+      color: #111111;
+      font-family: "Montserrat", sans-serif;
+      font-size: 32px;
+      font-weight: 600;
+      line-height: 130%;
+      margin-bottom: 24px; }
+    .act-case-study__content [class*="__description"] {
+      color: #111111;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 150%;
+      margin: 24px 0; }
+    .act-case-study__content [class*="__cta"] {
+      align-items: flex-end;
+      display: flex;
+      flex-direction: row;
+      flex-grow: 1;
+      font-size: 24px;
+      justify-content: flex-end;
+      margin-top: 24px;
+      text-decoration: none;
+      transition: margin 0.2s cubic-bezier(0, 0, 0.58, 1); }
+      .act-case-study__content [class*="__cta"] z {
+        align-items: center;
+        color: #472d8c;
+        display: inline-flex;
+        justify-content: center; }
+        .act-case-study__content [class*="__cta"] z ::before {
+          height: 24px; }
+      .act-case-study__content [class*="__cta"] span {
+        font-size: 18px;
+        text-decoration: underline; }
+  .act-case-study .act-tag__container {
+    margin-bottom: 16px; }
+
 .act-breaker {
   align-items: flex-start;
   background-color: #f4f2fa;

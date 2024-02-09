@@ -590,6 +590,20 @@
 			"core"
 		]
 	},
+	"Q1": {
+		"details": {
+			"id": "Q1",
+			"category": "✖ Quick Exit",
+			"name": "Quick Exit",
+			"type": "Component"
+		},
+		"description": "Provides users a method to exit the website quickly.",
+		"element": "<code>&lt;div class=\"act-quick-exit\"&gt;</code>",
+		"status": [
+			"production",
+			"core"
+		]
+	},
 	"S11": {
 		"details": {
 			"id": "S11",
