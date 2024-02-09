@@ -200,6 +200,7 @@ export const parameters = {
 						"Loaders",
 						"Logos",
 						"Popups",
+						"Quick Exit",
 						"Search Elements",
 							[
 								"Overview",

@@ -377,6 +377,17 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
+document.querySelectorAll(".act-megamenu__sub-menu-link-container").forEach(function(item) {
+	document.querySelectorAll(".act-megamenu__link").addEventListener("click", function(e) {
+		if (item.style.opacity == "1") {
+			item.style.opacity = "0";
+		} else {
+			item.style.opacity = "1";
+		}
+	});
+});
+
+
 /* Custom GA Tracking */
 // document.addEventListener("DOMContentLoaded", function() {
 // 	function feedbackYes(e) {

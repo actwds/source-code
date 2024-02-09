@@ -10,6 +10,7 @@
 @import url("/fonts/fontawesome/css/brands.css");
 @import url("/fonts/fontawesome/css/regular.css");
 @import url("/fonts/fontawesome/css/light.css");
+@import url("/fonts/fontawesome/css/sharp.css");
 * {
   box-sizing: border-box;
   margin: 0;
@@ -2930,6 +2931,7 @@ aside {
 
 .act-quick-exit {
   bottom: 0%;
+  left: 0%;
   position: fixed;
   width: 100%; }
   .act-quick-exit__button {
