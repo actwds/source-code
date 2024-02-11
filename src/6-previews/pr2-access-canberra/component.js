@@ -3,6 +3,7 @@ import { createW18 } from "../../4-components/w1-wayfinding/w18-popular-links/co
 import { createPC11 } from "../../5-patterns/pc1-card-grid/pc11-default-card-grid/component";
 import { createPT1 } from "../../5-patterns/pt1-topbar/component";
 import { createPF2 } from "../../5-patterns/pf2-footers/component";
+import { createC31 } from "../../4-components/c3-case-study/c31-case-study/component";
 
 
 export const createPR2 = () => {
@@ -42,15 +43,20 @@ export const createPR2 = () => {
     ctaVisible: "True",
     ctaText: "Learn more",
   });
+  
+  const caseStudy = createC31({
+    heading: "Case study",
+    tagVisible: true,
+    tag1: "Case study",
+    tag2: "Case study",
+    imageVisible: true,
+    buttonVisible: true,
+  });
 
   const topbarHTML = createPT1({
     title: "An ACT Government Website",
     buttonText: "Log In",
   });
-
-
-
-
 
   const footerHTML = createPF2({
     type: "primary",
@@ -70,11 +76,14 @@ export const createPR2 = () => {
   + cards2 + cards2 +
   `<h2>Latest</h2>`
   + cards +
-  `</div>
-  </div>
-  </div>
-  </div>
-  </div>
+          `
+          <h2>Case study</h2>`
+          + caseStudy +
+          `</div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
   </main>`
   + footerHTML;

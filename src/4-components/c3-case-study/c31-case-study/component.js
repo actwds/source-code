@@ -1,15 +1,18 @@
 import { createT31 } from "../../../4-components/t3-tags/t31-tags/component";
 
 export const createC31 = ({
+  heading,
   tagVisible,
   imageVisible,
   buttonVisible,
+  tag1,
+  tag2,
 }) => {
 
   const tags1HTML = createT31({
     style: "stroke",
-    tag1: "Case study",
-    tag2: "Mulleun",
+    tag1: tag1,
+    tag2: tag2,
     colour: "purple",
   });
 
@@ -44,7 +47,7 @@ export const createC31 = ({
     <div class="act-case-study__container">
       <div class="act-case-study__content">
       `+featureTagHTML+`
-        <span class="act-case-study__title">Heading</span>
+        <span class="act-case-study__title">`+heading+`</span>
         `+featureImageHTML+`
         <div class="act-case-study__description">
         `+featureDescriptionHTML+`

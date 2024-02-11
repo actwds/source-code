@@ -1,3 +1,4 @@
+import React from "react";
 import { createC31 } from "./component";
 import directory from "../../../_docs/directory.json";
 
@@ -12,6 +13,16 @@ export default {
 		layout: "fullscreen",
 	},
 	argTypes: {
+		heading: {
+			control: { type: "text", },
+			defaultValue: "Heading",
+			description: "Sets the text for the heading",
+			table: {
+				defaultValue: {
+					summary: "Heading",
+				},
+			},
+		},
 		tagVisible: {
 			control: { type: "boolean", },
 			defaultValue: true,
@@ -25,7 +36,7 @@ export default {
 		tag1: {
 			control: { type: "text", },
 			defaultValue: "Case study",
-			description: "Flowers",
+			description: "Text for the first tag",
 			table: {
 				defaultValue: {
 					summary: "Case study",
@@ -35,7 +46,7 @@ export default {
 		tag2: {
 			control: { type: "text", },
 			defaultValue: "Mulleun",
-			description: "Eagle",
+			description: "Text for the second tag",
 			table: {
 				defaultValue: {
 					summary: "Mulleun",
