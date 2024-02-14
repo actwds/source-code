@@ -1,12 +1,14 @@
 .act-footer-aoc,
 .act-footer-nav,
 .act-footer-main {
-	p {
+	p,
+	h2,
+	h3,
+	h4 {
 		a {
 			border-bottom: 1px solid $act-colour__white;
 			color: $act-colour__white;
 			cursor: pointer;
-			font-size: $act-font-size__desktop-p-small;
 			font-weight: $act-font-weight__regular;
 			line-height: $act-line-height__100;
 			text-decoration: none;
@@ -15,6 +17,11 @@
 			&:focus {
 				border-bottom: 1px dashed $act-colour__middle-grey;
 			}
+		}
+	}
+	p {
+		a {
+			font-size: $act-font-size__desktop-p-small;
 		}
 	}
 	ol,
