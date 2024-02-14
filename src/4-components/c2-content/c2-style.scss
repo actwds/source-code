@@ -207,3 +207,92 @@
 		}
 	}
 }
+
+.act-content-block {
+	align-items: stretch;
+	border: 0px solid transparent;
+	display: flex;
+	&__container {
+		align-items: flex-start;
+		border: 1px solid $act-colour__middle-grey;
+		// display: flex;
+		display: block;
+		flex-direction: column;
+		justify-content: flex-start;
+		width: 100%;
+	}
+	[class*="__image"] {
+		background-color: $act-colour__middle-grey;
+		display: none;
+		height: map-get($act-space, "desktop-11");
+		margin-bottom: map-get($act-space, "desktop-3");
+		min-height: map-get($act-space, "desktop-11");
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		width: 100%;
+	}
+	&__content {
+		align-items: flex-start;
+		color: $act-colour__black;
+		display: flex;
+		// height: 100%;
+		flex-direction: column;
+		justify-content: flex-start;
+		padding: map-get($act-space, "desktop-3");
+		width: 100%;
+		word-wrap: anywhere;
+		[class*="__icon"] {
+			display: none;
+			margin-bottom: map-get($act-space, "desktop-3");
+			z {
+				align-items: center;
+				color: $act-colour__purple;
+				display: inline-flex;
+				font-size: 32px;
+				justify-content: center;
+				::before {
+					height: 32px;
+				}
+			}
+		}
+		[class*="__title"] {
+			color: $act-colour__black;
+			font-family: $montserrat;
+			font-size: $act-font-size__desktop-h5;
+			font-weight: $act-font-weight__semibold;
+			line-height: $act-line-height__130;
+			margin-bottom: map-get($act-space, "desktop-1");
+		}
+		[class*="__description"] {
+			color: $act-colour__black;
+			font-size: $act-font-size__desktop-p;
+			font-weight: $act-font-weight__regular;
+			line-height: $act-line-height__150;
+		}
+	}
+
+	/* Feature Toggles */
+	&__feature--image {
+		[class*="__image"] {
+			display: flex;
+		}
+	}
+	&__feature--icon {
+		[class*="__icon"] {
+			display: flex;
+		}
+	}
+	&__feature--none {
+		[class*="__image"],
+		[class*="__icon"] {
+			display: none;
+		}
+	}
+	&__feature--links-list {
+		// display:none;
+		[class*="act-content-block__content"] {
+			padding-bottom: 0;
+		}
+	}
+}

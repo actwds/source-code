@@ -255,13 +255,28 @@
 	},
 	"C29": {
 		"details": {
-			"id": "C28",
+			"id": "C29",
 			"category": "📘 Content",
 			"name": "Links List",
 			"type": "Component"
 		},
 		"description": "Link lists surface and group related content.",
 		"element": "<code>&lt;div class=\"act-links-list\"&gt;</code>",
+		"usage": "",
+		"status": [
+			"production",
+			"core"
+		]
+	},
+	"C210": {
+		"details": {
+			"id": "C210",
+			"category": "📘 Content",
+			"name": "Content Block",
+			"type": "Component"
+		},
+		"description": "Used on content pages to help visually break up the page as well as calling out important information",
+		"element": "<code>&lt;div class=\"act-content-block\"&gt;</code>",
 		"usage": "",
 		"status": [
 			"production",

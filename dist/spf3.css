@@ -1509,6 +1509,70 @@ a,
       color: #472d8c;
       margin-right: 16px; }
 
+.act-content-block {
+  align-items: stretch;
+  border: 0px solid transparent;
+  display: flex;
+  /* Feature Toggles */ }
+  .act-content-block__container {
+    align-items: flex-start;
+    border: 1px solid #adadad;
+    display: block;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%; }
+  .act-content-block [class*="__image"] {
+    background-color: #adadad;
+    display: none;
+    height: 252px;
+    margin-bottom: 24px;
+    min-height: 252px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%; }
+  .act-content-block__content {
+    align-items: flex-start;
+    color: #111111;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 24px;
+    width: 100%;
+    word-wrap: anywhere; }
+    .act-content-block__content [class*="__icon"] {
+      display: none;
+      margin-bottom: 24px; }
+      .act-content-block__content [class*="__icon"] z {
+        align-items: center;
+        color: #472d8c;
+        display: inline-flex;
+        font-size: 32px;
+        justify-content: center; }
+        .act-content-block__content [class*="__icon"] z ::before {
+          height: 32px; }
+    .act-content-block__content [class*="__title"] {
+      color: #111111;
+      font-family: "Montserrat", sans-serif;
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 130%;
+      margin-bottom: 8px; }
+    .act-content-block__content [class*="__description"] {
+      color: #111111;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 150%; }
+  .act-content-block__feature--image [class*="__image"] {
+    display: flex; }
+  .act-content-block__feature--icon [class*="__icon"] {
+    display: flex; }
+  .act-content-block__feature--none [class*="__image"],
+  .act-content-block__feature--none [class*="__icon"] {
+    display: none; }
+  .act-content-block__feature--links-list [class*="act-content-block__content"] {
+    padding-bottom: 0; }
+
 .act-button-group {
   display: grid;
   gap: 1.25rem;
