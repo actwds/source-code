@@ -1802,22 +1802,52 @@ a,
         font-size: 40px; }
 
 .act-footer-aoc p a,
+.act-footer-aoc h2 a,
+.act-footer-aoc h3 a,
+.act-footer-aoc h4 a,
 .act-footer-nav p a,
-.act-footer-main p a {
+.act-footer-nav h2 a,
+.act-footer-nav h3 a,
+.act-footer-nav h4 a,
+.act-footer-main p a,
+.act-footer-main h2 a,
+.act-footer-main h3 a,
+.act-footer-main h4 a {
   border-bottom: 1px solid #ffffff;
   color: #ffffff;
   cursor: pointer;
-  font-size: 14px;
-  font-weight: 400;
   line-height: 100%;
   text-decoration: none;
   margin-right: 8px; }
   .act-footer-aoc p a:hover, .act-footer-aoc p a:focus,
+  .act-footer-aoc h2 a:hover,
+  .act-footer-aoc h2 a:focus,
+  .act-footer-aoc h3 a:hover,
+  .act-footer-aoc h3 a:focus,
+  .act-footer-aoc h4 a:hover,
+  .act-footer-aoc h4 a:focus,
   .act-footer-nav p a:hover,
   .act-footer-nav p a:focus,
+  .act-footer-nav h2 a:hover,
+  .act-footer-nav h2 a:focus,
+  .act-footer-nav h3 a:hover,
+  .act-footer-nav h3 a:focus,
+  .act-footer-nav h4 a:hover,
+  .act-footer-nav h4 a:focus,
   .act-footer-main p a:hover,
-  .act-footer-main p a:focus {
+  .act-footer-main p a:focus,
+  .act-footer-main h2 a:hover,
+  .act-footer-main h2 a:focus,
+  .act-footer-main h3 a:hover,
+  .act-footer-main h3 a:focus,
+  .act-footer-main h4 a:hover,
+  .act-footer-main h4 a:focus {
     border-bottom: 1px dashed #adadad; }
+
+.act-footer-aoc p a,
+.act-footer-nav p a,
+.act-footer-main p a {
+  font-size: 14px; }
 
 .act-footer-aoc ol,
 .act-footer-aoc ul,
