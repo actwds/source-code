@@ -388,6 +388,146 @@ document.querySelectorAll(".act-megamenu__sub-menu-link-container").forEach(func
 });
 
 
+// F2 - AJAX Search
+document.addEventListener("DOMContentLoaded", function() {
+    let urlString;
+    let inputsSelector;
+    let inputsValueArray = [];
+    let inputsParamArray = [];
+
+    function setURLParams() {
+        let formAction = document.querySelector('.ajax-form').getAttribute('action');
+        let hostName = window.location.hostname;
+        urlString = `https://${hostName}${formAction}`;
+        getInputValue();
+        getInputParam();
+        for (i=0; i < inputsParamArray.length; i++) {
+            if (i === 0) {
+                urlString += `?${inputsParamArray[i]}=${inputsValueArray[i]}`
+            } else {
+                urlString += `&${inputsParamArray[i]}=${inputsValueArray[i]}`
+            }
+        }
+    }
+
+    function getInputParam() {
+        inputsParamArray = [];
+        inputsSelector = document.querySelectorAll('.ajax-form input, .ajax-form select');
+        inputsSelector.forEach(function(input) {
+            let inputType = input.getAttribute('type');
+            let inputParam = input.getAttribute('name');
+            if (inputType != null) {
+                if (inputType.toLowerCase() === 'submit') {
+                    // Do nothing
+                } else {
+                    inputsParamArray.push(inputParam);
+                }
+            } else {
+                inputsParamArray.push(inputParam);
+            }
+        })
+    }
+
+    function getInputValue() {
+        inputsValueArray = [];
+        inputsSelector = document.querySelectorAll('.ajax-form input, .ajax-form select');
+        inputsSelector.forEach(function(input) {
+            let inputType = input.getAttribute('type');
+            let inputValue = input.value;
+            if (inputType != null) {
+                if (inputType.toLowerCase() === 'submit') {
+                    // Do nothing
+                } else {
+                    inputsValueArray.push(inputValue);
+                }
+            } else {
+                inputsValueArray.push(inputValue);
+            }
+        })
+    }
+
+    function resetInputs() {
+        getInputs()
+        for (i=1; i < inputsParamArray.length; i++) {
+            if (document.querySelector(`.ajax-form input[name=${inputsParamArray[i]}`)) {
+                document.querySelector(`.ajax-form input[name=${inputsParamArray[i]}`).value = "";
+            } else if (document.querySelector(`.ajax-form select[name=${inputsParamArray[i]}`)) {
+                document.querySelector(`.ajax-form select[name=${inputsParamArray[i]}`).value = "";
+            }
+        }
+    }
+
+    function filterResults(elementID, responseText) {
+        let textToFilter = document.createElement('textToFilter');
+        textToFilter.innerHTML = responseText;
+        let filteredResult = textToFilter.querySelector(elementID);
+        document.querySelector(elementID).innerHTML = filteredResult.innerHTML;            
+    }
+    
+    function loadCCEResults() {
+        setURLParams();
+        fetch(urlString)
+            .then((response) => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error: ${response.status}`);
+                }
+                return response.text();
+            })
+            .then((text) => {
+                // hide loading
+                filterResults('#search-outer-wrapper', text);
+                filterResults('#search-matching', text);
+            })
+            .catch((error) => {
+                // didn't work
+            })
+    }
+
+    function cceListener() {
+        let formInputs = document.querySelectorAll('.ajax-form input, .ajax-form select');
+        formInputs.forEach(function(input) {
+            input.addEventListener('change', function() {
+                loadCCEResults();
+            })
+        })
+    }
+
+    function bindResetButton() {
+        let resetButton = document.querySelector('.button-reset');
+        resetButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            resetInputs();
+        })
+    }
+    
+    let ajaxForm = document.querySelector('.ajax-form');
+    if (ajaxForm) {
+        cceListener();
+        bindResetButton();
+    }
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Custom GA Tracking */
 // document.addEventListener("DOMContentLoaded", function() {
 // 	function feedbackYes(e) {
