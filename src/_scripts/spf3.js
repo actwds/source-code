@@ -393,42 +393,46 @@ document.addEventListener("DOMContentLoaded", function() {
     let urlString;
     let inputsSelector;
     let inputsValueArray = [];
-    let inputsParamArray = [];
+    let inputsParameterArray = [];
 
-    function setURLParams() {
+    function setURLParameters() {
         let formAction = document.querySelector('.ajax-form').getAttribute('action');
         let hostName = window.location.hostname;
         urlString = `https://${hostName}${formAction}`;
-        getInputValue();
-        getInputParam();
-        for (i=0; i < inputsParamArray.length; i++) {
-            if (i === 0) {
-                urlString += `?${inputsParamArray[i]}=${inputsValueArray[i]}`
-            } else {
-                urlString += `&${inputsParamArray[i]}=${inputsValueArray[i]}`
-            }
-        }
     }
 
-    function getInputParam() {
-        inputsParamArray = [];
+	function setInputParameters() {
+        getInputValues();
+        getInputParameters();
+        for (i=0; i < inputsParameterArray.length; i++) {
+            if (i === 0) {
+                urlString += `?${inputsParameterArray[i]}=${inputsValueArray[i]}`
+            } else {
+                urlString += `&${inputsParameterArray[i]}=${inputsValueArray[i]}`
+            }
+        }
+
+	}
+
+    function getInputParameters() {
+        inputsParameterArray = [];
         inputsSelector = document.querySelectorAll('.ajax-form input, .ajax-form select');
         inputsSelector.forEach(function(input) {
             let inputType = input.getAttribute('type');
-            let inputParam = input.getAttribute('name');
+            let inputParameter = input.getAttribute('name');
             if (inputType != null) {
                 if (inputType.toLowerCase() === 'submit') {
                     // Do nothing
                 } else {
-                    inputsParamArray.push(inputParam);
+                    inputsParameterArray.push(inputParameter);
                 }
             } else {
-                inputsParamArray.push(inputParam);
+                inputsParameterArray.push(inputParameter);
             }
         })
     }
 
-    function getInputValue() {
+    function getInputValues() {
         inputsValueArray = [];
         inputsSelector = document.querySelectorAll('.ajax-form input, .ajax-form select');
         inputsSelector.forEach(function(input) {
@@ -448,11 +452,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function resetInputs() {
         getInputs()
-        for (i=1; i < inputsParamArray.length; i++) {
-            if (document.querySelector(`.ajax-form input[name=${inputsParamArray[i]}`)) {
-                document.querySelector(`.ajax-form input[name=${inputsParamArray[i]}`).value = "";
-            } else if (document.querySelector(`.ajax-form select[name=${inputsParamArray[i]}`)) {
-                document.querySelector(`.ajax-form select[name=${inputsParamArray[i]}`).value = "";
+        for (i=1; i < inputsParameterArray.length; i++) {
+            if (document.querySelector(`.ajax-form input[name=${inputsParameterArray[i]}`)) {
+                document.querySelector(`.ajax-form input[name=${inputsParameterArray[i]}`).value = "";
+            } else if (document.querySelector(`.ajax-form select[name=${inputsParameterArray[i]}`)) {
+                document.querySelector(`.ajax-form select[name=${inputsParameterArray[i]}`).value = "";
             }
         }
     }
@@ -465,7 +469,8 @@ document.addEventListener("DOMContentLoaded", function() {
     }
     
     function loadCCEResults() {
-        setURLParams();
+        setURLParameters();
+		setInputParameters();
         fetch(urlString)
             .then((response) => {
                 if (!response.ok) {
