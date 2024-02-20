@@ -26,8 +26,8 @@ export const createC11 = ({
   var featureIconHTML = "";
   var featureTagHTML = "";
   var featureDateHTML = "";
-  var featureHeaderHTML = `<div class="act-card__title">`+header+`</div>`;
-  var featureDescriptionHTML = `<div class="act-card__description">`+description+`</div>`;
+  var featureHeaderHTML = `<span class="act-card__title">`+header+`</span>`;
+  var featureDescriptionHTML = `<span class="act-card__description">`+description+`</span>`;
   var featureCTAHTML = "";
   var tagTypeOpen = "a";
   var tagTypeClose = "as";
@@ -67,10 +67,10 @@ export const createC11 = ({
 
 
   if (ctaVisible == true){
-    featureCTAHTML = `<div class="act-card__cta">
+    featureCTAHTML = `<span class="act-card__cta">
       <z class="fa-solid fa-arrow-right"></z>
       <span>`+ctaText+`</span>
-    </div>`;
+    </span>`;
   }
 
   return `

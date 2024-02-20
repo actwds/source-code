@@ -1,0 +1,95 @@
+.act-case-study {
+	align-items: stretch;
+	background-color: $act-colour__success-light-purple-background;
+	border: 0px solid transparent;
+	display: flex;
+	&__container {
+		align-items: flex-start;
+		border: 1px solid $act-colour__middle-grey;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		width: 100%;
+	}
+	[class*="__image"] {
+		background-color: $act-colour__middle-grey;
+		height: map-get($act-space, "desktop-15");
+		min-height: map-get($act-space, "desktop-15");
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		width: 100%;
+	}
+	&__content {
+		align-items: flex-start;
+		color: $act-colour__black;
+		display: flex;
+		height: 100%;
+		flex-direction: column;
+		justify-content: flex-start;
+		padding: map-get($act-space, "desktop-3");
+		word-wrap: anywhere;
+		[class*="__icon"] {
+			align-items: normal;
+			background: transparent;
+			margin-bottom: map-get($act-space, "desktop-1");
+			margin-left: 0;
+			z {
+				align-items: center;
+				color: $act-colour__purple;
+				display: inline-flex;
+				justify-content: center;
+			}
+		}
+		[class*="__timestamp"] {
+			color: $act-colour__black;
+			font-size: $act-font-size__desktop-p-small;
+			font-weight: $act-font-weight__semibold;
+			margin-bottom: map-get($act-space, "desktop-1");
+		}
+		[class*="__title"] {
+			color: $act-colour__black;
+			font-family: $montserrat;
+			font-size: $act-font-size__desktop-h3;
+			font-weight: $act-font-weight__semibold;
+			line-height: $act-line-height__130;
+			margin-bottom: map-get($act-space, "desktop-3");
+		}
+		[class*="__description"] {
+			color: $act-colour__black;
+			font-size: $act-font-size__desktop-p;
+			font-weight: $act-font-weight__regular;
+			line-height: $act-line-height__150;
+			margin: $act-space__desktop-3 0;
+		}
+		[class*="__cta"] {
+			align-items: flex-end;
+			display: flex;
+			flex-direction: row;
+			flex-grow: 1;
+			font-size: 24px;
+			justify-content: flex-end;
+			margin-top: map-get($act-space, "desktop-3");
+			text-decoration: none;
+			transition: margin 0.2s $act-animation__cubic-bezier;
+			z {
+				align-items: center;
+				color: $act-colour__purple;
+				display: inline-flex;
+				justify-content: center;
+				::before {
+					height: 24px;
+				}
+			}
+			span {
+				font-size: $act-font-size__desktop-p;
+				text-decoration: underline;
+			}
+		}
+	}
+	.act-tag {
+		&__container {
+			margin-bottom: map-get($act-space, "desktop-2");
+		}
+	}
+}

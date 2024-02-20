@@ -7,18 +7,12 @@
 document.addEventListener("DOMContentLoaded", function() {
 	const sectionHeadings = document.querySelectorAll(".act-accordion__section__heading");
 	sectionHeadings.forEach(function(heading) {
-		heading.addEventListener("click", function() {
+		heading.addEventListener("click", function(e) {
+			e.preventDefault();
 			const section = heading.parentElement;
 			section.classList.toggle("act-accordion__section__open");
 			section.classList.toggle("act-accordion__section__closed");
 			const icon = heading.querySelector(".fa-solid");
-			if (section.classList.contains("act-accordion__section__open")) {
-				icon.classList.remove("fa-xmark");
-				icon.classList.add("fa-minus");
-			} else {
-				icon.classList.remove("fa-minus");
-				icon.classList.add("fa-xmark");
-			}
 		});
 	});
 });
@@ -245,7 +239,9 @@ document.addEventListener("click", function(e) {
 //W-15 Mega Menu keyboard arrow navigation
 document.addEventListener("keydown", function(e) {
 	if(event.keyCode === 37 || event.keyCode === 38 || event.keyCode === 39 || event.keyCode === 40) {
-		e.preventDefault();
+		if (document.querySelector(".act-megamenu").classList.contains("act-megamenu__open")) {
+			e.preventDefault();
+		}
 	}
 	if (document.activeElement.closest(".act-megamenu__open")) {
 		if (document.activeElement.closest(".act-megamenu__sub-menu-link-container")) {
@@ -381,17 +377,27 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
+document.querySelectorAll(".act-megamenu__sub-menu-link-container").forEach(function(item) {
+	document.querySelectorAll(".act-megamenu__link").addEventListener("click", function(e) {
+		if (item.style.opacity == "1") {
+			item.style.opacity = "0";
+		} else {
+			item.style.opacity = "1";
+		}
+	});
+});
+
+
 /* Custom GA Tracking */
 // document.addEventListener("DOMContentLoaded", function() {
-// 	var hrefCurrent = window.location.href;
 // 	function feedbackYes(e) {
-// 		ga("send", "event", "Feedback - Yes", "click", hrefCurrent);
+// 		gtag("event", "click", {feedback_type: "Yes"});
 // 		document.getElementById("feedback-yes").removeEventListener("click", feedbackYes);
 // 		document.getElementById("feedback-no").removeEventListener("click", feedbackNo);
 // 	}
 	
 // 	function feedbackNo(e) {
-// 		ga("send", "event", "Feedback - No", "click", hrefCurrent);
+// 		gtag("event", "click", {feedback_type: "No"});
 // 		document.getElementById("feedback-yes").removeEventListener("click", feedbackYes);
 // 		document.getElementById("feedback-no").removeEventListener("click", feedbackNo);
 // 	}

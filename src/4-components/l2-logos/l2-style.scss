@@ -23,15 +23,12 @@ $act-local-cobrand-text-height-desktop: calc(#{($act-local-logo-height-desktop/1
 				img {
 					display: block;
 					@include devices(mobile) {
-						height: $act-local-logo-height-mobile;
 						max-height: $act-local-logo-height-mobile;
 					}
 					@include devices(tablet) {
-						height: $act-local-logo-height-tablet;
 						max-height: $act-local-logo-height-tablet;
 					}
 					@include devices(desktop) {
-						height: $act-local-logo-height-desktop;
 						max-height: $act-local-logo-height-desktop;
 					}
 				}

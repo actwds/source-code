@@ -31,11 +31,11 @@ export const createW12 = ({
             <z class="fa-solid fa-magnifying-glass"></z>
           </div>
         </div>
-        <div class="act-navbar__menu">
+        <a class="act-navbar__menu" href="#" aria-expanded="false" aria-haspopup="true" aria-label="Open site navigation">
           <div class="act-navbar__menu__container">
             <span class="act-navbar__menu__text">Menu</span> <z class="fa-solid fa-bars"></z>
           </div>
-        </div>
+        </a>
       </div>
     </div>
   </div>

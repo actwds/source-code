@@ -158,6 +158,11 @@ export const parameters = {
 								"Standard Cards",
 								"Featured",
 							],
+						"Case Study",
+							[
+								"Guidance",
+								"Case Study"
+							],
 						"Content",
 							[
 								"Overview",
@@ -200,6 +205,11 @@ export const parameters = {
 						"Loaders",
 						"Logos",
 						"Popups",
+						"Quick Exit",
+							[
+								"Guidance",
+								"Quick Exit",
+							],
 						"Search Elements",
 							[
 								"Overview",

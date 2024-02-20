@@ -15,8 +15,13 @@
 	&__item {
 		color: $act-colour__black;
 		font-size: $act-font-size__desktop-h5;
-
 		width: 100%;
+		a {
+			&:hover,
+			&:focus {
+				text-decoration: underline;
+			}
+		}
 		&:active {
 			// background-color: $act-colour__purple;
 			color: $act-colour__white;
@@ -38,14 +43,17 @@
 			&:hover,
 			&:focus {
 				background-color: $act-colour__pastel-violet;
-				color: $act-colour__black;
 				a {
-					color: $act-colour__black;
+					text-decoration: underline;
 				}
 			}
-			&__selected {
+			&.selected {
 				background-color: $act-colour__purple;
 				color: $act-colour__white;
+				a {
+					color: $act-colour__white;
+				}
+
 				&:hover,
 				&:focus {
 					background-color: $act-colour__purple;
@@ -62,36 +70,64 @@
 			border-top: 5px solid $act-colour__black;
 			margin-left: 5px;
 		}
-		&__dropdown {
-			list-style: none;
-			border-top: 1px solid $act-colour__white;
-			color: $act-colour__black;
-			cursor: pointer;
-			font-size: $act-font-size__desktop-h6;
-			font-weight: $act-font-weight__regular;
-			width: 100%;
-			margin: 0;
-			&__item {
-				padding: map-get($act-space, "desktop-2");
-				border-bottom: 1px solid $act-colour__white;
-				transition: background-color 0.1s $act-animation__cubic-bezier;
-				&:hover,
-				&:focus {
-					background-color: $act-colour__pastel-violet;
-					color: $act-colour__black;
+		.act-sidebar__item {
+			.act-sidebar__item {
+				&__summary {
+					padding-left: $act-space__desktop-4;
 					a {
-						color: $act-colour__black;
+						margin: 0;
 					}
 				}
-			}
-			&__item:last-of-type {
-				border: none;
-			}
-			&__closed {
-				display: none;
-			}
-			&__open {
-				display: block;
+				&__dropdown {
+					list-style: none;
+					border-top: 1px solid $act-colour__white;
+					color: $act-colour__purple;
+					cursor: pointer;
+					font-size: $act-font-size__desktop-p;
+					font-weight: $act-font-weight__regular;
+					width: 100%;
+					margin: 0;
+					&__item {
+						margin: 0;
+						padding: 0;
+						transition: background-color 0.1s $act-animation__cubic-bezier;
+						a {
+							border-bottom: 1px solid $act-colour__white;
+							margin: 0;
+							padding: $act-space__desktop-2 $act-space__desktop-2 $act-space__desktop-2 $act-space__desktop-5;
+							display: block;
+							&:hover,
+							&:focus {
+								background-color: $act-colour__pastel-violet;
+								color: $act-colour__purple;
+							}
+							&.selected {
+								background-color: $act-colour__purple;
+								color: $act-colour__white;
+								a {
+									color: $act-colour__white;
+								}
+
+								&:hover,
+								&:focus {
+									background-color: $act-colour__purple;
+									color: $act-colour__white;
+								}
+							}
+						}
+					}
+					&__item:last-of-type {
+						a {
+							border: none;
+						}
+					}
+					&__closed {
+						display: none;
+					}
+					&__open {
+						display: block;
+					}
+				}
 			}
 		}
 	}
@@ -105,16 +141,22 @@
 			align-items: center;
 			list-style: none;
 			user-select: none;
+			.summary-chevron {
+				display: none;
+			}
+			&.has-children {
+				.summary-chevron {
+					display: block;
+				}
+			}
 		}
 		summary::-webkit-details-marker {
 			display: none;
 		}
 	}
 	details[open] > summary {
-		background-color: $act-colour__purple;
-		color: $act-colour__white;
 		> a {
-			color: $act-colour__white;
+			font-weight: bold;
 		}
 	}
 	details[open] > summary > .summary-chevron > svg {

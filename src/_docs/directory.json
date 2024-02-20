@@ -255,13 +255,28 @@
 	},
 	"C29": {
 		"details": {
-			"id": "C28",
+			"id": "C29",
 			"category": "📘 Content",
 			"name": "Links List",
 			"type": "Component"
 		},
 		"description": "Link lists surface and group related content.",
 		"element": "<code>&lt;div class=\"act-links-list\"&gt;</code>",
+		"usage": "",
+		"status": [
+			"production",
+			"core"
+		]
+	},
+	"C210": {
+		"details": {
+			"id": "C210",
+			"category": "📘 Content",
+			"name": "Content Block",
+			"type": "Component"
+		},
+		"description": "Used on content pages to help visually break up the page as well as calling out important information",
+		"element": "<code>&lt;div class=\"act-content-block\"&gt;</code>",
 		"usage": "",
 		"status": [
 			"production",
@@ -585,6 +600,20 @@
 		"description": "Acknowledgment of Country footer to used at the bottom of all pages",
 		"element": "<code>&lt;footer class=\"act-footer\"&gt;</code>",
 		"usage": "<ul><li>Footers should always be the last elements on the page</li></ul>",
+		"status": [
+			"production",
+			"core"
+		]
+	},
+	"Q1": {
+		"details": {
+			"id": "Q1",
+			"category": "✖ Quick Exit",
+			"name": "Quick Exit",
+			"type": "Component"
+		},
+		"description": "Provides users a method to exit the website quickly.",
+		"element": "<code>&lt;div class=\"act-quick-exit\"&gt;</code>",
 		"status": [
 			"production",
 			"core"

@@ -35,6 +35,10 @@
 .fa-brands {
   font-family: 'Font Awesome 6 Brands'; }
 
+.fas,
+.fa-sharp {
+  font-family: 'Font Awesome 6 Sharp'; }
+
 .fa-1x {
   font-size: 1em; }
 

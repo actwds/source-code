@@ -1,13 +1,14 @@
 .act-footer-aoc,
 .act-footer-nav,
 .act-footer-main {
-	p {
+	p,
+	h2,
+	h3,
+	h4 {
 		a {
 			border-bottom: 1px solid $act-colour__white;
 			color: $act-colour__white;
 			cursor: pointer;
-			font-size: $act-font-size__desktop-p-small;
-			font-weight: $act-font-weight__regular;
 			line-height: $act-line-height__100;
 			text-decoration: none;
 			margin-right: map-get($act-space, "desktop-1");
@@ -15,6 +16,11 @@
 			&:focus {
 				border-bottom: 1px dashed $act-colour__middle-grey;
 			}
+		}
+	}
+	p {
+		a {
+			font-size: $act-font-size__desktop-p-small;
 		}
 	}
 	ol,
@@ -91,6 +97,7 @@
 		&__button {
 			align-items: center;
 			background-color: $act-colour__purple;
+			border: 0;
 			border-radius: 50%;
 			color: $act-colour__white;
 			cursor: pointer;
@@ -99,8 +106,11 @@
 			height: map-get($act-space, "desktop-4");
 			margin: 0px map-get($act-space, "desktop-1");
 			width: map-get($act-space, "desktop-4");
-			&:hover {
+			&:hover,
+			&:focus {
 				background-color: $act-colour__dark-bright-violet;
+				border: none;
+				color: $act-colour__white;
 			}
 			z {
 				font-size: map-get($act-space, "desktop-2");

@@ -1,8 +1,20 @@
+$act-navbar-height-mobile: 67px;
+$act-navbar-height-tablet: 90px;
+$act-navbar-height-desktop: 96px;
 .act-navbar {
 	background-color: $act-colour__white;
 	display: flex;
 	width: $act-page-full-width;
 	justify-content: center;
+	@include devices(mobile) {
+		height: $act-navbar-height-mobile;
+	}
+	@include devices(tablet) {
+		height: $act-navbar-height-tablet;
+	}
+	@include devices(desktop) {
+		height: $act-navbar-height-desktop;
+	}
 	&__container {
 		align-items: center;
 		display: flex;
