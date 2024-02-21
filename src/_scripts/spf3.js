@@ -438,10 +438,9 @@ document.addEventListener("DOMContentLoaded", function() {
         inputsSelector.forEach(function(input) {
             let inputType = input.getAttribute('type');
             let inputValue = input.value;
+			// If null, most likely a select element
             if (inputType != null) {
-                if (inputType.toLowerCase() === 'submit') {
-                    // Do nothing
-                } else {
+                if (inputType.toLowerCase() != 'submit') {
                     inputsValueArray.push(inputValue);
                 }
             } else {
@@ -513,22 +512,6 @@ document.addEventListener("DOMContentLoaded", function() {
         bindResetButton();
     }
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
