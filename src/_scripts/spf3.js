@@ -451,7 +451,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     function resetInputs() {
-        getInputs()
+        getInputParameters();
         for (i=1; i < inputsParameterArray.length; i++) {
             if (document.querySelector(`.ajax-form input[name=${inputsParameterArray[i]}`)) {
                 document.querySelector(`.ajax-form input[name=${inputsParameterArray[i]}`).value = "";
@@ -459,6 +459,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 document.querySelector(`.ajax-form select[name=${inputsParameterArray[i]}`).value = "";
             }
         }
+		submitAJAXForm();
     }
 
     function filterResults(elementID, responseText) {
@@ -498,7 +499,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     function bindResetButton() {
-        let resetButton = document.querySelector('.button-reset');
+        let resetButton = document.querySelector('.ajax-form .button-reset');
         resetButton.addEventListener('click', function(e) {
             e.preventDefault();
             resetInputs();
