@@ -468,7 +468,7 @@ document.addEventListener("DOMContentLoaded", function() {
         document.querySelector(elementID).innerHTML = filteredResult.innerHTML;            
     }
     
-    function loadCCEResults() {
+    function submitAJAXForm() {
         setURLParameters();
 		setInputParameters();
         fetch(urlString)
@@ -488,11 +488,11 @@ document.addEventListener("DOMContentLoaded", function() {
             })
     }
 
-    function cceListener() {
+    function initAJAXForm() {
         let formInputs = document.querySelectorAll('.ajax-form input, .ajax-form select');
         formInputs.forEach(function(input) {
             input.addEventListener('change', function() {
-                loadCCEResults();
+                submitAJAXForm();
             })
         })
     }
@@ -507,7 +507,7 @@ document.addEventListener("DOMContentLoaded", function() {
     
     let ajaxForm = document.querySelector('.ajax-form');
     if (ajaxForm) {
-        cceListener();
+        initAJAXForm();
         bindResetButton();
     }
 })
