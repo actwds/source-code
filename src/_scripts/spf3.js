@@ -391,10 +391,13 @@ document.querySelectorAll(".act-megamenu__sub-menu-link-container").forEach(func
 // F2 - AJAX Search
 document.addEventListener("DOMContentLoaded", function() {
     let urlString;
-    let inputsSelector = document.querySelectorAll('.ajax-form input, .ajax-form select');
+    let ajaxForm = document.querySelector('.ajax-form');
+	let ajaxFormInputs = ajaxForm.querySelectorAll('input, select');
     let inputsValueArray = [];
     let inputsParameterArray = [];
 	let targetSelectors = ['#search-outer-wrapper', '#search-matching'];
+
+
 
     function setURLPath() {
         let formAction = document.querySelector('.ajax-form').getAttribute('action');
@@ -412,12 +415,11 @@ document.addEventListener("DOMContentLoaded", function() {
                 urlString += `&${inputsParameterArray[i]}=${inputsValueArray[i]}`
             }
         }
-
 	}
 
     function getInputParameters() {
         inputsParameterArray = [];
-        inputsSelector.forEach(function(input) {
+        ajaxFormInputs.forEach(function(input) {
             let inputType = input.getAttribute('type');
             let inputParameter = input.getAttribute('name');
             if (inputType != null) {
@@ -434,7 +436,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function getInputValues() {
         inputsValueArray = [];
-        inputsSelector.forEach(function(input) {
+        ajaxFormInputs.forEach(function(input) {
             let inputType = input.getAttribute('type');
             let inputValue = input.value;
 			// If null, most likely a select element
@@ -508,7 +510,6 @@ document.addEventListener("DOMContentLoaded", function() {
         })
     }
     
-    let ajaxForm = document.querySelector('.ajax-form');
     if (ajaxForm) {
         initAJAXForm(targetSelectors);
         bindResetButton();
