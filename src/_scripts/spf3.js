@@ -390,128 +390,128 @@ document.querySelectorAll(".act-megamenu__sub-menu-link-container").forEach(func
 
 // F2 - AJAX Search
 document.addEventListener("DOMContentLoaded", function() {
-    let urlString;
-    let ajaxForm = document.querySelector('.ajax-form');
-	let ajaxFormInputs = ajaxForm.querySelectorAll('input, select');
-    let inputsValueArray = [];
-    let inputsParameterArray = [];
-	let targetSelectors = ['#search-outer-wrapper', '#search-matching'];
+	let urlString;
+	let ajaxForm = document.querySelector(".ajax-form");
+	let ajaxFormInputs = ajaxForm.querySelectorAll("input, select");
+	let inputsValueArray = [];
+	let inputsParameterArray = [];
+	let targetSelectors = ["#search-outer-wrapper", "#search-matching",];
 
-    function setURLPath() {
-        const formAction = document.querySelector('.ajax-form').getAttribute('action');
-        const hostName = window.location.hostname;
-        urlString = `https://${hostName}${formAction}`;
-    }
-
-	function setInputParameters() {
-        getInputValues();
-        getInputParameters();
-        for (i=0; i < inputsParameterArray.length; i++) {
-            if (i === 0) {
-                urlString += `?${inputsParameterArray[i]}=${inputsValueArray[i]}`
-            } else {
-                urlString += `&${inputsParameterArray[i]}=${inputsValueArray[i]}`
-            }
-        }
+	function setURLPath() {
+		const formAction = document.querySelector(".ajax-form").getAttribute("action");
+		const hostName = window.location.hostname;
+		urlString = `https://${hostName}${formAction}`;
 	}
 
-    function getInputParameters() {
-        inputsParameterArray = [];
-        ajaxFormInputs.forEach(function(input) {
-            let inputType = input.getAttribute('type');
-            let inputParameter = input.getAttribute('name');
-			// If null, most likely a select element
-            if (inputType != null) {
-                if (inputType.toLowerCase() != 'submit') {
-                    inputsParameterArray.push(inputParameter);
-                }
-            } else {
-                inputsParameterArray.push(inputParameter);
-            }
-        })
-    }
+	function setInputParameters() {
+		getInputValues();
+		getInputParameters();
+		for (let i=0; i < inputsParameterArray.length; i++) {
+			if (i === 0) {
+				urlString += `?${inputsParameterArray[i]}=${inputsValueArray[i]}`;
+			} else {
+				urlString += `&${inputsParameterArray[i]}=${inputsValueArray[i]}`;
+			}
+		}
+	}
 
-    function getInputValues() {
-        inputsValueArray = [];
-        ajaxFormInputs.forEach(function(input) {
-            let inputType = input.getAttribute('type');
-            let inputValue = input.value;
+	function getInputParameters() {
+		inputsParameterArray = [];
+		ajaxFormInputs.forEach(function(input) {
+			let inputType = input.getAttribute("type");
+			let inputParameter = input.getAttribute("name");
 			// If null, most likely a select element
-            if (inputType != null) {
-                if (inputType.toLowerCase() != 'submit') {
-                    inputsValueArray.push(inputValue);
-                }
-            } else {
-                inputsValueArray.push(inputValue);
-            }
-        })
-    }
+			if (inputType != null) {
+				if (inputType.toLowerCase() != "submit") {
+					inputsParameterArray.push(inputParameter);
+				}
+			} else {
+				inputsParameterArray.push(inputParameter);
+			}
+		});
+	}
 
-    function resetInputs() {
-        getInputParameters();
-        for (i=0; i < inputsParameterArray.length; i++) {
+	function getInputValues() {
+		inputsValueArray = [];
+		ajaxFormInputs.forEach(function(input) {
+			let inputType = input.getAttribute("type");
+			let inputValue = input.value;
+			// If null, most likely a select element
+			if (inputType != null) {
+				if (inputType.toLowerCase() != "submit") {
+					inputsValueArray.push(inputValue);
+				}
+			} else {
+				inputsValueArray.push(inputValue);
+			}
+		});
+	}
+
+	function resetInputs() {
+		getInputParameters();
+		for (let i=0; i < inputsParameterArray.length; i++) {
 			if (document.querySelector(`.ajax-form input[name=${inputsParameterArray[i]}`) === document.querySelector(`.ajax-form input[type='hidden']`)) {
 				continue;
 			}
-            if (document.querySelector(`.ajax-form input[name=${inputsParameterArray[i]}`)) {
-                document.querySelector(`.ajax-form input[name=${inputsParameterArray[i]}`).value = "";
-            } else if (document.querySelector(`.ajax-form select[name=${inputsParameterArray[i]}`)) {
-                document.querySelector(`.ajax-form select[name=${inputsParameterArray[i]}`).value = "";
-            }
-        }
+			if (document.querySelector(`.ajax-form input[name=${inputsParameterArray[i]}`)) {
+				document.querySelector(`.ajax-form input[name=${inputsParameterArray[i]}`).value = "";
+			} else if (document.querySelector(`.ajax-form select[name=${inputsParameterArray[i]}`)) {
+				document.querySelector(`.ajax-form select[name=${inputsParameterArray[i]}`).value = "";
+			}
+		}
 		submitAJAXForm(targetSelectors);
-    }
+	}
 
-    function filterResults(elementID, responseText) {
-        let textToFilter = document.createElement('textToFilter');
-        textToFilter.innerHTML = responseText;
-        let filteredResult = textToFilter.querySelector(elementID);
-        document.querySelector(elementID).innerHTML = filteredResult.innerHTML;            
-    }
+	function filterResults(elementID, responseText) {
+		let textToFilter = document.createElement("textToFilter");
+		textToFilter.innerHTML = responseText;
+		let filteredResult = textToFilter.querySelector(elementID);
+		document.querySelector(elementID).innerHTML = filteredResult.innerHTML;            
+	}
     
-    function submitAJAXForm(resultSelector) {
-        setURLPath();
+	function submitAJAXForm(resultSelector) {
+		setURLPath();
 		setInputParameters();
-        fetch(urlString)
-            .then((response) => {
-                if (!response.ok) {
-                    throw new Error(`HTTP error: ${response.status}`);
-                }
-                return response.text();
-            })
-            .then((text) => {
-                // hide loading
+		fetch(urlString)
+			.then((response) => {
+				if (!response.ok) {
+					throw new Error(`HTTP error: ${response.status}`);
+				}
+				return response.text();
+			})
+			.then((text) => {
+				// hide loading
 				resultSelector.forEach(function(item) {
 					filterResults(item, text);
-				})
-            })
-            .catch((error) => {
-                // didn't work
-            })
-    }
+				});
+			})
+			.catch((error) => {
+				// didn't work
+			});
+	}
 
-    function initAJAXForm(resultSelector) {
-        let formInputs = document.querySelectorAll('.ajax-form input, .ajax-form select');
-        formInputs.forEach(function(input) {
-            input.addEventListener('change', function() {
-                submitAJAXForm(resultSelector);
-            })
-        })
-    }
+	function initAJAXForm(resultSelector) {
+		let formInputs = document.querySelectorAll(".ajax-form input, .ajax-form select");
+		formInputs.forEach(function(input) {
+			input.addEventListener("change", function() {
+				submitAJAXForm(resultSelector);
+			});
+		});
+	}
 
-    function bindResetButton() {
-        let resetButton = document.querySelector('.ajax-form .button-reset');
-        resetButton.addEventListener('click', function(e) {
-            e.preventDefault();
-            resetInputs();
-        })
-    }
+	function bindResetButton() {
+		let resetButton = document.querySelector(".ajax-form .button-reset");
+		resetButton.addEventListener("click", function(e) {
+			e.preventDefault();
+			resetInputs();
+		});
+	}
     
-    if (ajaxForm) {
-        initAJAXForm(targetSelectors);
-        bindResetButton();
-    }
-})
+	if (ajaxForm) {
+		initAJAXForm(targetSelectors);
+		bindResetButton();
+	}
+});
 
 
 
