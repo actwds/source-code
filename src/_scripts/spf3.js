@@ -469,7 +469,7 @@ document.addEventListener("DOMContentLoaded", function() {
         document.querySelector(elementID).innerHTML = filteredResult.innerHTML;            
     }
     
-    function submitAJAXForm() {
+    function submitAJAXForm(resultSelector) {
         setURLPath();
 		setInputParameters();
         fetch(urlString)
@@ -481,19 +481,20 @@ document.addEventListener("DOMContentLoaded", function() {
             })
             .then((text) => {
                 // hide loading
-                filterResults('#search-outer-wrapper', text);
-                filterResults('#search-matching', text);
+				resultSelector.forEach(function(item) {
+					filterResults(item, text);
+				})
             })
             .catch((error) => {
                 // didn't work
             })
     }
 
-    function initAJAXForm() {
+    function initAJAXForm(resultSelector) {
         let formInputs = document.querySelectorAll('.ajax-form input, .ajax-form select');
         formInputs.forEach(function(input) {
             input.addEventListener('change', function() {
-                submitAJAXForm();
+                submitAJAXForm(resultSelector);
             })
         })
     }
@@ -508,7 +509,7 @@ document.addEventListener("DOMContentLoaded", function() {
     
     let ajaxForm = document.querySelector('.ajax-form');
     if (ajaxForm) {
-        initAJAXForm();
+        initAJAXForm(['#search-outer-wrapper', '#search-matching']);
         bindResetButton();
     }
 })
