@@ -395,7 +395,7 @@ document.addEventListener("DOMContentLoaded", function() {
     let inputsValueArray = [];
     let inputsParameterArray = [];
 
-    function setURLParameters() {
+    function setURLPath() {
         let formAction = document.querySelector('.ajax-form').getAttribute('action');
         let hostName = window.location.hostname;
         urlString = `https://${hostName}${formAction}`;
@@ -470,7 +470,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
     
     function submitAJAXForm() {
-        setURLParameters();
+        setURLPath();
 		setInputParameters();
         fetch(urlString)
             .then((response) => {
