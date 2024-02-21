@@ -397,11 +397,9 @@ document.addEventListener("DOMContentLoaded", function() {
     let inputsParameterArray = [];
 	let targetSelectors = ['#search-outer-wrapper', '#search-matching'];
 
-
-
     function setURLPath() {
-        let formAction = document.querySelector('.ajax-form').getAttribute('action');
-        let hostName = window.location.hostname;
+        const formAction = document.querySelector('.ajax-form').getAttribute('action');
+        const hostName = window.location.hostname;
         urlString = `https://${hostName}${formAction}`;
     }
 
@@ -422,10 +420,9 @@ document.addEventListener("DOMContentLoaded", function() {
         ajaxFormInputs.forEach(function(input) {
             let inputType = input.getAttribute('type');
             let inputParameter = input.getAttribute('name');
+			// If null, most likely a select element
             if (inputType != null) {
-                if (inputType.toLowerCase() === 'submit') {
-                    // Do nothing
-                } else {
+                if (inputType.toLowerCase() != 'submit') {
                     inputsParameterArray.push(inputParameter);
                 }
             } else {
