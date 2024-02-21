@@ -391,9 +391,10 @@ document.querySelectorAll(".act-megamenu__sub-menu-link-container").forEach(func
 // F2 - AJAX Search
 document.addEventListener("DOMContentLoaded", function() {
     let urlString;
-    let inputsSelector;
+    let inputsSelector = document.querySelectorAll('.ajax-form input, .ajax-form select');
     let inputsValueArray = [];
     let inputsParameterArray = [];
+	let targetSelectors = ['#search-outer-wrapper', '#search-matching'];
 
     function setURLPath() {
         let formAction = document.querySelector('.ajax-form').getAttribute('action');
@@ -416,7 +417,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function getInputParameters() {
         inputsParameterArray = [];
-        inputsSelector = document.querySelectorAll('.ajax-form input, .ajax-form select');
         inputsSelector.forEach(function(input) {
             let inputType = input.getAttribute('type');
             let inputParameter = input.getAttribute('name');
@@ -434,7 +434,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function getInputValues() {
         inputsValueArray = [];
-        inputsSelector = document.querySelectorAll('.ajax-form input, .ajax-form select');
         inputsSelector.forEach(function(input) {
             let inputType = input.getAttribute('type');
             let inputValue = input.value;
@@ -461,7 +460,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 document.querySelector(`.ajax-form select[name=${inputsParameterArray[i]}`).value = "";
             }
         }
-		submitAJAXForm();
+		submitAJAXForm(targetSelectors);
     }
 
     function filterResults(elementID, responseText) {
@@ -511,7 +510,7 @@ document.addEventListener("DOMContentLoaded", function() {
     
     let ajaxForm = document.querySelector('.ajax-form');
     if (ajaxForm) {
-        initAJAXForm(['#search-outer-wrapper', '#search-matching']);
+        initAJAXForm(targetSelectors);
         bindResetButton();
     }
 })
