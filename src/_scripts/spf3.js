@@ -451,7 +451,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function resetInputs() {
         getInputParameters();
-        for (i=1; i < inputsParameterArray.length; i++) {
+        for (i=0; i < inputsParameterArray.length; i++) {
+			if (document.querySelector(`.ajax-form input[name=${inputsParameterArray[i]}`) === document.querySelector(`.ajax-form input[type='hidden']`)) {
+				continue;
+			}
             if (document.querySelector(`.ajax-form input[name=${inputsParameterArray[i]}`)) {
                 document.querySelector(`.ajax-form input[name=${inputsParameterArray[i]}`).value = "";
             } else if (document.querySelector(`.ajax-form select[name=${inputsParameterArray[i]}`)) {
