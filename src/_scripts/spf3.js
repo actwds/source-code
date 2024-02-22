@@ -514,6 +514,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 // C28 - Table of Contents
+let anchor = "";
 function processDynamicAnchors() {
 	/* Detect all second level headings (H2) within the scannable div. If more than one H2 exists then generate and add hyperlinks in the Table Of Contents (TOC) div For H2, H3's and manual TOC entries */
 	const CONST_H2_THRESHOLD = 8; //Do not show hyperlinks for H3 headings if  total number of H2 headings on the page exceeds this threshold
@@ -572,13 +573,17 @@ function processDynamicAnchors() {
 	}
 }
 
-function checkAnchor(anchorTarget) {
-	let anchor = "";
+function setAnchor(anchorTarget) {
 	if (anchorTarget === undefined) {
 		anchor = window.location.hash;
 	} else {
 		anchor = anchorTarget;
 	}
+
+}
+
+function checkAnchor(anchorTarget) {
+	setAnchor(anchorTarget);
 	if (anchor != "" && document.querySelector(anchor)) { 
 		return true;
 	} else {
@@ -587,13 +592,7 @@ function checkAnchor(anchorTarget) {
 }
 
 function setHeadingHighlight(anchorTarget) {
-	let anchor = "";
-	if (anchorTarget === undefined) {
-		anchor = window.location.hash;
-	} else {
-		anchor = anchorTarget;
-	}
-    if (anchor != "" && document.querySelector(anchor)) { 
+    if (checkAnchor(anchorTarget)) { 
     	let h2List = document.querySelectorAll("h2");
     	h2List.forEach(function(heading) {
     		heading.classList.remove("toc__highlight");
@@ -604,13 +603,7 @@ function setHeadingHighlight(anchorTarget) {
 }
 
 function scrollToAnchor(anchorTarget) {
-	let anchor = "";
-	if (anchorTarget === undefined) {
-		anchor = window.location.hash;
-	} else {
-		anchor = anchorTarget;
-	}
-	if (anchor != "" && document.querySelector(anchor)) {
+	if (checkAnchor(anchorTarget)) {
 		if (anchor.length > 0) {
 			document.querySelector(anchor).scrollIntoView({ 
 				behavior: "smooth",
