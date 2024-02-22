@@ -614,7 +614,7 @@ function setTOCListeners() {
 document.addEventListener("DOMContentLoaded", function() {
     processDynamicAnchors();
     scrollToAnchor();
-	tocEventListener();
+	setTOCListeners();
 });
 
 
