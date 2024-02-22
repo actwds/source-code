@@ -594,9 +594,9 @@ function processDynamicAnchors() {
 function highlightHeading(anchorTarget) {
 	let h2List = document.querySelectorAll('h2');
 	h2List.forEach(function(heading) {
-		heading.classList.remove('toc-highlight');
+		heading.classList.remove('toc__highlight');
 	})
-	document.querySelector(anchorTarget).classList.add('toc-highlight');
+	document.querySelector(anchorTarget).classList.add('toc__highlight');
 	console.log(anchorTarget);
 }
 

@@ -121,6 +121,10 @@
 	h2 {
 		margin: 0;
 	}
+	&&__highlight {
+		background-color: $act-colour__light-grey;
+		outline: 1px solid $act-colour__light-lavender-hover;
+	}
 }
 
 .act-links-list {
