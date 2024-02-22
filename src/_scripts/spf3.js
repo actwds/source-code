@@ -592,6 +592,10 @@ function processDynamicAnchors() {
 }
 
 function highlightHeading(anchorTarget) {
+	let h2List = document.querySelectorAll('h2');
+	h2List.forEach(function(heading) {
+		heading.classList.remove('toc-highlight');
+	})
 	document.querySelector(anchorTarget).classList.add('toc-highlight');
 	console.log(anchorTarget);
 }
