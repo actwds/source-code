@@ -597,9 +597,7 @@ function anchorScroll(anchorTarget) {
     }
 }
 
-document.addEventListener("DOMContentLoaded", function() {
-    processDynamicAnchors();
-    anchorScroll();
+function setTOCListeners() {
     let tocLinks = document.querySelectorAll('#TOC a');
     tocLinks.forEach(function(item) {
         item.addEventListener('click', function(e) {
@@ -610,6 +608,13 @@ document.addEventListener("DOMContentLoaded", function() {
 			highlightHeading(anchorTarget);            
         })
     })
+
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    processDynamicAnchors();
+    anchorScroll();
+	tocEventListener();
 });
 
 
