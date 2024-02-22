@@ -513,7 +513,107 @@ document.addEventListener("DOMContentLoaded", function() {
 	}
 });
 
+// C28 - Table of Contents
+function processDynamicAnchors() {
+	/* Detect all second level headings (H2) within the scannable div. If more than one H2 exists then generate and add hyperlinks in the Table Of Contents (TOC) div For H2, H3's and manual TOC entries */
+	const CONST_H2_THRESHOLD = 8; //Do not show hyperlinks for H3 headings if  total number of H2 headings on the page exceeds this threshold
+	let divTOCScannableArea = document.querySelectorAll(".toc-page #TOCScannableArea");
+	let divTOC = document.querySelectorAll("#TOC");
+	if ((divTOCScannableArea.length > 0) && (divTOC.length > 0)) {
+		let allHeadings = document.querySelectorAll(".toc-page #TOCScannableArea h2");
+        
+		// Commented out the jQuery version, need to consider if the manual headings are still required and update to accommodate them
+		// var allHeadings =  $(divTOCScannableArea).find('h2, .manual-TOC-entry').not('.spf-article-box h2,.uikit-accordion__body-wrapper h2,.toc-hide');
+		// var H2_Headings = allHeadings.filter('h2');
+		// var Manual_Headings = allHeadings.filter('.manual-TOC-entry');
+		// var count_H2_Headings = H2_Headings.length;
+		// var count_Manual_Headings = Manual_Headings.length;
+		// var count_All_Headings = count_H2_Headings + count_Manual_Headings;
+        
+		let count_All_Headings = allHeadings.length;
+        
+		if (count_All_Headings == 0) {
+			// Hide TOC if there are no headings on the page
+			document.querySelector("#TOC").remove();
+		} else {
+			//Hide the TOC if metadata field 'showTOC' is set to false
+			const showTOC = document.querySelectorAll("meta[name=showTOC]");
+			if (showTOC.length < 1) {
+				return;
+			} 
+			if (document.querySelector("meta[name=showTOC]").getAttribute("content").toLowerCase().trim() === "true") {
+				if (count_All_Headings > 1) {
+					let newContent = "";
+					newContent+="<div class=\"act-table-contents\"><div class=\"act-table-contents__container\"><h2 class=\"act-table-contents__title act-h5\">On this page</h2>";
+					newContent+="<ul class=\"act-table-contents__content\">";
+					for(let i=0; i < count_All_Headings; i++) {
+						let currentItem = allHeadings[i];
+						let newDynamicAnchorID = currentItem.textContent.replace(/[_\W]+/g, "-").replace(/â€™/g,"-").replace(/'/g,"-");
+						currentItem.setAttribute("id", newDynamicAnchorID);
+						currentItem.setAttribute("class", "dynamicAnchor");
+                            
+						//Only add hyperlinks pointing to H3's to the TOC if H2 Threshold has not been breached
+						newContent+= "<li class=\"act-table-contents__content__item\"><a href='#";
+						newContent+= newDynamicAnchorID;
+						newContent+= "'";
+						newContent+= " class='dynamicLink'>";
+						newContent+= currentItem.textContent;
+						newContent+= "</a></li>";
+					}   
+					newContent+="</ul></div></div>";
+					// divTOC.append(newContent);
+					document.querySelector("#TOC").insertAdjacentHTML("beforeend", newContent);
+				}
+			} else {
+				document.querySelector("#TOC").remove();
+			}
+            
+		}
+	}
+}
 
+function setHeadingHighlight(anchorTarget) {
+	let h2List = document.querySelectorAll("h2");
+	h2List.forEach(function(heading) {
+		heading.classList.remove("toc__highlight");
+	});
+	document.querySelector(anchorTarget).classList.add("toc__highlight");
+}
+
+function scrollToAnchor(anchorTarget) {
+	let anchor = "";
+	if (anchorTarget === undefined) {
+		anchor = window.location.hash;
+	} else {
+		anchor = anchorTarget;
+	}
+	if (anchor != "" && document.querySelector(anchor)) {
+		if (anchor.length > 0) {
+			document.querySelector(anchor).scrollIntoView({ 
+				behavior: "smooth",
+			});
+		}
+	}
+}
+
+function setTOCListeners() {
+	let tocLinks = document.querySelectorAll("#TOC a");
+	tocLinks.forEach(function(item) {
+		item.addEventListener("click", function(e) {
+			e.preventDefault();
+			let anchorTarget = item.getAttribute("href");
+			history.replaceState(null,null,anchorTarget);
+			scrollToAnchor(anchorTarget);
+			setHeadingHighlight(anchorTarget);            
+		});
+	});
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+	processDynamicAnchors();
+	scrollToAnchor();
+	setTOCListeners();
+});
 
 
 

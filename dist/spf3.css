@@ -1436,6 +1436,9 @@ a,
 
 .toc {
   margin-bottom: 32px; }
+  .toc__highlight {
+    background-color: #f6f6f6;
+    outline: 1px solid #e3e0ee; }
   .toc h2 {
     margin: 0; }
 
