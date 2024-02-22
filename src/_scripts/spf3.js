@@ -522,7 +522,7 @@ function processDynamicAnchors() {
     if ((divTOCScannableArea.length > 0) && (divTOC.length > 0)) {
         let allHeadings = document.querySelectorAll('.toc-page #TOCScannableArea h2');
         
-        // Need to look at fixing some of these
+        // Commented out the jQuery version, need to consider if the manual headings are still required and update to accommodate them
         // var allHeadings =  $(divTOCScannableArea).find('h2, .manual-TOC-entry').not('.spf-article-box h2,.uikit-accordion__body-wrapper h2,.toc-hide');
         // var H2_Headings = allHeadings.filter('h2');
         // var Manual_Headings = allHeadings.filter('.manual-TOC-entry');
@@ -549,7 +549,6 @@ function processDynamicAnchors() {
                         for(let i=0; i < count_All_Headings; i++) {
                             let currentItem = allHeadings[i];
                             let newDynamicAnchorID = currentItem.textContent.replace(/[_\W]+/g, '-').replace(/â€™/g,'-').replace(/'/g,'-');
-                            let newAnchorToInsert = '<a id=\"'+newDynamicAnchorID+'" class="dynamicAnchor">';
                             currentItem.setAttribute('id', newDynamicAnchorID);
                             currentItem.setAttribute('class', 'dynamicAnchor');
                             
