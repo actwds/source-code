@@ -604,7 +604,7 @@ function setTOCListeners() {
 			let anchorTarget = item.getAttribute("href");
 			history.replaceState(null,null,anchorTarget);
 			scrollToAnchor(anchorTarget);
-			setHeadingHighlight(anchorTarget);            
+			setHeadingHighlight(anchorTarget);
 		});
 	});
 }
@@ -612,6 +612,7 @@ function setTOCListeners() {
 document.addEventListener("DOMContentLoaded", function() {
 	processDynamicAnchors();
 	scrollToAnchor();
+	setHeadingHighlight(window.location.hash);
 	setTOCListeners();
 });
 
