@@ -571,24 +571,6 @@ function processDynamicAnchors() {
             }
         }
     }
-    
-    // Needs to be converted from jQuery
-    //Highlight target heading when a hyperlink pointing to it is clicked
-    // $('a.dynamicLink').click(function() {
-    //     var headings = $('.toc-page #TOCScannableArea').find('h2, .manual-TOC-entry').not('.spf-article-box h2');
-    //     for(var i=0; i < headings.length; i++) {
-    //         $(headings[i]).css({'background-color' : 'transparent', 'outline' : 'none'});
-    //     }
-    //     var href = $(this).attr('href');
-    //     var nextSibling = $(href).next();
-    //     if ((nextSibling != undefined) && ((nextSibling.is("h2")) || (nextSibling.hasClass("manual-TOC-entry")))) {
-    //         nextSibling.css({'background-color' : 'hsla(0,0%,95%,1.0)', 'outline' : '1px solid #edd7e9'});
-    //     }
-    // });
-
-
-
-
 }
 
 function highlightHeading(anchorTarget) {
