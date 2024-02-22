@@ -578,7 +578,6 @@ function setHeadingHighlight(anchorTarget) {
 		heading.classList.remove('toc__highlight');
 	})
 	document.querySelector(anchorTarget).classList.add('toc__highlight');
-	console.log(anchorTarget);
 }
 
 function scrollToAnchor(anchorTarget) {
