@@ -572,7 +572,7 @@ function processDynamicAnchors() {
     }
 }
 
-function highlightHeading(anchorTarget) {
+function setHeadingHighlight(anchorTarget) {
 	let h2List = document.querySelectorAll('h2');
 	h2List.forEach(function(heading) {
 		heading.classList.remove('toc__highlight');
@@ -581,7 +581,7 @@ function highlightHeading(anchorTarget) {
 	console.log(anchorTarget);
 }
 
-function anchorScroll(anchorTarget) {
+function scrollToAnchor(anchorTarget) {
     let anchor = "";
     if (anchorTarget === undefined) {
         anchor = window.location.hash;
@@ -604,8 +604,8 @@ function setTOCListeners() {
             e.preventDefault();
             let anchorTarget = item.getAttribute('href');
             history.replaceState(null,null,anchorTarget);
-            anchorScroll(anchorTarget);
-			highlightHeading(anchorTarget);            
+            scrollToAnchor(anchorTarget);
+			setHeadingHighlight(anchorTarget);            
         })
     })
 
@@ -613,7 +613,7 @@ function setTOCListeners() {
 
 document.addEventListener("DOMContentLoaded", function() {
     processDynamicAnchors();
-    anchorScroll();
+    scrollToAnchor();
 	tocEventListener();
 });
 
