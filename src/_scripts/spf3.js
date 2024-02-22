@@ -35,14 +35,10 @@ function globalAlert() {
 globalAlert();
 
 //B13 - Back to top Button
-function backToTop() {
-	document.getElementById("act-header").scrollIntoView({
-		behavior: "smooth",
-	});
-}
-const backToTopButton = document.getElementById("back-to-top");
+const backToTopButton = document.querySelector("#back-to-top");
+const backToTopTarget = "#act-header";
 backToTopButton.addEventListener("click", function() {
-	backToTop();
+	scrollToTarget(backToTopTarget);
 });
 
 function revealOnScroll() {
@@ -514,7 +510,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 // C28 - Table of Contents
-let anchor = "";
+let target = "";
 function processDynamicAnchors() {
 	/* Detect all second level headings (H2) within the scannable div. If more than one H2 exists then generate and add hyperlinks in the Table Of Contents (TOC) div For H2, H3's and manual TOC entries */
 	const CONST_H2_THRESHOLD = 8; //Do not show hyperlinks for H3 headings if  total number of H2 headings on the page exceeds this threshold
@@ -573,41 +569,39 @@ function processDynamicAnchors() {
 	}
 }
 
-function setAnchor(anchorTarget) {
-	if (anchorTarget === undefined) {
-		anchor = window.location.hash;
+function setScrollTarget(target) {
+	if (target === undefined) {
+		scrollTarget = window.location.hash;
 	} else {
-		anchor = anchorTarget;
+		scrollTarget = target;
 	}
 
 }
 
-function checkAnchor(anchorTarget) {
-	setAnchor(anchorTarget);
-	if (anchor != "" && document.querySelector(anchor)) { 
+function checkTarget(target) {
+	setScrollTarget(target);
+	if (scrollTarget != "" && document.querySelector(scrollTarget)) { 
 		return true;
 	} 
 	return false;
 	
 }
 
-function setHeadingHighlight(anchorTarget) {
-	if (checkAnchor(anchorTarget)) { 
+function setHeadingHighlight(target) {
+	if (checkTarget(target)) { 
 		let h2List = document.querySelectorAll("h2");
 		h2List.forEach(function(heading) {
 			heading.classList.remove("toc__highlight");
 		});
-		document.querySelector(anchorTarget).classList.add("toc__highlight");
+		document.querySelector(target).classList.add("toc__highlight");
 	}
 }
 
-function scrollToAnchor(anchorTarget) {
-	if (checkAnchor(anchorTarget)) {
-		if (anchor.length > 0) {
-			document.querySelector(anchor).scrollIntoView({ 
-				behavior: "smooth",
-			});
-		}
+function scrollToTarget(target) {
+	if (target.length > 0) {
+		document.querySelector(target).scrollIntoView({ 
+			behavior: "smooth",
+		});
 	}
 }
 
@@ -616,17 +610,19 @@ function setTOCListeners() {
 	tocLinks.forEach(function(item) {
 		item.addEventListener("click", function(e) {
 			e.preventDefault();
-			let anchorTarget = item.getAttribute("href");
-			history.replaceState(null,null,anchorTarget);
-			scrollToAnchor(anchorTarget);
-			setHeadingHighlight(anchorTarget);
+			let target = item.getAttribute("href");
+			history.replaceState(null,null,target);
+			if (checkTarget(target)) {
+				scrollToTarget(target);
+				setHeadingHighlight(target);
+			}
 		});
 	});
 }
 
 document.addEventListener("DOMContentLoaded", function() {
 	processDynamicAnchors();
-	scrollToAnchor(window.location.hash);
+	scrollToTarget(window.location.hash);
 	setHeadingHighlight(window.location.hash);
 	setTOCListeners();
 });
