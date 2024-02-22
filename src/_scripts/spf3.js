@@ -516,9 +516,9 @@ document.addEventListener("DOMContentLoaded", function() {
 // C28 - Table of Contents
 function processDynamicAnchors() {
     /* Detect all second level headings (H2) within the scannable div. If more than one H2 exists then generate and add hyperlinks in the Table Of Contents (TOC) div For H2, H3's and manual TOC entries */
-    var CONST_H2_THRESHOLD = 8; //Do not show hyperlinks for H3 headings if  total number of H2 headings on the page exceeds this threshold
-    var divTOCScannableArea = document.querySelectorAll('.toc-page #TOCScannableArea');
-    var divTOC = document.querySelectorAll('#TOC');
+    const CONST_H2_THRESHOLD = 8; //Do not show hyperlinks for H3 headings if  total number of H2 headings on the page exceeds this threshold
+    let divTOCScannableArea = document.querySelectorAll('.toc-page #TOCScannableArea');
+    let divTOC = document.querySelectorAll('#TOC');
     if ((divTOCScannableArea.length > 0) && (divTOC.length > 0)) {
         let allHeadings = document.querySelectorAll('.toc-page #TOCScannableArea h2');
         
@@ -543,23 +543,21 @@ function processDynamicAnchors() {
             } else {
                 if (document.querySelector('meta[name=showTOC]').getAttribute('content').toLowerCase().trim() === "true") {
                     if (count_All_Headings > 1) {
-                        var newContent = '';
+                        let newContent = '';
                         newContent+='<div class="act-table-contents"><div class="act-table-contents__container"><h2 class="act-table-contents__title act-h5">On this page</h2>';
                         newContent+='<ul class="act-table-contents__content">';
-                        for(var i=0; i < count_All_Headings; i++) {
+                        for(let i=0; i < count_All_Headings; i++) {
                             let currentItem = allHeadings[i];
                             let newDynamicAnchorID = currentItem.textContent.replace(/[_\W]+/g, '-').replace(/â€™/g,'-').replace(/'/g,'-');
                             let newAnchorToInsert = '<a id=\"'+newDynamicAnchorID+'" class="dynamicAnchor">';
                             currentItem.setAttribute('id', newDynamicAnchorID);
                             currentItem.setAttribute('class', 'dynamicAnchor');
-                            //console.log(newAnchorToInsert);
                             
                             //Only add hyperlinks pointing to H3's to the TOC if H2 Threshold has not been breached
                             newContent+= '<li class="act-table-contents__content__item"><a href=\'#';
                             newContent+= newDynamicAnchorID;
                             newContent+= '\'';
                             newContent+= ' class=\'dynamicLink\'>';
-                            // newContent+= $(currentItem).text();
                             newContent+= currentItem.textContent;
                             newContent+= '</a></li>';
                         };   
@@ -589,7 +587,6 @@ function processDynamicAnchors() {
     // });
 }
 
-// It seems to not do the scroll thing when selecting a new anchor, or on page load?
 function anchorScroll(anchorTarget) {
     let anchor = "";
     if (anchorTarget === undefined) {
@@ -599,7 +596,6 @@ function anchorScroll(anchorTarget) {
     }
     if (anchor != "" && document.querySelector(anchor)) {
         if (anchor.length > 0) {
-            console.log('scrolling');
             document.querySelector(anchor).scrollIntoView({ 
                 behavior: 'smooth'
             });
@@ -610,15 +606,14 @@ function anchorScroll(anchorTarget) {
 document.addEventListener("DOMContentLoaded", function() {
     processDynamicAnchors();
     anchorScroll();
-    
-    
     let tocLinks = document.querySelectorAll('#TOC a');
     tocLinks.forEach(function(item) {
         item.addEventListener('click', function(e) {
             e.preventDefault();
-            let anchorTarget = item.getAttribute('href')
-            window.location.hash = anchorTarget;
+            let anchorTarget = item.getAttribute('href');
+            history.replaceState(null,null,anchorTarget);
             anchorScroll(anchorTarget);
+            
         })
     })
 });
