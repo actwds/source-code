@@ -586,20 +586,19 @@ function checkAnchor(anchorTarget) {
 	setAnchor(anchorTarget);
 	if (anchor != "" && document.querySelector(anchor)) { 
 		return true;
-	} else {
-		return false;
-	}
+	} 
+	return false;
+	
 }
 
 function setHeadingHighlight(anchorTarget) {
-    if (checkAnchor(anchorTarget)) { 
-    	let h2List = document.querySelectorAll("h2");
-    	h2List.forEach(function(heading) {
-    		heading.classList.remove("toc__highlight");
-    	});
-    	document.querySelector(anchorTarget).classList.add("toc__highlight");
-        
-    }
+	if (checkAnchor(anchorTarget)) { 
+		let h2List = document.querySelectorAll("h2");
+		h2List.forEach(function(heading) {
+			heading.classList.remove("toc__highlight");
+		});
+		document.querySelector(anchorTarget).classList.add("toc__highlight");
+	}
 }
 
 function scrollToAnchor(anchorTarget) {

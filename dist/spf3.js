@@ -514,6 +514,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 // C28 - Table of Contents
+let anchor = "";
 function processDynamicAnchors() {
 	/* Detect all second level headings (H2) within the scannable div. If more than one H2 exists then generate and add hyperlinks in the Table Of Contents (TOC) div For H2, H3's and manual TOC entries */
 	const CONST_H2_THRESHOLD = 8; //Do not show hyperlinks for H3 headings if  total number of H2 headings on the page exceeds this threshold
@@ -572,22 +573,36 @@ function processDynamicAnchors() {
 	}
 }
 
-function setHeadingHighlight(anchorTarget) {
-	let h2List = document.querySelectorAll("h2");
-	h2List.forEach(function(heading) {
-		heading.classList.remove("toc__highlight");
-	});
-	document.querySelector(anchorTarget).classList.add("toc__highlight");
-}
-
-function scrollToAnchor(anchorTarget) {
-	let anchor = "";
+function setAnchor(anchorTarget) {
 	if (anchorTarget === undefined) {
 		anchor = window.location.hash;
 	} else {
 		anchor = anchorTarget;
 	}
-	if (anchor != "" && document.querySelector(anchor)) {
+
+}
+
+function checkAnchor(anchorTarget) {
+	setAnchor(anchorTarget);
+	if (anchor != "" && document.querySelector(anchor)) { 
+		return true;
+	} 
+	return false;
+	
+}
+
+function setHeadingHighlight(anchorTarget) {
+	if (checkAnchor(anchorTarget)) { 
+		let h2List = document.querySelectorAll("h2");
+		h2List.forEach(function(heading) {
+			heading.classList.remove("toc__highlight");
+		});
+		document.querySelector(anchorTarget).classList.add("toc__highlight");
+	}
+}
+
+function scrollToAnchor(anchorTarget) {
+	if (checkAnchor(anchorTarget)) {
 		if (anchor.length > 0) {
 			document.querySelector(anchor).scrollIntoView({ 
 				behavior: "smooth",
@@ -604,14 +619,15 @@ function setTOCListeners() {
 			let anchorTarget = item.getAttribute("href");
 			history.replaceState(null,null,anchorTarget);
 			scrollToAnchor(anchorTarget);
-			setHeadingHighlight(anchorTarget);            
+			setHeadingHighlight(anchorTarget);
 		});
 	});
 }
 
 document.addEventListener("DOMContentLoaded", function() {
 	processDynamicAnchors();
-	scrollToAnchor();
+	scrollToAnchor(window.location.hash);
+	setHeadingHighlight(window.location.hash);
 	setTOCListeners();
 });
 
