@@ -585,6 +585,15 @@ function processDynamicAnchors() {
     //         nextSibling.css({'background-color' : 'hsla(0,0%,95%,1.0)', 'outline' : '1px solid #edd7e9'});
     //     }
     // });
+
+
+
+
+}
+
+function highlightHeading(anchorTarget) {
+	document.querySelector(anchorTarget).classList.add('toc-highlight');
+	console.log(anchorTarget);
 }
 
 function anchorScroll(anchorTarget) {
@@ -613,7 +622,7 @@ document.addEventListener("DOMContentLoaded", function() {
             let anchorTarget = item.getAttribute('href');
             history.replaceState(null,null,anchorTarget);
             anchorScroll(anchorTarget);
-            
+			highlightHeading(anchorTarget);            
         })
     })
 });
