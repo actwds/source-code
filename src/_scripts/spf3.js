@@ -572,12 +572,35 @@ function processDynamicAnchors() {
 	}
 }
 
+function checkAnchor(anchorTarget) {
+	let anchor = "";
+	if (anchorTarget === undefined) {
+		anchor = window.location.hash;
+	} else {
+		anchor = anchorTarget;
+	}
+	if (anchor != "" && document.querySelector(anchor)) { 
+		return true;
+	} else {
+		return false;
+	}
+}
+
 function setHeadingHighlight(anchorTarget) {
-	let h2List = document.querySelectorAll("h2");
-	h2List.forEach(function(heading) {
-		heading.classList.remove("toc__highlight");
-	});
-	document.querySelector(anchorTarget).classList.add("toc__highlight");
+	let anchor = "";
+	if (anchorTarget === undefined) {
+		anchor = window.location.hash;
+	} else {
+		anchor = anchorTarget;
+	}
+    if (anchor != "" && document.querySelector(anchor)) { 
+    	let h2List = document.querySelectorAll("h2");
+    	h2List.forEach(function(heading) {
+    		heading.classList.remove("toc__highlight");
+    	});
+    	document.querySelector(anchorTarget).classList.add("toc__highlight");
+        
+    }
 }
 
 function scrollToAnchor(anchorTarget) {
@@ -611,7 +634,7 @@ function setTOCListeners() {
 
 document.addEventListener("DOMContentLoaded", function() {
 	processDynamicAnchors();
-	scrollToAnchor();
+	scrollToAnchor(window.location.hash);
 	setHeadingHighlight(window.location.hash);
 	setTOCListeners();
 });
