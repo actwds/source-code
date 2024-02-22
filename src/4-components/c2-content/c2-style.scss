@@ -118,6 +118,10 @@
 
 .toc {
 	margin-bottom: $act-space__desktop-4;
+	&__highlight {
+		background-color: $act-colour__light-grey;
+		outline: 1px solid $act-colour__light-lavender-hover;
+	}
 	h2 {
 		margin: 0;
 	}
