@@ -143,12 +143,11 @@ function openChildLinks(e) {
 	}
 }
 
-
 document.addEventListener("DOMContentLoaded", function() {
-	const megaMenu = document.getElementsByClassName("act-megamenu")[0];
+	const megaMenu = document.querySelectorAll("act-megamenu")[0];
 	const megaMenuToggle = document.querySelectorAll(".act-navbar__menu");
 	const megaMenuIcon = document.querySelectorAll(".act-navbar__menu .act-navbar__menu__container z")[0];
-	const megaMenuText = document.getElementsByClassName("act-navbar__menu__text")[0];
+	const megaMenuText = document.querySelectorAll("act-navbar__menu__text")[0];
 	megaMenuToggle.forEach(function(button) {
 		button.addEventListener("click", function(e) {
 			e.preventDefault();
@@ -179,8 +178,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
 //Search
 document.addEventListener("DOMContentLoaded", function() {
-	const searchContainer = document.getElementsByClassName("act-navbar__search__container")[0];
-	const searchInput = document.getElementsByClassName("act-navbar__search__text")[0];
+	const searchContainer = document.querySelectorAll("act-navbar__search__container")[0];
+	const searchInput = document.querySelectorAll("act-navbar__search__text")[0];
 	const searchToggle = document.querySelectorAll(".act-navbar__search__container z");
 	searchToggle.forEach(function(button) {
 		button.addEventListener("click", function() {
@@ -192,10 +191,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
 //Close events
 document.addEventListener("keydown", function() {
-	const megaMenu = document.getElementsByClassName("act-megamenu")[0];
+	const megaMenu = document.querySelectorAll("act-megamenu")[0];
 	const megaMenuIcon = document.querySelectorAll(".act-navbar__menu .act-navbar__menu__container z")[0];
-	const megaMenuText = document.getElementsByClassName("act-navbar__menu__text")[0];
-	const searchContainer = document.getElementsByClassName("act-navbar__search__container")[0];
+	const megaMenuText = document.querySelectorAll("act-navbar__menu__text")[0];
+	const searchContainer = document.querySelectorAll("act-navbar__search__container")[0];
 	if(event.keyCode === 27) {
 		if (megaMenu.classList.contains("act-megamenu__open")) {
 			megaMenu.classList.toggle("act-megamenu__open");
@@ -212,11 +211,11 @@ document.addEventListener("keydown", function() {
 });
 
 document.addEventListener("click", function(e) {
-	const megaMenu = document.getElementsByClassName("act-megamenu")[0];
+	const megaMenu = document.querySelectorAll("act-megamenu")[0];
 	const megaMenuIcon = document.querySelectorAll(".act-navbar__menu .act-navbar__menu__container z")[0];
-	const megaMenuText = document.getElementsByClassName("act-navbar__menu__text")[0];
-	const searchContainer = document.getElementsByClassName("act-navbar__search__container")[0];
-	const navbar = document.getElementsByClassName("act-navbar")[0];
+	const megaMenuText = document.querySelectorAll("act-navbar__menu__text")[0];
+	const searchContainer = document.querySelectorAll("act-navbar__search__container")[0];
+	const navbar = document.querySelectorAll("act-navbar")[0];
 	if (!navbar.contains(e.target) && !megaMenu.contains(e.target)) {
 		if (megaMenu.classList.contains("act-megamenu__open")) {
 			megaMenu.classList.toggle("act-megamenu__open");
@@ -249,8 +248,8 @@ document.addEventListener("keydown", function(e) {
 			if(event.keyCode === 37) {
 				if (i % 2 == 0 || sw < 991) { //left col
 					//
-					document.getElementsByClassName("act-megamenu__content__block-sub-menu")[0].classList.add("hidden-mobile");
-					Array.from(document.getElementsByClassName("act-megamenu__sub-menu-link-container")).forEach(function(container) {
+					document.querySelectorAll("act-megamenu__content__block-sub-menu")[0].classList.add("hidden-mobile");
+					Array.from(document.querySelectorAll("act-megamenu__sub-menu-link-container")).forEach(function(container) {
 						container.style.display = "none";
 					});
 					let numMega = document.activeElement.closest(".act-megamenu__sub-menu-link-container").id.split("-")[2];
@@ -364,8 +363,8 @@ document.addEventListener("DOMContentLoaded", function() {
 			if (e.target.closest(".act-megamenu__link")) {
 				return;
 			} 
-			document.getElementsByClassName("act-megamenu__content__block-sub-menu")[0].classList.add("hidden-mobile");
-			Array.from(document.getElementsByClassName("act-megamenu__sub-menu-link-container")).forEach(function(container) {
+			document.querySelectorAll("act-megamenu__content__block-sub-menu")[0].classList.add("hidden-mobile");
+			Array.from(document.querySelectorAll("act-megamenu__sub-menu-link-container")).forEach(function(container) {
 				container.style.display = "none";
 			});
 		});
