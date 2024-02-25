@@ -372,145 +372,157 @@ document.addEventListener("DOMContentLoaded", function() {
 	});
 });
 
+function setOpacity(submenuTargetID, item) {
+	if (submenuTargetID === item.id.split("-")[2]) {
+		item.style.opacity = 1;
+	} else {
+		item.style.opacity = 0;
+	}
+}
 
-document.querySelectorAll(".act-megamenu__sub-menu-link-container").forEach(function(item) {
-	document.querySelectorAll(".act-megamenu__link").addEventListener("click", function(e) {
-		if (item.style.opacity == "1") {
-			item.style.opacity = "0";
-		} else {
-			item.style.opacity = "1";
-		}
+document.querySelector(".act-megamenu__link-container").addEventListener("click", function(e) {
+	let currentItemID = e.target.closest('a').id.split("-")[3];
+	let submenuTargetID = document.querySelector('#sub-menu-'+currentItemID).id.split("-")[2];
+	document.querySelectorAll(".act-megamenu__sub-menu-link-container").forEach(function(item) {
+		setOpacity(submenuTargetID, item);
 	});
 });
 
-
 // F2 - AJAX Search
 document.addEventListener("DOMContentLoaded", function() {
-	let urlString;
-	let ajaxForm = document.querySelector(".ajax-form");
-	let ajaxFormInputs = ajaxForm.querySelectorAll("input, select");
-	let inputsValueArray = [];
-	let inputsParameterArray = [];
-	let targetSelectors = ["#search-outer-wrapper", "#search-matching",];
-
-	function setURLPath() {
-		const formAction = document.querySelector(".ajax-form").getAttribute("action");
-		const hostName = window.location.hostname;
-		urlString = `https://${hostName}${formAction}`;
-	}
-
-	function setInputParameters() {
-		getInputValues();
-		getInputParameters();
-		for (let i=0; i < inputsParameterArray.length; i++) {
-			if (i === 0) {
-				urlString += `?${inputsParameterArray[i]}=${inputsValueArray[i]}`;
-			} else {
-				urlString += `&${inputsParameterArray[i]}=${inputsValueArray[i]}`;
+	function ajaxForm() {
+		let urlString;
+		let ajaxForm = document.querySelector(".ajax-form");
+		let ajaxFormInputs = ajaxForm.querySelectorAll("input, select");
+		let inputsValueArray = [];
+		let inputsParameterArray = [];
+		let targetSelectors = ["#search-outer-wrapper", "#search-matching",];
+	
+		function setURLPath() {
+			const formAction = document.querySelector(".ajax-form").getAttribute("action");
+			const hostName = window.location.hostname;
+			// urlString = `https://${hostName}${formAction}`;
+			urlString = "https://"+hostName+formAction;
+		}
+	
+		function setInputParameters() {
+			getInputValues();
+			getInputParameters();
+			for (let i=0; i < inputsParameterArray.length; i++) {
+				if (i === 0) {
+					// urlString += `?${inputsParameterArray[i]}=${inputsValueArray[i]}`;
+					urlString += "?"+inputsParameterArray[i]+"="+inputsValueArray[i];
+				} else {
+					// urlString += `&${inputsParameterArray[i]}=${inputsValueArray[i]}`;
+					urlString += "&"+inputsParameterArray[i]+"="+inputsValueArray[i];
+				}
 			}
 		}
-	}
-
-	function getInputParameters() {
-		inputsParameterArray = [];
-		ajaxFormInputs.forEach(function(input) {
-			let inputType = input.getAttribute("type");
-			let inputParameter = input.getAttribute("name");
-			// If null, most likely a select element
-			if (inputType != null) {
-				if (inputType.toLowerCase() != "submit") {
+	
+		function getInputParameters() {
+			inputsParameterArray = [];
+			ajaxFormInputs.forEach(function(input) {
+				let inputType = input.getAttribute("type");
+				let inputParameter = input.getAttribute("name");
+				// If null, most likely a select element
+				if (inputType != null) {
+					if (inputType.toLowerCase() != "submit") {
+						inputsParameterArray.push(inputParameter);
+					}
+				} else {
 					inputsParameterArray.push(inputParameter);
 				}
-			} else {
-				inputsParameterArray.push(inputParameter);
-			}
-		});
-	}
-
-	function getInputValues() {
-		inputsValueArray = [];
-		ajaxFormInputs.forEach(function(input) {
-			let inputType = input.getAttribute("type");
-			let inputValue = input.value;
-			// If null, most likely a select element
-			if (inputType != null) {
-				if (inputType.toLowerCase() != "submit") {
+			});
+		}
+	
+		function getInputValues() {
+			inputsValueArray = [];
+			ajaxFormInputs.forEach(function(input) {
+				let inputType = input.getAttribute("type");
+				let inputValue = input.value;
+				// If null, most likely a select element
+				if (inputType != null) {
+					if (inputType.toLowerCase() != "submit") {
+						inputsValueArray.push(inputValue);
+					}
+				} else {
 					inputsValueArray.push(inputValue);
 				}
-			} else {
-				inputsValueArray.push(inputValue);
-			}
-		});
-	}
-
-	function resetInputs() {
-		getInputParameters();
-		for (let i=0; i < inputsParameterArray.length; i++) {
-			if (document.querySelector(`.ajax-form input[name=${inputsParameterArray[i]}`) === document.querySelector(`.ajax-form input[type='hidden']`)) {
-				continue;
-			}
-			if (document.querySelector(`.ajax-form input[name=${inputsParameterArray[i]}`)) {
-				document.querySelector(`.ajax-form input[name=${inputsParameterArray[i]}`).value = "";
-			} else if (document.querySelector(`.ajax-form select[name=${inputsParameterArray[i]}`)) {
-				document.querySelector(`.ajax-form select[name=${inputsParameterArray[i]}`).value = "";
-			}
+			});
 		}
-		submitAJAXForm(targetSelectors);
-	}
-
-	function filterResults(elementID, responseText) {
-		let textToFilter = document.createElement("textToFilter");
-		textToFilter.innerHTML = responseText;
-		let filteredResult = textToFilter.querySelector(elementID);
-		document.querySelector(elementID).innerHTML = filteredResult.innerHTML;            
-	}
-    
-	function submitAJAXForm(resultSelector) {
-		setURLPath();
-		setInputParameters();
-		fetch(urlString)
-			.then((response) => {
-				if (!response.ok) {
-					throw new Error(`HTTP error: ${response.status}`);
+	
+		function resetInputs() {
+			getInputParameters();
+			for (let i=0; i < inputsParameterArray.length; i++) {
+				if (document.querySelector(`.ajax-form input[name=${inputsParameterArray[i]}`) === document.querySelector(`.ajax-form input[type='hidden']`)) {
+					continue;
 				}
-				return response.text();
-			})
-			.then((text) => {
-				// hide loading
-				resultSelector.forEach(function(item) {
-					filterResults(item, text);
+				if (document.querySelector(`.ajax-form input[name=${inputsParameterArray[i]}`)) {
+					document.querySelector(`.ajax-form input[name=${inputsParameterArray[i]}`).value = "";
+				} else if (document.querySelector(`.ajax-form select[name=${inputsParameterArray[i]}`)) {
+					document.querySelector(`.ajax-form select[name=${inputsParameterArray[i]}`).value = "";
+				}
+			}
+			submitAJAXForm(targetSelectors);
+		}
+	
+		function filterResults(elementID, responseText) {
+			let textToFilter = document.createElement("textToFilter");
+			textToFilter.innerHTML = responseText;
+			let filteredResult = textToFilter.querySelector(elementID);
+			document.querySelector(elementID).innerHTML = filteredResult.innerHTML;            
+		}
+		
+		function submitAJAXForm(resultSelector) {
+			setURLPath();
+			setInputParameters();
+			fetch(urlString)
+				.then((response) => {
+					if (!response.ok) {
+						throw new Error(`HTTP error: ${response.status}`);
+					}
+					return response.text();
+				})
+				.then((text) => {
+					// hide loading
+					resultSelector.forEach(function(item) {
+						filterResults(item, text);
+					});
+				})
+				.catch((error) => {
+					// didn't work
 				});
-			})
-			.catch((error) => {
-				// didn't work
+		}
+	
+		function initAJAXForm(resultSelector) {
+			let formInputs = document.querySelectorAll(".ajax-form input, .ajax-form select");
+			formInputs.forEach(function(input) {
+				input.addEventListener("change", function() {
+					submitAJAXForm(resultSelector);
+				});
 			});
-	}
-
-	function initAJAXForm(resultSelector) {
-		let formInputs = document.querySelectorAll(".ajax-form input, .ajax-form select");
-		formInputs.forEach(function(input) {
-			input.addEventListener("change", function() {
-				submitAJAXForm(resultSelector);
+		}
+	
+		function bindResetButton() {
+			let resetButton = document.querySelector(".ajax-form .button-reset");
+			resetButton.addEventListener("click", function(e) {
+				e.preventDefault();
+				resetInputs();
 			});
-		});
+		}
+		
+		if (ajaxForm) {
+			initAJAXForm(targetSelectors);
+			bindResetButton();
+		}
 	}
-
-	function bindResetButton() {
-		let resetButton = document.querySelector(".ajax-form .button-reset");
-		resetButton.addEventListener("click", function(e) {
-			e.preventDefault();
-			resetInputs();
-		});
-	}
-    
-	if (ajaxForm) {
-		initAJAXForm(targetSelectors);
-		bindResetButton();
+	if (document.querySelector(".ajax-form")) {
+		ajaxForm();
 	}
 });
 
 // C28 - Table of Contents
-let target = "";
+let scrollTarget = "";
 function processDynamicAnchors() {
 	/* Detect all second level headings (H2) within the scannable div. If more than one H2 exists then generate and add hyperlinks in the Table Of Contents (TOC) div For H2, H3's and manual TOC entries */
 	const CONST_H2_THRESHOLD = 8; //Do not show hyperlinks for H3 headings if  total number of H2 headings on the page exceeds this threshold
