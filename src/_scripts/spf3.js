@@ -643,20 +643,20 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 /* Custom GA Tracking */
-// document.addEventListener("DOMContentLoaded", function() {
-// 	function feedbackYes(e) {
-// 		gtag("event", "click", {feedback_type: "Yes"});
-// 		document.getElementById("feedback-yes").removeEventListener("click", feedbackYes);
-// 		document.getElementById("feedback-no").removeEventListener("click", feedbackNo);
-// 	}
+document.addEventListener("DOMContentLoaded", function() {
+	function feedbackYes(e) {
+		gtag("event", "click", {feedback_type: "Yes"});
+		document.getElementById("feedback-yes").removeEventListener("click", feedbackYes);
+		document.getElementById("feedback-no").removeEventListener("click", feedbackNo);
+	}
 	
-// 	function feedbackNo(e) {
-// 		gtag("event", "click", {feedback_type: "No"});
-// 		document.getElementById("feedback-yes").removeEventListener("click", feedbackYes);
-// 		document.getElementById("feedback-no").removeEventListener("click", feedbackNo);
-// 	}
-// 	if (document.querySelectorAll(".act-footer-feedback").length > 0) {
-// 		document.getElementById("feedback-yes").addEventListener("click", feedbackYes);
-// 		document.getElementById("feedback-no").addEventListener("click", feedbackNo);
-// 	}
-// });
+	function feedbackNo(e) {
+		gtag("event", "click", {feedback_type: "No"});
+		document.getElementById("feedback-yes").removeEventListener("click", feedbackYes);
+		document.getElementById("feedback-no").removeEventListener("click", feedbackNo);
+	}
+	if (document.querySelectorAll(".act-footer-feedback").length > 0) {
+		document.getElementById("feedback-yes").addEventListener("click", feedbackYes);
+		document.getElementById("feedback-no").addEventListener("click", feedbackNo);
+	}
+});
