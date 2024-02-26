@@ -347,20 +347,11 @@ function closeMegamenuSubmenu(e) {
 	}
 }
 
-function setOpacity(submenuTargetID, item) {
-	if (submenuTargetID === item.id.split("-")[2]) {
-		item.style.opacity = 1;
-	} else {
-		item.style.opacity = 0;
-	}
-}
-
 document.querySelector(".act-megamenu__link-container").addEventListener("click", function(e) {
 	e.preventDefault();
 	let currentItemID = e.target.closest('a').id.split("-")[3];
 	let submenuTargetID = document.querySelector('#sub-menu-'+currentItemID).id.split("-")[2];
 	document.querySelectorAll(".act-megamenu__sub-menu-link-container").forEach(function(item) {
-		setOpacity(submenuTargetID, item);
 		openChildLinks(submenuTargetID, item);
 	});
 });
