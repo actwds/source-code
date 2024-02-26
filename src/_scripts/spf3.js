@@ -331,7 +331,9 @@ document.addEventListener("keydown", function(e) {
 
 			if(e.key === 'ArrowDown') {
 				if ((activeCount-1) != i) {
-					active.nextElementSibling.focus();				
+					if (active.nextElementSibling != null) {
+						active.nextElementSibling.focus();
+					}
 				} else {
 					document.querySelector(".act-megamenu__content__block-main-menu__additional-links a").focus();
 				}
