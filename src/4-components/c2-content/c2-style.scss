@@ -128,9 +128,6 @@
 }
 
 .act-links-list {
-	&__container {
-		padding: map-get($act-space, "desktop-2");
-	}
 	&__content {
 		list-style-type: none;
 		&__item {
@@ -138,7 +135,7 @@
 			display: flex;
 			flex-direction: row;
 			justify-content: space-between;
-			margin-left: map-get($act-space, "desktop-1");
+			margin-left: 0;
 			width: 100%;
 			&__text {
 				align-items: center;
@@ -172,6 +169,9 @@
 		list-style-type: none;
 		display: grid;
 		grid-template-columns: 1fr 1fr;
+		@include devices(mobile) {
+			grid-template-columns: 1fr;
+		}
 		grid-column-gap: 32px;
 		height: auto;
 		justify-content: space-between;
@@ -180,7 +180,7 @@
 			display: flex;
 			flex-direction: row;
 			justify-content: space-between;
-			margin-left: map-get($act-space, "desktop-1");
+			margin-left: 0;
 			width: 100%;
 			&__text {
 				align-items: center;
