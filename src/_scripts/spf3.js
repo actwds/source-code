@@ -269,7 +269,7 @@ function megamenuMoveDown(i, activeSubnavCount) {
 
 //W-15 Mega Menu keyboard arrow navigation
 document.addEventListener("keydown", function(e) {
-	if(event.keyCode === 37 || event.keyCode === 38 || event.keyCode === 39 || event.keyCode === 40) {
+	if(e.key === 'ArrowLeft' || e.key === 'ArrowUp' || e.key === 'ArrowRight' || e.key === 'ArrowDown') {
 		if (document.querySelector(".act-megamenu").classList.contains("act-megamenu__open")) {
 			e.preventDefault();
 		}
@@ -280,20 +280,16 @@ document.addEventListener("keydown", function(e) {
 			let activeSubnavCount = document.activeElement.parentNode.childElementCount;
 			let i = Array.from(active.parentNode.children).indexOf(active);
 			let screenWidth = screen.width;
-			//left
-			if(event.keyCode === 37) {
+			if(e.key === 'ArrowLeft') {
 				megamenuMoveLeft(i);	
 			}
-			//up
-			if(event.keyCode === 38) {
+			if(e.key === 'ArrowUp') {
 				megamenuMoveUp(i);
 			}
-			//right
-			if(event.keyCode === 39) {
+			if(e.key === 'ArrowRight') {
 				megamenuMoveRight(i, activeSubnavCount)				
 			}
-			//down
-			if(event.keyCode === 40) {
+			if(e.key === 'ArrowDown') {
 				megamenuMoveDown(i, activeSubnavCount);
 			}
 		} else if (document.activeElement.closest(".act-megamenu__link-container")) {
