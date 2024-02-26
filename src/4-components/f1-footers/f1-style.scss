@@ -71,11 +71,9 @@
 	align-items: flex-start;
 	justify-content: flex-start;
 	&__title {
-		align-items: center;
 		display: flex;
-		flex-direction: row;
+		flex-direction: column;
 		justify-content: flex-start;
-		margin-bottom: map-get($act-space, "desktop-2");
 		padding: map-get($act-space, "desktop-1");
 	}
 	&__text {
@@ -90,6 +88,20 @@
 		display: flex;
 		flex-direction: row;
 		justify-content: flex-start;
+		&:last-of-type {
+			margin-top: map-get($act-space, "desktop-2");
+		}
+		&__radio {
+			height: map-get($act-space, "desktop-3");
+			width: map-get($act-space, "desktop-3");
+			margin-right: map-get($act-space, "desktop-2")
+		}
+		&__label {
+			font-size: $act-font-size__desktop-p;
+			&:first-of-type {
+				margin-right: map-get($act-space, "desktop-4");
+			}
+		}		
 		.act-h4 {
 			margin-bottom: 0px;
 			margin-right: map-get($act-space, "desktop-1");
