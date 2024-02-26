@@ -268,7 +268,7 @@ document.addEventListener("keydown", function(e) {
 			}
 			//down
 			if(event.keyCode === 40) {
-				if (active.parentNode.classList.contains("section-heading")) {
+				if (active.parentNode.classList.contains("section-heading") && active.parentNode.parentNode.children[1].children.length > 0) {
 					document.activeElement.parentNode.nextElementSibling.querySelector("a").focus();
 				} else if (sw < 991 && (activeSubnavCount-1) != i) {
 					document.activeElement.nextElementSibling.focus();
