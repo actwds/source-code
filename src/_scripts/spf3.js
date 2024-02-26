@@ -175,12 +175,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 //Close events
-document.addEventListener("keydown", function() {
+document.addEventListener("keydown", function(e) {
 	const megaMenu = document.querySelectorAll(".act-megamenu")[0];
 	const megaMenuIcon = document.querySelectorAll(".act-navbar__menu .act-navbar__menu__container z")[0];
 	const megaMenuText = document.querySelectorAll(".act-navbar__menu__text")[0];
 	const searchContainer = document.querySelectorAll(".act-navbar__search__container")[0];
-	if(event.keyCode === 27) {
+	if(e.key === 'Escape') {
 		if (megaMenu.classList.contains("act-megamenu__open")) {
 			megaMenu.classList.toggle("act-megamenu__open");
 			megaMenuIcon.classList.add("fa-bars");
@@ -296,14 +296,12 @@ document.addEventListener("keydown", function(e) {
 			let active = document.activeElement;
 			let activeCount = active.closest(".act-megamenu__link-container").childElementCount;
 			let i = Array.from(active.closest(".act-megamenu__link-container").children).indexOf(active.closest(".act-megamenu__link"));
-			//up
-			if(event.keyCode === 38) {
+			if(e.key === 'ArrowUp') {
 				if (!i == 0) {
 					active.previousElementSibling.focus();
 				}
 			}
-			//right
-			if(event.keyCode === 39 || event.keyCode === 13) {
+			if(e.key === 'ArrowRight' || e.key === 'Enter') {
 				let active = document.activeElement;
 				let activeID = active.closest(".act-megamenu__link").id.split("-")[3];
 				let submenuTarget = document.querySelector('#sub-menu-'+activeID);
@@ -312,8 +310,7 @@ document.addEventListener("keydown", function(e) {
 				toggleSubMenu(true);
 				submenuTarget.querySelector("a").focus();
 			}
-			//down
-			if(event.keyCode === 40) {
+			if(e.key === 'ArrowDown') {
 				if ((activeCount-1) != i) {
 					active.nextElementSibling.focus();				
 				} else {
@@ -324,8 +321,7 @@ document.addEventListener("keydown", function(e) {
 			let active = document.activeElement;
 			let activeCount = active.closest(".act-megamenu__content__block-main-menu__additional-links").childElementCount;
 			let i = Array.from(active.closest(".act-megamenu__content__block-main-menu__additional-links").children).indexOf(active.closest(".act-megamenu__link"));
-			//up
-			if(event.keyCode === 38) {
+			if(e.key === 'ArrowUp') {
 				if (!i == 0) {
 					active.previousElementSibling.focus();
 				} else {
@@ -334,8 +330,7 @@ document.addEventListener("keydown", function(e) {
 				}
 			}
 
-			//down
-			if(event.keyCode === 40) {
+			if(e.key === 'ArrowDown') {
 				if ((activeCount-1) != i) {
 					active.nextElementSibling.focus();				
 				} else {
