@@ -122,8 +122,7 @@ function toggleSubMenu(open) {
 }
 
 function openChildLinks(e) {
-	const element = e.currentTarget;
-	const num = element.id.split("-")[3];
+	const num = e.id.split("-")[3];
 	
 	
 	const visibleChildElements = document.querySelectorAll("[id^=sub-menu-]");
@@ -142,7 +141,7 @@ function openChildLinks(e) {
 			link.setAttribute("aria-expanded", "false");
 		});
 
-		e.currentTarget.setAttribute("aria-expanded", "true");
+		e.setAttribute("aria-expanded", "true");
 	} else if (!childElement) {
 		toggleSubMenu(false);
 	}
@@ -370,6 +369,7 @@ function setOpacity(submenuTargetID, item) {
 document.querySelector(".act-megamenu__link-container").addEventListener("click", function(e) {
 	let currentItemID = e.target.closest('a').id.split("-")[3];
 	let submenuTargetID = document.querySelector('#sub-menu-'+currentItemID).id.split("-")[2];
+	openChildLinks(e.target.closest('a'));
 	document.querySelectorAll(".act-megamenu__sub-menu-link-container").forEach(function(item) {
 		setOpacity(submenuTargetID, item);
 	});
