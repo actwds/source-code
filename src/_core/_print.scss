@@ -73,6 +73,36 @@ $act-local-logo-height-print: 30px;
 				}
 			}
 		}
+		&__bordered {
+			[class*="__closed"] {
+				[class*="__heading"] {
+					background-color: transparent;
+					z {
+						display: none;
+					}
+				}
+				[class*="__content"] {
+					visibility: visible;
+					height: auto;
+					opacity: 1;
+				}
+			}
+		}
+		&__underlined {
+			[class*="__closed"] {
+				[class*="__heading"] {
+					background-color: transparent;
+					z {
+						display: none;
+					}
+				}
+				[class*="__content"] {
+					visibility: visible;
+					height: auto;
+					opacity: 1;
+				}
+			}
+		}
 	}
 	main,
 	.act-body {
@@ -119,5 +149,8 @@ $act-local-logo-height-print: 30px;
 				border: 1px solid $act-colour__black;
 			}
 		}
+	}
+	.act-quick-exit {
+		display: none !important;
 	}
 }
