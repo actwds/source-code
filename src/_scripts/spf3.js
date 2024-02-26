@@ -123,14 +123,15 @@ function toggleSubMenu(open) {
 
 function openChildLinks(submenuTargetID, item) {
 	let itemID = item.id.split("-")[2];
+	let mainMenuItem = document.querySelector('#main-menu-link-'+itemID);
 	if (submenuTargetID === itemID) {
 		item.style.display = 'grid';
 		item.style.opacity = 1;
-		document.querySelector('#main-menu-link-'+itemID).setAttribute("aria-expanded", "true");
+		mainMenuItem.setAttribute("aria-expanded", "true");
 	} else {
 		item.style.display = 'none';
 		item.style.opacity = 0;
-		document.querySelector('#main-menu-link-'+itemID).setAttribute("aria-expanded", "false");
+		mainMenuItem.setAttribute("aria-expanded", "false");
 	}
 	toggleSubMenu(true);
 }
