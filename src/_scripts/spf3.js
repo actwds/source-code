@@ -104,10 +104,10 @@ function toggleCookieConsent() {
 
 
 //W-15 Mega menu
-const megaMenu = document.querySelectorAll(".act-megamenu")[0];
+const megaMenu = document.querySelector(".act-megamenu");
 const megaMenuToggle = document.querySelector(".act-navbar__menu");
-const megaMenuIcon = document.querySelectorAll(".act-navbar__menu .act-navbar__menu__container z")[0];
-const megaMenuText = document.querySelectorAll(".act-navbar__menu__text")[0];
+const megaMenuIcon = document.querySelector(".act-navbar__menu .act-navbar__menu__container z");
+const megaMenuText = document.querySelector(".act-navbar__menu__text");
 
 function toggleSubMenu(open) {
 	const mainMenu = document.querySelector(".act-megamenu__content__block-main-menu");
@@ -163,8 +163,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 //Search
 document.addEventListener("DOMContentLoaded", function() {
-	const searchContainer = document.querySelectorAll(".act-navbar__search__container")[0];
-	const searchInput = document.querySelectorAll(".act-navbar__search__text")[0];
+	const searchContainer = document.querySelector(".act-navbar__search__container");
 	const searchToggle = document.querySelectorAll(".act-navbar__search__container z");
 	searchToggle.forEach(function(button) {
 		button.addEventListener("click", function() {
@@ -176,10 +175,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
 //Close events
 document.addEventListener("keydown", function(e) {
-	const megaMenu = document.querySelectorAll(".act-megamenu")[0];
-	const megaMenuIcon = document.querySelectorAll(".act-navbar__menu .act-navbar__menu__container z")[0];
-	const megaMenuText = document.querySelectorAll(".act-navbar__menu__text")[0];
-	const searchContainer = document.querySelectorAll(".act-navbar__search__container")[0];
+	const megaMenu = document.querySelector(".act-megamenu");
+	const megaMenuIcon = document.querySelector(".act-navbar__menu .act-navbar__menu__container z");
+	const megaMenuText = document.querySelector(".act-navbar__menu__text");
+	const searchContainer = document.querySelector(".act-navbar__search__container");
 	if(e.key === 'Escape') {
 		if (megaMenu.classList.contains("act-megamenu__open")) {
 			megaMenu.classList.toggle("act-megamenu__open");
@@ -196,11 +195,11 @@ document.addEventListener("keydown", function(e) {
 });
 
 document.addEventListener("click", function(e) {
-	const megaMenu = document.querySelectorAll(".act-megamenu")[0];
-	const megaMenuIcon = document.querySelectorAll(".act-navbar__menu .act-navbar__menu__container z")[0];
-	const megaMenuText = document.querySelectorAll(".act-navbar__menu__text")[0];
-	const searchContainer = document.querySelectorAll(".act-navbar__search__container")[0];
-	const navbar = document.querySelectorAll(".act-navbar")[0];
+	const megaMenu = document.querySelector(".act-megamenu");
+	const megaMenuIcon = document.querySelector(".act-navbar__menu .act-navbar__menu__container z");
+	const megaMenuText = document.querySelector(".act-navbar__menu__text");
+	const searchContainer = document.querySelector(".act-navbar__search__container");
+	const navbar = document.querySelector(".act-navbar");
 	if (!navbar.contains(e.target) && !megaMenu.contains(e.target)) {
 		if (megaMenu.classList.contains("act-megamenu__open")) {
 			megaMenu.classList.toggle("act-megamenu__open");
@@ -222,7 +221,7 @@ function getScreenWidth() {
 
 function megamenuMoveLeft(i) {
 	if (i % 2 == 0 || getScreenWidth() < 991) { //left col
-		document.querySelectorAll(".act-megamenu__content__block-sub-menu")[0].classList.add("hidden-mobile");
+		document.querySelector(".act-megamenu__content__block-sub-menu").classList.add("hidden-mobile");
 		Array.from(document.querySelectorAll(".act-megamenu__sub-menu-link-container")).forEach(function(container) {
 			container.style.display = "none";
 		});
@@ -344,7 +343,7 @@ document.addEventListener("keydown", function(e) {
 //W-15 Mega Menu close submenu when left portion clicked
 function closeMegamenuSubmenu(e) {
 	if (e.target.classList.contains('act-megamenu__content__block-main-menu')) {
-		document.querySelectorAll(".act-megamenu__content__block-sub-menu")[0].classList.add("hidden-mobile");
+		document.querySelector(".act-megamenu__content__block-sub-menu").classList.add("hidden-mobile");
 		Array.from(document.querySelectorAll(".act-megamenu__sub-menu-link-container")).forEach(function(container) {
 			container.style.display = "none";
 		});
