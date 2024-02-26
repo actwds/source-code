@@ -69,6 +69,17 @@ export default {
 				},
 			},
 		},
+		heading: {
+			control: { type: "radio", },
+			options: ["span", "h2", "h3", "h4", "h5",],
+			defaultValue: "span",
+			description: "Sets the accordion heading",
+			table: {
+				defaultValue: {
+					summary: "span",
+				},
+			},
+		},
 	},
 };
 

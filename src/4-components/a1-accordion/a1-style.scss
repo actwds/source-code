@@ -48,6 +48,13 @@
 				&:focus {
 					background-color: $act-colour__light-grey;
 					color: $act-colour__purple;
+					h2 {
+						background-color: $act-colour__light-grey;
+						color: $act-colour__purple;
+					}
+				}
+				h2 {
+					color: $act-colour__white;
 				}
 			}
 			[class*="__content"] {
@@ -65,6 +72,10 @@
 				border-bottom: 1px solid $act-colour__light-lavender-active;
 				z {
 					transform: rotate(180deg);
+				}
+				h2 {
+					background-color: $act-colour__light-grey;
+					color: $act-colour__purple;
 				}
 			}
 			[class*="__content"] {
@@ -106,6 +117,9 @@
 				z {
 					transform: rotate(180deg);
 				}
+				h2 {
+					color: $act-colour__white;
+				}
 			}
 			[class*="__content"] {
 				background-color: $act-colour__white;
@@ -143,6 +157,9 @@
 				z {
 					transform: rotate(180deg);
 					color: $act-colour__black;
+				}
+				h2 {
+					color: $act-colour__purple;
 				}
 			}
 			[class*="__content"] {
