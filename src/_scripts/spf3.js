@@ -292,17 +292,11 @@ document.addEventListener("keydown", function(e) {
 			if(event.keyCode === 39 || event.keyCode === 13) {
 				let active = document.activeElement;
 				let activeID = active.closest(".act-megamenu__link").id.split("-")[3];
+				let submenuTarget = document.querySelector('#sub-menu-'+activeID);
+				let submenuTargetID = document.querySelector('#sub-menu-'+activeID).id.split("-")[2];
+				openChildLinks(submenuTargetID, activeID);
 				toggleSubMenu(true);
-				const visibleChildElements = document.querySelectorAll("[id^=sub-menu-]");
-				for (const childElement of visibleChildElements) {
-					childElement.style.display = "none";
-				}
-				const childElement = document.querySelector("#sub-menu-" + activeID);
-				if (!childElement) {
-					return;
-				}
-				childElement.style.display = "grid";
-				childElement.querySelector("a").focus();
+				submenuTarget.querySelector("a").focus();
 			}
 			//down
 			if(event.keyCode === 40) {
