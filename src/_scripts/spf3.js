@@ -125,20 +125,14 @@ function openChildLinks(submenuTargetID, item) {
 	let itemID = item.id.split("-")[2];
 	if (submenuTargetID === itemID) {
 		item.style.display = 'grid';
+		item.style.opacity = 1;
 		document.querySelector('#main-menu-link-'+itemID).setAttribute("aria-expanded", "true");
 	} else {
 		item.style.display = 'none';
+		item.style.opacity = 0;
 		document.querySelector('#main-menu-link-'+itemID).setAttribute("aria-expanded", "false");
 	}
 	toggleSubMenu(true);
-}
-
-function setOpacity(submenuTargetID, item) {
-	if (submenuTargetID === item.id.split("-")[2]) {
-		item.style.opacity = 1;
-	} else {
-		item.style.opacity = 0;
-	}
 }
 
 function toggleMegamenu() {
