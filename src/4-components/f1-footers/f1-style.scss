@@ -94,14 +94,14 @@
 		&__radio {
 			height: map-get($act-space, "desktop-3");
 			width: map-get($act-space, "desktop-3");
-			margin-right: map-get($act-space, "desktop-2")
+			margin-right: map-get($act-space, "desktop-2");
 		}
 		&__label {
 			font-size: $act-font-size__desktop-p;
 			&:first-of-type {
 				margin-right: map-get($act-space, "desktop-4");
 			}
-		}		
+		}
 		.act-h4 {
 			margin-bottom: 0px;
 			margin-right: map-get($act-space, "desktop-1");

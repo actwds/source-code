@@ -123,14 +123,14 @@ function toggleSubMenu(open) {
 
 function openChildLinks(submenuTargetID, itemIDSplit) {
 	// let itemID = item.id.split("-")[2];
-	let itemTarget = document.querySelector('#sub-menu-'+itemIDSplit);
-	let mainMenuItem = document.querySelector('#main-menu-link-'+itemIDSplit);
+	let itemTarget = document.querySelector("#sub-menu-"+itemIDSplit);
+	let mainMenuItem = document.querySelector("#main-menu-link-"+itemIDSplit);
 	if (submenuTargetID === itemIDSplit) {
-		itemTarget.style.display = 'grid';
+		itemTarget.style.display = "grid";
 		itemTarget.style.opacity = 1;
 		mainMenuItem.setAttribute("aria-expanded", "true");
 	} else {
-		itemTarget.style.display = 'none';
+		itemTarget.style.display = "none";
 		itemTarget.style.opacity = 0;
 		mainMenuItem.setAttribute("aria-expanded", "false");
 	}
@@ -179,7 +179,7 @@ document.addEventListener("keydown", function(e) {
 	const megaMenuIcon = document.querySelector(".act-navbar__menu .act-navbar__menu__container z");
 	const megaMenuText = document.querySelector(".act-navbar__menu__text");
 	const searchContainer = document.querySelector(".act-navbar__search__container");
-	if(e.key === 'Escape') {
+	if(e.key === "Escape") {
 		if (megaMenu.classList.contains("act-megamenu__open")) {
 			megaMenu.classList.toggle("act-megamenu__open");
 			megaMenuIcon.classList.add("fa-bars");
@@ -268,7 +268,7 @@ function megamenuMoveDown(i, activeSubnavCount) {
 
 //W-15 Mega Menu keyboard arrow navigation
 document.addEventListener("keydown", function(e) {
-	if(e.key === 'ArrowLeft' || e.key === 'ArrowUp' || e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+	if(e.key === "ArrowLeft" || e.key === "ArrowUp" || e.key === "ArrowRight" || e.key === "ArrowDown") {
 		if (document.querySelector(".act-megamenu").classList.contains("act-megamenu__open")) {
 			e.preventDefault();
 		}
@@ -279,37 +279,37 @@ document.addEventListener("keydown", function(e) {
 			let activeSubnavCount = document.activeElement.parentNode.childElementCount;
 			let i = Array.from(active.parentNode.children).indexOf(active);
 			let screenWidth = screen.width;
-			if(e.key === 'ArrowLeft') {
+			if(e.key === "ArrowLeft") {
 				megamenuMoveLeft(i);	
 			}
-			if(e.key === 'ArrowUp') {
+			if(e.key === "ArrowUp") {
 				megamenuMoveUp(i);
 			}
-			if(e.key === 'ArrowRight') {
-				megamenuMoveRight(i, activeSubnavCount)				
+			if(e.key === "ArrowRight") {
+				megamenuMoveRight(i, activeSubnavCount);				
 			}
-			if(e.key === 'ArrowDown') {
+			if(e.key === "ArrowDown") {
 				megamenuMoveDown(i, activeSubnavCount);
 			}
 		} else if (document.activeElement.closest(".act-megamenu__link-container")) {
 			let active = document.activeElement;
 			let activeCount = active.closest(".act-megamenu__link-container").childElementCount;
 			let i = Array.from(active.closest(".act-megamenu__link-container").children).indexOf(active.closest(".act-megamenu__link"));
-			if(e.key === 'ArrowUp') {
+			if(e.key === "ArrowUp") {
 				if (!i == 0) {
 					active.previousElementSibling.focus();
 				}
 			}
-			if(e.key === 'ArrowRight' || e.key === 'Enter') {
+			if(e.key === "ArrowRight" || e.key === "Enter") {
 				let active = document.activeElement;
 				let activeID = active.closest(".act-megamenu__link").id.split("-")[3];
-				let submenuTarget = document.querySelector('#sub-menu-'+activeID);
-				let submenuTargetID = document.querySelector('#sub-menu-'+activeID).id.split("-")[2];
+				let submenuTarget = document.querySelector("#sub-menu-"+activeID);
+				let submenuTargetID = document.querySelector("#sub-menu-"+activeID).id.split("-")[2];
 				openChildLinks(submenuTargetID, activeID);
 				toggleSubMenu(true);
 				submenuTarget.querySelector("a").focus();
 			}
-			if(e.key === 'ArrowDown') {
+			if(e.key === "ArrowDown") {
 				if ((activeCount-1) != i) {
 					active.nextElementSibling.focus();				
 				} else {
@@ -320,7 +320,7 @@ document.addEventListener("keydown", function(e) {
 			let active = document.activeElement;
 			let activeCount = active.closest(".act-megamenu__content__block-main-menu__additional-links").childElementCount;
 			let i = Array.from(active.closest(".act-megamenu__content__block-main-menu__additional-links").children).indexOf(active.closest(".act-megamenu__link"));
-			if(e.key === 'ArrowUp') {
+			if(e.key === "ArrowUp") {
 				if (!i == 0) {
 					active.previousElementSibling.focus();
 				} else {
@@ -329,7 +329,7 @@ document.addEventListener("keydown", function(e) {
 				}
 			}
 
-			if(e.key === 'ArrowDown') {
+			if(e.key === "ArrowDown") {
 				if ((activeCount-1) != i) {
 					if (active.nextElementSibling != null) {
 						active.nextElementSibling.focus();
@@ -344,7 +344,7 @@ document.addEventListener("keydown", function(e) {
 
 //W-15 Mega Menu close submenu when left portion clicked
 function closeMegamenuSubmenu(e) {
-	if (e.target.classList.contains('act-megamenu__content__block-main-menu')) {
+	if (e.target.classList.contains("act-megamenu__content__block-main-menu")) {
 		document.querySelector(".act-megamenu__content__block-sub-menu").classList.add("hidden-mobile");
 		Array.from(document.querySelectorAll(".act-megamenu__sub-menu-link-container")).forEach(function(container) {
 			container.style.display = "none";
@@ -354,8 +354,8 @@ function closeMegamenuSubmenu(e) {
 
 document.querySelector(".act-megamenu__link-container").addEventListener("click", function(e) {
 	e.preventDefault();
-	let currentItemID = e.target.closest('a').id.split("-")[3];
-	let submenuTargetID = document.querySelector('#sub-menu-'+currentItemID).id.split("-")[2];
+	let currentItemID = e.target.closest("a").id.split("-")[3];
+	let submenuTargetID = document.querySelector("#sub-menu-"+currentItemID).id.split("-")[2];
 	document.querySelectorAll(".act-megamenu__sub-menu-link-container").forEach(function(item) {
 		let itemIDSplit = item.id.split("-")[2];
 		openChildLinks(submenuTargetID, itemIDSplit);
@@ -366,9 +366,9 @@ document.addEventListener("DOMContentLoaded", function() {
 	megaMenuToggle.addEventListener("click", function(e) {
 		e.preventDefault();
 		toggleMegamenu();
-		document.querySelector('.act-megamenu__content__block-main-menu').addEventListener('click', function(e) {
+		document.querySelector(".act-megamenu__content__block-main-menu").addEventListener("click", function(e) {
 			closeMegamenuSubmenu(e);
-		})
+		});
 	});
 });
 
@@ -627,20 +627,20 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 /* Custom GA Tracking */
-document.addEventListener("DOMContentLoaded", function() {
-	function feedbackYes(e) {
-		gtag("event", "click", {feedback_type: "Yes"});
-		document.getElementById("feedback-yes").removeEventListener("click", feedbackYes);
-		document.getElementById("feedback-no").removeEventListener("click", feedbackNo);
-	}
+// document.addEventListener("DOMContentLoaded", function() {
+// 	function feedbackYes(e) {
+// 		gtag("event", "click", {feedback_type: "Yes",});
+// 		document.getElementById("feedback-yes").removeEventListener("click", feedbackYes);
+// 		document.getElementById("feedback-no").removeEventListener("click", feedbackNo);
+// 	}
 	
-	function feedbackNo(e) {
-		gtag("event", "click", {feedback_type: "No"});
-		document.getElementById("feedback-yes").removeEventListener("click", feedbackYes);
-		document.getElementById("feedback-no").removeEventListener("click", feedbackNo);
-	}
-	if (document.querySelectorAll(".act-footer-feedback").length > 0) {
-		document.getElementById("feedback-yes").addEventListener("click", feedbackYes);
-		document.getElementById("feedback-no").addEventListener("click", feedbackNo);
-	}
-});
+// 	function feedbackNo(e) {
+// 		gtag("event", "click", {feedback_type: "No",});
+// 		document.getElementById("feedback-yes").removeEventListener("click", feedbackYes);
+// 		document.getElementById("feedback-no").removeEventListener("click", feedbackNo);
+// 	}
+// 	if (document.querySelectorAll(".act-footer-feedback").length > 0) {
+// 		document.getElementById("feedback-yes").addEventListener("click", feedbackYes);
+// 		document.getElementById("feedback-no").addEventListener("click", feedbackNo);
+// 	}
+// });
