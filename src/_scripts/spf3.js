@@ -625,16 +625,16 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // Q1 - Quick Exit
 function initQuickExit() {
-	let quickExitToggle = document.querySelector('.act-quick-exit__button');
-	let html = document.querySelector('html');
+	let quickExitToggle = document.querySelector(".act-quick-exit__button");
+	let html = document.querySelector("html");
 	
-	if (document.querySelectorAll('.act-quick-exit__button').length > 0) {
+	if (document.querySelectorAll(".act-quick-exit__button").length > 0) {
 		quickExitToggle.addEventListener("click", function(e) {
 			e.preventDefault();
 			html.remove();
-			window.location.replace('https://www.google.com.au');
-		})
-	};
+			window.location.replace("https://www.google.com.au");
+		});
+	}
 }
 
 document.addEventListener("DOMContentLoaded", function() {
