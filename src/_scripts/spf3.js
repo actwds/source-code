@@ -543,7 +543,7 @@ function processDynamicAnchors() {
 						let currentItem = allHeadings[i];
 						let newDynamicAnchorID = currentItem.textContent.replace(/[_\W]+/g, "-").replace(/â€™/g,"-").replace(/'/g,"-");
 						currentItem.setAttribute("id", newDynamicAnchorID);
-						currentItem.setAttribute("class", "dynamicAnchor");
+						currentItem.classList.add("dynamicAnchor");
                             
 						//Only add hyperlinks pointing to H3's to the TOC if H2 Threshold has not been breached
 						newContent+= "<li class=\"act-table-contents__content__item\"><a href='#";
