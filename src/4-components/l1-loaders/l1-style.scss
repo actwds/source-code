@@ -1,0 +1,11 @@
+
+.loader {
+    position: relative;
+    z {
+        // position: absolute;
+        // top: $act-space__desktop-5;
+        // left: $act-space__desktop-2;
+        font-size: $act-font-size__loader;
+        animation: $act-animation__loader;
+    }
+}
