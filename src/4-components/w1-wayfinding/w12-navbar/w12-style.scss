@@ -185,6 +185,7 @@ $act-navbar-height-desktop: 96px;
 		}
 		&__text {
 			font-family: $montserrat;
+			word-break: normal;
 		}
 		@include devices(mobile) {
 			&__container {
