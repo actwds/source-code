@@ -148,7 +148,7 @@
 			top: $act-space__desktop-5;
 			left: $act-space__desktop-2;
 			font-size: $act-font-size__loader;
-			animation:loader 1s infinite steps(30);
+			animation: $act-animation__loader;
 		}
 	}
 }
