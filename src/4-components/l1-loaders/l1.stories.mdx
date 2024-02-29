@@ -1,0 +1,87 @@
+import { Meta, ColorPalette, ColorItem } from "@storybook/addon-docs";
+import { themes, ThemeProvider, convert, ensure } from "@storybook/theming";
+import Masthead from "../../_docs/masthead";
+import AoC from "../../_docs/aoc";
+import Footer from "../../_docs/footer";
+import LinkTo from "@storybook/addon-links/react";
+
+<Meta
+	title="Components/Loaders/Overview"
+	parameters={{
+		previewTabs: {
+			canvas: { hidden: true },
+			"storybook/docs/panel": { hidden: true },
+		},
+	}}
+/>
+
+<div className="act-docs-container">
+	<Masthead />
+	<main className="act-body">
+		<div className="act-flex act-flex-light-purple">
+			<div className="act-flex__container act-flex__container-padding-trim">
+				<div className="act-flex__grid">
+					<div className="act-flex__row">
+						<div className="act-col__cw-12">
+							<div className="act-box">
+								<div className="act-breadcrumbs">
+									<ul className="act-breadcrumbs__container">
+										<li className="act-breadcrumbs__crumb act-h6">
+											<LinkTo className="act-breadcrumbs__crumb__link" kind="about-about--page">
+												Design System <z className="fa-solid fa-angle-right"></z>
+											</LinkTo>
+										</li>
+										<li className="act-breadcrumbs__crumb act-h6">
+											<LinkTo className="act-breadcrumbs__crumb__link" kind="components-overview--page">
+												Components <z className="fa-solid fa-angle-right"></z>
+											</LinkTo>
+										</li>
+										<li className="act-breadcrumbs__crumb act-h6">
+											<LinkTo className="act-breadcrumbs__crumb__link" kind="components-loaders-overview--page">
+												Loaders<z className="fa-solid fa-angle-right"></z>
+											</LinkTo>
+										</li>
+									</ul>
+								</div>
+								<h1>Loaders</h1>
+								<p>Loaders are animated icons used with interactive elements to inform users they need to wait for something to happen.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div className="act-flex">
+			<div className="act-flex__container">
+				<div className="act-flex__grid">
+					<div className="act-flex__row">
+						<div className="act-col__cw-12">
+							<div className="act-box">
+								<div className="act-card-grid">
+									<LinkTo className="act-card act-card__primary act-card__feature--icon" kind="components-loaders-loader--loader">
+										<div class="act-card__container">
+											<div class="act-card__content">
+												<div class="act-card__icon">
+													<z class="fa-solid fa-spinner"></z>
+												</div>
+												<div class="act-card__title">Loader</div>
+												<div class="act-card__description">For use with interactive elements when the user should be informed they need to wait for something to happen</div>
+												<div class="act-card__cta">
+													<z class="fa-solid fa-arrow-right"></z>
+												</div>
+											</div>
+										</div>
+									</LinkTo>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<footer className="act-footer">
+		<AoC />
+		<Footer />
+	</footer>
+</div>
