@@ -1,9 +1,9 @@
 export const createL11 = ({
-  content,
+  icon,
 }) => {
   return `
   <div class="loader">
-    <z class="fa-solid fa-spinner"></z>
+    <z class="`+icon+`"></z>
   </div>
 `;
 };
