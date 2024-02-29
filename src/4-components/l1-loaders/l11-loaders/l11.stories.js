@@ -9,7 +9,7 @@ export default {
 		icon: {
 			control: { type: "text", },
 			defaultValue: "fa-solid fa-spinner",
-			description: "Sets the icon",
+			description: "Sets the spinner icon",
 		},
 	},
 };
