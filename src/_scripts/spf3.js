@@ -662,7 +662,6 @@ function translateChange() {
 
 function googleTranslatePrependEnglish() {
 	let googleTranslateElementDropdown = document.querySelector("#google_translate_element select");
-	console.log("hello");
 	let englishOption = document.createElement("option");
 	englishOption.setAttribute("value", "en");
 	englishOption.textContent = "English";
@@ -683,15 +682,9 @@ function googleTranslateRemoveEnglish() {
 
 function addObserver() {
 	const targetNode = document.querySelector("#google_translate_element select");
-	console.log(targetNode);
 	const config = { childList: true,};    
 	const callback = (mutationList, observer) => {
 		if (observerCheck === false) {
-			for (const mutation of mutationList) {
-				if (mutation.type === "childList") {
-					console.log("A child node has been added or removed.");
-				}
-			}
 			googleTranslateRemoveEnglish();
 			observerCheck = true;
 		}
