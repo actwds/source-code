@@ -646,62 +646,62 @@ document.addEventListener("DOMContentLoaded", function() {
 // W11 - Google Translate
 let observerCheck = false;
 function googleTranslateUpdates() {
-    let googleTranslateElement = document.querySelector('#google_translate_element');
-    let googleTranslateElementDropdown = googleTranslateElement.querySelector('select');
-    googleTranslateElement.querySelector('span').remove();
-    translateChange();
+	let googleTranslateElement = document.querySelector("#google_translate_element");
+	let googleTranslateElementDropdown = googleTranslateElement.querySelector("select");
+	googleTranslateElement.querySelector("span").remove();
+	translateChange();
 }
 
 function translateChange() {
-    let googleTranslateElementDropdown = document.querySelector('#google_translate_element select');
-    googleTranslateElementDropdown.addEventListener('change', function() {
-        addObserver();
-        observerCheck = false;
-    })
+	let googleTranslateElementDropdown = document.querySelector("#google_translate_element select");
+	googleTranslateElementDropdown.addEventListener("change", function() {
+		addObserver();
+		observerCheck = false;
+	});
 }
 
 function googleTranslatePrependEnglish() {
-    let googleTranslateElementDropdown = document.querySelector('#google_translate_element select');
-    console.log('hello');
-    let englishOption = document.createElement('option');
-    englishOption.setAttribute('value', 'en');
-    englishOption.textContent = 'English';
-    googleTranslateElementDropdown.prepend(englishOption);
+	let googleTranslateElementDropdown = document.querySelector("#google_translate_element select");
+	console.log("hello");
+	let englishOption = document.createElement("option");
+	englishOption.setAttribute("value", "en");
+	englishOption.textContent = "English";
+	googleTranslateElementDropdown.prepend(englishOption);
 }
 
 function googleTranslateRemoveEnglish() {
-    let googleTranslateLanguages = document.querySelectorAll('#google_translate_element select option');
-    if (googleTranslateLanguages.length > 0) {
-        googleTranslateLanguages.forEach(function(language) {
-            if (language.value === 'en') {
-                language.remove();
-                googleTranslatePrependEnglish();
-            }
-        })
-    }
+	let googleTranslateLanguages = document.querySelectorAll("#google_translate_element select option");
+	if (googleTranslateLanguages.length > 0) {
+		googleTranslateLanguages.forEach(function(language) {
+			if (language.value === "en") {
+				language.remove();
+				googleTranslatePrependEnglish();
+			}
+		});
+	}
 }
 
 function addObserver() {
-    const targetNode = document.querySelector('#google_translate_element select');
-    console.log(targetNode);
-    const config = { childList: true};    
-    const callback = (mutationList, observer) => {
-        if (observerCheck === false) {
-            for (const mutation of mutationList) {
-                if (mutation.type === "childList") {
-                console.log("A child node has been added or removed.");
-                }
-            }
-            googleTranslateRemoveEnglish()
-            observerCheck = true;
-        }
-    };
+	const targetNode = document.querySelector("#google_translate_element select");
+	console.log(targetNode);
+	const config = { childList: true,};    
+	const callback = (mutationList, observer) => {
+		if (observerCheck === false) {
+			for (const mutation of mutationList) {
+				if (mutation.type === "childList") {
+					console.log("A child node has been added or removed.");
+				}
+			}
+			googleTranslateRemoveEnglish();
+			observerCheck = true;
+		}
+	};
       
-    // Create an observer instance linked to the callback function
-    const observer = new MutationObserver(callback);
+	// Create an observer instance linked to the callback function
+	const observer = new MutationObserver(callback);
     
-    // Start observing the target node for configured mutations
-    observer.observe(targetNode, config);
+	// Start observing the target node for configured mutations
+	observer.observe(targetNode, config);
 }
 
 
