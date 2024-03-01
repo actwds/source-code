@@ -654,38 +654,45 @@ function googleTranslateUpdates() {
 
 function translateChange() {
 	let googleTranslateElementDropdown = document.querySelector("#google_translate_element select");
-	googleTranslateElementDropdown.addEventListener("change", function() {
-		addObserver();
+	googleTranslateElementDropdown.addEventListener("change", function(e) {
+		addObserver(e);
 		observerCheck = false;
 	});
 }
 
-function googleTranslatePrependEnglish() {
+function googleTranslatePrependEnglish(languageCheck) {
 	let googleTranslateElementDropdown = document.querySelector("#google_translate_element select");
 	let englishOption = document.createElement("option");
 	englishOption.setAttribute("value", "en");
 	englishOption.textContent = "English";
 	googleTranslateElementDropdown.prepend(englishOption);
+	if (languageCheck === true) {
+	    document.querySelector("#google_translate_element select").value = 'en';
+	}
 }
 
-function googleTranslateRemoveEnglish() {
+function googleTranslateRemoveEnglish(e) {
+    let languageCheck = false;
+	if (e.target.value === 'en') {
+	    languageCheck = true;
+	}
 	let googleTranslateLanguages = document.querySelectorAll("#google_translate_element select option");
 	if (googleTranslateLanguages.length > 0) {
 		googleTranslateLanguages.forEach(function(language) {
 			if (language.value === "en") {
 				language.remove();
-				googleTranslatePrependEnglish();
+				googleTranslatePrependEnglish(languageCheck);
 			}
 		});
 	}
 }
 
-function addObserver() {
+function addObserver(e) {
 	const targetNode = document.querySelector("#google_translate_element select");
-	const config = { childList: true,};    
+	const config = { childList: true,};
 	const callback = (mutationList, observer) => {
 		if (observerCheck === false) {
-			googleTranslateRemoveEnglish();
+			googleTranslateRemoveEnglish(e);
 			observerCheck = true;
 		}
 	};
