@@ -643,6 +643,14 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
+// G1 - Translate
+function googleTranslateUpdate() {
+	let googleTranslateElement = document.querySelector('#google_translate_element');
+    let googleTranslateDropdown = googleTranslateElement.querySelector('select');
+	googleTranslateElement.querySelector('span').remove();
+}
+
+
 /* Custom GA Tracking */
 // document.addEventListener("DOMContentLoaded", function() {
 // 	function feedbackYes(e) {
