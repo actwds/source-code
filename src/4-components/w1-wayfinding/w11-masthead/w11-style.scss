@@ -73,4 +73,38 @@
 			position: static;
 		}
 	}
+	#translate {
+		margin-top: -5px;
+		span {
+			display: none;
+		}
+		div {
+			display: inline;
+		}
+		select {
+			background: none;
+			border: none;
+			color: #fff;
+			font-weight: bold;
+			font-size: 14px;
+			font-family: "Source Sans Pro", sans-serif;
+			margin: 0;
+			width: 130px;
+			option {
+				color: $act-colour__black;
+			}
+		}
+	}
+}
+body {
+	top: 0% !important;
+}
+
+.skiptranslate {
+	&.goog-te-gadget {
+		font-size: 0px;
+	}
+	iframe {
+		display: none;
+	}
 }
