@@ -3,6 +3,7 @@
 	background-color: $act-colour__success-light-purple-background;
 	border: 0px solid transparent;
 	display: flex;
+	margin: $act-space__desktop-5 0;
 	&__container {
 		align-items: flex-start;
 		border: 1px solid $act-colour__middle-grey;
@@ -28,6 +29,7 @@
 		flex-direction: column;
 		justify-content: flex-start;
 		padding: map-get($act-space, "desktop-3");
+		width: 100%;
 		word-wrap: anywhere;
 		[class*="__icon"] {
 			align-items: normal;
