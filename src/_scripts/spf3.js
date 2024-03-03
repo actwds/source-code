@@ -667,14 +667,14 @@ function googleTranslatePrependEnglish(languageCheck) {
 	englishOption.textContent = "English";
 	googleTranslateElementDropdown.prepend(englishOption);
 	if (languageCheck === true) {
-	    document.querySelector("#google_translate_element select").value = 'en';
+		document.querySelector("#google_translate_element select").value = "en";
 	}
 }
 
 function googleTranslateRemoveEnglish(e) {
-    let languageCheck = false;
-	if (e.target.value === 'en') {
-	    languageCheck = true;
+	let languageCheck = false;
+	if (e.target.value === "en") {
+		languageCheck = true;
 	}
 	let googleTranslateLanguages = document.querySelectorAll("#google_translate_element select option");
 	if (googleTranslateLanguages.length > 0) {
