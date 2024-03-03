@@ -217,6 +217,7 @@
 	align-items: stretch;
 	border: 0px solid transparent;
 	display: flex;
+	margin: $act-space__desktop-5 0;
 	&__container {
 		align-items: flex-start;
 		border: 1px solid $act-colour__middle-grey;
@@ -299,5 +300,8 @@
 		[class*="act-content-block__content"] {
 			padding-bottom: 0;
 		}
+	}
+	.act-links-list {
+		padding: 0 $act-space__desktop-3 $act-space__desktop-3;
 	}
 }
