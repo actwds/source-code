@@ -10,19 +10,19 @@ export const createC211 = ({
   let vimeoHTML = ``;
   let captionHTML = caption;
 
-  if (type == 'YouTube') {
+  if (type == "YouTube") {
     youtubeHTML = `<iframe src="${youtube}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`;
   } else {
     youtubeHTML = ``;
   }
 
-  if (type == 'Image') {
-    imageHTML = `<img src='/images/purple.jpg'>`;
+  if (type == "Image") {
+    imageHTML = `<img src='${image}'>`;
   } else {
     imageHTML = ``;
   }
 
-  if (type == 'Vimeo') {
+  if (type == "Vimeo") {
     vimeoHTML = `<iframe src="${vimeo}" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen=""></iframe>`;
   } else {
     vimeoHTML = ``;

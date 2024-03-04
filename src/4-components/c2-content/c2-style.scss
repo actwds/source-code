@@ -306,7 +306,6 @@
 	}
 }
 
-
 .act-framed-media {
 	padding: $act-space__desktop-2;
 	width: 100%;
@@ -318,16 +317,16 @@
 		overflow: hidden;
 		padding-bottom: 56.25%;
 		position: relative;
-		 iframe,
-		 embed,
-		 img {
+		iframe,
+		embed,
+		img {
 			height: 100%;
 			left: 0;
 			max-width: 100%;
 			position: absolute;
 			top: 0;
 			width: 100%;
-		 }
+		}
 	}
 	&__caption {
 		background: $act-colour__light-grey;
