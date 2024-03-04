@@ -305,3 +305,32 @@
 		padding: 0 $act-space__desktop-3 $act-space__desktop-3;
 	}
 }
+
+
+.act-framed-media {
+	padding: $act-space__desktop-2;
+	width: 100%;
+	&:first-child {
+		padding-top: 0;
+	}
+	&__container {
+		height: 0;
+		overflow: hidden;
+		padding-bottom: 56.25%;
+		position: relative;
+		 iframe,
+		 embed,
+		 img {
+			height: 100%;
+			left: 0;
+			max-width: 100%;
+			position: absolute;
+			top: 0;
+			width: 100%;
+		 }
+	}
+	&__caption {
+		background: $act-colour__light-grey;
+		padding: $act-space__desktop-2;
+	}
+}
