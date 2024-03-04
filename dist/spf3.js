@@ -643,6 +643,68 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
+// W11 - Google Translate
+let observerCheck = false;
+function googleTranslateUpdates() {
+	let googleTranslateElement = document.querySelector("#google_translate_element");
+	let googleTranslateElementDropdown = googleTranslateElement.querySelector("select");
+	googleTranslateElement.querySelector("span").remove();
+	translateChange();
+}
+
+function translateChange() {
+	let googleTranslateElementDropdown = document.querySelector("#google_translate_element select");
+	googleTranslateElementDropdown.addEventListener("change", function(e) {
+		addObserver(e);
+		observerCheck = false;
+	});
+}
+
+function googleTranslatePrependEnglish(languageCheck) {
+	let googleTranslateElementDropdown = document.querySelector("#google_translate_element select");
+	let englishOption = document.createElement("option");
+	englishOption.setAttribute("value", "en");
+	englishOption.textContent = "English";
+	googleTranslateElementDropdown.prepend(englishOption);
+	if (languageCheck === true) {
+		document.querySelector("#google_translate_element select").value = "en";
+	}
+}
+
+function googleTranslateRemoveEnglish(e) {
+	let languageCheck = false;
+	if (e.target.value === "en") {
+		languageCheck = true;
+	}
+	let googleTranslateLanguages = document.querySelectorAll("#google_translate_element select option");
+	if (googleTranslateLanguages.length > 0) {
+		googleTranslateLanguages.forEach(function(language) {
+			if (language.value === "en") {
+				language.remove();
+				googleTranslatePrependEnglish(languageCheck);
+			}
+		});
+	}
+}
+
+function addObserver(e) {
+	const targetNode = document.querySelector("#google_translate_element select");
+	const config = { childList: true,};
+	const callback = (mutationList, observer) => {
+		if (observerCheck === false) {
+			googleTranslateRemoveEnglish(e);
+			observerCheck = true;
+		}
+	};
+      
+	// Create an observer instance linked to the callback function
+	const observer = new MutationObserver(callback);
+    
+	// Start observing the target node for configured mutations
+	observer.observe(targetNode, config);
+}
+
+
 /* Custom GA Tracking */
 // document.addEventListener("DOMContentLoaded", function() {
 // 	function feedbackYes(e) {
