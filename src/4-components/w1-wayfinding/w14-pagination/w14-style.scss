@@ -2,6 +2,7 @@
 	align-items: center;
 	display: flex;
 	flex-direction: row;
+	flex-wrap: wrap;
 	justify-content: flex-start;
 	&__title {
 		font-size: $act-font-size__desktop-pagination;
