@@ -31,6 +31,9 @@
 			line-height: $act-line-height__100;
 			margin-top: map-get($act-space, "desktop-1");
 		}
+		&__best-bet {
+			background-color: $act-colour__pastel-violet;
+		}
 	}
 }
 
