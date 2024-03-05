@@ -178,6 +178,7 @@
 		justify-content: space-between;
 		&__item {
 			align-items: center;
+			border-bottom: 1px solid $act-colour__middle-grey;
 			display: flex;
 			flex-direction: row;
 			justify-content: space-between;
@@ -185,7 +186,7 @@
 			width: 100%;
 			&__text {
 				align-items: center;
-				border-bottom: 1px solid $act-colour__middle-grey;
+				border-bottom: none;
 				display: flex;
 				flex-direction: row;
 				font-family: $sourcesanspro;
@@ -200,6 +201,7 @@
 				}
 				&:focus,
 				&:hover {
+					border-bottom: none;
 					color: $act-colour__black;
 					background-color: $act-colour__light-lavender-hover;
 					border-color: $act-colour__light-lavender-hover;
@@ -208,6 +210,10 @@
 			&__icon {
 				color: $act-colour__purple;
 				margin-right: $act-space__desktop-2;
+			}
+			&:focus,
+			&:hover {
+				border-bottom: 1px solid transparent;
 			}
 		}
 	}
