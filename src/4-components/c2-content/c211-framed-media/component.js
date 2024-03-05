@@ -31,9 +31,7 @@ export const createC211 = ({
   return `
   <div class="act-framed-media">
   <div class="act-framed-media__container">  
-      ${youtubeHTML}
-      ${imageHTML}
-      ${vimeoHTML}
+      ${youtubeHTML}${imageHTML}${vimeoHTML}
   </div>
   <div class="act-framed-media__caption">${captionHTML}</div>
 </div>
