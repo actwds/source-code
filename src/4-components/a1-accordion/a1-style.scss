@@ -37,6 +37,12 @@
 			flex-grow: 1;
 			padding: map-get($act-space, "desktop-2");
 			width: 100%;
+			& > h2:first-child,
+			& > h3:first-child,
+			& > h4:first-child,
+			& > h5:first-child {
+				margin-top: 0;
+			}
 		}
 	}
 	&__filled {
