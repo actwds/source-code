@@ -82,7 +82,7 @@ export const createF11 = () => {
                 </div>
                 <div class="act-footer-main__content">
                   <div class="act-footer-main__socials">
-                    <h5>Follow us</h5>
+                    <h2>Follow us</h2>
                     <a class="act-footer-main__socials__icon" href="#" target="_blank" title="Facebook">
                       <z class="fa-brands fa-facebook-f"></z>
                     </a>

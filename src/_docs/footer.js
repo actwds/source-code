@@ -296,7 +296,7 @@ const Footer = () => {
 										</div>
 										<div className="act-footer-main__content">
 											<div className="act-footer-main__socials">
-												<h5>Follow us</h5>
+												<h2>Follow us</h2>
 												<a className="act-footer-main__socials__icon" href="#" target="_blank" title="Facebook">
 													<z className="fa-brands fa-facebook-f"></z>
 												</a>
