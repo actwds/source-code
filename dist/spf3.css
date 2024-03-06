@@ -2104,6 +2104,7 @@ a,
     flex-direction: row;
     justify-content: flex-end; }
     .act-footer-main__socials h2 {
+      color: #ffffff;
       font-size: 20px;
       font-weight: 600;
       line-height: 130%;
