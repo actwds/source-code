@@ -5,12 +5,12 @@
 	margin-bottom: map-get($act-space, "desktop-1");
 	.act-tag {
 		align-items: center;
-		border: 1px solid $act-colour__black;
+		outline: 1px solid $act-colour__black;
 		border-radius: calc(#{map-get($act-space, "desktop-3") / 2});
 		display: inline-flex;
 		font-size: calc(#{$act-font-size__desktop-p-small - 1px});
 		font-weight: $act-font-weight__semibold;
-		height: map-get($act-space, "desktop-3");
+		min-height: map-get($act-space, "desktop-3");
 		justify-content: center;
 		line-height: $act-line-height__120;
 		margin-right: map-get($act-space, "desktop-1");
