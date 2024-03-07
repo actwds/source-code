@@ -7,6 +7,7 @@ $act-top-bar-max-width: 1440px;
 
 $act-space__desktop-0: 4px;
 $act-space__desktop-1: 8px;
+$act-space__desktop-17: 12px;
 $act-space__desktop-2: 16px;
 $act-space__desktop-16: 20px;
 $act-space__desktop-3: 24px;
@@ -41,4 +42,5 @@ $act-space: (
 	"desktop-14": $act-space__desktop-14,
 	"desktop-15": $act-space__desktop-15,
 	"desktop-16": $act-space__desktop-16,
+	"desktop-16": $act-space__desktop-17,
 );
