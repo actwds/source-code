@@ -42,7 +42,7 @@
 	/* Button Sizes */
 	&__normal,
 	&__default {
-		height: 56px;
+		min-height: 56px;
 		padding: map-get($act-space, "desktop-2") map-get($act-space, "desktop-3");
 	}
 	&__xsmall {
@@ -266,7 +266,7 @@
 		bottom: 100px;
 		background: $act-colour__white;
 		color: $act-colour__middle-dark-grey;
-		padding: 32px 24px;
+		padding: map-get($act-space, "desktop-17") map-get($act-space, "desktop-3");
 		margin: 0 !important;
 		transition: all 100ms cubic-bezier(0, 0, 0.58, 1);
 		opacity: 1;
