@@ -32,8 +32,8 @@ export const createF13 = () => {
                   <div class="act-h4">Was this page useful?</div>
                 </div>
                 <div class="act-footer-feedback__block">
-                  <input class="act-footer-feedback__block__radio" type="radio" name="grpPageHelpful" id="feedback-yes"><label class="act-footer-feedback__block__label" for="radioPageHelpfulYes">Yes</label>
-                  <input class="act-footer-feedback__block__radio" type="radio" name="grpPageHelpful" id="feedback-no"><label class="act-footer-feedback__block__label" for="radioPageHelpfulNo">No</label>
+                  <input class="act-footer-feedback__radio act-form__field__radio" type="radio" name="grpPageHelpful" id="feedback-yes"><label class="act-footer-feedback__block__label" for="radioPageHelpfulYes">Yes</label>
+                  <input class="act-footer-feedback__radio act-form__field__radio" type="radio" name="grpPageHelpful" id="feedback-no"><label class="act-footer-feedback__block__label" for="radioPageHelpfulNo">No</label>
                 </div>
               </div>
               <div class="act-footer-feedback__text">

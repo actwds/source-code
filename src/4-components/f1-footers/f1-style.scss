@@ -91,11 +91,6 @@
 		&:last-of-type {
 			margin-top: map-get($act-space, "desktop-2");
 		}
-		&__radio {
-			height: map-get($act-space, "desktop-3");
-			width: map-get($act-space, "desktop-3");
-			margin-right: map-get($act-space, "desktop-2");
-		}
 		&__label {
 			font-size: $act-font-size__desktop-p;
 			&:first-of-type {

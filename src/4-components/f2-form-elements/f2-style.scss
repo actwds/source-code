@@ -301,6 +301,13 @@ form p,
 			box-shadow: 0 0 0 1px $act-colour__white, 0 0 0 4px $act-colour__purple;
 			border-radius: 0px;
 		}
+		&.act-footer-feedback {
+			&__radio {
+				height: map-get($act-space, "desktop-3");
+				width: map-get($act-space, "desktop-3");
+				margin-right: map-get($act-space, "desktop-2");
+			}
+		}
 	}
 	&__toggle {
 		cursor: pointer;
