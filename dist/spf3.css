@@ -3614,12 +3614,12 @@ table,
     display: inline-flex;
     font-size: calc(13px);
     font-weight: 600;
-    min-height: 24px;
+    min-height: 16px;
     justify-content: center;
     line-height: 120%;
     margin-right: 8px;
     margin-bottom: 4px;
-    padding: 0px 8px;
+    padding: 4px 8px;
     width: fit-content;
     transition: background-color 0.2s cubic-bezier(0, 0, 0.58, 1), color 0.2s cubic-bezier(0, 0, 0.58, 1); }
     .act-tag__container .act-tag__stroke {
