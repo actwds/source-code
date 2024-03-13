@@ -1284,12 +1284,10 @@ a,
 .act-case-study {
   align-items: stretch;
   background-color: #f4f2fa;
-  border: 0px solid transparent;
   display: flex;
   margin: 48px 0; }
   .act-case-study__container {
     align-items: flex-start;
-    border: 1px solid #adadad;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -2002,10 +2000,6 @@ a,
     justify-content: flex-start; }
     .act-footer-feedback__block:last-of-type {
       margin-top: 16px; }
-    .act-footer-feedback__block__radio {
-      height: 24px;
-      width: 24px;
-      margin-right: 16px; }
     .act-footer-feedback__block__label {
       font-size: 18px; }
       .act-footer-feedback__block__label:first-of-type {
@@ -2435,6 +2429,10 @@ form p,
   .act-form__field__radio.focus, .act-form__field__radio:focus, .act-form__field__radio__focus {
     box-shadow: 0 0 0 1px #ffffff, 0 0 0 4px #472d8c;
     border-radius: 0px; }
+  .act-form__field__radio.act-footer-feedback__radio {
+    height: 24px;
+    width: 24px;
+    margin-right: 16px; }
 
 .act-form__field__toggle {
   cursor: pointer;
