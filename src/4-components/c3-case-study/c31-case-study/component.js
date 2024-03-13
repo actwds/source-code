@@ -28,7 +28,7 @@ export const createC31 = ({
   }
 
   if (imageVisible == true){
-    featureImageHTML = `<div class="act-case-study__image" style="background-image: url('/images/purple.jpg');"></div>`;
+    featureImageHTML = `<div class="act-case-study__image""><img src="/images/purple.jpg" alt=""></div>`;
   } else {
     featureImageHTML = ``;
   }
