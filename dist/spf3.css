@@ -1296,10 +1296,12 @@ a,
     background-color: #adadad;
     height: 420px;
     min-height: 420px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%; }
+    width: 100%;
+    overflow: hidden; }
+    .act-case-study [class*="__image"] img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; }
   .act-case-study__content {
     align-items: flex-start;
     color: #111111;
@@ -1552,7 +1554,6 @@ a,
   /* Feature Toggles */ }
   .act-content-block__container {
     align-items: flex-start;
-    border: 1px solid #adadad;
     display: block;
     flex-direction: column;
     justify-content: flex-start;
