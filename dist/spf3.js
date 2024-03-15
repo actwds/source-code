@@ -219,7 +219,7 @@ function getScreenWidth() {
 	return screen.width;
 }
 
-function megamenuMoveLeft(i) {
+function megamenuSubMoveLeft(i) {
 	if (i % 2 == 0 || getScreenWidth() < 991) { //left col
 		document.querySelector(".act-megamenu__content__block-sub-menu").classList.add("hidden-mobile");
 		Array.from(document.querySelectorAll(".act-megamenu__sub-menu-link-container")).forEach(function(container) {
@@ -234,7 +234,7 @@ function megamenuMoveLeft(i) {
 	}	
 }
 
-function megamenuMoveUp(i) {
+function megamenuSubMoveUp(i) {
 	if (getScreenWidth() < 991 && i != 0) {
 		document.activeElement.previousElementSibling.focus();
 	} else if (i == 0 || i == 1) {
@@ -246,7 +246,7 @@ function megamenuMoveUp(i) {
 	}				
 }
 
-function megamenuMoveRight(i, activeSubnavCount) {
+function megamenuSubMoveRight(i, activeSubnavCount) {
 	if (i % 2 == 1) {
 		document.activeElement.focus();
 	} else if (i < (activeSubnavCount-1)) {		
@@ -254,7 +254,7 @@ function megamenuMoveRight(i, activeSubnavCount) {
 	}
 }
 
-function megamenuMoveDown(i, activeSubnavCount) {
+function megamenuSubMoveDown(i, activeSubnavCount) {
 	if (document.activeElement.parentNode.classList.contains("section-heading") && document.activeElement.parentNode.parentNode.children[1].children.length > 0) {
 		document.activeElement.parentNode.nextElementSibling.querySelector("a").focus();
 	} else if (getScreenWidth() < 991 && (activeSubnavCount-1) != i) {
@@ -268,56 +268,83 @@ function megamenuMoveDown(i, activeSubnavCount) {
 
 //W-15 Mega Menu keyboard arrow navigation
 document.addEventListener("keydown", function(e) {
+	let active = document.activeElement;
+	function checkFocusLocation(location) {
+		if (location) {
+			return true;
+		} 
+		return false;
+		
+	}
+
+	function megamenuMoveUp(i) {
+		if (!i == 0) {
+			active.previousElementSibling.focus();
+		}		
+	}
+
+	function megamenuMoveRight() {
+		document.querySelector(".act-megamenu__content__block-sub-menu").classList.add("hidden-mobile");
+		Array.from(document.querySelectorAll(".act-megamenu__sub-menu-link-container")).forEach(function(container) {
+			container.style.display = "none";
+		});
+		toggleSubMenu(false);
+
+
+
+		let activeID = active.closest(".act-megamenu__link").id.split("-")[3];
+		let submenuTarget = document.querySelector("#sub-menu-"+activeID);
+		let submenuTargetID = document.querySelector("#sub-menu-"+activeID).id.split("-")[2];
+		openChildLinks(submenuTargetID, activeID);
+		toggleSubMenu(true);
+		submenuTarget.querySelector("a").focus();
+
+	}
+
+	function megamenuMoveDown(activeCount, i) {
+		if ((activeCount-1) != i) {
+			active.nextElementSibling.focus();				
+		} else {
+			document.querySelector(".act-megamenu__content__block-main-menu__additional-links a").focus();
+		}
+		
+	}
+
 	if(e.key === "ArrowLeft" || e.key === "ArrowUp" || e.key === "ArrowRight" || e.key === "ArrowDown") {
 		if (document.querySelector(".act-megamenu").classList.contains("act-megamenu__open")) {
 			e.preventDefault();
 		}
 	}
-	if (document.activeElement.closest(".act-megamenu__open")) {
-		if (document.activeElement.closest(".act-megamenu__sub-menu-link-container")) {
-			let active = document.activeElement;
+	if (checkFocusLocation(".act-megamenu__open")) {
+		if (checkFocusLocation(active.closest(".act-megamenu__sub-menu-link-container"))) {
 			let activeSubnavCount = document.activeElement.parentNode.childElementCount;
 			let i = Array.from(active.parentNode.children).indexOf(active);
 			let screenWidth = screen.width;
 			if(e.key === "ArrowLeft") {
-				megamenuMoveLeft(i);	
+				megamenuSubMoveLeft(i);	
 			}
 			if(e.key === "ArrowUp") {
-				megamenuMoveUp(i);
+				megamenuSubMoveUp(i);
 			}
 			if(e.key === "ArrowRight") {
-				megamenuMoveRight(i, activeSubnavCount);				
+				megamenuSubMoveRight(i, activeSubnavCount);				
 			}
 			if(e.key === "ArrowDown") {
-				megamenuMoveDown(i, activeSubnavCount);
+				megamenuSubMoveDown(i, activeSubnavCount);
 			}
-		} else if (document.activeElement.closest(".act-megamenu__link-container")) {
-			let active = document.activeElement;
+		} else if (checkFocusLocation(active.closest(".act-megamenu__link-container"))) {
 			let activeCount = active.closest(".act-megamenu__link-container").childElementCount;
 			let i = Array.from(active.closest(".act-megamenu__link-container").children).indexOf(active.closest(".act-megamenu__link"));
 			if(e.key === "ArrowUp") {
-				if (!i == 0) {
-					active.previousElementSibling.focus();
-				}
+				megamenuMoveUp(i);
 			}
 			if(e.key === "ArrowRight" || e.key === "Enter") {
-				let active = document.activeElement;
-				let activeID = active.closest(".act-megamenu__link").id.split("-")[3];
-				let submenuTarget = document.querySelector("#sub-menu-"+activeID);
-				let submenuTargetID = document.querySelector("#sub-menu-"+activeID).id.split("-")[2];
-				openChildLinks(submenuTargetID, activeID);
-				toggleSubMenu(true);
-				submenuTarget.querySelector("a").focus();
+				megamenuMoveRight();
 			}
 			if(e.key === "ArrowDown") {
-				if ((activeCount-1) != i) {
-					active.nextElementSibling.focus();				
-				} else {
-					document.querySelector(".act-megamenu__content__block-main-menu__additional-links a").focus();
-				}
+				megamenuMoveDown(activeCount, i);
 			}
-		} else if (document.activeElement.closest(".act-megamenu__content__block-main-menu__additional-links")) {
-			let active = document.activeElement;
+		} else if (active.closest(".act-megamenu__content__block-main-menu__additional-links")) {
 			let activeCount = active.closest(".act-megamenu__content__block-main-menu__additional-links").childElementCount;
 			let i = Array.from(active.closest(".act-megamenu__content__block-main-menu__additional-links").children).indexOf(active.closest(".act-megamenu__link"));
 			if(e.key === "ArrowUp") {

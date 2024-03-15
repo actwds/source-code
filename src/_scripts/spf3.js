@@ -271,10 +271,10 @@ document.addEventListener("keydown", function(e) {
 	let active = document.activeElement;
 	function checkFocusLocation(location) {
 		if (location) {
-			return true
-		} else {
-			return false
-		}
+			return true;
+		} 
+		return false;
+		
 	}
 
 	function megamenuMoveUp(i) {
