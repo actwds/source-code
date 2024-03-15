@@ -268,14 +268,14 @@ function megamenuMoveDown(i, activeSubnavCount) {
 
 //W-15 Mega Menu keyboard arrow navigation
 document.addEventListener("keydown", function(e) {
+	let active = document.activeElement;
 	if(e.key === "ArrowLeft" || e.key === "ArrowUp" || e.key === "ArrowRight" || e.key === "ArrowDown") {
 		if (document.querySelector(".act-megamenu").classList.contains("act-megamenu__open")) {
 			e.preventDefault();
 		}
 	}
-	if (document.activeElement.closest(".act-megamenu__open")) {
-		if (document.activeElement.closest(".act-megamenu__sub-menu-link-container")) {
-			let active = document.activeElement;
+	if (active.closest(".act-megamenu__open")) {
+		if (active.closest(".act-megamenu__sub-menu-link-container")) {
 			let activeSubnavCount = document.activeElement.parentNode.childElementCount;
 			let i = Array.from(active.parentNode.children).indexOf(active);
 			let screenWidth = screen.width;
@@ -291,8 +291,7 @@ document.addEventListener("keydown", function(e) {
 			if(e.key === "ArrowDown") {
 				megamenuMoveDown(i, activeSubnavCount);
 			}
-		} else if (document.activeElement.closest(".act-megamenu__link-container")) {
-			let active = document.activeElement;
+		} else if (active.closest(".act-megamenu__link-container")) {
 			let activeCount = active.closest(".act-megamenu__link-container").childElementCount;
 			let i = Array.from(active.closest(".act-megamenu__link-container").children).indexOf(active.closest(".act-megamenu__link"));
 			if(e.key === "ArrowUp") {
@@ -301,7 +300,6 @@ document.addEventListener("keydown", function(e) {
 				}
 			}
 			if(e.key === "ArrowRight" || e.key === "Enter") {
-				let active = document.activeElement;
 				let activeID = active.closest(".act-megamenu__link").id.split("-")[3];
 				let submenuTarget = document.querySelector("#sub-menu-"+activeID);
 				let submenuTargetID = document.querySelector("#sub-menu-"+activeID).id.split("-")[2];
@@ -316,8 +314,7 @@ document.addEventListener("keydown", function(e) {
 					document.querySelector(".act-megamenu__content__block-main-menu__additional-links a").focus();
 				}
 			}
-		} else if (document.activeElement.closest(".act-megamenu__content__block-main-menu__additional-links")) {
-			let active = document.activeElement;
+		} else if (active.closest(".act-megamenu__content__block-main-menu__additional-links")) {
 			let activeCount = active.closest(".act-megamenu__content__block-main-menu__additional-links").childElementCount;
 			let i = Array.from(active.closest(".act-megamenu__content__block-main-menu__additional-links").children).indexOf(active.closest(".act-megamenu__link"));
 			if(e.key === "ArrowUp") {
