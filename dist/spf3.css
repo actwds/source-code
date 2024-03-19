@@ -3852,7 +3852,8 @@ table,
       margin: 0;
       width: 130px; }
       .act-masthead #translate select option {
-        color: #111111; }
+        color: #111111;
+        background: #ffffff; }
 
 body {
   top: 0% !important; }
