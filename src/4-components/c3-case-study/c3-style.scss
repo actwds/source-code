@@ -99,6 +99,7 @@
 		[class*="__image"] {
 			float: left;
 			margin-right: map-get($act-space, "desktop-3");
+			max-height: map-get($act-space, "desktop-15");
 			width: 25%;
 		}
 	}
