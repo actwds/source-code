@@ -63,6 +63,17 @@ export default {
 				},
 			},
 		},
+		imageAlignment: {
+			control: { type: "radio", },
+			options: ["top", "left",],
+			defaultValue: "top",
+			description: "Sets the alignment of the case study image",
+			table: {
+				defaultValue: {
+					summary: "top",
+				},
+			},
+		},
 		buttonVisible: {
 			control: { type: "boolean", },
 			defaultValue: true,

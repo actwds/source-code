@@ -1362,6 +1362,10 @@ a,
         text-decoration: underline; }
   .act-case-study .act-tag__container {
     margin-bottom: 16px; }
+  .act-case-study__image-left [class*="__image"] {
+    float: left;
+    margin-right: 24px;
+    width: 25%; }
 
 .act-breaker {
   align-items: flex-start;

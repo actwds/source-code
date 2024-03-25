@@ -7,6 +7,7 @@ export const createC31 = ({
   buttonVisible,
   tag1,
   tag2,
+  imageAlignment,
 }) => {
 
   const tags1HTML = createT31({
@@ -19,7 +20,9 @@ export const createC31 = ({
   let featureTagHTML = ``;
   let featureImageHTML = ``;
   let buttonHTML = ``;
-  let featureDescriptionHTML = `<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus a ipsum a felis porta vulputate. Etiam condimentum blandit tellus, in molestie purus fermentum et. Nunc vestibulum sapien sit amet ex facilisis, et malesuada sapien malesuada. In bibendum eget sem sit amet tempor. Cras fringilla enim a lacus fringilla, vitae aliquam nulla gravida. Vestibulum feugiat sed est quis sagittis. Proin eu leo ac metus varius malesuada. Sed imperdiet pulvinar orci vel euismod. Nullam placerat mollis nisl, quis rutrum nisi varius eget. Maecenas quis ex at libero blandit convallis id ut massa. Sed efficitur neque eu enim rhoncus posuere. Integer at dolor facilisis, vestibulum massa quis, ornare orci. Nullam suscipit non neque nec elementum. Vivamus et lacus metus. Sed tempus ac dolor id commodo. Pellentesque lacus urna, tempor sit amet libero vel, finibus ultrices ex.</p>`;
+  let featureDescriptionHTML = `<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus a ipsum a felis porta vulputate. Etiam condimentum blandit tellus, in molestie purus fermentum et. Nunc vestibulum sapien sit amet ex facilisis, et malesuada sapien malesuada. In bibendum eget sem sit amet tempor. Cras fringilla enim a lacus fringilla, vitae aliquam nulla gravida. Vestibulum feugiat sed est quis sagittis. Proin eu leo ac metus varius malesuada. Sed imperdiet pulvinar orci vel euismod. Nullam placerat mollis nisl, quis rutrum nisi varius eget. Maecenas quis ex at libero blandit convallis id ut massa. Sed efficitur neque eu enim rhoncus posuere. Integer at dolor facilisis, vestibulum massa quis, ornare orci. Nullam suscipit non neque nec elementum. Vivamus et lacus metus. Sed tempus ac dolor id commodo. Pellentesque lacus urna, tempor sit amet libero vel, finibus ultrices ex.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus a ipsum a felis porta vulputate. Etiam condimentum blandit tellus, in molestie purus fermentum et. Nunc vestibulum sapien sit amet ex facilisis, et malesuada sapien malesuada. In bibendum eget sem sit amet tempor. Cras fringilla enim a lacus fringilla, vitae aliquam nulla gravida. Vestibulum feugiat sed est quis sagittis. Proin eu leo ac metus varius malesuada. Sed imperdiet pulvinar orci vel euismod. Nullam placerat mollis nisl, quis rutrum nisi varius eget. Maecenas quis ex at libero blandit convallis id ut massa. Sed efficitur neque eu enim rhoncus posuere. Integer at dolor facilisis, vestibulum massa quis, ornare orci. Nullam suscipit non neque nec elementum. Vivamus et lacus metus. Sed tempus ac dolor id commodo. Pellentesque lacus urna, tempor sit amet libero vel, finibus ultrices ex.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus a ipsum a felis porta vulputate. Etiam condimentum blandit tellus, in molestie purus fermentum et. Nunc vestibulum sapien sit amet ex facilisis, et malesuada sapien malesuada. In bibendum eget sem sit amet tempor. Cras fringilla enim a lacus fringilla, vitae aliquam nulla gravida. Vestibulum feugiat sed est quis sagittis. Proin eu leo ac metus varius malesuada. Sed imperdiet pulvinar orci vel euismod. Nullam placerat mollis nisl, quis rutrum nisi varius eget. Maecenas quis ex at libero blandit convallis id ut massa. Sed efficitur neque eu enim rhoncus posuere. Integer at dolor facilisis, vestibulum massa quis, ornare orci. Nullam suscipit non neque nec elementum. Vivamus et lacus metus. Sed tempus ac dolor id commodo. Pellentesque lacus urna, tempor sit amet libero vel, finibus ultrices ex.</p>`;
 
   if (tagVisible == true){
     featureTagHTML = `<div class="act-tag__container">` + tags1HTML +  `</div>`;
@@ -42,8 +45,11 @@ export const createC31 = ({
     buttonHTML = ``;
   }
 
-  return `
-  <div class="act-case-study">
+  
+
+  if (imageAlignment == "top") {
+    return `
+  <div class="act-case-study act-case-study__image-top">
     <div class="act-case-study__container">
       <div class="act-case-study__content">
       `+featureTagHTML+`
@@ -57,4 +63,22 @@ export const createC31 = ({
     </div>
   </div>
 `;
+  } 
+
+  return `
+    <div class="act-case-study act-case-study__image-left">
+      <div class="act-case-study__container">
+        <div class="act-case-study__content">
+        `+featureTagHTML+`
+          <span class="act-case-study__title">`+heading+`</span>
+          <div class="act-case-study__description">          
+          `+featureImageHTML+`
+          `+featureDescriptionHTML+`
+          `+buttonHTML+`
+          </div>
+        </div>    
+      </div>
+    </div>
+  `;
+  
 };

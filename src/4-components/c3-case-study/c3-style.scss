@@ -95,4 +95,11 @@
 			margin-bottom: map-get($act-space, "desktop-2");
 		}
 	}
+	&__image-left {
+		[class*="__image"] {
+			float: left;
+			margin-right: map-get($act-space, "desktop-3");
+			width: 25%;
+		}
+	}
 }
