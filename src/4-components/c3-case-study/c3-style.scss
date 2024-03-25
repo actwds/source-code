@@ -102,6 +102,11 @@
 			margin-right: map-get($act-space, "desktop-2");
 			max-height: map-get($act-space, "desktop-15");
 			width: 50%;
+			@include devices(mobile) {
+				float: none;
+				margin: map-get($act-space, "desktop-3") 0;
+				width: 100%;
+			}
 		}
 	}
 }

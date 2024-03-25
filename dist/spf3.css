@@ -1368,6 +1368,11 @@ a,
     margin-right: 16px;
     max-height: 420px;
     width: 50%; }
+    @media only screen and (min-width: 0px) and (max-width: 478px) {
+      .act-case-study__image-left [class*="__image"] {
+        float: none;
+        margin: 24px 0;
+        width: 100%; } }
 
 .act-breaker {
   align-items: flex-start;
