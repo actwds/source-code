@@ -98,7 +98,7 @@
 	&__image-left {
 		[class*="__image"] {
 			float: left;
-			margin-right: map-get($act-space, "desktop-3");
+			margin-right: map-get($act-space, "desktop-2");
 			max-height: map-get($act-space, "desktop-15");
 			width: 25%;
 		}

@@ -1364,7 +1364,8 @@ a,
     margin-bottom: 16px; }
   .act-case-study__image-left [class*="__image"] {
     float: left;
-    margin-right: 24px;
+    margin-right: 16px;
+    max-height: 420px;
     width: 25%; }
 
 .act-breaker {
