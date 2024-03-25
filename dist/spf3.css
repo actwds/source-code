@@ -1339,7 +1339,8 @@ a,
       font-size: 18px;
       font-weight: 400;
       line-height: 150%;
-      margin: 24px 0; }
+      margin: 24px 0;
+      width: 100%; }
     .act-case-study__content [class*="__cta"] {
       align-items: flex-end;
       display: flex;
@@ -1366,7 +1367,7 @@ a,
     float: left;
     margin-right: 16px;
     max-height: 420px;
-    width: 25%; }
+    width: 50%; }
 
 .act-breaker {
   align-items: flex-start;
