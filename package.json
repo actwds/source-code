@@ -5,7 +5,7 @@
 		"url": "https://actwds.github.io"
 	},
 	"name": "ACTWDS",
-	"version": "1.9.5",
+	"version": "1.9.6",
 	"description": "ACT Website Design System",
 	"main": "index.js",
 	"scripts": {
