@@ -510,13 +510,15 @@
 	}
 	&__featured-home {
 		.act-card__content {
-			.act-card__title h2 {
-				font-size: 32px;
-				font-weight: 600;
-				line-height: 120%;
-				margin-bottom: 8px;
-				margin-top: 0;
-				color: #fff;
+			.act-card__title {
+				h2 {
+					font-size: 32px;
+					font-weight: 600;
+					line-height: 120%;
+					margin-bottom: 8px;
+					margin-top: 0;
+					color: #fff;
+				}
 			}
 		}
 	}
