@@ -56,6 +56,10 @@ z.fa-brands {
   width: 100%;
   padding: 8px; }
 
+img {
+  height: auto;
+  max-width: 100%; }
+
 .act-flex {
   background-color: #ffffff;
   display: flex;
