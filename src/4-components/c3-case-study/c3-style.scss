@@ -98,6 +98,8 @@
 	}
 	&__image-left {
 		[class*="__image"] {
+			background-repeat: no-repeat;
+			background-size: cover;
 			float: left;
 			margin-right: map-get($act-space, "desktop-2");
 			max-height: map-get($act-space, "desktop-15");
