@@ -103,6 +103,20 @@
 			"core"
 		]
 	},
+	"PC210": {
+		"details": {
+			"id": "PC210",
+			"category": "🃏 Content",
+			"name": "Content Block Grid",
+			"type": "Pattern"
+		},
+		"description": "Container element that holds rows of individual content blocks",
+		"element": "<code>&lt;div class=\"act-content-block-grid\"&gt;</code>",
+		"status": [
+			"production",
+			"core"
+		]
+	},
 	"C11": {
 		"details": {
 			"id": "C11",

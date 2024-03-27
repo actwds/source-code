@@ -218,7 +218,108 @@
 		}
 	}
 }
-
+.act-content-block-grid {
+	display: grid;
+	column-gap: map-get($act-space, "desktop-3");
+	row-gap: map-get($act-space, "desktop-3");
+	margin: map-get($act-space, "desktop-5") 0px;
+	@include devices(mobile) {
+		grid-template-columns: repeat(1, minmax(0, 1fr));
+		column-gap: 0;
+	}
+	@include devices(tablet) {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+	@include devices(desktop) {
+		grid-template-columns: repeat(4, minmax(0, 1fr));
+	}
+	.act-content-block {
+		&__col-span-2 {
+			@include devices(tablet) {
+				grid-column: span 1;
+			}
+			@include devices(mobile) {
+				grid-column: span 1;
+			}
+		}
+		&__col-span-3 {
+			@include devices(tablet) {
+				grid-column: span 2;
+			}
+			@include devices(mobile) {
+				grid-column: span 1;
+			}
+		}
+		&__col-span-4 {
+			@include devices(tablet) {
+				grid-column: span 2;
+			}
+			@include devices(mobile) {
+				grid-column: span 1;
+			}
+		}
+		&__row-span-2 {
+			@include devices(tablet) {
+				grid-row: span 1;
+			}
+			@include devices(mobile) {
+				grid-row: span 1;
+			}
+		}
+		&__row-span-3 {
+			@include devices(tablet) {
+				grid-row: span 2;
+			}
+			@include devices(mobile) {
+				grid-row: span 1;
+			}
+		}
+		&__row-span-4 {
+			@include devices(tablet) {
+				grid-row: span 2;
+			}
+			@include devices(mobile) {
+				grid-row: span 1;
+			}
+		}
+	}
+	&__1-col {
+		@include devices(mobile) {
+			grid-template-columns: repeat(1, minmax(0, 1fr));
+			column-gap: 0;
+		}
+		@include devices(tablet) {
+			grid-template-columns: repeat(1, minmax(0, 1fr));
+		}
+		@include devices(desktop) {
+			grid-template-columns: repeat(1, minmax(0, 1fr));
+		}
+	}
+	&__2-col {
+		@include devices(mobile) {
+			grid-template-columns: repeat(1, minmax(0, 1fr));
+			column-gap: 0;
+		}
+		@include devices(tablet) {
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+		}
+		@include devices(desktop) {
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+		}
+	}
+	&__3-col {
+		@include devices(mobile) {
+			grid-template-columns: repeat(1, minmax(0, 1fr));
+			column-gap: 0;
+		}
+		@include devices(tablet) {
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+		}
+		@include devices(desktop) {
+			grid-template-columns: repeat(3, minmax(0, 1fr));
+		}
+	}
+}
 .act-content-block {
 	align-items: stretch;
 	border: 0px solid transparent;
@@ -249,7 +350,7 @@
 		// height: 100%;
 		flex-direction: column;
 		justify-content: flex-start;
-		padding: map-get($act-space, "desktop-3");
+		// padding: map-get($act-space, "desktop-3");
 		width: 100%;
 		word-wrap: anywhere;
 		[class*="__icon"] {
@@ -306,7 +407,7 @@
 		}
 	}
 	.act-links-list {
-		padding: 0 $act-space__desktop-3 $act-space__desktop-3;
+		padding: 0 0 $act-space__desktop-3;
 	}
 }
 
