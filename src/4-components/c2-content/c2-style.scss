@@ -327,9 +327,9 @@
 	margin: $act-space__desktop-5 0;
 	&__container {
 		align-items: flex-start;
-		display: block;
+		display: flex;
 		flex-direction: column;
-		justify-content: flex-start;
+		justify-content: space-between;
 		width: 100%;
 	}
 	[class*="__image"] {
@@ -408,6 +408,7 @@
 	}
 	.act-links-list {
 		padding: 0 0 $act-space__desktop-3;
+		width: 100%;
 	}
 }
 

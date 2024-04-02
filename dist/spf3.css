@@ -1651,9 +1651,9 @@ a,
   /* Feature Toggles */ }
   .act-content-block__container {
     align-items: flex-start;
-    display: block;
+    display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: space-between;
     width: 100%; }
   .act-content-block [class*="__image"] {
     background-color: #adadad;
@@ -1706,7 +1706,8 @@ a,
   .act-content-block__feature--links-list [class*="act-content-block__content"] {
     padding-bottom: 0; }
   .act-content-block .act-links-list {
-    padding: 0 0 24px; }
+    padding: 0 0 24px;
+    width: 100%; }
 
 .act-framed-media {
   padding: 16px;
