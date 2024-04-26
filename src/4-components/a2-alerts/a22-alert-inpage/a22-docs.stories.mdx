@@ -64,12 +64,19 @@ import LinkTo from "@storybook/addon-links/react";
 							<div className="act-box">
 								<h3>Usage</h3>
 								<p>
-									Global alerts are designed to capture the attention of the user in a deliberately intrusive way. They persist over a session but are user dismissible, and are
-									purposefully created and not initiated by a user interaction or system event.
+									In page alerts are designed to communicate a short, important message that is relevant to the specific page that alert appears on. It is different to a global alert because it appears in the body content of a page and only appears on specified page instead of all pages.
 								</p>
-								<p>Use alerts:</p>
+								<p>Use in page alerts:</p>
 								<ul>
 									<li>to attract the attention to an important time sensitive messages, or to encourage an action</li>
+									<li>to attract attention to an important time sensitive messages, or to encourage an action that is relevant to a specific page</li>
+									<li>To inform the user of the system's status after they perform an action. for example:
+										<ul>
+											<li>"Your form has been successfully submitted"</li>
+											<li>"Error: your form could not be submitted"</li>
+											<li>"Alert: Ensure that you have included all attachments in your submission."</li>
+										</ul>
+									</li>
 								</ul>
 							</div>
 						</div>
@@ -80,14 +87,16 @@ import LinkTo from "@storybook/addon-links/react";
 								<h3>Do's &amp; Dont's</h3>
 								<h4>Do</h4>
 								<ul>
+									<li>Place in page alerts towards the top of a page so that users see it immediately</li>
 									<li>Keep alert text short and succinct (should be no longer than one sentence)</li>
+									<li>Link to further information</li>
 									<li>Use clear, concise easy to understand language, to minimise cognitive load</li>
-									<li>Use the correct variant ie notice (blue) or warning (orange) </li>
+									<li>Use the correct variant, i.e., success (green) or warning (orange)</li>
 									<li>Reserve the use of the critical alert for circumstances which warrant it</li>
 								</ul>
 								<h4>Don't</h4>
 								<ul>
-									<li></li>
+									<li>Use more than one in page alert on a single page</li>
 								</ul>
 							</div>
 						</div>
