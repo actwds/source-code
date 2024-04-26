@@ -57,7 +57,7 @@ import LinkTo from "@storybook/addon-links/react";
 					<div className="act-flex__row">
 						<div className="act-col__cw-12">
 							<div className="act-box">
-								<h3>Breaker</h3>
+								<h2>Breaker</h2>
 								<p>The breaker component can be used on content pages to help visually break up the page as well as calling out important information.</p>
 								<div className="act-img">
 									<img src="/images/breaker_example.png" alt="Illustration of how a breaker renders within the design system" />
@@ -65,16 +65,15 @@ import LinkTo from "@storybook/addon-links/react";
 										<z class="fa-solid fa-circle-info"></z> Illustration of how a breaker renders within the design system
 									</div>
 								</div>
-								<h4>Do</h4>
+								<h3>Do</h3>
 								<ul>
 									<li>Keep breakers short and succinct, one sentence length</li>
 									<li>Use clear, concise and relevant language</li>
-									<li>use with consistent site theme colours </li>
-									<li>here</li>
 								</ul>
-								<h4>Do not</h4>
+								<h3>Don't</h3>
 								<ul>
-									<li>Avoid using too many on a single page</li>
+									<li>Use too many on a single page</li>
+									<li>Use as the first content that a user sees on a page, consider using an in page alert instead</li>
 								</ul>
 							</div>
 						</div>
@@ -82,35 +81,70 @@ import LinkTo from "@storybook/addon-links/react";
 					<div className="act-flex__row">
 						<div className="act-col__cw-12">
 							<div className="act-box">
-								<h3>Content Block</h3>
-								<p>Used to help break up content by displaying it visually in columns</p>
+								<h2>Content Block</h2>
+									<p>Use content blocks where a user needs to be presented with multiple pieces of information or actions to deep dive into content.</p>
+									<h3>Do</h3>
+        						<ul>
+                			<li>Consider and choose text and visual elements carefully.</li>
+                			<li>Test content blocks with the minimal content and only add additional content or graphics where they give needed context to the user</li>
+                			<li>Use when content requires in-line or multiple links</li>
+                			<li>Use headlines and links that set clear expectations about the content being linked to</li>
+                			<li>Outline the main idea with the minimal possible information, don't overload with information where you link the user to more detail</li>
+            				</ul>
+        					<h3>Don't</h3>
+        						<p>Content blocks should only display enough information to give a user context.</p>
+            				<ul>
+                			<li>Use to group related content, consider cards instead</li>
+                			<li>Use when the content only has one call to action, consider cards instead</li>
+                			<li>Use when a large amount of text is needed to give users context, consider a normal text paragraph with a link list instead</li>
+            				</ul>
+       	 					<h3>Variables for content blocks</h3>
+            				<p>Variable features of the content block include:</p>
+            				<h4>Images</h4>
+                			<p>
+                   	 	images will fill the available space, which changes size depending on a user's device and how many columns of content blocks are being used. Limit the use of images on content blocks to major landing pages and homepages.
+                    	</p>
+                		<h4>Icons</h4>
+                			<p>
+											Like images, limit the use of icons to major landing pages and homepages, or where icons may help a user understand what the list of links below is for.
+											</p>
+                    	<p>Use a simple and clearly relevant icon.</p>
+                    	<p>On act.gov.au, we have access to 
+											<a href="https://fontawesome.com/" target="_blank">icons through font awesome</a>
+											. From their range of icons, act.gov.au and Access Canberra currently use 'Solid' style, which has the icon filled in with colour.</p>
+                    	<p>
+											<strong>Note: </strong>
+											Do not use both an image and an icon on the same content block.
+											</p>
+                		<h4>Description</h4>
+                			<p>There is an optional description field that underneath the heading. Keep descriptions short and only use them if they will help users understand the purpose of the links below.</p>
 							</div>
 						</div>
 					</div>
 					<div className="act-flex__row">
 						<div className="act-col__cw-12">
 							<div className="act-box">
-								<h3>Framed Media</h3>
+								<h2>Framed Media</h2>
 								<p>Media should be used to assist giving meaning to content, media can be images, videos and embeds such as Power BI.</p>
+								<p>The framed media component provides a space within the content to embed media with a caption.</p>
 							</div>
 						</div>
 					</div>
 					<div className="act-flex__row">
 						<div className="act-col__cw-12">
 							<div className="act-box">
-								<h3>Key message</h3>
+								<h2>Key message</h2>
 								<p>
 									The key message component can be used at the start of content pages to summarise the key points to help users find information quickly. They are designed to
 									capture the attention of the user in a deliberately way on a specific page.
 								</p>
-								<h4>Do</h4>
+								<h3>Do</h3>
 								<ul>
 									<li>Keep key messages short and succinct (should be no longer than one sentence and a minimal number of dot points)</li>
-									<li>use clear, concise easy to understand language, to minimise cognitive load</li>
-									<li>use with consistent site theme colours </li>
-									<li>reserve the use of the critical alert for circumstances which warrant it</li>
+									<li>Use clear, concise easy to understand language, to minimise cognitive load</li>
+									<li>Reserve the use of the critical alert for circumstances which warrant it</li>
 								</ul>
-								<h4>Do not</h4>
+								<h3>Don't</h3>
 								<ul>
 									<li>Do not stack multiple in key messages, limit of one per page.</li>
 									<li>Do not use for time sensitive alerts. In this instance use the In page alert.</li>
@@ -121,18 +155,18 @@ import LinkTo from "@storybook/addon-links/react";
 					<div className="act-flex__row">
 						<div className="act-col__cw-12">
 							<div className="act-box">
-								<h3>Links List</h3>
+								<h2>Links List</h2>
 								<p>Link lists surface and group related content.</p>
-								<h4>Do</h4>
+								<h3>Do</h3>
 								<ul>
 									<li>keep links short and intuitive for users to scan</li>
 									<li>use the writing guide to ensure you keep the tone active.</li>
 								</ul>
-								<h4>Do not use:</h4>
+								<h3>Don't</h3>
 								<ul>
-									<li>for pages that aren't related as this is likely to confuse users.</li>
-									<li>in a transactional service or a form</li>
-									<li>to link to content on the same page, consider in-page navigation</li>
+									<li>Use to list pages that aren't related as this is likely to confuse users.</li>
+									<li>Use in a transactional service or a form</li>
+									<li>Use to link to content on the same page</li>
 								</ul>
 							</div>
 						</div>
@@ -140,16 +174,17 @@ import LinkTo from "@storybook/addon-links/react";
 					<div className="act-flex__row">
 						<div className="act-col__cw-12">
 							<div className="act-box">
-								<h3>Quote</h3>
+								<h2>Quote</h2>
 								<p>Quotes are used on content pages to help visually break up the page as well as calling out important information.</p>
-								<h4>Do</h4>
+								<h3>Do</h3>
 								<ul>
-									<li>Do not stack quotes</li>
 									<li>Limit of one quote per paragraph</li>
 								</ul>
-								<h4>Do not</h4>
+								<h3>Don't</h3>
 								<ul>
-									<li>Avoid using too many on the same content page</li>
+									<li>Use too many on the same content page</li>
+                	<li>Stack quotes</li>
+                	<li>Use for long quotes that go for multiple sentences</li>
 								</ul>
 							</div>
 						</div>
@@ -157,16 +192,16 @@ import LinkTo from "@storybook/addon-links/react";
 					<div className="act-flex__row">
 						<div className="act-col__cw-12">
 							<div className="act-box">
-								<h3>Service Card</h3>
+								<h2>Service Card</h2>
 								<p>Service cards are used to display up to date information for helpful services.</p>
 								<p>It is recommended to use only one primary link, with a secondary link available for phone numbers or other contact information if necessary.</p>
-								<h4>Do</h4>
+								<h3>Do</h3>
 								<ul>
 									<li>Desktop and tablet to use ‘large’ variant and mobile to use ‘small’ variant</li>
 									<li>Paragraph length should only be one sentence</li>
 									<li>Phone number is optional</li>
 								</ul>
-								<h4>Do not</h4>
+								<h3>Don't</h3>
 								<ul>
 									<li>Use too much content such as multiple paragraphs of text.</li>
 								</ul>
