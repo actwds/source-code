@@ -62,6 +62,17 @@ export default {
 				},
 			},
 		},
+		feature: {
+			control: { type: "radio", },
+			options: ["none", "overflow-div",],
+			defaultValue: "none",
+			description: "Adds a div around the table to provide an overflow scroll",
+			table: {
+				defaultValue: {
+					summary: "none",
+				},
+			},
+		},
 	},
 };
 
