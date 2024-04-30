@@ -2137,6 +2137,8 @@ a,
       position: absolute;
       top: 48px;
       left: 16px; }
+  .act-footer-feedback__form__charlimit__error {
+    color: #ba2133; }
 
 .act-footer-aoc__title {
   align-items: center;
