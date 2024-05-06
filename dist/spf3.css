@@ -3518,6 +3518,14 @@ aside {
       scrollbar-width: none; }
       .act-table-container ::-webkit-scrollbar {
         display: none; } }
+  .act-table-container::-webkit-scrollbar {
+    width: 5px; }
+  .act-table-container::-webkit-scrollbar-track {
+    background: #f1f1f1; }
+  .act-table-container::-webkit-scrollbar-thumb {
+    background: #888; }
+  .act-table-container::-webkit-scrollbar-thumb:hover {
+    background: #555; }
 
 table,
 .act-table {
