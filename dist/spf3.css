@@ -3174,9 +3174,6 @@ form p,
         .act-multi-step__navigation__buttons button {
           width: 100%; } }
 
-div::-webkit-scrollbar {
-  display: none; }
-
 .hide-scroll,
 aside {
   -ms-overflow-style: none;
@@ -3643,6 +3640,11 @@ table,
     table tbody tr:nth-child(even) td,
     .act-table tbody tr:nth-child(even) td {
       background-color: #f6f6f6; }
+  table *,
+  .act-table * {
+    word-break: normal;
+    word-wrap: normal;
+    overflow-wrap: normal; }
 
 .act-tabs-container {
   align-items: flex-start;
