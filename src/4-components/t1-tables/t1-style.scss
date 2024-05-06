@@ -132,4 +132,10 @@ table,
 			}
 		}
 	}
+
+	* {
+		word-break: normal;
+		word-wrap: normal;
+		overflow-wrap: normal;
+	}
 }
