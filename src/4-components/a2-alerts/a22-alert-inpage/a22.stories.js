@@ -49,7 +49,7 @@ export default {
 	argTypes: {
 		type: {
 			control: { type: "radio", },
-			options: ["success", "warning", "error",],
+			options: ["success", "warning", "error", "attention",],
 			defaultValue: "success",
 			description: "Sets the alert type",
 			table: {
