@@ -1690,7 +1690,8 @@ a,
       font-size: 20px;
       font-weight: 600;
       line-height: 130%;
-      margin-bottom: 8px; }
+      margin-bottom: 8px;
+      margin-top: 0; }
     .act-content-block__content [class*="__description"] {
       color: #111111;
       font-size: 18px;
