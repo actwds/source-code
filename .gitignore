@@ -47,3 +47,7 @@ out
 
 # Storybook files
 storybook-static
+
+# Minified files
+dist/spf3.min.css
+dist/spf3.min.js
