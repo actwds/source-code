@@ -749,6 +749,20 @@
 			"core"
 		]
 	},
+	"T51": {
+		"details": {
+			"id": "T51",
+			"category": "Timeline",
+			"name": "Timeline",
+			"type": "Component"
+		},
+		"description": "Timeline",
+		"element": "<code>&lt;div class=\"act-timeline\"&gt;</code>",
+		"status": [
+			"production",
+			"core"
+		]
+	},
 	"W11": {
 		"details": {
 			"id": "W11",
