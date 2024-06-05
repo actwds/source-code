@@ -25,7 +25,7 @@ export const createT11 = ({
     <tbody>
       <tr>
         <td>Issue of a learner driver licence</td>
-        <td>$51.10</td>
+        <td>`+feature+`$51.10</td>
         <td>$51.10</td>
         <td>$25.50</td>
         <td>$25.50</td>

@@ -5,6 +5,7 @@ const formHTML = createF27({
   type: "text",
   width: "50%",
   label: "How could we improve this page?",
+  maxLength: 100,
   required: true,
   value: "",
 });
@@ -42,6 +43,7 @@ export const createF13 = () => {
               <div class="act-footer-feedback__form">
                 <form class="act-form">
                   `+formHTML+`
+                  <p id="act-footer-feedback__form__charlimit">100 characters left</p>
                   `+buttonHTML+`
                 </form>
               </div>

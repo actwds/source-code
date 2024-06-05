@@ -2,6 +2,7 @@ export const createF27 = ({
   rows,
   width,
   label,
+  maxLength,
   required,
   pseudoClass,
   placeholder,
@@ -74,7 +75,7 @@ export const createF27 = ({
   <label class="act-form__field__label" for="`+id+`">
     `+labelHTML+`
   </label>
-  <textarea class="act-form__field__textarea `+pseudoClass+`" rows="`+rows+`" id="`+id+`" `+requiredData+` type="textarea" value="`+valueData+`" `+placeholderData+` `+readonlyData+` `+disabledData+`/></textarea>
+  <textarea class="act-form__field__textarea `+pseudoClass+`" rows="`+rows+`" id="`+id+`" `+requiredData+` maxlength=`+maxLength+` type="textarea" value="`+valueData+`" `+placeholderData+` `+readonlyData+` `+disabledData+`/></textarea>
   `+descriptionHTML+alertHTML+`
 </div>
 `;};

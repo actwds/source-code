@@ -532,6 +532,27 @@ document.addEventListener("DOMContentLoaded", function() {
 	}
 });
 
+// F13 - Feedback Footer character limit
+document.addEventListener("DOMContentLoaded", function() {
+	const feedbackFooterTextarea = document.querySelector(".act-footer-feedback textarea");
+	const feedbackFooterCharacterLimit = document.querySelector("#act-footer-feedback__form__charlimit");
+	feedbackFooterTextarea.addEventListener("keyup", function(e) {
+		let feedbackFooterTextareaLength = e.target.value.length;
+		function calculateRemainingCharacters() {
+			let result = 100 - feedbackFooterTextareaLength;
+			return result;
+		}
+		
+		feedbackFooterCharacterLimit.textContent = (calculateRemainingCharacters() + " characters left");
+		if (feedbackFooterTextareaLength >= 100) {
+			feedbackFooterCharacterLimit.classList.add("act-footer-feedback__form__charlimit__error");
+		} else {
+			feedbackFooterCharacterLimit.classList.remove("act-footer-feedback__form__charlimit__error");
+		}
+	});
+});
+
+
 // C28 - Table of Contents
 let scrollTarget = "";
 function processDynamicAnchors() {

@@ -78,6 +78,16 @@ export default {
 				},
 			},
 		},
+		maxLength: {
+			control: { type: "number", },
+			defaultValue: "",
+			description: "Sets the max length",
+			table: {
+				defaultValue: {
+					summary: "",
+				},
+			},
+		},
 		required: {
 			control: { type: "boolean", },
 			defaultValue: false,
