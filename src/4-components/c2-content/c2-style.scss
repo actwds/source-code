@@ -374,6 +374,7 @@
 			font-weight: $act-font-weight__semibold;
 			line-height: $act-line-height__130;
 			margin-bottom: map-get($act-space, "desktop-1");
+			margin-top: 0;
 		}
 		[class*="__description"] {
 			color: $act-colour__black;

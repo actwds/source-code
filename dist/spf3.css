@@ -1690,7 +1690,8 @@ a,
       font-size: 20px;
       font-weight: 600;
       line-height: 130%;
-      margin-bottom: 8px; }
+      margin-bottom: 8px;
+      margin-top: 0; }
     .act-content-block__content [class*="__description"] {
       color: #111111;
       font-size: 18px;
@@ -3176,9 +3177,6 @@ form p,
         .act-multi-step__navigation__buttons button {
           width: 100%; } }
 
-div::-webkit-scrollbar {
-  display: none; }
-
 .hide-scroll,
 aside {
   -ms-overflow-style: none;
@@ -3523,6 +3521,14 @@ aside {
       scrollbar-width: none; }
       .act-table-container ::-webkit-scrollbar {
         display: none; } }
+  .act-table-container::-webkit-scrollbar {
+    width: 5px; }
+  .act-table-container::-webkit-scrollbar-track {
+    background: #f1f1f1; }
+  .act-table-container::-webkit-scrollbar-thumb {
+    background: #888; }
+  .act-table-container::-webkit-scrollbar-thumb:hover {
+    background: #555; }
 
 table,
 .act-table {
@@ -3645,6 +3651,11 @@ table,
     table tbody tr:nth-child(even) td,
     .act-table tbody tr:nth-child(even) td {
       background-color: #f6f6f6; }
+  table *,
+  .act-table * {
+    word-break: normal;
+    word-wrap: normal;
+    overflow-wrap: normal; }
 
 .act-tabs-container {
   align-items: flex-start;
