@@ -23,6 +23,17 @@ export default {
 				},
 			},
 		},
+		headingLevel: {
+			control: { type: "radio", },
+			options: ["h2", "h3",],
+			defaultValue: "h2",
+			description: "Sets the heading level",
+			table: {
+				defaultValue: {
+					summary: "h2",
+				},
+			},
+		},
 		iconVisible: {
 			control: { type: "boolean", },
 			defaultValue: true,

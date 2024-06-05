@@ -2,6 +2,7 @@ import { createT31 } from "../../t3-tags/t31-tags/component";
 
 export const createC210 = ({
   heading,
+  headingLevel,
   iconVisible,
   icon,
   imageVisible,
@@ -20,6 +21,12 @@ export const createC210 = ({
   let featureDescriptionHTML = description;
   let linksHTML = ``;
 
+  if (headingLevel == "h2") {
+    headingLevel = "h2";
+  } else {
+    headingLevel = "h3";
+  }
+  
   if (iconVisible == true) {
     iconVisibleHTML = `act-content-block__feature--icon`;
     featureIconHTML = `<div class="act-content-block__icon"><z class="fa-solid `+icon+`"></z></div>`;
@@ -81,7 +88,7 @@ export const createC210 = ({
       <div class="act-content-block__content">
         `+featureIconHTML+`
         `+featureImageHTML+`
-        <span class="act-content-block__title">`+heading+`</span>
+        <`+headingLevel+` class="act-content-block__title">`+heading+`</`+headingLevel+`>
         <span class="act-content-block__description">`+featureDescriptionHTML+`</span>
       </div>
       `+linksHTML+`
