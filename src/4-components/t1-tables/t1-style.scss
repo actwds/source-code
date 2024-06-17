@@ -24,11 +24,16 @@
 	&::-webkit-scrollbar-thumb:hover {
 		background: #555;
 	}
+	table,
+	.act-table {
+		margin-bottom: 0px;
+	}
 }
 table,
 .act-table {
 	border-collapse: collapse;
 	margin-top: $act-space__desktop-2;
+	margin-bottom: map-get($act-space, "desktop-3");
 	width: 100%;
 	thead,
 	tfoot {
