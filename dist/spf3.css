@@ -3529,11 +3529,15 @@ aside {
     background: #888; }
   .act-table-container::-webkit-scrollbar-thumb:hover {
     background: #555; }
+  .act-table-container table,
+  .act-table-container .act-table {
+    margin-bottom: 0px; }
 
 table,
 .act-table {
   border-collapse: collapse;
   margin-top: 16px;
+  margin-bottom: 24px;
   width: 100%; }
   table thead tr td,
   table thead tr th,
