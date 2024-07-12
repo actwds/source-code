@@ -680,8 +680,8 @@ function initQuickExit() {
 		quickExitToggle.addEventListener("click", function(e) {
 			e.preventDefault();
 			html.remove();
-			window.open("http://www.bom.gov.au/", "_blank");
-			window.location.replace("http://www.bom.gov.au/");
+			window.open("https://www.google.com.au", "_blank");
+			window.location.replace("https://www.google.com.au");
 		});
 	}
 }
