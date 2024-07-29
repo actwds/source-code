@@ -22,6 +22,8 @@ AccessCanberra.args = {
 	type2: "cobrand-text",
 	alt1: "ACT Government",
 	alt2: "Access Canberra",
+	aria1: "ACT Government",
+	aria2: "Access Canberra",
 };
 export const ACTHealth = Template.bind({});
 ACTHealth.args = {
@@ -31,4 +33,6 @@ ACTHealth.args = {
 	type2: "cobrand-text",
 	alt1: "ACT Government",
 	alt2: "Health",
+	aria1: "ACT Government",
+	aria2: "Health",
 };

@@ -31,7 +31,7 @@ export const createW12 = ({
             <z class="fa-solid fa-magnifying-glass"></z>
           </div>
         </div>
-        <a class="act-navbar__menu" href="#" aria-expanded="false" aria-haspopup="true" aria-label="Open site navigation">
+        <a class="act-navbar__menu" href="#" aria-expanded="false" aria-haspopup="true" aria-label="Menu">
           <div class="act-navbar__menu__container">
             <span class="act-navbar__menu__text">Menu</span> <z class="fa-solid fa-bars"></z>
           </div>

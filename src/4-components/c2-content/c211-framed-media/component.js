@@ -1,5 +1,6 @@
 export const createC211 = ({
   caption,
+  altText,
   type,
   youtube,
   image,
@@ -11,19 +12,19 @@ export const createC211 = ({
   let captionHTML = caption;
 
   if (type == "YouTube") {
-    youtubeHTML = `<iframe src="${youtube}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`;
+    youtubeHTML = `<iframe src="${youtube}" title="YouTube video player" alt="${altText}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`;
   } else {
     youtubeHTML = ``;
   }
 
   if (type == "Image") {
-    imageHTML = `<img src='${image}'>`;
+    imageHTML = `<img src='${image}' alt="${altText}">`;
   } else {
     imageHTML = ``;
   }
 
   if (type == "Vimeo") {
-    vimeoHTML = `<iframe src="${vimeo}" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen=""></iframe>`;
+    vimeoHTML = `<iframe src="${vimeo}" alt="${altText}" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen=""></iframe>`;
   } else {
     vimeoHTML = ``;
   }

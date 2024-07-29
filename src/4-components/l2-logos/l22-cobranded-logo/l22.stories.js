@@ -22,4 +22,6 @@ AccessCanberra.args = {
 	type2: "cobrand-logo",
 	alt1: "ACT Government",
 	alt2: "Access Canberra",
+	aria1: "ACT Government",
+	aria2: "Access Canberra",
 };
