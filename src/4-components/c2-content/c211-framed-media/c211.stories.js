@@ -61,6 +61,16 @@ export default {
 				},
 			},
 		},
+		altText: {
+			control: { type: "text", },
+			defaultValue: "Lorem ipsum",
+			description: "Sets the alt text",
+			table: {
+				defaultValue: {
+					summary: "Lorem ipsum",
+				},
+			},
+		},
 	},
 };
 
