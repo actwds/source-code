@@ -4976,7 +4976,9 @@ main .act-breadcrumbs,
     box-shadow: none;
     border: 1px solid #111111; }
   .act-quick-exit {
-    display: none !important; } }
+    display: none !important; }
+  .act-sidebar {
+    display: none; } }
 
 @keyframes loader {
   to {
