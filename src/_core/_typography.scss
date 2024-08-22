@@ -172,7 +172,8 @@ h6,
 	font-size: $act-font-size__desktop-h6;
 	font-weight: $act-font-weight__semibold;
 	line-height: $act-line-height__130;
-	margin-bottom: map-get($act-space, "desktop-2");
+	margin-top: map-get($act-space, "desktop-2");
+	margin-bottom: map-get($act-space, "desktop-1");
 	&:last-child {
 		margin-bottom: 0px;
 	}
