@@ -158,7 +158,7 @@ h5,
 	&:last-child {
 		margin-bottom: 0px;
 	}
-	
+
 	@include devices(mobile) {
 		font-size: $act-font-size__mobile-h5;
 	}
