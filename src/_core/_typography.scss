@@ -116,7 +116,7 @@ h4 {
 	font-weight: $act-font-weight__semibold;
 	line-height: $act-line-height__130;
 	margin-bottom: map-get($act-space, "desktop-1");
-	margin-top: map-get($act-space, "desktop-2");
+	margin-top: map-get($act-space, "desktop-4");
 	&:last-child {
 		margin-bottom: 0px;
 	}
@@ -134,7 +134,7 @@ h4 {
 	font-weight: $act-font-weight__semibold;
 	line-height: $act-line-height__130;
 	margin-bottom: map-get($act-space, "desktop-1");
-	margin-top: map-get($act-space, "desktop-2");
+	margin-top: map-get($act-space, "desktop-4");
 	&:last-child {
 		margin-bottom: 0px;
 	}
@@ -153,10 +153,12 @@ h5,
 	font-size: $act-font-size__desktop-h5;
 	font-weight: $act-font-weight__semibold;
 	line-height: $act-line-height__130;
-	margin-top: map-get($act-space, "desktop-2");
+	margin-top: map-get($act-space, "desktop-3");
+	margin-bottom: map-get($act-space, "desktop-1");
 	&:last-child {
 		margin-bottom: 0px;
 	}
+	
 	@include devices(mobile) {
 		font-size: $act-font-size__mobile-h5;
 	}
