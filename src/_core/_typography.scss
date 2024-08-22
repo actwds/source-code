@@ -283,12 +283,12 @@ ul {
 	font-size: $act-font-size__desktop-p;
 	font-weight: $act-font-weight__regular;
 	line-height: $act-line-height__150;
-	margin-top: map-get ($act-space, "desktop-1");
-	margin-bottom: map-get ($act-space, "desktop-3");
+	margin-top: map-get($act-space, "desktop-1");
+	margin-bottom: map-get($act-space, "desktop-3");
 	li {
 		list-style-position: outside;
 		margin-left: map-get($act-space, "desktop-5");
-		margin-bottom: map-get ($act-space, "desktop-1");
+		margin-bottom: map-get($act-space, "desktop-1");
 	}
 }
 
