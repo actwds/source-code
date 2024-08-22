@@ -172,7 +172,7 @@ h6,
 	font-size: $act-font-size__desktop-h6;
 	font-weight: $act-font-weight__semibold;
 	line-height: $act-line-height__130;
-	margin-bottom: map-get($act-space, "desktop-1");
+	margin-bottom: map-get($act-space, "desktop-2");
 	&:last-child {
 		margin-bottom: 0px;
 	}
@@ -188,7 +188,7 @@ p {
 	font-size: $act-font-size__desktop-p;
 	font-weight: $act-font-weight__regular;
 	line-height: $act-line-height__150;
-	margin-bottom: map-get($act-space, "desktop-1");
+	margin-bottom: map-get($act-space, "desktop-3");
 	&:last-child {
 		margin-bottom: 0px;
 	}
@@ -238,7 +238,7 @@ p {
 	font-size: $act-font-size__desktop-p;
 	font-weight: $act-font-weight__regular;
 	line-height: $act-line-height__150;
-	margin-bottom: map-get($act-space, "desktop-1");
+	margin-bottom: map-get($act-space, "desktop-3");
 	&:last-child {
 		margin-bottom: 0px;
 	}
@@ -283,10 +283,12 @@ ul {
 	font-size: $act-font-size__desktop-p;
 	font-weight: $act-font-weight__regular;
 	line-height: $act-line-height__150;
-	margin: map-get($act-space, "desktop-1") 0px;
+	margin-top: map-get ($act-space, "desktop-1");
+	margin-bottom: map-get ($act-space, "desktop-3");
 	li {
 		list-style-position: outside;
 		margin-left: map-get($act-space, "desktop-5");
+		margin-bottom: map-get ($act-space, "desktop-1");
 	}
 }
 
