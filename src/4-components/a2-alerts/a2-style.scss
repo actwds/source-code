@@ -41,6 +41,7 @@
 	}
 	&__success {
 		background-color: $act-colour__success-green;
+
 		border-color: $act-colour__white;
 		a {
 			color: $act-colour__white;
@@ -178,9 +179,9 @@
 		}
 	}
 	&__success {
-		background-color: $act-colour__attention-light-blue;
-		box-shadow: inset 0 4px 0 0 $act-colour__attention-light-blue, inset 4px 0 0 0 $act-colour__attention-light-blue, inset -4px 0 0 0 $act-colour__attention-light-blue,
-			0 4px 0 $act-colour__attention-blue;
+		background-color: $act-colour__success-light-green;
+		box-shadow: inset 0 4px 0 0 $act-colour__success-light-green, inset 4px 0 0 0 $act-colour__success-light-green, inset -4px 0 0 0 $act-colour__success-light-green,
+			0 4px 0 $act-colour__success-green;
 		color: $act-colour__black;
 		a {
 			color: $act-colour__black;
@@ -190,7 +191,7 @@
 			}
 		}
 		z {
-			color: $act-colour__attention-blue;
+			color: $act-colour__success-green;
 		}
 	}
 	&__warning {
@@ -211,7 +212,26 @@
 			color: $act-colour__warning-yellow;
 		}
 	}
-	&__error {
+
+	&__attention {
+		background-color: $act-colour__attention-light-blue;
+		box-shadow: inset 0 4px 0 0 $act-colour__attention-light-blue, inset 4px 0 0 0 $act-colour__attention-light-blue, inset -4px 0 0 0 $act-colour__attention-light-blue,
+			0 4px 0 $act-colour__attention-blue;
+		color: $act-colour__black;
+		a {
+			border-color: $act-colour__black;
+			color: $act-colour__black;
+			&:hover,
+			&:focus {
+				border-color: $act-colour__black;
+				color: $act-colour__black;
+			}
+		}
+		z {
+			color: $act-colour__attention-blue;
+		}
+	}
+	&__alert {
 		background-color: $act-colour__alert-light-red;
 		box-shadow: inset 0 4px 0 0 $act-colour__alert-light-red, inset 4px 0 0 0 $act-colour__alert-light-red, inset -4px 0 0 0 $act-colour__alert-light-red,
 			0 4px 0 $act-colour__alert-red;
