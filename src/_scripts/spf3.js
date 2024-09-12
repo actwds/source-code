@@ -61,26 +61,80 @@ function togglePopover() {
 
 //T21 - Tabs
 document.addEventListener("DOMContentLoaded", function() {
-	var tabs = document.querySelectorAll(".act-tabs__tab");
-	var tabContents = document.querySelectorAll(".act-tabs__content");
+	let tabs = document.querySelectorAll(".act-tabs__tab");
+	
+	if (tabs.length === 0)
+		return;
+
+	let tabContents = document.querySelectorAll(".act-tabs__content");
+	let maxTabIndex = tabs.length - 1;
+    
+	function resetTabs(tabs) {
+		tabs.forEach(function(tab) {
+			tab.classList.remove("act-tabs__tab__active");
+			tab.setAttribute("aria-selected", "false");
+			tab.setAttribute("tabindex", -1);
+		});
+	}
+    
+	function resetTabContents(tabContents) {
+		tabContents.forEach(function(tabContent) {
+			tabContent.classList.remove("act-tabs__content__open");
+			tabContent.classList.add("act-tabs__content__closed");
+			tabContent.setAttribute("tabindex", -1);
+		});
+	}
+
+	function activateTab(tab, isFocused) {
+		tab.classList.add("act-tabs__tab__active");
+		tab.setAttribute("aria-selected", "true");
+		tab.setAttribute("tabindex", 0);
+		if (isFocused)
+			tab.focus();
+	}
+    
+	function activateTabContent(tabContent, isFocused) {
+		tabContent.classList.remove("act-tabs__content__closed");
+		tabContent.classList.add("act-tabs__content__open");
+		tabContent.setAttribute("tabindex", 0);
+		if (isFocused)
+			tabContent.focus();
+	}
+    
 	tabs.forEach(function(tab, index) {
 		tab.addEventListener("click", function() {
-			tabs.forEach(function(tab) {
-				tab.classList.remove("act-tabs__tab__active");
-				tab.setAttribute("aria-selected", "false");
-			});
-			this.classList.add("act-tabs__tab__active");
-			this.setAttribute("aria-selected", "true");
-			tabContents.forEach(function(tabContent) {
-				tabContent.classList.remove("act-tabs__content__open");
-				tabContent.classList.add("act-tabs__content__closed");
-			});
-			tabContents[index].classList.remove("act-tabs__content__closed");
-			tabContents[index].classList.add("act-tabs__content__open");
+			resetTabs(tabs);
+			resetTabContents(tabContents);
+			activateTab(tab, true);
+			activateTabContent(tabContents[index], false);
+		});
+		
+		tab.addEventListener("keyup", function(e) {
+			let keyCode = e.code.toLowerCase();
+			let nextTabIndex = (index < maxTabIndex) ? index + 1 : 0;
+			let previousTabIndex = (index > 0) ? index - 1 : maxTabIndex;
+
+			if ((keyCode === "arrowright") || (keyCode === "arrowleft")) {
+				resetTabs(tabs);
+				resetTabContents(tabContents);
+			}
+
+			if (keyCode === "arrowright") {
+				activateTab(tabs[nextTabIndex], true);
+				activateTabContent(tabContents[nextTabIndex], false);
+			} else if (keyCode === "arrowleft") {
+				activateTab(tabs[previousTabIndex], true);
+				activateTabContent(tabContents[previousTabIndex], false);
+			} else if (keyCode === "arrowdown") {
+				activateTabContent(tabContents[index], true);
+			}
 		});
 	});
+	resetTabs(tabs);
+	resetTabContents(tabContents);
+	activateTab(tabs[0], false);
+	activateTabContent(tabContents[0], false);
 });
-
 
 
 //P-12 Cookie Consent
