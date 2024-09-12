@@ -9,14 +9,14 @@
 	"description": "ACT Website Design System",
 	"main": "index.js",
 	"scripts": {
-		"dev": "export NODE_OPTIONS=--openssl-legacy-provider && start-storybook -p 9001",
+		"dev": "set NODE_OPTIONS=--openssl-legacy-provider && start-storybook -p 9001",
 		"test-eslint": "npx eslint .",
 		"test-prettier": "npx prettier --check .",
 		"test-all": "npm run test-eslint && npm run test-prettier",
 		"fix-eslint": "npx eslint . --fix",
 		"fix-prettier": "npx prettier --write .",
 		"fix-all": "npm run fix-eslint && npm run fix-prettier",
-		"build-storybook": "export NODE_OPTIONS=--openssl-legacy-provider && npm run fix-eslint && npm run fix-prettier && build-storybook",
+		"build-storybook": "set NODE_OPTIONS=--openssl-legacy-provider && npm run fix-eslint && npm run fix-prettier && build-storybook",
 		"build": "npm run fix-eslint && npm run fix-prettier && copyfiles -f src/_scripts/spf3.js dist && uglifyjs dist/spf3.js -o dist/spf3.min.js && echo Dist folder created with scripts && node-sass src/_core/_core.scss dist/spf3.css && node-sass src/_core/_core.scss dist/spf3.min.css --output-style compressed",
 		"serve": "npx http-server ./storybook-static -p 9001"
 	},
