@@ -226,14 +226,26 @@
 	@include devices(mobile) {
 		grid-template-columns: repeat(1, minmax(0, 1fr));
 		column-gap: 0;
+		margin: 12px 0;
+		padding: 0;
 	}
 	@include devices(tablet) {
 		grid-template-columns: repeat(2, minmax(0, 1fr));
+		margin: 12px 0;
+		padding: 0;
 	}
 	@include devices(desktop) {
 		grid-template-columns: repeat(4, minmax(0, 1fr));
 	}
 	.act-content-block {
+		@include devices(mobile) {
+			margin: 0;
+			padding: 0;
+		}
+		@include devices(tablet) {
+			margin: 0;
+			padding: 0;
+		}
 		&__col-span-2 {
 			@include devices(tablet) {
 				grid-column: span 1;
@@ -329,7 +341,7 @@
 		align-items: flex-start;
 		display: flex;
 		flex-direction: column;
-		justify-content: space-between;
+		justify-content: flex-start;
 		width: 100%;
 	}
 	[class*="__image"] {
