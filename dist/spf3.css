@@ -3703,7 +3703,7 @@ table,
     display: flex;
     flex-direction: row;
     font-family: "Montserrat", sans-serif;
-    font-size: 16px;
+    font-size: 18px;
     justify-content: flex-start;
     padding: 8px 16px;
     min-width: 140px;
@@ -3721,7 +3721,8 @@ table,
     align-items: center;
     background-color: #f6f6f6;
     display: flex;
-    font-size: 16px;
+    font-size: 18px;
+    line-height: 150%;
     justify-content: center;
     padding: 16px;
     margin-top: 2px;
