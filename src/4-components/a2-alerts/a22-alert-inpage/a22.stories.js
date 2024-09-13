@@ -49,7 +49,6 @@ export default {
 	argTypes: {
 		type: {
 			control: { type: "radio", },
-			//options: ["success", "warning", "error",],
 			options: ["success", "warning", "attention", "alert",],
 			defaultValue: "success",
 			description: "Sets the alert type",

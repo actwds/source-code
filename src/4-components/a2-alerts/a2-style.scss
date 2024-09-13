@@ -139,6 +139,7 @@
 	flex-grow: 1;
 	justify-content: center;
 	padding: map-get($act-space, "desktop-2");
+	margin-top: $act-space__desktop-0;
 	&__container {
 		display: flex;
 		flex-direction: row;
