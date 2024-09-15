@@ -48,8 +48,8 @@ import LinkTo from "@storybook/addon-links/react";
 										</li>
 									</ul>
 								</div>
-								<h1>In Page Alert</h1>
-								<p>In page alerts are designed to capture the attention of the user in a deliberately way on a specific page.</p>
+								<h1>In-Page Alert</h1>
+								<p>In-page alerts are designed to capture the attention of the user in a deliberately way on a specific page.</p>
 							</div>
 						</div>
 					</div>
@@ -62,33 +62,60 @@ import LinkTo from "@storybook/addon-links/react";
 					<div className="act-flex__row">
 						<div className="act-col__cw-12">
 							<div className="act-box">
-								<h3>Usage</h3>
-								<p>
-									Global alerts are designed to capture the attention of the user in a deliberately intrusive way. They persist over a session but are user dismissible, and are
-									purposefully created and not initiated by a user interaction or system event.
-								</p>
-								<p>Use alerts:</p>
-								<ul>
-									<li>to attract the attention to an important time sensitive messages, or to encourage an action</li>
-								</ul>
+								<h2>Usage</h2>
+									<p>
+									Use in-page alerts to attract attention to an important time sensitive messages, to encourage an action, or to inform the user about the status of an interaction on a single page.
+									</p> 
+									<p>For example, you might use an in-page alert:</p>
+									<ul>
+										<li>When a user submits a form, to tell them that their submission has been successfully received and they can exit the page now.</li>
+										<li>To inform users of a temporary change to a service that is described on the page.</li>
+										<li>To inform the user of a system error.</li>
+									</ul>
+									<p>Unlike the global alert, in-page alerts cannot be dismissed or closed by the user.</p>
 							</div>
 						</div>
 					</div>
 					<div className="act-flex__row">
 						<div className="act-col__cw-12">
 							<div className="act-box">
-								<h3>Do's &amp; Dont's</h3>
-								<h4>Do</h4>
+								<h3>Do</h3>
 								<ul>
-									<li>Keep alert text short and succinct (should be no longer than one sentence)</li>
-									<li>Use clear, concise easy to understand language, to minimise cognitive load</li>
-									<li>Use the correct variant ie notice (blue) or warning (orange) </li>
-									<li>Reserve the use of the critical alert for circumstances which warrant it</li>
+									<li>Use clear, concise language to minimise cognitive load.</li>
+									<li>Display the alerts in context and at an appropriate time.</li>
+									<li>Use the appropriate alert colour for the type and urgency of the alert.</li>
 								</ul>
-								<h4>Don't</h4>
+								<h3>Don't</h3>
 								<ul>
-									<li></li>
+									<li>Overuse alerts, as this will erode their effectiveness.</li>
+									<li>Use for information that is already communicated in a global alert.</li>
 								</ul>
+							<h2>In-page alert types</h2>
+								<p>The in-page alert has 4 colour styles which can be used to show different kinds of message.</p>
+								<p>The styles are:</p>
+									<h3>Information alert (blue)</h3>
+										<p>Designed to be less intrusive or interruptive than other levels of alert, to draw attention to an important message that is not urgent or related to the status of an interaction.</p>
+										<ul>
+											<li>Use for information the user should know, but is not critical.</li>
+											<li>Use for tips or information which the user can benefit from.</li>
+											<li>Don't use in response to a user action.</li>
+										</ul>
+									<h3>Success alert (green)</h3>
+										<p>Use to inform the user that an action was performed successfully (e.g. submitting a form or registering an account).</p>
+									<h3>Warning alert (orange)</h3>
+										<ul>
+											<li>Use to warn the user of a possible negative outcome (e.g. password expiry).</li>
+											<li>Provide sufficient information to avoid the problem.</li>
+											<li>Use for an action that is out of the ordinary or might not be desired.</li>
+										</ul>
+									<h3>Critical alert (red)</h3>
+										<ul>
+											<li>Use where a system event has failed.</li>
+											<li>Use when the user has made an error.</li>
+											<li>Use where the user is blocked until the issue is resolved, or the issue needs resolving immediately.</li>
+											<li>Don't use for validation of an action.</li>
+										</ul>
+										<p>When using the critical alert to inform the user that they need to resolve a problem, make sure the user is clearly shown what the issue is and how to resolve it.</p>
 							</div>
 						</div>
 					</div>
