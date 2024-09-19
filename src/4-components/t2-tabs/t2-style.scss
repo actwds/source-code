@@ -44,12 +44,11 @@
 		}
 	}
 	&__content {
-		align-items: center;
 		background-color: $act-colour__light-grey;
 		display: flex;
 		font-size: $act-font-size__desktop-p;
 		line-height: $act-line-height__150;
-		justify-content: center;
+		flex-direction: column;
 		padding: map-get($act-space, "desktop-2");
 		margin-top: 2px;
 		width: 100%;
