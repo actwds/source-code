@@ -3125,6 +3125,39 @@ form p,
     .act-card__featured.image-left {
       grid-column: span 2; } }
 
+.act-flat-feature-row {
+  display: flex; }
+  .act-flat-feature-row > .act-card__featured-home > .act-card__container {
+    border: none; }
+  @media only screen and (min-width: 479px) and (max-width: 991px) {
+    .act-flat-feature-row {
+      flex-direction: column; }
+      .act-flat-feature-row > .act-col__cw-4 {
+        width: 100%;
+        max-width: 100%; }
+      .act-flat-feature-row > .act-col__cw-8 {
+        width: 100%;
+        max-width: 100%; }
+      .act-flat-feature-row .act-card-content {
+        padding: 24px; } }
+  @media only screen and (min-width: 0px) and (max-width: 478px) {
+    .act-flat-feature-row {
+      flex-direction: column; }
+      .act-flat-feature-row > .act-col__cw-4 {
+        width: 100%;
+        max-width: 100%; }
+      .act-flat-feature-row > .act-col__cw-8 {
+        width: 100%;
+        max-width: 100%; }
+      .act-flat-feature-row .act-card-content {
+        padding: 24px; } }
+
+.act-flat-feature-row-image {
+  min-height: 240px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
 .loader {
   position: relative; }
   .loader z {
