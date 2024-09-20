@@ -438,7 +438,7 @@ $act-hero-widget-height: 300px;
 }
 
 .act-card__featured-home {
-	.image-left {
+	&.image-left {
 		background-position: left;
 	}
 	@include devices(mobile) {
@@ -450,7 +450,7 @@ $act-hero-widget-height: 300px;
 }
 
 .act-card__featured {
-	.image-left {
+	&.image-left {
 		grid-column-start: 3;
 		grid-column-end: 5;
 
