@@ -470,16 +470,30 @@ $act-hero-widget-height: 300px;
 			border: none;
 		}
 	}
-	
+
 	@include devices(tablet) {
 		flex-direction: column;
 		& > .act-col__cw-4 {
 			width: 100%;
-			max-width: 100%
+			max-width: 100%;
 		}
 		& > .act-col__cw-8 {
 			width: 100%;
-			max-width: 100%
+			max-width: 100%;
+		}
+		& .act-card-content {
+			padding: 24px;
+		}
+	}
+	@include devices(mobile) {
+		flex-direction: column;
+		& > .act-col__cw-4 {
+			width: 100%;
+			max-width: 100%;
+		}
+		& > .act-col__cw-8 {
+			width: 100%;
+			max-width: 100%;
 		}
 		& .act-card-content {
 			padding: 24px;
@@ -493,5 +507,3 @@ $act-hero-widget-height: 300px;
 	background-repeat: no-repeat;
 	background-size: cover;
 }
-
-
