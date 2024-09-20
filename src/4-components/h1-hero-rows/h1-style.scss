@@ -438,22 +438,22 @@ $act-hero-widget-height: 300px;
 }
 
 .act-card__featured-home {
-	& .image-left {
-    	background-position: left;
+	.image-left {
+		background-position: left;
 	}
 	@include devices(mobile) {
-		background-image: none!important;
+		background-image: none !important;
 	}
-	@include devices(tablet){
-		background-image: none!important;
+	@include devices(tablet) {
+		background-image: none !important;
 	}
 }
 
 .act-card__featured {
-	&.image-left {
+	.image-left {
 		grid-column-start: 3;
 		grid-column-end: 5;
-		
+
 		@include devices(mobile) {
 			grid-column: span 2;
 		}
@@ -461,11 +461,4 @@ $act-hero-widget-height: 300px;
 			grid-column: span 2;
 		}
 	}
-	
 }
-	
-
-  
-    
-        
-    
