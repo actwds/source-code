@@ -3104,6 +3104,27 @@ form p,
     .act-flex .top-banner-image {
       flex-direction: column; } }
 
+.act-card__featured-home.image-left {
+  background-position: left; }
+
+@media only screen and (min-width: 0px) and (max-width: 478px) {
+  .act-card__featured-home {
+    background-image: none !important; } }
+
+@media only screen and (min-width: 479px) and (max-width: 991px) {
+  .act-card__featured-home {
+    background-image: none !important; } }
+
+.act-card__featured.image-left {
+  grid-column-start: 3;
+  grid-column-end: 5; }
+  @media only screen and (min-width: 0px) and (max-width: 478px) {
+    .act-card__featured.image-left {
+      grid-column: span 2; } }
+  @media only screen and (min-width: 479px) and (max-width: 991px) {
+    .act-card__featured.image-left {
+      grid-column: span 2; } }
+
 .loader {
   position: relative; }
   .loader z {
