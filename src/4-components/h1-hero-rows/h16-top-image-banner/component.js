@@ -12,7 +12,7 @@ export const createH16 = ({
   crumb4link,
   crumb5,
   crumb5link,
-  listItemsAdditionalClass
+  listItemsAdditionalClass,
 }) => {
 
   const breadcrumbsHTML = createW16({
@@ -26,7 +26,7 @@ export const createH16 = ({
     crumb4link: crumb4link,
     crumb5: crumb5,
     crumb5link: crumb5link,
-    listItemsAdditionalClass: "image-banner-crumb"
+    listItemsAdditionalClass: "image-banner-crumb",
   });
 
   const inpageBannerHTML = `

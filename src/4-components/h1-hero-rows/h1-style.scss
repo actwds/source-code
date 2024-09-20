@@ -424,9 +424,15 @@ $act-hero-widget-height: 300px;
 .act-flex {
 	.top-banner-image {
 		display: flex;
+		& > .act-col__cw-6 {
+			min-height:250px;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			justify-content: center;
+		}
 		@include devices(mobile) {
 			flex-direction: column;
 		}
-
 	}
 }
