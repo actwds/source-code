@@ -72,3 +72,20 @@ main,
 		}
 	}
 }
+.image-banner-crumb {
+	display: none;
+	&:nth-last-child(2) {
+		color: $act-colour__purple;
+		display: flex;
+		font-weight: $act-font-weight__semibold; 
+		a {
+			flex-direction: row-reverse;
+		}
+		z {
+			display: flex;
+			margin-left: 0px;
+			margin-right: map-get($act-space, "desktop-1");
+			transform: rotate(180deg);
+		}
+	}
+}

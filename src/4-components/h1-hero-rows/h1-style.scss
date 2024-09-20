@@ -421,3 +421,12 @@ $act-hero-widget-height: 300px;
 		}
 	}
 }
+.act-flex {
+	.top-banner-image {
+		display: flex;
+		@include devices(mobile) {
+			flex-direction: column;
+		}
+
+	}
+}

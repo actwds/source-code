@@ -9,12 +9,13 @@ export const createW16 = ({
   crumb4link,
   crumb5,
   crumb5link,
+  listItemsAdditionalClass="",
 }) => {
 
-  function crumbHTML(label,link){
+  function crumbHTML(label,link,listItemsAdditionalClass){
     // Indentation here needs to line up with code inside the return statement below
     var html = `
-    <li class="act-breadcrumbs__crumb">
+    <li class="act-breadcrumbs__crumb `+listItemsAdditionalClass+`">
       <a class="act-breadcrumbs__crumb__link" href="`+link+`" target="_self" title="`+label+`">
         `+label+` <z class="fa-solid fa-angle-right"></z>
       </a>
@@ -30,19 +31,19 @@ export const createW16 = ({
   var crumb5HTML = "";
 
   if (crumb1 != "" && crumb1 != undefined){
-    crumb1HTML = crumbHTML(crumb1,crumb1link);
+    crumb1HTML = crumbHTML(crumb1,crumb1link,listItemsAdditionalClass);
   }
   if (crumb2 != "" && crumb2 != undefined){
-    crumb2HTML = crumbHTML(crumb2,crumb2link);
+    crumb2HTML = crumbHTML(crumb2,crumb2link,listItemsAdditionalClass);
   }
   if (crumb3 != "" && crumb3 != undefined){
-    crumb3HTML = crumbHTML(crumb3,crumb3link);
+    crumb3HTML = crumbHTML(crumb3,crumb3link,listItemsAdditionalClass);
   }
   if (crumb4 != "" && crumb4 != undefined){
-    crumb4HTML = crumbHTML(crumb4,crumb4link);
+    crumb4HTML = crumbHTML(crumb4,crumb4link,listItemsAdditionalClass);
   }
   if (crumb5 != "" && crumb5 != undefined){
-    crumb5HTML = crumbHTML(crumb5,crumb5link);
+    crumb5HTML = crumbHTML(crumb5,crumb5link,listItemsAdditionalClass);
   }
 
   return `
