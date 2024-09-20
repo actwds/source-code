@@ -563,6 +563,20 @@
 			"core"
 		]
 	},
+	"H18": {
+		"details": {
+			"id": "H18",
+			"category": "⌨️ Hero Rows",
+			"name": "Flat Feature Row",
+			"type": "Component"
+		},
+		"description": "Flat Feature Row",
+		"element": "",
+		"status": [
+			"production",
+			"core"
+		]
+	},
 	"M11": {
 		"details": {
 			"id": "M11",
