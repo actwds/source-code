@@ -549,6 +549,20 @@
 			"core"
 		]
 	},
+	"H17": {
+		"details": {
+			"id": "H17",
+			"category": "⌨️ Hero Rows",
+			"name": "Feature Row",
+			"type": "Component"
+		},
+		"description": "Feature Row",
+		"element": "",
+		"status": [
+			"production",
+			"core"
+		]
+	},
 	"M11": {
 		"details": {
 			"id": "M11",
