@@ -481,7 +481,8 @@ $act-hero-widget-height: 300px;
 			width: 100%;
 			max-width: 100%;
 		}
-		& .act-card__content {
+		& .act-card__featured-home 
+			& .act-card__content {
 			padding: map-get($act-space, "desktop-3");
 		}
 	}
@@ -495,7 +496,8 @@ $act-hero-widget-height: 300px;
 			width: 100%;
 			max-width: 100%;
 		}
-		& .act-card__content {
+		& .act-card__featured-home 
+			& .act-card__content {
 			padding: map-get($act-space, "desktop-3");
 		}
 	}

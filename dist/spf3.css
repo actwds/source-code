@@ -838,10 +838,8 @@ a,
       font-size: 18px;
       line-height: 150%;
       text-decoration: none; }
-    .act-alert-inpage__content a {
-      text-decoration: underline !important; }
-      .act-alert-inpage__content a:hover, .act-alert-inpage__content a:focus {
-        text-decoration-style: dashed !important; }
+    .act-alert-inpage__content a:hover, .act-alert-inpage__content a:focus {
+      text-decoration-style: dashed !important; }
   .act-alert-inpage__success {
     background-color: #e7fff8;
     box-shadow: inset 0 4px 0 0 #e7fff8, inset 4px 0 0 0 #e7fff8, inset -4px 0 0 0 #e7fff8, 0 4px 0 #098660;
@@ -3138,7 +3136,7 @@ form p,
       .act-flat-feature-row > .act-col__cw-8 {
         width: 100%;
         max-width: 100%; }
-      .act-flat-feature-row .act-card-content {
+      .act-flat-feature-row .act-card__content {
         padding: 24px; } }
   @media only screen and (min-width: 0px) and (max-width: 478px) {
     .act-flat-feature-row {
@@ -3149,7 +3147,7 @@ form p,
       .act-flat-feature-row > .act-col__cw-8 {
         width: 100%;
         max-width: 100%; }
-      .act-flat-feature-row .act-card-content {
+      .act-flat-feature-row .act-card__content {
         padding: 24px; } }
 
 .act-flat-feature-row-image {
@@ -5087,7 +5085,7 @@ main .act-breadcrumbs,
   .act-quick-exit {
     display: none !important; }
   .act-sidebar {
-    display: none; } }
+    display: none !important; } }
 
 @keyframes loader {
   to {
