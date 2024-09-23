@@ -481,8 +481,8 @@ $act-hero-widget-height: 300px;
 			width: 100%;
 			max-width: 100%;
 		}
-		& .act-card-content {
-			padding: 24px;
+		& .act-card__content {
+			padding: map-get($act-space, "desktop-3");
 		}
 	}
 	@include devices(mobile) {
@@ -495,8 +495,8 @@ $act-hero-widget-height: 300px;
 			width: 100%;
 			max-width: 100%;
 		}
-		& .act-card-content {
-			padding: 24px;
+		& .act-card__content {
+			padding: map-get($act-space, "desktop-3");
 		}
 	}
 }

@@ -86,7 +86,7 @@ export default {
 		},
 		description: {
 			control: { type: "text", },
-			defaultValue: "<p>To assist customers having difficulty attending an <a class='description' href='#' target='_self' title=''>Access Canberra Service centre</a> at this time car and motorcycle learner licences that expired between 31 January and 31 March 2022 have now been extended by six months.</p>",
+			defaultValue: "<p>To assist customers having difficulty attending an <a class='' href='#' target='_self' title=''>Access Canberra Service centre</a> at this time car and motorcycle learner licences that expired between 31 January and 31 March 2022 have now been extended by six months.</p>",
 			description: "Sets the alert description",
 		},
 	},
