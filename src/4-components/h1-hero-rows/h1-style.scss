@@ -483,7 +483,7 @@ $act-hero-widget-height: 300px;
 		}
 		& .act-card__featured-home {
 			& .act-card__content {
-			padding: map-get($act-space, "desktop-3");
+				padding: map-get($act-space, "desktop-3");
 			}
 		}
 	}
@@ -499,7 +499,7 @@ $act-hero-widget-height: 300px;
 		}
 		& .act-card__featured-home {
 			& .act-card__content {
-			padding: map-get($act-space, "desktop-3");
+				padding: map-get($act-space, "desktop-3");
 			}
 		}
 	}
