@@ -1488,6 +1488,7 @@ a,
   list-style-type: none; }
   .act-table-contents__content__item {
     margin-left: 0;
+    margin-bottom: 0;
     padding: 4px 0; }
 
 .act-table-contents__title {
@@ -1510,6 +1511,7 @@ a,
     flex-direction: row;
     justify-content: space-between;
     margin-left: 0;
+    margin-bottom: 0;
     width: 100%; }
     .act-links-list__content__item__text {
       align-items: center;
