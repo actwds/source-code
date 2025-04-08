@@ -454,13 +454,13 @@ $act-hero-widget-height: 300px;
 		background-color: $act-colour__dark-deep-violet;
 	}
 	.act-card__featured {
-		[class*=__container] [class*=__content]{
-		background: none;
+		[class*="__container"] [class*="__content"] {
+			background: none;
 		}
 		&.image-left {
 			grid-column-start: 3;
 			grid-column-end: 5;
-	
+
 			@include devices(mobile) {
 				grid-column: span 2;
 			}
@@ -468,13 +468,11 @@ $act-hero-widget-height: 300px;
 				grid-column: span 2;
 			}
 		}
-
 	}
-	.act-card__content [class*=__title], [class*=__description] {
+	.act-card__content [class*="__title"],
+	[class*="__description"] {
 		color: $act-colour__white;
 	}
-	
-	
 }
 
 .act-flat-feature-row {
