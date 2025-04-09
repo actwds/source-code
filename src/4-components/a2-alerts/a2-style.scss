@@ -78,7 +78,7 @@
 			color: $act-colour__black;
 		}
 	}
-	&__error {
+	&__alert {
 		background-color: $act-colour__alert-red;
 		a {
 			color: $act-colour__white;
@@ -211,7 +211,7 @@
 			color: $act-colour__warning-yellow;
 		}
 	}
-	&__error {
+	&__alert {
 		background-color: $act-colour__alert-light-red;
 		box-shadow: inset 0 4px 0 0 $act-colour__alert-light-red, inset 4px 0 0 0 $act-colour__alert-light-red, inset -4px 0 0 0 $act-colour__alert-light-red,
 			0 4px 0 $act-colour__alert-red;
