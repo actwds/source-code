@@ -1,0 +1,230 @@
+.act-timeline {
+	padding-bottom: 1em;
+	position: relative;
+	max-width: 700px;
+	margin: 0 auto;
+	-webkit-animation: reveal 2s 0 ease both 1;
+	animation: reveal 2s 0 ease both 1;
+
+	&:before {
+		content: "";
+		border-left: 5px solid #ccc;
+		left: 17px;
+		top: 0.6em;
+		height: calc(100% - 120px);
+		position: absolute;
+		bottom: 0;
+		-webkit-transform-origin: 0 0;
+		transform-origin: 0 0;
+		-webkit-animation: scaleVertical 3s 1s ease both 1;
+		animation: scaleVertical 3s 1s ease both 1;
+	}
+	li {
+		margin: 0 0 3em 0;
+		padding: 0 8px 0em 41px;
+		position: relative;
+		list-style-type: none;
+		&:before {
+			content: "";
+			position: absolute;
+			top: 7px;
+			width: 30px;
+			height: 30px;
+			border-radius: 50%;
+			border: 5px solid #fff;
+			-webkit-animation: revealScaleUp 0.75s 0s ease both 1;
+			animation: revealScaleUp 0.75s 0s ease both 1;
+
+			background: #fff;
+			color: $act-colour__purple;
+			border: none;
+			content: "\f10c";
+			// font: normal normal normal 14px/1 FontAwesome;
+			font-family: "Font Awesome 6 Sharp";
+			font-size: inherit;
+			font-size: 1.6em;
+			left: 6px;
+		}
+		&.complete,
+		&.current {
+			&:before {
+				content: "\f111";
+				font-weight: 600;
+				font-family: "Font Awesome 6 Free";
+			}
+		}
+		&.current {
+			background: $act-colour__success-light-purple-background;
+		}
+		&.inactive {
+			&:before {
+				content: "\f111";
+				font-weight: 600;
+				font-family: "Font Awesome 6 Free";
+				color: $act-colour__middle-grey;
+			}
+		}
+		&.last-complete {
+			&:before {
+				content: "\f058";
+				color: #192e5b;
+			}
+		}
+		.content {
+			-webkit-animation: revealFromLeft 0.5s 0s ease both 1;
+			animation: revealFromLeft 0.5s 0s ease both 1;
+		}
+		&:nth-child(1) {
+			&:before {
+				-webkit-animation-delay: 0.85s;
+				animation-delay: 0.85s;
+			}
+			.content {
+				-webkit-animation-delay: 1.05s;
+				animation-delay: 1.05s;
+			}
+		}
+		&:nth-child(2) {
+			&:before {
+				-webkit-animation-delay: 1.2s;
+				animation-delay: 1.2s;
+			}
+			.content {
+				-webkit-animation-delay: 1.5s;
+				animation-delay: 1.5s;
+			}
+		}
+		&:nth-child(3) {
+			&:before {
+				-webkit-animation-delay: 1.8s;
+				animation-delay: 1.8s;
+			}
+			.content {
+				-webkit-animation-delay: 2.1s;
+				animation-delay: 2.1s;
+			}
+		}
+		&:nth-child(4) {
+			&:before {
+				-webkit-animation-delay: 2s;
+				animation-delay: 2s;
+			}
+			.content {
+				-webkit-animation-delay: 2.3s;
+				animation-delay: 2.3s;
+			}
+		}
+	}
+}
+
+@-webkit-keyframes revealFromLeft {
+	0% {
+		-webkit-transform: translateX(-1em);
+		transform: translateX(-1em);
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+		-webkit-transform: translateX(0);
+		transform: translateX(0);
+	}
+}
+
+@keyframes revealFromLeft {
+	0% {
+		-webkit-transform: translateX(-1em);
+		transform: translateX(-1em);
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+		-webkit-transform: translateX(0);
+		transform: translateX(0);
+	}
+}
+@-webkit-keyframes reveal {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes reveal {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@-webkit-keyframes scaleVertical {
+	0% {
+		-webkit-transform: scaleY(0);
+		transform: scaleY(0);
+	}
+	100% {
+		-webkit-transform: scaleY(1);
+		transform: scaleY(1);
+	}
+}
+@keyframes scaleVertical {
+	0% {
+		-webkit-transform: scaleY(0);
+		transform: scaleY(0);
+	}
+	100% {
+		-webkit-transform: scaleY(1);
+		transform: scaleY(1);
+	}
+}
+@-webkit-keyframes revealScaleUp {
+	0% {
+		opacity: 0;
+		-webkit-transform: scale(0.5);
+		transform: scale(0.5);
+	}
+	50% {
+		opacity: 1;
+		-webkit-transform: scale(1.3);
+		transform: scale(1.3);
+	}
+	100% {
+		opacity: 1;
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+}
+@keyframes revealScaleUp {
+	0% {
+		opacity: 0;
+		-webkit-transform: scale(0.5);
+		transform: scale(0.5);
+	}
+	50% {
+		opacity: 1;
+		-webkit-transform: scale(1.3);
+		transform: scale(1.3);
+	}
+	100% {
+		opacity: 1;
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+}
+
+// .t-block-teal {
+// 	background: #02aa9d;
+// }
+
+// .t-block-teal h2 {
+// 	color: #fff;
+// }
+
+// .t-block-teal h3 {
+// 	color: #034944;
+// }
+
+// .t-block-teal p {
+// 	color: #034944;
+// }
