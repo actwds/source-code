@@ -804,7 +804,8 @@ a,
   display: flex;
   flex-grow: 1;
   justify-content: center;
-  padding: 16px; }
+  padding: 16px;
+  margin-bottom: 4px; }
   .act-alert-inpage__container {
     display: flex;
     flex-direction: row;
